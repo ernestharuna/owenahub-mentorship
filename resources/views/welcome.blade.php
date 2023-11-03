@@ -6,7 +6,7 @@
     <div class='animated-2 fadeIn'>
         <section class="container text-center mt-5">
             <div>
-                <h1 class='mb-4 fs-large'>
+                <h1 class='mb-4 fs-large fw-bold'>
                     Empowering learners to thrive <br class="d-none d-md-block">
                     <span class="text-theme">through mentorship.</span>
                 </h1>
@@ -38,7 +38,7 @@
             <div class="container">
                 <div class="shadow shadow-0 feature_box">
                     <div>
-                        <i class="bi bi-play-btn text-secondary"></i>
+                        <i class="bi bi-play-btn text-theme"></i>
                         <div>
                             <strong>Swift Sips</strong><br />
                             <p class="lh-sm">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div>
-                        <i class="bi bi-person-workspace text-secondary"></i>
+                        <i class="bi bi-person-workspace text-theme"></i>
                         <div>
                             <strong>Expert Sessions</strong><br />
                             <p class="lh-sm">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div>
-                        <i class="bi bi-journal-bookmark text-secondary"></i>
+                        <i class="bi bi-journal-bookmark text-theme"></i>
                         <div>
                             <strong>Enriching Repository</strong><br />
                             <p class="lh-sm">
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div>
-                        <i class="bi bi-people text-secondary"></i>
+                        <i class="bi bi-people text-theme"></i>
                         <div>
                             <strong>Private Session</strong><br />
                             <p class="lh-sm">

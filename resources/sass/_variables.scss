@@ -46,7 +46,7 @@ $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 // Font
 .fs-large {
     font-size: 4rem;
-    font-weight: 800;
+    // font-weight: 800;
 }
 
 .fs-tiny {
@@ -61,7 +61,7 @@ $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
     display: inline-block;
     padding: .25rem .8rem;
     color: #fff;
-    background: linear-gradient(45deg, #F6A700, #EFC364) !important;
+    background: $theme-gradient;
     ;
     border-radius: 9999px !important;
 }
