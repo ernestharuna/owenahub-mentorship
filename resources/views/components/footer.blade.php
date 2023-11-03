@@ -1,0 +1,56 @@
+<!-- I begin to speak only when I am certain what I will say is not better left unsaid. - Cato the Younger -->
+<!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
+<footer class='bg-dark py-4'>
+    <div class="container text-white fs-6">
+        <div>
+            <h2 class='fs-5 fw-bold m-0'>
+                {{-- Logo goes here --}}
+                <img src={{ asset('images/logo.png') }} alt="..." class="d-block img-fluid mb-3" width="50">
+                OwenaHub<small class='fs-6 fst-italic fw-light'> — The Learner&apos;s Hub</small>
+            </h2>
+            <p>
+                <small>
+                    Fostering global connections, leveraging experts to empower learners through mentorship.
+                </small>
+            </p>
+        </div>
+
+        <div class='social-links'>
+            <h2 class='fs-5 m-0'>
+                Contact
+            </h2>
+            <p>
+                <small>
+                    hello@owenahub.com <br />
+                </small>
+            </p>
+
+            <div>
+                <div class="input-group mb-3">
+                    <button class="btn rounded rounded-0 fw-bold btn-theme">Join our Community</button>
+                </div>
+            </div>
+
+            <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                class='text-white instagram'>
+                <i class="bi bi-instagram fs-5"></i>
+            </a>
+
+            <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08" class="text-white twitter">
+                {{-- <i class="bi bi-twitter-x fs-5"></i> --}}
+                <i class="bi bi-twitter fs-5"></i>
+            </a>
+
+            <a href="https://www.facebook.com/owenahub?mibextid=ZbWKwL" class="text-white facebook">
+                <i class="bi bi-facebook fs-5"></i>
+            </a>
+        </div>
+
+
+        <div class="fs-6 my-4">
+            <p class="m-0 fs-tiny">
+                &copy; 2023, OwenaHub. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>

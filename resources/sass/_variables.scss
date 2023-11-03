@@ -1,0 +1,146 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
+
+// Background
+.bg-fff {
+    background: #fff !important;
+}
+
+.bg-f2 {
+    background: #f4f5f6;
+}
+
+.bg-theme {
+    background: #F6A700 !important;
+}
+
+.bg-premium {
+    background: linear-gradient(60deg, #EEEDFD, #FCEEF2);
+    font-family: Soehne, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+}
+
+// button
+.btn-theme {
+    background: $theme-gradient;
+    transition: all .3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.pill {
+    background-color: #ffe8b6;
+    border: 3px solid #F6A700;
+    border-radius: 5px;
+    padding: 0 5px;
+    color: #9E0094;
+}
+
+// Font
+.fs-large {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.fs-tiny {
+    font-size: 12px !important;
+}
+
+.text-theme {
+    color: #F6A700 !important
+}
+
+.circle {
+    display: inline-block;
+    padding: .25rem .8rem;
+    color: #fff;
+    background: linear-gradient(45deg, #F6A700, #EFC364) !important;
+    ;
+    border-radius: 9999px !important;
+}
+
+.w-64 {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.w-34 {
+    max-width: 34rem !important;
+    margin: 0 auto;
+}
+
+.emp-text {
+    text-decoration: underline;
+    text-decoration-color: #F6A700;
+    text-decoration-thickness: 7px;
+    font-family: 'Croissant One', cursive;
+    /* transform text size here */
+}
+
+// Animations
+.animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated-2 {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.hover {
+    animation: hover 3s linear infinite;
+}
+
+.hover-2 {
+    animation: hover 4.5s linear infinite;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@keyframes hover {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 10px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .fs-large {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+}
