@@ -27,7 +27,7 @@
 
             <div>
                 <div class="input-group mb-3">
-                    <button class="btn rounded rounded-0 fw-bold btn-theme">Join our Community</button>
+                    <livewire:subscribe-button />
                 </div>
             </div>
 

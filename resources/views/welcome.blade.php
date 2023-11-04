@@ -105,7 +105,7 @@
 
                 <div class="text-start mx-auto">
                     {{-- load some articles here --}}
-                    {{-- <livewire:recommended-articles /> --}}
+                    <livewire:recommended-articles />
                 </div>
             </div>
         </section>

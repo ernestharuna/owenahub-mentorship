@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GuestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
+Route::name('guest.')->group(function () {
+    Route::name('articles.')->group(function () {
+        Route::get('/articles', [GuestController::class, 'articles'])->name('index');
+        Route::get('/articles/{article}/show', [GuestController::class, 'show_article'])->name('show');
+    });
+});

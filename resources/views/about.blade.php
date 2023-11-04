@@ -7,7 +7,7 @@
     </head>
     <div class="bg-f2">
         <div class="w-64 py-5 text-center">
-            <h1 class='theme-text-color mb-4 fs-large fw-bold text-uppercase fs-5'>
+            <h1 class='text-theme mb-4 fs-large fw-bold text-uppercase fs-5'>
                 About Us
             </h1>
             <span class="fs-3 lh-1 fw-light">

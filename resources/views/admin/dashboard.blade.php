@@ -10,7 +10,7 @@
             <div class="my-3">
                 <a href={{ route('admin.articles.create') }}>
                     <button class="btn btn-dark rounded rounded-0 px-2 py-1">
-                        Create Post >
+                        <i class="bi bi-plus-square-fill"></i> New Article
                     </button>
                 </a>
             </div>
@@ -33,9 +33,10 @@
                         </a>
                     </div>
                     <div>
-                        <button class="btn btn-danger text-white rounded rounded-0 py-0 fs-tiny fw-bold" type="button"
+                        <button class="btn btn-danger text-white rounded rounded-0 py-0 px-2 fs-tiny fw-bold"
+                            type="button"
                             onclick="event.preventDefault(); document.getElementById('delete-article').submit();">
-                            DELETE <i class="bi bi-trash3"></i>
+                            DELETE
                         </button>
                     </div>
                 </div>
