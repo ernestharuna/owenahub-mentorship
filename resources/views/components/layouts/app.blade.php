@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#F6A700">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <title>
+        {{ $title ?? 'Empowering learners to thrive through mentorship - OwenaHub' }}
+    </title>
 
     <!-- SEO SHIT -->
     <meta name="description"
@@ -33,7 +36,7 @@
 
     <!-- Scripts -->
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script> --}}
     {{-- <script>
         window.dataLayer = window.dataLayer || [];
 

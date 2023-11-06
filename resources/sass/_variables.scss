@@ -1,11 +1,12 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #fff;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
+$theme-gradient-light: linear-gradient(45deg, #ffeeca, #ffda8a) !important;
 
 // Background
 .bg-fff {
@@ -18,6 +19,10 @@ $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 
 .bg-theme {
     background: $theme-gradient;
+}
+
+.bg-theme-light {
+    background: $theme-gradient-light;
 }
 
 .bg-premium {
@@ -46,7 +51,6 @@ $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 // Font
 .fs-large {
     font-size: 3.5rem;
-    // font-weight: 800;
 }
 
 .fs-tiny {
@@ -55,6 +59,10 @@ $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 
 .text-theme {
     color: #F6A700 !important
+}
+
+.text-shadow {
+    text-shadow: 0 5px 20px #0000004d;
 }
 
 .circle {

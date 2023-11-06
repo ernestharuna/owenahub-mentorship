@@ -1,16 +1,16 @@
 {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
 <!-- Button trigger modal -->
 <div>
-    <button type="button" class="btn rounded rounded-0 fw-bold btn-theme" data-bs-toggle="modal"
+    <button type="button" class="btn rounded rounded-0 btn-theme" data-bs-toggle="modal"
         data-bs-target="#subscribe-button">
-        Join Our Community
+        <span class="text-white fs-5 fw-medium"> Subscribe </span> — <small class="fw-light fs-tiny">it's free ❤️</small>
     </button>
 
     <!-- Modal -->
     <div class="modal fade" id="subscribe-button" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content text-start">
                 <div class="modal-header bg-theme">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Join Our Community</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -29,7 +29,7 @@
                         </p>
                     </div>
 
-                    <form class="row g-3 text-dark" wire:submit="save">
+                    <form class="row g-3 text-dark text-start" wire:submit="save">
                         @csrf
                         <div class="col-12">
                             <label for="name" class="form-label m-0">Your Name:</label>

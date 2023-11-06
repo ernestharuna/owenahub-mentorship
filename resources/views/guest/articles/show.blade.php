@@ -1,11 +1,7 @@
 <x-guest.article>
-
-    <head>
-        <title>
-            {{ $article->title }} - OwenaHub
-        </title>
-        <meta name="description" content="{{ $article->description }}">
-    </head>
+    <x-slot name="title">
+        {{ $article->title ?? 'Tech Career Insights - OwenaHub' }}
+    </x-slot>
 
     <div class='mb-4'>
         <div>
@@ -16,6 +12,10 @@
         </div>
         <h1 class='fw-medium fs-large'>{{ $article->title }}</h1>
         <p class="p-2 bg-f2 border">{{ $article->description }}</p>
+
+        <div>
+            <img src="{{ asset('images/about_img.png') }}" alt="..." class="img-fluid w-100 shadow">
+        </div>
     </div>
 
     <div class="animated-2 fadeIn">

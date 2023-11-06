@@ -1,8 +1,4 @@
 <x-layouts.app>
-
-    <head>
-        <title>OwenaHub | The Learner's Hub</title>
-    </head>
     <div class='animated-2 fadeIn'>
         <section class="container text-center mt-5">
             <div>
@@ -119,6 +115,23 @@
                     </button>
                 </a>
             </div>
+        </section>
+    </div>
+    <div class="bg-theme-light">
+        <section class="container py-5">
+            <div>
+                <div class="text-center">
+                    <h2 class="fs-1 fw-bold">Not your average Tech Newsletter.</h2>
+                    <p class="text-secondary my-4 fs-5 font-monospace">
+                        Exclusive insights from experienced mentors with
+                        proven track records.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <livewire:subscribe-button />
+                </div>
+            </div>
+
         </section>
     </div>
 </x-layouts.app>
