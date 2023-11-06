@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FeaturedArticleController;
 
 Route::name('admin.')->group(function () {
     Route::prefix('admin')->group(function () {
@@ -23,6 +24,14 @@ Route::name('admin.')->group(function () {
                 Route::patch('{article}/update', [ArticleController::class, 'update'])->name('articles.update');
                 Route::get('{article}/edit', [ArticleController::class, 'show'])->name('articles.edit');
                 Route::delete('{article}/delete', [ArticleController::class, 'delete'])->name('articles.delete');
+            });
+
+            Route::prefix('featuredarticles')->group(function () {
+                Route::view('create', 'admin.featured_articles.create')->name('feat_articles.create');
+                Route::post('store', [FeaturedArticleController::class, 'store'])->name('feat_articles.create.req');
+                Route::patch('{article}/update', [FeaturedArticleController::class, 'update'])->name('feat_articles.update');
+                Route::get('{article}/edit', [FeaturedArticleController::class, 'show'])->name('feat_articles.edit');
+                Route::delete('{article}/delete', [FeaturedArticleController::class, 'delete'])->name('feat_articles.delete');
             });
 
             Route::get('logout', [AuthController::class, 'logout'])->name('logout');

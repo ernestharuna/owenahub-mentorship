@@ -9,7 +9,7 @@
             <div class="my-1 text-uppercase fs-tiny fw-bold text-secondary">
                 {{ $article->created_at->format('j M Y, g:i a') }}
                 @unless ($article->created_at->eq($article->updated_at))
-                    <span class=""> &middot; {{ __('edited') }}</span>
+                    <span class=""> &middot; {{ __('updated') }}</span>
                 @endunless
             </div>
         </div>
@@ -20,7 +20,7 @@
         </div>
 
         <div>
-            <img src="{{ $article->image_path ? asset('storage/' . $article->image_path) : asset('images/about_img.png') }}"
+            <img src="{{ $article->image_path ? asset('storage/' . $article->image_path) : asset('images/generic_img.jpg') }}"
                 alt="..." class="img-fluid w-100 shadow">
         </div>
     </div>

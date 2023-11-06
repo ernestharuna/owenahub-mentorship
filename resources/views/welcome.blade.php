@@ -96,7 +96,7 @@
         <section class='mt-5 py-5 bg-f2'>
             <div class="container">
                 <h3 class='fw-bold fs-4 mb-4'>
-                    <span class="circle shadow">5</span> FEATURED ARTICLES
+                    <span class="circle shadow">6</span> EDITOR'S PICKS
                 </h3>
 
                 <div class="text-start mx-auto">

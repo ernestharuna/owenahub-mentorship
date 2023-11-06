@@ -12,7 +12,7 @@
 
             <aside class='col-md-4'>
                 <div>
-                    <h4 class='fw-bold'>Recommended Articles</h4>
+                    <h4 class='fw-bold'>Recommended Articles 😍</h4>
                     <livewire:recommended-articles />
 
                     @if (Route::is('guest.articles.show'))

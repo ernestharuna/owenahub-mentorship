@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -32,6 +31,10 @@ class Admin extends Authenticatable
     public function article(): HasMany
     {
         return $this->hasMany(Article::class);
+    }
+    public function featured_article(): HasMany
+    {
+        return $this->hasMany(FeaturedArticles::class);
     }
 
     /**
