@@ -57,11 +57,24 @@
 
         <main>
             {{ $slot }}
+
+            <!-- Session messages-->
+            @if (session('status'))
+                <x-success-msg />
+            @endif
+            @if (session('error'))
+                <x-error-msg />
+            @endif
         </main>
 
         <!-- Footer --->
         <x-footer />
     </div>
+    <script>
+        document.getElementById('dismiss-button').addEventListener('click', function() {
+            document.getElementById('flash-message').style.display = 'none';
+        });
+    </script>x
 </body>
 
 </html>

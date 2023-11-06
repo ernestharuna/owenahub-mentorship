@@ -30,7 +30,7 @@ class FeaturedArticleController extends Controller
                 $data['image_path'] = $request->file('image_path')->store('article_images', 'public');
             }
             $request->user()->featured_article()->create($data);
-            return redirect(route('admin.dashboard'));
+            return redirect(route('admin.dashboard'))->with('status', "You've featured an Article");
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', 'Something went wrong');
@@ -52,13 +52,13 @@ class FeaturedArticleController extends Controller
             return redirect(route('admin.dashboard'))->with('status', 'Update Succesfull');
         } catch (\Exception $e) {
             throw $e;
-            return back()->with('status', 'Update failed');
+            return back()->with('error', 'Update failed');
         }
     }
 
     public function show(FeaturedArticles $article)
     {
-        return view('admin.articles.edit', [
+        return view('admin.featured_articles.edit', [
             'article' => $article
         ]);
     }
@@ -66,6 +66,6 @@ class FeaturedArticleController extends Controller
     public function delete(FeaturedArticles $article)
     {
         $article->delete();
-        return back()->with('status', 'Article deleted');
+        return back()->with('error', 'Article deleted❗');
     }
 }

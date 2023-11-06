@@ -64,7 +64,7 @@
             @forelse ($feat_articles as $featured)
                 <div class="bg-f2 p-2 d-flex align-items-center justify-content-between mb-1 border">
                     <div>
-                        <a href={{ route('admin.articles.edit', $featured->id) }}
+                        <a href={{ route('admin.feat_articles.edit', $featured->id) }}
                             class="d-block text-dark text-decoration-none">
 
                             <small class="fs-tiny">{{ $featured->created_at->format('j M Y, g:i a') }}</small>
@@ -75,13 +75,13 @@
                     <div>
                         <button class="btn btn-danger text-white rounded rounded-0 py-0 px-2 fs-tiny fw-bold"
                             type="button"
-                            onclick="event.preventDefault(); document.getElementById('delete-article').submit();">
+                            onclick="event.preventDefault(); document.getElementById('delete-feat').submit();">
                             DELETE
                         </button>
                     </div>
                 </div>
-                <form action="{{ route('admin.articles.delete', $featured->id) }}" class="d-none" method="POST"
-                    id="delete-article">
+                <form action="{{ route('admin.feat_articles.delete', $featured->id) }}" class="d-none" method="POST"
+                    id="delete-feat">
                     @csrf
                     @method('DELETE')
                 </form>

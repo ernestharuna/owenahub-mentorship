@@ -34,13 +34,13 @@
                         <div class="col-12">
                             <label for="name" class="form-label m-0">Your Name:</label>
                             <input type="text" id="name" class="form-control rounded rounded-0 py-2"
-                                wire:model="name" placeholder="Vlad Kowalski">
+                                wire:model="name" placeholder="Vlad Kowalski" required>
                         </div>
 
                         <div class="col-12">
                             <label for="email" class="form-label m-0">Your Email:</label>
                             <input type="email" id="email" class="form-control rounded rounded-0 py-2"
-                                wire:model="email" placeholder="valid@email.com">
+                                wire:model="email" placeholder="valid@email.com" required>
                         </div>
 
                         <div class="col-12 mt-4">

@@ -37,14 +37,60 @@
                 <hr />
 
                 <div>
-                    <h4 class='fw-bold'>Our Categories</h4>
-                    <div>
-                        <p>Web Development <i class="bi bi-arrow-right-short"></i></p>
-                        <p>Project Management <i class="bi bi-arrow-right-short"></i></p>
-                        <p>Data Science <i class="bi bi-arrow-right-short"></i></p>
-                        <p>Career Advice <i class="bi bi-arrow-right-short"></i></p>
-                        <p>Software Engineering <i class="bi bi-arrow-right-short"></i></p>
+                    <h4 class='fw-bold'>What We Gist About</h4>
+                    <div class="">
+                        <div class="text-secondary mb-2">
+                            <p class="m-0 text-dark fw-semibold">Web Development <i class="bi bi-arrow-right-short"></i>
+                            </p>
+                            <small class="fs-tiny">Getting tips on how to traverse the wide trees of Web
+                                Engineering
+                            </small>
+                        </div>
+
+                        <div class="text-secondary mb-2">
+                            <p class="m-0 text-dark fw-semibold">Career Development <i
+                                    class="bi bi-arrow-right-short"></i></p>
+                            <small class="fs-tiny">
+                                Get useful insight on taking your career to the next level
+                            </small>
+                        </div>
+
+                        <div class="text-secondary mb-2">
+                            <p class="m-0 text-dark fw-semibold">Success Stories <i class="bi bi-arrow-right-short"></i>
+                            </p>
+                            <small class="fs-tiny">
+                                Be inspired by the success stories of our mentees who have decided to share thier
+                                stories
+                            </small>
+                        </div>
+
+                        <div class="text-secondary mb-2">
+                            <p class="m-0 text-dark fw-semibold">Machine Learning & AI <i
+                                    class="bi bi-arrow-right-short"></i></p>
+                            <small class="fs-tiny">
+                                Be updated with news concerning the new trendy world of Artificial Intelligence.
+                            </small>
+                        </div>
+
+                        <div class="text-secondary mb-2">
+                            <p class="m-0 text-dark fw-semibold">Coding Standards & Best Practices <i
+                                    class="bi bi-arrow-right-short"></i></p>
+                            <small class="fs-tiny">
+                                Learn to do the 1's and 0's the right way — get updates on new standards and existing
+                                processes
+                            </small>
+                        </div>
+
+                        <div class="text-secondary mb-2">
+                            <p class="m-0 text-dark fw-semibold">Events, Internships, Tech News and Updates <i
+                                    class="bi bi-arrow-right-short"></i></p>
+                            <small class="fs-tiny">
+                                We provide a platform to participate our internships and other events that may be of
+                                interest to you.
+                            </small>
+                        </div>
                     </div>
+                    <livewire:subscribe-button />
                 </div>
 
             </aside>

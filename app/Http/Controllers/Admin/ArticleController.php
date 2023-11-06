@@ -26,7 +26,7 @@ class ArticleController extends Controller
                 $data['image_path'] = $request->file('image_path')->store('article_images', 'public');
             }
             $request->user()->article()->create($data);
-            return redirect(route('admin.dashboard'));
+            return redirect(route('admin.dashboard'))->with('status', 'Article Published!');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', 'Something went wrong');
@@ -62,6 +62,6 @@ class ArticleController extends Controller
     public function delete(Article $article)
     {
         $article->delete();
-        return back()->with('status', 'Article deleted');
+        return back()->with('error', 'Article deleted');
     }
 }

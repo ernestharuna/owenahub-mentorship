@@ -45,8 +45,8 @@
                 <div class="text-center">
                     <h2 class="fs-1 fw-bold">Not your average Tech Newsletter.</h2>
                     <p class="text-secondary my-4 fs-5 font-monospace">
-                        Exclusive insights from experienced mentors with
-                        proven track records.
+                        Subscribe now to get exclusive insights <br>
+                        from experienced mentors.
                     </p>
                 </div>
                 <div class="text-center">

@@ -2,7 +2,7 @@
     <div class="container">
         <header class="my-4">
             <h4 class="text-secondary fs-2 fw-bold">
-                Edit Post <br> <span class="fs-6 text-dark">{{ $article->title }}</span>
+                Edit featured article <br> <span class="fs-6 text-dark">{{ $article->title }}</span>
             </h4>
             <div class="my-3">
                 <a href={{ route('admin.dashboard') }}>
@@ -15,7 +15,7 @@
 
         <hr>
 
-        <form method="POST" action={{ route('admin.articles.update', $article->id) }} class="row g-3"
+        <form method="POST" action={{ route('admin.feat_articles.update', $article->id) }} class="row g-3"
             enctype="multipart/form-data">
             @csrf
             @method('PATCH')

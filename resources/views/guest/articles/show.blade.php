@@ -21,7 +21,7 @@
 
         <div>
             <img src="{{ $article->image_path ? asset('storage/' . $article->image_path) : asset('images/generic_img.jpg') }}"
-                alt="..." class="img-fluid w-100 shadow">
+                alt="..." class="img-fluid w-100 shadow animated fadeIn">
         </div>
     </div>
     <div class="animated-2 fadeIn">

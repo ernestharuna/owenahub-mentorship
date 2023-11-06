@@ -27,13 +27,24 @@
     <div id="app">
         <!-- Header --->
         <x-admin.header />
-
         <main>
             {{ $slot }}
-        </main>
 
-        <!-- Footer --->
+            <!-- Session messages-->
+            @if (session('status'))
+                <x-success-msg />
+            @endif
+            @if (session('error'))
+                <x-error-msg />
+            @endif
+        </main>
     </div>
+    <script>
+        document.getElementById('dismiss-button').addEventListener('click', function() {
+            document.getElementById('flash-message').style.display = 'none';
+        });
+    </script>
 </body>
+
 
 </html>
