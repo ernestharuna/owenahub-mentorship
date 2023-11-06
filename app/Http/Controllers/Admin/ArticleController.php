@@ -17,11 +17,14 @@ class ArticleController extends Controller
             'title' => ['required', 'min:5', 'max:100'],
             'category' => 'required',
             'description' => ['required', 'min:10', 'max:150'],
-            'image_path' => 'sometimes|nullable',
+            'image_path' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
             'content' => 'required',
         ]);
 
         try {
+            if ($request->hasFile('image_path')) {
+                $data['image_path'] = $request->file('image_path')->store('article_images', 'public');
+            }
             $request->user()->article()->create($data);
             return redirect(route('admin.dashboard'));
         } catch (\Exception $e) {

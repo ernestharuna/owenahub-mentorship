@@ -11,8 +11,8 @@
             <a href="{{ route('guest.articles.show', $article->id) }}" class='text-decoration-none'>
                 <div class="card bg-white my-2 bg-gradient border border-none">
                     <div class="card-body p-1 d-flex align-items-stretch">
-                        <img src="{{ asset('images/about_img.png') }}" alt="..." class="img-fluid d-block rounded"
-                            width="140px">
+                        <img src="{{ $article->image_path ? asset('storage/' . $article->image_path) : asset('images/about_img.png') }}"
+                            alt="..." class="img-fluid d-block rounded" width="140px">
 
                         <div class="mx-2">
                             <div class="text-primary">{{ $article->category }}</div>

@@ -6,8 +6,8 @@
             <div class="card bg-white mb-2 border border-none">
                 <div class="card-body p-1 d-flex align-items-stretch">
                     @if (Route::is('home'))
-                        <img src="{{ asset('images/about_img.png') }}" alt="..." class="img-fluid d-block rounded"
-                            width="140px">
+                        <img src="{{ $article->image_path ? asset('storage/' . $article->image_path) : asset('images/about_img.png') }}"
+                            alt="..." class="img-fluid d-block rounded" width="140px">
                     @endif
 
                     <div class="mx-2">

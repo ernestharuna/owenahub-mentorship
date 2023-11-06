@@ -9,7 +9,7 @@ class GuestController extends Controller
 {
     public function articles()
     {
-        $articles = Article::latest()->simplePaginate(8);
+        $articles = Article::with('admin')->latest()->simplePaginate(8);
         return view('guest.articles.index', [
             'articles' => $articles
         ]);

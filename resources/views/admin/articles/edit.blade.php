@@ -15,7 +15,8 @@
 
         <hr>
 
-        <form method="POST" action={{ route('admin.articles.update', $article->id) }} class="row g-3">
+        <form method="POST" action={{ route('admin.articles.update', $article->id) }} class="row g-3"
+            enctype="multipart/form-data">
             @csrf
             @method('PATCH')
 

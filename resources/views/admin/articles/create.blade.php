@@ -15,7 +15,7 @@
 
         <hr>
 
-        <form method="POST" action={{ route('admin.articles.create.req') }} class="row g-3">
+        <form method="POST" action={{ route('admin.articles.create.req') }} class="row g-3" enctype="multipart/form-data">
             @csrf
             {{-- Title --}}
             <div class="col-12">
