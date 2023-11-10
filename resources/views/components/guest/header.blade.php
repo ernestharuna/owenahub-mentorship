@@ -1,12 +1,10 @@
 <header class='bg-f2 py-3'>
     <nav class=' container py-2 d-flex justify-content-between align-items-center'>
         <div>
-            <h1 class='text-decoration-none fs-6 fw-bold m-0'>
-                <a href="/" class='text-decoration-none text-theme text-shadow'>
-                    <img src={{ asset('images/logo.png') }} alt="logo" width="28"
-                        style="position: relative; top: -4px;"><span style="font-size: 18px">wenaHub</span>
-                </a>
-            </h1>
+            <a href="/" class='text-decoration-none text-theme text-shadow fs-6 fw-bold m-0'>
+                <img src={{ asset('images/logo.png') }} alt="logo" width="28"
+                    style="position: relative; top: -4px;"><span style="font-size: 18px"> OwenaHub</span>
+            </a>
         </div>
 
         <div class='fs-tiny fw-bold'>

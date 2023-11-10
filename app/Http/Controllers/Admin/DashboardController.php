@@ -12,7 +12,8 @@ class DashboardController extends Controller
     public function __invoke()
     {
         $articles = Article::latest()->paginate(5);
-        $feat_articles = FeaturedArticles::latest()->get();
+        $feat_articles = FeaturedArticles::get();
+
         return view('admin.dashboard', [
             'articles' => $articles,
             'feat_articles' => $feat_articles

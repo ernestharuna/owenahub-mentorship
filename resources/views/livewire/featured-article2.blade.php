@@ -17,7 +17,7 @@
                         Read More 🔓
                     </span>
                 </a>
-            </div>a
+            </div>
         </div>
     @endif
 </div>

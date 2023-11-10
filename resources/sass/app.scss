@@ -24,16 +24,24 @@ body::-webkit-scrollbar-thumb {
     background: #000;
 }
 
-.social-links .instagram {
-    background: linear-gradient(45deg, #F6A700, #E4405F, #8A3AB9);
-}
+.social-links {
+    color: #fff !important;
 
-.social-links .twitter {
-    background: #1DA1F2;
-}
+    .twitter {
+        background: #1DA1F2;
+    }
 
-.social-links .facebook {
-    background: #1877F2;
+    .facebook {
+        background: #1877F2;
+    }
+
+    .instagram {
+        background: linear-gradient(45deg, #F6A700, #E4405F, #8A3AB9);
+    }
+
+    .whatsapp {
+        background: #25D366;
+    }
 }
 
 .social-links a {

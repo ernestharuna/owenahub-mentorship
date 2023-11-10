@@ -22,7 +22,7 @@ class SubscribeButton extends Component
             Subscriber::create(
                 $this->only(['name', 'email'])
             );
-            return redirect('/articles')->with('status', 'Email Registered! 👍');
+            return redirect('/articles')->with('status', 'Email Registered!');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', 'Something went wrong');

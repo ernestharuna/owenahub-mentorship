@@ -76,47 +76,48 @@
                 </div>
             </div>
         </section>
-
-        <section class='quote container'>
-            <div class="text-center py-2">
-                <figure class="text-center text-dark m-0">
-                    <blockquote class="blockquote">
-                        <p class='fs-6'>
-                            <small>OwenaHub is resource rich for people wishing to pick up tips and tricks and gain
-                                perspective in their career path.</small>
-                        </p>
-                    </blockquote>
-                    <figcaption class="blockquote-footer">
-                        <span>Ernest Haruna, <i>founder</i></span>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section class='mt-5 py-5 bg-f2'>
-            <div class="container">
-                <h3 class='fw-bold fs-4 mb-4'>
-                    <span class="circle shadow">6</span> EDITOR'S PICKS
-                </h3>
-
-                <div class="text-start mx-auto">
-                    {{-- load some articles here --}}
-                    <livewire:recommended-articles />
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class='my-5 text-center'>
-                <a href="/articles">
-                    <button class="btn btn-dark text-white rounded rounded-0 text-uppercase fs-6 fw-light shadow"
-                        type='button'>
-                        View More <i class="bi bi-arrow-right"></i>
-                    </button>
-                </a>
-            </div>
-        </section>
     </div>
+
+    <section class='quote container'>
+        <div class="text-center py-2">
+            <figure class="text-center text-dark m-0">
+                <blockquote class="blockquote">
+                    <p class='fs-6'>
+                        <small>OwenaHub is resource rich for people wishing to pick up tips and tricks and gain
+                            perspective in their career path.</small>
+                    </p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    <span>Ernest Haruna, <i>founder</i></span>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class='mt-5 py-5 bg-f2'>
+        <div class="container">
+            <h3 class='fw-bold fs-4 mb-4'>
+                <span class="circle shadow">6</span> EDITOR'S PICKS
+            </h3>
+
+            <div class="text-start mx-auto">
+                {{-- load some articles here --}}
+                <livewire:recommended-articles />
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class='my-5 text-center'>
+            <a href="/articles">
+                <button class="btn btn-dark text-white rounded rounded-0 text-uppercase fs-6 fw-light shadow"
+                    type='button'>
+                    View More <i class="bi bi-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+    </section>
+
     <div class="bg-theme-light">
         <section class="container py-5">
             <div>
