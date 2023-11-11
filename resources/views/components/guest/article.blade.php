@@ -8,7 +8,6 @@
         <div class='row mb-4'>
             <div class='col-md-8 mb-4 px-lg-5'>
                 {{ $slot }}
-                <livewire:share-page />
             </div>
 
             <aside class='col-md-4'>

@@ -26,7 +26,7 @@
 <body>
     <div id="app">
         <!-- Header --->
-        <x-admin.header />
+        <x-admin.navbar />
         <main>
             {{ $slot }}
 

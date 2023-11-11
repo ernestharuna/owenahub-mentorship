@@ -14,7 +14,13 @@
 
     <div class="animated-2 fadeIn">
         @forelse ($articles as $article)
-            <a href="{{ route('guest.articles.show', $article->id) }}" class='text-decoration-none'>
+            @php
+                $data = $article->category;
+                $category = strtolower(str_replace(' ', '-', $data));
+            @endphp
+
+            <a href="{{ route('guest.articles.show', ['article' => $article->id, 'slug' => $category]) }}"
+                class='text-decoration-none'>
                 <div class="card bg-light my-2 bg-gradient border border-none">
                     <div class="card-body p-1 d-flex align-items-stretch">
                         <div class="mx-2">

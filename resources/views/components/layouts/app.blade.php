@@ -52,7 +52,7 @@
 <body>
     <div id="app">
         <!-- Header --->
-        <x-guest.header />
+        <x-guest.navbar />
 
         <main>
             {{ $slot }}

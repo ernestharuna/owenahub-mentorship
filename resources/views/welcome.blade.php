@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class='animated-2 fadeIn'>
-        <section class="container text-center mt-5">
+        <header class="container text-center mt-5">
             <div>
                 <h1 class='mb-4 fs-large fw-bold'>
                     Empowering learners to thrive <br class="d-none d-md-block">
@@ -28,7 +28,7 @@
                 <span class=glow></span>
                 <span class=glow_2></span>
             </div>
-        </section>
+        </header>
 
         <section class=features>
             <div class="container">
@@ -96,8 +96,8 @@
 
     <section class='mt-5 py-5 bg-f2'>
         <div class="container">
-            <h3 class='fw-bold fs-4 mb-4'>
-                <span class="circle shadow">6</span> EDITOR'S PICKS
+            <h3 class='fw-bold fs-3 mb-4'>
+                <span class="circle shadow">4</span> Editor's Picks
             </h3>
 
             <div class="text-start mx-auto">
@@ -105,16 +105,35 @@
                 <livewire:recommended-articles />
             </div>
         </div>
-    </section>
-
-    <section>
-        <div class='my-5 text-center'>
+        <div class='mt-5 text-center'>
             <a href="/articles">
                 <button class="btn btn-dark text-white rounded rounded-0 text-uppercase fs-6 fw-light shadow"
                     type='button'>
                     View More <i class="bi bi-arrow-right"></i>
                 </button>
             </a>
+        </div>
+    </section>
+
+    <section class="my-5">
+        <div class="container">
+            <div class="text-center">
+                <h3 class='fw-bold fs-3 ,b-4'>
+                    Explore Our <span class="text-theme">Courses</span>
+                </h3>
+
+                <div class="mb-3">
+                    <p class="m-0 font-monospace">
+                        We organise courses into short and impactful packages that allow you <br
+                            class="d-md-block d-none" />
+                        learn vital topics <b>within 1 month</b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="d-block d-md-flex flex-wrap justify-content-center align-items-center">
+                <x-slice-card />
+            </div>
         </div>
     </section>
 
