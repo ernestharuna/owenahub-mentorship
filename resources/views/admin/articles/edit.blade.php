@@ -1,6 +1,6 @@
 <x-layouts.admin>
     <div class="container">
-        <header class="my-4">
+        <div class="my-4">
             <h4 class="text-secondary fs-2 fw-bold">
                 Edit Post <br> <span class="fs-6 text-dark">{{ $article->title }}</span>
             </h4>
@@ -11,7 +11,7 @@
                     </button>
                 </a>
             </div>
-        </header>
+        </div>
 
         <hr>
 

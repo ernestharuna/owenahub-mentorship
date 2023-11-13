@@ -27,7 +27,7 @@
                 alt="..." class="img-fluid w-100 shadow animated fadeIn">
         </div>
     </div>
-    <div class="animated-2 fadeIn">
+    <div class="animated-2 fadeIn mb-5">
         {!! $article->content !!}
     </div>
     <livewire:share-page />

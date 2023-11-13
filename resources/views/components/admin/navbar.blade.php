@@ -1,5 +1,5 @@
-<nav class="navbar container bg-body-tertiary border">
-    <div class="container-fluid">
+<nav class="navbar bg-body-tertiary border-bottom">
+    <div class="container ">
         <a href="/" class='text-decoration-none text-dark fs-6 fw-bold m-0'>
             <img src={{ asset('images/logo.png') }} alt="logo" width="28" style="position: relative; top: -2px;">
             Administrator

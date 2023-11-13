@@ -34,6 +34,10 @@ Route::name('admin.')->group(function () {
                 Route::delete('{article}/delete', [FeaturedArticleController::class, 'delete'])->name('feat_articles.delete');
             });
 
+            Route::prefix('slices')->group(function () {
+                Route::view('create', 'admin.slices.create')->name('slice.create');
+            });
+
             Route::get('logout', [AuthController::class, 'logout'])->name('logout');
         });
     });

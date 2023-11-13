@@ -5,14 +5,15 @@
             $category = strtolower(str_replace(' ', '-', $data));
         @endphp
 
-        <div class="card rounded rounded-0 m-2 border-bottom border-0" style="width: auto;">
-            <div class="card-body">
-                <div class="bg-f2 p-1 fs-tiny font-monospace text-uppercase fw-bold text-secondary bg-gradient">
-                    Posted on {{ $article->created_at->format('j M Y') }} | <span
-                        class="text-theme">{{ $article->category }}</span>
-                </div>
-                <h2 class="card-title fw-semibold my-2 fs-5">{{ $article->title }}</h2>
-                <p class="card-text">{{ $article->description }}</p>
+        <div class="card rounded rounded-0 m-2 border-bottom border-0 p-0" style="width: auto;">
+            <div class="card-body p-3">
+                <h2 class="card-title fw-semibold mb-2 fs-5">
+                    {{ $article->title }}
+                </h2>
+                <p class="card-text text-secondary fs-tiny">
+                    {{ $article->created_at->format('j M Y') }} &middot; {{ $article->category }} —
+                    <span class="text-dark"> {{ \Illuminate\Support\Str::limit($article->description, 30) }}</span>
+                </p>
 
                 <div class="text-start">
                     <a href="{{ route('guest.articles.show', ['article' => $article->id, 'slug' => $category]) }}"
