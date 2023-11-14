@@ -18,7 +18,7 @@
                 <div class="text-start">
                     <a href="{{ route('guest.articles.show', ['article' => $article->id, 'slug' => $category]) }}"
                         class="btn btn-theme text-dark rounded rounded-0 fw-light fs-tiny shadow">
-                        <i class="bi bi-chevron-double-right"></i> READ MORE
+                        READ MORE <i class="bi bi-chevron-double-right"></i>
                     </a>
                 </div>
             </div>
