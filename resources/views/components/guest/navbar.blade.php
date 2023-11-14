@@ -1,5 +1,5 @@
 <nav class='bg-f2'>
-    <div id="announcement" class="text-center text-theme fs-tiny py-1 bg-dark">
+    <div id="announcement" class="text-center text-theme fs-tiny py-1 bg-dark sticky-top">
         <i class="bi bi-megaphone-fill fs-6"></i>
         <a href="" class="text-white">Courses</a> are now available!
     </div>

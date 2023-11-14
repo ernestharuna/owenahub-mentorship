@@ -94,9 +94,9 @@
                                     </p>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="#sub-btn" type="button"
+                                    <a type="button" data-bs-dismiss="modal"
                                         class="btn btn-dark rounded rounded-0 fw-bold font-monospace">
-                                        Subscribe
+                                        Understood!
                                     </a>
                                 </div>
                             </div>

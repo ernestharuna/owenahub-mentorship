@@ -96,9 +96,9 @@
 
     <section class='mt-5 py-5 bg-f2'>
         <div class="container">
-            <h3 class='fw-bold fs-3 mb-4'>
-                <span class="circle shadow">4</span> Editor's Picks
-            </h3>
+            <h2 class='fw-bold fs-3 mb-4'>
+                <span class="circle shadow"><i class="bi bi-gift-fill"></i></span> Editor's Picks
+            </h2>
 
             <div class="text-start mx-auto">
                 {{-- load some articles here --}}
@@ -117,13 +117,16 @@
 
     <section class="my-5">
         <div class="container">
-            <div class="text-center">
-                <h3 class='fw-bold fs-3 ,b-4'>
+            <div class="text-start">
+                <h2 class='fw-bold fs-3 mb-4'>
+                    <span class="circle shadow">
+                        <i class="bi bi-box-seam-fill"></i>
+                    </span>
                     Explore Our <span class="text-theme">Courses</span>
-                </h3>
+                </h2>
 
                 <div class="mb-3">
-                    <p class="m-0 font-monospace">
+                    <p class="m-0 font-monospace container">
                         We organise courses into short and impactful packages that allow you <br
                             class="d-md-block d-none" />
                         learn vital topics <b>within 1 month</b>
@@ -131,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="d-block d-md-flex flex-wrap justify-content-center align-items-center">
+            <div class="d-block d-md-flex flex-wrap align-items-center">
                 <x-slice-card />
             </div>
         </div>

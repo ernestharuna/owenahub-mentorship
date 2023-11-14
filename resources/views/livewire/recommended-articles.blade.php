@@ -5,22 +5,23 @@
             $category = strtolower(str_replace(' ', '-', $data));
         @endphp
 
-        <div class="card rounded rounded-0 m-2 border-bottom border-0 p-0" style="width: auto;">
-            <div class="card-body p-3">
-                <h2 class="card-title fw-semibold mb-2 fs-5">
+        <div class="card rounded rounded-0 mb-2 border p-0" style="width: auto;">
+            <div class="card-body px-2 py-2">
+                <p class="text-secondary fs-tiny m-0">
+                    {{ $article->created_at->format('j M Y') }} &middot; {{ $article->category }} <br>
+                </p>
+                <h2 class="card-title fw-semibold mb-0 fs-5">
                     {{ $article->title }}
                 </h2>
                 <p class="card-text text-secondary fs-tiny">
-                    {{ $article->created_at->format('j M Y') }} &middot; {{ $article->category }} —
-                    <span class="text-dark"> {{ \Illuminate\Support\Str::limit($article->description, 30) }}</span>
+                    <span class="text-dark">
+                        {{ \Illuminate\Support\Str::limit($article->description, 50) }}...
+                        <a href="{{ route('guest.articles.show', ['article' => $article->id, 'slug' => $category]) }}"
+                            class="fw-semibold fst-italic">
+                            read more
+                        </a>
+                    </span>
                 </p>
-
-                <div class="text-start">
-                    <a href="{{ route('guest.articles.show', ['article' => $article->id, 'slug' => $category]) }}"
-                        class="btn btn-theme text-dark rounded rounded-0 fw-light fs-tiny shadow">
-                        READ MORE <i class="bi bi-chevron-double-right"></i>
-                    </a>
-                </div>
             </div>
         </div>
     @empty

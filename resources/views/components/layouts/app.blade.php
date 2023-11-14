@@ -35,7 +35,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Scripts --> <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -45,35 +45,19 @@
         gtag('js', new Date());
 
         gtag('config', 'G-HSLS7K2448');
-    </script>
+    </script> --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
     <div id="app">
-        <!-- Header --->
-        <x-guest.navbar />
-
+        <x-guest.navbar /> <!-- Header --->
         <main>
             {{ $slot }}
-
-            <!-- Session messages-->
-            @if (session('status'))
-                <x-success-msg />
-            @endif
-            @if (session('error'))
-                <x-error-msg />
-            @endif
+            <x-session-message /> <!-- Session messages-->
         </main>
-
-        <!-- Footer --->
-        <x-footer />
+        <x-footer /> <!-- Footer --->
     </div>
-    <script>
-        document.getElementById('dismiss-button').addEventListener('click', function() {
-            document.getElementById('flash-message').style.display = 'none';
-        });
-    </script>
 </body>
 
 </html>
