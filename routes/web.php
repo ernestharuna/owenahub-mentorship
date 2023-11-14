@@ -27,4 +27,10 @@ Route::name('guest.')->group(function () {
     });
 
     Route::get('featuredarticles/{article}', [GuestController::class, 'show_feat_article'])->name('feat_articles.show');
+
+    Route::prefix('slices')->group(function () {
+        Route::name('slices.')->group(function () {
+            Route::view('/1/overview', 'guest.slice.overview');
+        });
+    });
 });
