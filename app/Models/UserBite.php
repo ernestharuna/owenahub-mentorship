@@ -19,8 +19,8 @@ class UserBite extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function slice(): BelongsTo
+    public function bite(): BelongsTo
     {
-        return $this->belongsTo(Slice::class);
+        return $this->belongsTo(Bite::class);
     }
 }

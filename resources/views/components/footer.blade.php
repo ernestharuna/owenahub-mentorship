@@ -13,6 +13,11 @@
                     Fostering global connections, leveraging experts to empower learners through mentorship.
                 </small>
             </p>
+            <div>
+                <div class="input-group mb-3">
+                    <livewire:subscribe-button />
+                </div>
+            </div>
         </div>
 
         <div class='social-links'>
@@ -25,24 +30,19 @@
                 </small>
             </p>
 
-            <div>
-                <div class="input-group mb-3">
-                    <livewire:subscribe-button />
-                </div>
-            </div>
-
-            <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
-                class='text-white instagram'>
-                <i class="bi bi-instagram fs-5"></i>
+            <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"
+                class='text-white instagram p-2 text-decoration-none fw-semibold'>
+                <i class="bi bi-instagram fs-5"></i> Instagram
             </a>
 
-            <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08" class="text-white twitter">
-                {{-- <i class="bi bi-twitter-x fs-5"></i> --}}
-                <i class="bi bi-twitter fs-5"></i>
+            <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08" target="_blank"
+                class="text-white twitter p-2 text-decoration-none fw-semibold">
+                <i class="bi bi-twitter-x fs-5"></i> (formerly Twitter)
             </a>
 
-            <a href="https://www.facebook.com/owenahub?mibextid=ZbWKwL" class="text-white facebook">
-                <i class="bi bi-facebook fs-5"></i>
+            <a href="https://www.facebook.com/owenahub?mibextid=ZbWKwL" target="_blank"
+                class="text-white facebook p-2 text-decoration-none fw-semibold">
+                <i class="bi bi-facebook fs-5"></i> Facebook
             </a>
         </div>
 

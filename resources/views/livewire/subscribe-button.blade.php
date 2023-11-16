@@ -12,12 +12,12 @@
         <div class="modal-dialog">
             <div class="modal-content text-start">
                 <div class="modal-header bg-theme">
-                    <h3 class="modal-title fs-5" id="staticBackdropLabel">Join Our Community</h3>
+                    <h3 class="modal-title fs-3" id="staticBackdropLabel">Subscribe</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="text-dark">
-                        <h3 class="fs-4">Why Join Us {{ $name }}</h3>
+                        <h3 class="fs-5">Why Subscribe to our Newsletter? {{ $name }}</h3>
                         <p class="fs-tiny">
                             <b>→ Priority Access:</b> Be the first to experience new features before it's available to
                             the

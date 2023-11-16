@@ -37,6 +37,11 @@ class Admin extends Authenticatable
         return $this->hasMany(FeaturedArticles::class);
     }
 
+    public function slice(): HasMany
+    {
+        return $this->hasMany(Slice::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

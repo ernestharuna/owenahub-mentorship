@@ -42,13 +42,17 @@ body::-webkit-scrollbar-thumb {
     .whatsapp {
         background: #25D366;
     }
+
+    .linkedin {
+        background: #0077B5;
+    }
 }
 
 .social-links a {
-    padding: .2em .5rem;
-    border-radius: 9999px;
-    display: inline-block;
-    margin-right: .5rem;
+    i {
+        position: relative;
+        top: 1px;
+    }
 }
 
 .color-twitter {

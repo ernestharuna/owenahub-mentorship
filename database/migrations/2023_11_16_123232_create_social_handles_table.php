@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('social_handles', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->constrained(table: 'users', column: 'id')->cascadeOnDelete();
             $table->foreignId('admin_id')->nullable()->constrained(table: 'admins', column: 'id')->cascadeOnDelete();
             $table->foreignId('mentor_id')->nullable()->constrained(table: 'mentors', column: 'id')->cascadeOnDelete();
-            $table->string('title');
-            $table->string('category')->default('Career Development');
-            $table->string('description');
-            $table->string('image_path')->nullable();
-            $table->longText('content');
-            $table->string('published')->default(true);
+            $table->string('facebook')->nullable();
+            $table->string('x_twitter')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('instagram')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('social_handles');
     }
 };
