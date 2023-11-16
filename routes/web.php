@@ -23,10 +23,10 @@ Route::view('about', 'about')->name('about');
 Route::name('guest.')->group(function () {
     Route::name('articles.')->group(function () {
         Route::get('/articles', [GuestController::class, 'articles'])->name('index');
-        Route::get('/articles/{article}/{slug?}', [GuestController::class, 'show_article'])->name('show');
+        Route::get('/articles/{article}/{title?}', [GuestController::class, 'show_article'])->name('show');
     });
 
-    Route::get('featuredarticles/{article}', [GuestController::class, 'show_feat_article'])->name('feat_articles.show');
+    Route::get('featuredarticles/{article}/{title?}', [GuestController::class, 'show_feat_article'])->name('feat_articles.show');
 
     Route::prefix('slices')->group(function () {
         Route::name('slices.')->group(function () {
