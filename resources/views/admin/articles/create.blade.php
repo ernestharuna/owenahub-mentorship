@@ -28,6 +28,7 @@
                     </p>
                 @enderror
             </div>
+
             {{-- Category --}}
             <div class="col-12">
                 <label for="category" class="form-label m-0 text-uppercase fs-tiny">Category</label>

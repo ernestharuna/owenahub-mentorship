@@ -122,14 +122,13 @@
                     <span class="circle shadow">
                         <i class="bi bi-box-seam-fill"></i>
                     </span>
-                    Explore Our <span class="text-theme">Courses</span>
+                    Explore Our Courses: <span class="text-theme">Take A Slice</span>
                 </h2>
 
                 <div class="mb-3">
-                    <p class="m-0 font-monospace container">
-                        We organise courses into short and impactful packages that allow you <br
-                            class="d-md-block d-none" />
-                        learn vital topics <b>within 1 month</b>
+                    <p class="m-0 container">
+                        We organise courses into short and impactful packages<br class="d-md-block d-none" />
+                        we call <b> SLICES</b> that allow you learn vital topics <b>within 1 month</b>
                     </p>
                 </div>
             </div>

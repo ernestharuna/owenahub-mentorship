@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeaturedArticleController;
+use App\Http\Controllers\Admin\SliceController;
 
 Route::name('admin.')->group(function () {
     Route::prefix('admin')->group(function () {
@@ -36,6 +37,7 @@ Route::name('admin.')->group(function () {
 
             Route::prefix('slices')->group(function () {
                 Route::view('create', 'admin.slices.create')->name('slice.create');
+                Route::post('store', [SliceController::class, 'store'])->name('slice.create.req');
             });
 
             Route::get('logout', [AuthController::class, 'logout'])->name('logout');

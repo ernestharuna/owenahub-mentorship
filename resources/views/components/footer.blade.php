@@ -31,18 +31,18 @@
             </p>
 
             <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"
-                class='text-white instagram p-2 text-decoration-none fw-semibold'>
-                <i class="bi bi-instagram fs-5"></i> Instagram
+                class='text-white instagram p-2 text-decoration-none fw-light text-uppercase fs-tiny'>
+                <i class="bi bi-instagram fs-6"></i> Instagram
             </a>
 
             <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08" target="_blank"
-                class="text-white twitter p-2 text-decoration-none fw-semibold">
-                <i class="bi bi-twitter-x fs-5"></i> (formerly Twitter)
+                class="text-white twitter p-2 text-decoration-none fw-light text-uppercase fs-tiny">
+                <i class="bi bi-twitter-x fs-6"></i> (formerly Twitter)
             </a>
 
             <a href="https://www.facebook.com/owenahub?mibextid=ZbWKwL" target="_blank"
-                class="text-white facebook p-2 text-decoration-none fw-semibold">
-                <i class="bi bi-facebook fs-5"></i> Facebook
+                class="text-white facebook p-2 text-decoration-none fw-light text-uppercase fs-tiny">
+                <i class="bi bi-facebook fs-6"></i> Facebook
             </a>
         </div>
 

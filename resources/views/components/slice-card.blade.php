@@ -14,7 +14,7 @@
         <hr>
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <a href="/slices/1/overview" class="btn btn-danger rounded rounded-0 fs-tiny px-4 d-block">ENROLL </a>
+                <a href="/slices/1/overview" class="btn btn-theme rounded rounded-0 fs-tiny px-4 d-block">ENROLL </a>
             </div>
             <button class="d-block fs-tiny fw-light btn btn-light rounded rounded-0 border" onclick="whatsapp()">
                 SHARE
