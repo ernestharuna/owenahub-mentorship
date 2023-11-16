@@ -16,7 +16,7 @@
             <div>
                 <a href="/slices/1/overview" class="btn btn-danger rounded rounded-0 fs-tiny px-4 d-block">ENROLL </a>
             </div>
-            <button class="d-block fs-tiny fw-light btn btn-light rounded rounded-0" onclick="whatsapp()">
+            <button class="d-block fs-tiny fw-light btn btn-light rounded rounded-0 border" onclick="whatsapp()">
                 SHARE
                 <i class="bi bi-share-fill"></i>
             </button>

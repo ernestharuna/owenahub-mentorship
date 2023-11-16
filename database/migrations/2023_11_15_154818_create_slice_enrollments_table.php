@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bites', function (Blueprint $table) {
+        Schema::create('slice_enrollments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained(table: 'users', column: 'id')->cascadeOnDelete();
             $table->foreignId('slice_id')->constrained(table: 'slices', column: 'id')->cascadeOnDelete();
-            $table->string('title');
-            $table->text('description');
-            $table->text('content');
-            $table->integer('position');
+            $table->string('completed')->default(false);
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bites');
+        Schema::dropIfExists('slice_enrollments');
     }
 };

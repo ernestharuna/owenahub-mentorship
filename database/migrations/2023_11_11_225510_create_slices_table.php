@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('slices', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('admin_id')->nullable()->constrained(table: 'admins', column: 'id')->cascadeOnDelete();
+            $table->foreignId('mentor_id')->nullable()->constrained(table: 'mentors', column: 'id')->cascadeOnDelete();
             $table->string('title');
             $table->text('description');
-            $table->string('image_path');
+            $table->string('category');
             $table->boolean('is_paid')->default(false);
-            $table->decimal('price')->nullable();
+            $table->decimal('price', 8, 2)->nullable();
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

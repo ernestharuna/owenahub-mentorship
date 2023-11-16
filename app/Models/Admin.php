@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Admin extends Authenticatable
 {
-
     use HasFactory, Notifiable;
 
     protected $guard = "admin";
@@ -32,6 +31,7 @@ class Admin extends Authenticatable
     {
         return $this->hasMany(Article::class);
     }
+
     public function featured_article(): HasMany
     {
         return $this->hasMany(FeaturedArticles::class);

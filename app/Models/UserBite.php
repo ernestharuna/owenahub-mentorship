@@ -6,16 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Bite extends Model
+class UserBite extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'description',
-        'content',
-        'position'
+        'completed'
     ];
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function slice(): BelongsTo
     {
