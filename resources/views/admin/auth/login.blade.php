@@ -1,11 +1,13 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
-        <div class="bg-white border rounded-3 shadow col-md-4 col-lg-4 mx-3 my-5 p-4">
-
-            <h4 class="text-center fw-bold">
-                <i class="bi bi-person-circle fs-large"></i> <br>
-                <span class="text-secondary">admin</span>
-            </h4>
+        <div class="bg-white border rounded-3 shadow col-md-4 col-lg-4 mx-3 my-5 px-4 py-3">
+            <h1 class="text-center fw-bold">
+                <img src="{{ asset('images/logo.png') }}" alt="..." width="40px"
+                    style="position: relative; top: -4px;">wenaHub
+            </h1>
+            <div class="text-center fw-bold mb-4">
+                <span class="text-primary">Admin Login</span>
+            </div>
 
             <form method="POST" action={{ route('admin.login.req') }} class="row g-3">
                 @csrf
@@ -21,13 +23,12 @@
                         placeholder="Password">
                 </div>
 
-                <div class="col-12 my-4">
+                <div class="col-12 mt-4">
                     <button type="submit"
                         class="btn btn-dark rounded rounded-0 shadow fw-light text-uppercase fs-6 w-100">
                         Login
                     </button>
                 </div>
-                <hr class="m-0">
 
                 <div>
                     @error('email')

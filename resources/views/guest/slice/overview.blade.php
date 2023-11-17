@@ -1,5 +1,4 @@
 <x-layouts.app>
-
     <section class="bg-theme">
         <div class="container py-4">
             <h1 class="fw-bold fs-2">

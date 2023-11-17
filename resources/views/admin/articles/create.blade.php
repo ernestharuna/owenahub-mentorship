@@ -64,6 +64,7 @@
                     </p>
                 @enderror
             </div>
+
             {{-- Image --}}
             <div class="col-12">
                 <label for="image_path" class="form-label m-0 text-uppercase fs-tiny">Image</label>
@@ -74,6 +75,7 @@
                     </p>
                 @enderror
             </div>
+
             {{-- Content --}}
             <div class="col-12">
                 <label for="content" class="form-label m-0 text-uppercase fs-tiny">Content</label>

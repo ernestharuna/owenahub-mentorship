@@ -44,6 +44,9 @@ class ArticleController extends Controller
         ]);
 
         try {
+            if ($request->hasFile('image_path')) {
+                $data['image_path'] = $request->file('image_path')->store('article_images', 'public');
+            }
             $article->update($data);
             return redirect(route('admin.dashboard'))->with('status', 'Update Succesful');
         } catch (\Exception $e) {

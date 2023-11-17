@@ -3,23 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Slice;
 use Illuminate\Http\Request;
 
 class BiteController extends Controller
 {
-    public function store(Request $request)
+    public function store(Request $request, Slice $slice)
     {
+        // dd($request);
         $data = $request->validate([
             'title' => ['required', 'max:100'],
             'description' => 'required',
             'position' => 'required',
-            'content' => ['required', 'min:20'],
+            'content' => ['required', 'min:10'],
         ]);
 
         try {
-
-            $request->user()->slice()->create($data);
-            return redirect(route('admin.dashboard'))->with('status', 'Slice Created!');
+            $slice->bite()->create($data);
+            return redirect(route('admin.slice.show', $slice->id))->with('status', 'Slice Created!');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', 'Something went wrong');
