@@ -4,7 +4,7 @@
             <div>
                 <h1 class='mb-4 fs-large fw-bold'>
                     Empowering learners to thrive <br class="d-none d-md-block">
-                    <span class="text-theme">through mentorship.</span>
+                    <span class="text-theme animated-text">through mentorship.</span>
                 </h1>
                 <p>
                     We offer a vibrant platform for learners <br class="d-md-block d-none" />

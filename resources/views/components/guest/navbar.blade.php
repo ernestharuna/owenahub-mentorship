@@ -17,19 +17,23 @@
                     <div class="social-links fw-semibold fs-5">
                         <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
                             class="py-4 mt-3 rounded shadow text-white text-decoration-none d-block instagram">
+                            <i class="bi bi-instagram d-block icon"></i>
                             Follow Us On Instagram
                         </a>
                         <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08"
                             class="py-4 my-3 rounded shadow text-white text-decoration-none d-block twitter">
+                            <i class="bi bi-twitter d-block icon"></i>
                             Follow Us On X
                         </a>
                         <hr class="bg-dak text-dark" />
                         <a href="https://www.facebook.com/groups/896520008575738/?ref=share"
                             class="py-4 rounded shadow text-white text-decoration-none d-block facebook">
+                            <i class="bi bi-facebook d-block icon"></i>
                             Facebook Community
                         </a>
                         <a href="https://linkedin.com/in/ernestharuna"
                             class="py-4 rounded shadow text-white text-decoration-none d-block my-3 linkedin">
+                            <i class="bi bi-linkedin d-block icon"></i>
                             LinkedIn Community
                         </a>
                     </div>

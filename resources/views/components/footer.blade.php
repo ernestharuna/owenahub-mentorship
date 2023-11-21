@@ -30,19 +30,23 @@
                 </small>
             </p>
 
+
+            <h2 class='fs-5'>
+                Follow <span class="text-theme">OwenaHub</span>
+            </h2>
             <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"
-                class='text-white instagram p-2 text-decoration-none fw-light text-uppercase fs-tiny'>
-                <i class="bi bi-instagram fs-6"></i> Instagram
+                class='text-white text-decoration-none fw-light fs-tiny'>
+                <i class="bi bi-instagram fs-6"></i> instagram
             </a>
 
             <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08" target="_blank"
-                class="text-white twitter p-2 text-decoration-none fw-light text-uppercase fs-tiny">
+                class="text-white mx-3 text-decoration-none fw-light fs-tiny">
                 <i class="bi bi-twitter-x fs-6"></i> (formerly Twitter)
             </a>
 
             <a href="https://www.facebook.com/owenahub?mibextid=ZbWKwL" target="_blank"
-                class="text-white facebook p-2 text-decoration-none fw-light text-uppercase fs-tiny">
-                <i class="bi bi-facebook fs-6"></i> Facebook
+                class="text-white text-decoration-none fw-light fs-tiny">
+                <i class="bi bi-facebook fs-6"></i> facebook
             </a>
         </div>
 
