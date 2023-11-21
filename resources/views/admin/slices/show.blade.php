@@ -89,7 +89,7 @@
                     Curriculum
                 </p>
                 <div class="accordion" id="accordionExample">
-                    @forelse ($slice->bite as $bite)
+                    @forelse ($slice->bite->sortBy('position')  as $bite)
                         <div class="accordion-item mb-2">
                             <h2 class="accordion-header">
                                 <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"

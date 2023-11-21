@@ -19,6 +19,11 @@ class BiteController extends Controller
         ]);
 
         try {
+            $existing_bite = $slice->bite()->where('position', $data['position'])->first();
+            if ($existing_bite) {
+                return back()->with('error', 'A bite with the same position already exists.');
+            }
+
             $slice->bite()->create($data);
             return redirect(route('admin.slice.show', $slice->id))->with('status', 'Slice Created!');
         } catch (\Exception $e) {
