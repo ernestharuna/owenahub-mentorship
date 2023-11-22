@@ -13,9 +13,11 @@ class Slice extends Model
 
     protected $fillable = [
         'title',
-        'description',
+        'about',
+        'overview',
         'category',
         'is_paid',
+        'duration',
         'price',
         'image_path'
     ];

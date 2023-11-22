@@ -16,8 +16,10 @@ return new class extends Migration
             $table->foreignId('admin_id')->nullable()->constrained(table: 'admins', column: 'id')->cascadeOnDelete();
             $table->foreignId('mentor_id')->nullable()->constrained(table: 'mentors', column: 'id')->cascadeOnDelete();
             $table->string('title');
-            $table->text('description');
+            $table->string('about');
+            $table->text('overview');
             $table->string('category');
+            $table->string('duration');;
             $table->boolean('is_paid')->default(false);
             $table->decimal('price', 8, 2)->nullable();
             $table->string('image_path')->nullable();

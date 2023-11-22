@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\FeaturedArticles;
+use App\Models\Slice;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -27,6 +28,21 @@ class GuestController extends Controller
     {
         return view('guest.articles.show', [
             'article' => $article
+        ]);
+    }
+
+    public function slices()
+    {
+        $slices = Slice::with('admin')->latest()->simplePaginate(8);
+        return view('guest.slice.index', [
+            'slices' => $slices
+        ]);
+    }
+
+    public function show_slice(Slice $slice)
+    {
+        return view('guest.slice.overview', [
+            'slice' => $slice
         ]);
     }
 }

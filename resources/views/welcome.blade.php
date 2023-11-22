@@ -12,7 +12,7 @@
                 </p>
 
                 <div class="cta mt-4">
-                    <a href="/articles" class='text-decoration-none'>
+                    <a href="{{ route('guest.slices.index') }}" class='text-decoration-none'>
                         <button class="btn btn-theme rounded rounded-0 text-uppercase fs-6 fw-bold shadow text-dark">
                             Start Learning Now <i class="bi bi-arrow-right"></i>
                         </button>
@@ -122,7 +122,7 @@
                     <span class="circle shadow">
                         <i class="bi bi-box-seam-fill"></i>
                     </span>
-                    Explore Our Courses: <span class="text-theme">Take A Slice</span>
+                    Explore: <span class="text-theme">Take A Slice</span>
                 </h2>
 
                 <div class="mb-3">
@@ -135,6 +135,35 @@
 
             <div class="d-block d-md-flex flex-wrap align-items-center">
                 <x-slice-card />
+
+                <div class="card m-2 bg-theme w-auto" style="width: 16rem;">
+                    {{-- <img src="..." class="card-img-top" alt="..."> --}}
+                    <div class="card-body">
+                        <h5 class="card-title">The Most Effective Way To Learn 🚀</h5>
+                        <p class="fs-tiny">
+                            Our slices are an effective way to learn from mentors on the go
+                        </p>
+                        <p class="card-text fs-tiny">
+                            <span class="px-2 py-1 bg-f2 text-dark d-inline-block rounded-pill border">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </span>
+                        </p>
+                        <hr>
+                        <div>
+                            <div>
+                                <a href="{{ route('guest.slices.index') }}"
+                                    class="btn btn-light rounded rounded-0 fs-tiny px-4 d-block">
+                                    View Slices
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

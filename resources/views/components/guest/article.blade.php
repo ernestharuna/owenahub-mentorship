@@ -4,7 +4,7 @@
         {{ $title ?? 'Tech Career Insights - OwenaHub' }}
     </x-slot>
 
-    <section class='container my-5'>
+    <section class='container my-4'>
         <div class='row mb-4'>
             <div class='col-md-8 mb-4 px-lg-5'>
                 {{ $slot }}

@@ -1,6 +1,10 @@
 <x-guest.article>
+    <div class="mb-3">
+        <h1>
+            <span class="text-theme fw-bold">OwenaHub</span> blog
+        </h1>
+    </div>
     <div class="featured-articles mb-4">
-        <h3 class='fw-bold'>Featured Articles 👌</h3>
         <livewire:featured-article />
         <livewire:featured-article2 />
     </div>

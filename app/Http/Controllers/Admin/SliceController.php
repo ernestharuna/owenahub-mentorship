@@ -15,12 +15,16 @@ class SliceController extends Controller
     {
         $data = $request->validate([
             'title' => ['required', 'max:100'],
+            'about' => 'required',
+            'overview' => ['required', 'min:20'],
             'category' => 'required',
-            'description' => ['required', 'min:20'],
+            'duration' => 'required',
+            'price' => 'nullable|sometimes|numeric',
+            'is_paid' => 'nullable|sometimes|boolean',
             'image_path' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'price' => 'sometimes|numeric',
-            'is_paid' => 'nullable|boolean',
         ]);
+
+        // dd($data);
 
         try {
             if ($request->hasFile('image_path')) {

@@ -14,9 +14,6 @@ use App\Http\Controllers\GuestController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome')->name('welcome');
-// });
 Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
 
@@ -30,7 +27,8 @@ Route::name('guest.')->group(function () {
 
     Route::prefix('slices')->group(function () {
         Route::name('slices.')->group(function () {
-            Route::view('/1/overview', 'guest.slice.overview');
+            Route::get('/', [GuestController::class, 'slices'])->name('index');
+            Route::get('/{slice}/overview', [GuestController::class, 'show_slice'])->name('show');
         });
     });
 });

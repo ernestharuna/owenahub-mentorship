@@ -54,8 +54,12 @@
         </div>
 
         <div class='fs-tiny fw-bold'>
-            <a href={{ route('about') }} class='text-secondary text-decoration-none mx-3'>ABOUT</a>
-            <a href="/articles" class='text-secondary text-decoration-none'>BLOG</a>
+            @if (Route::is('guest.articles.index'))
+                <a href={{ route('guest.slices.index') }} class='text-secondary text-decoration-none mx-3'>SLICES</a>
+            @else
+                <a href="/articles" class='text-secondary text-decoration-none mx-3'>BLOG</a>
+            @endif
+            <a href={{ route('about') }} class='text-secondary text-decoration-none'>ABOUT</a>
         </div>
     </div>
 </nav>

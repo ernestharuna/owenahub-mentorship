@@ -2,13 +2,11 @@
     <section class="bg-theme">
         <div class="container py-4">
             <h1 class="fw-bold fs-2">
-                Introduction to Problem Solving
+                {{ $slice->title }}
             </h1>
-            <p class="">Duration: 4 Weeks</p>
-            <p class="m-0 text-white">
-                The course guides you to develop your problem solving skills. <br>
-                Making use of case studies and self-assessment exercises gives you
-                competence in problem solving.
+            <p class="">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
+            <p class="m-0 text-white" style="max-width: 300px;">
+                {{ $slice->about }}
             </p>
         </div>
     </section>
@@ -20,49 +18,13 @@
                     <h2 class="fs-5 fw-bold text-theme">Course Overview</h2>
 
                     <div>
-                        <p>
-                            The "Introduction to Problem Solving" course is designed to equip students with foundational
-                            skills in computer science and problem-solving techniques. The course aims to develop
-                            critical
-                            thinking, algorithmic reasoning, and programming skills essential for addressing real-world
-                            challenges in a computing context.
-                        </p>
-
-                        <p>
-                            <b>Who Is This Course For?</b>
-                        </p>
-                        <ul>
-                            <li>
-                                Students with little or no prior programming experience.
-                            </li>
-                            <li>
-                                Individuals interested in developing problem-solving skills in a computational context.
-                            </li>
-                        </ul>
-
-                        <p>
-                            <b>Key Topics You'll Learn</b>
-                        </p>
-                        <ul>
-                            <li>
-                                Model of the Human memory
-                            </li>
-                            <li>
-                                Pigeon hole principle
-                            </li>
-                            <li>
-                                The invariance principles
-                            </li>
-                            <li>
-                                The inductive principles
-                            </li>
-                        </ul>
+                        {!! $slice->overview !!}
                     </div>
                 </div>
                 <div class="p-4 bg-white rounded col-lg-3 align-self-start">
                     <p class="fs-2 fw-bold">
                         <span class="text-decoration-line-through text-secondary">$12.00</span>
-                        <span class="text-theme">FREE</span>
+                        <span class="text-theme">{{ $slice->price ? $slice->price : 'FREE' }}</span>
                     </p>
                     <hr>
                     <!-- Button trigger modal -->

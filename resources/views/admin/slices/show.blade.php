@@ -13,55 +13,78 @@
             NEW BITE
         </a> --}}
 
-        <section class="mt-4 bg-f2 shadow rounded border p-3">
-            <div class="mb-2">
-                <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
-                    Title
-                </p>
-                <p class="m-0">
-                    {{ $slice->title }}
-                </p>
+        <section class="mt-4 bg-f2 shadow rounded border p-3 d-lg-flex justify-content-between">
+            <div class="p-2 mb-4 flex-grow-3 w-100">
+                <div class="mb-2">
+                    <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
+                        Title
+                    </p>
+                    <p class="m-0">
+                        {{ $slice->title }}
+                    </p>
+                </div>
+
+                <div class="mb-2">
+                    <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
+                        Category
+                    </p>
+                    <p class="m-0">
+                        {{ $slice->category }}
+                    </p>
+                </div>
+
+                <div class="mb-2">
+                    <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
+                        Price
+                    </p>
+                    <p class="m-0">
+                        {{ $slice->price ? $slice->price : 'FREE COURSE' }}
+                    </p>
+                </div>
+
+                <div class="mb-2">
+                    <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
+                        Duration
+                    </p>
+                    <p class="m-0">
+                        {{ $slice->duration }} Weeks
+                    </p>
+                </div>
+
+                <div class="mb-2">
+                    <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
+                        Created At
+                    </p>
+                    <p class="m-0">
+                        {{ $slice->created_at }}
+                    </p>
+                </div>
+
+                <div class="mb-2">
+                    <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
+                        ABout
+                    </p>
+                    <p class="m-0">
+                        {{ $slice->about }}
+                    </p>
+                </div>
+
+                <div>
+                    <button class="btn btn-outline-dark fw-bold rounded rounded-0">
+                        <i class="bi bi-pencil-fill"></i> Edit Slice
+                    </button>
+                </div>
             </div>
 
-            <div class="mb-2">
-                <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
-                    Category
-                </p>
-                <p class="m-0">
-                    {{ $slice->category }}
-                </p>
-            </div>
-
-            <div class="mb-2">
-                <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
-                    Price
-                </p>
-                <p class="m-0">
-                    {{ $slice->price }}
-                </p>
-            </div>
-
-            <div class="mb-2">
-                <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
-                    Created At
-                </p>
-                <p class="m-0">
-                    {{ $slice->created_at }}
-                </p>
-            </div>
-            <div class="mb-2">
-                <p class="m-0 text-secondary text-uppercase fw-semibold fs-tiny">
-                    Description
-                </p>
-                <p class="m-0">
-                    {!! $slice->description !!}
-                </p>
-            </div>
-
-            <div>
-                <button class="btn btn-outline-dark fw-bold">
-                    <i class="bi bi-pencil-fill"></i> Edit Slice
-                </button>
+            <div class="px-3 py-2 border-start border-2">
+                <div class="mb-2">
+                    <p class="text-white p-1 bg-dark text-uppercase fw-semibold fs-tiny">
+                        Overview
+                    </p>
+                    <p class="m-0">
+                        {!! $slice->overview !!}
+                    </p>
+                </div>
             </div>
         </section>
 

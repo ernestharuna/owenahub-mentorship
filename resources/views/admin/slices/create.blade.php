@@ -50,11 +50,35 @@
                 @enderror
             </div>
 
-            {{-- description --}}
+            {{-- duration --}}
             <div class="col-12">
-                <label for="description" class="form-label m-0 text-secondary fw-semibold">Slice Description</label>
-                <textarea name="description" id="summernote" required></textarea>
-                @error('description')
+                <label for="duration" class="form-label m-0 text-secondary fw-semibold">Slice Duration</label>
+                <input type="number" name="duration" id="duration" class="form-control rounded rounded-0 py-2"
+                    placeholder="2 Weeks">
+                @error('duration')
+                    <p class="text-danger fs-6 mt-1">
+                        {{ $message }}
+                    </p>
+                @enderror
+            </div>
+
+            {{-- about --}}
+            <div class="col-12">
+                <label for="about" class="form-label m-0 text-secondary fw-semibold">Slice About</label>
+                <input type="text" name="about" id="about" class="form-control rounded rounded-0 py-2"
+                    placeholder="Write a short description of what the slice is about">
+                @error('about')
+                    <p class="text-danger fs-6 mt-1">
+                        {{ $message }}
+                    </p>
+                @enderror
+            </div>
+
+            {{-- overview --}}
+            <div class="col-12">
+                <label for="summernote" class="form-label m-0 text-secondary fw-semibold">Overview</label>
+                <textarea name="overview" id="summernote" required></textarea>
+                @error('overview')
                     <p class="text-danger fs-6 mt-1">
                         {{ $message }}
                     </p>
