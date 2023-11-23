@@ -22,7 +22,8 @@
                         </a>
                         <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08"
                             class="py-4 my-3 rounded shadow text-white text-decoration-none d-block twitter">
-                            <i class="bi bi-twitter d-block icon"></i>
+                            {{-- <i class="bi bi-twitter d-block icon"></i> --}}
+                            <i class="bi bi-twitter-x d-block icon"></i>
                             Follow Us On X
                         </a>
                         <hr class="bg-dak text-dark" />

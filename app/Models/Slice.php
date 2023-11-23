@@ -36,4 +36,9 @@ class Slice extends Model
     {
         return $this->hasMany(Bite::class);
     }
+
+    public function review(): HasMany
+    {
+        return $this->hasMany(Review::class);
+    }
 }

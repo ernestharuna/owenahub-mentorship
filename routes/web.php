@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\User\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,30 @@ use App\Http\Controllers\GuestController;
 Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
 
+/*
+| Authentication Routes for all
+| users of - Admin, Mentors, Users
+*/
+Route::middleware('guest')->group(function () {
+    Route::name('admin.')->group(function () {
+        Route::prefix('admin')->group(function () {
+            Route::view('login', 'admin.auth.login')->name('login');
+            Route::post('login', [AuthController::class, 'login'])->name('login.req');
+        });
+    });
+
+    Route::name('user.')->group(function () {
+        Route::prefix('user')->group(function () {
+            Route::view('login', 'user.auth.login')->name('login');
+            Route::view('register', 'user.auth.register')->name('register');
+
+            Route::post('login', [AuthController::class, 'login'])->name('login.req');
+            Route::post('register', [AuthController::class, 'register'])->name('register.req');
+        });
+    });
+});
+
+// ------------------------ Guest Routes
 Route::name('guest.')->group(function () {
     Route::name('articles.')->group(function () {
         Route::get('/articles', [GuestController::class, 'articles'])->name('index');

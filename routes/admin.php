@@ -10,11 +10,7 @@ use App\Http\Controllers\Admin\SliceController;
 
 Route::name('admin.')->group(function () {
     Route::prefix('admin')->group(function () {
-        Route::middleware('guest')->group(function () {
-            Route::view('login', 'admin.auth.login')->name('login');
-            Route::post('login', [AuthController::class, 'login'])->name('login.req');
-        });
-
+        // ----------------------- middleware -------------------------
         Route::middleware('auth:admin')->group(function () {
             Route::get('dashboard', DashboardController::class)->name('dashboard');
 

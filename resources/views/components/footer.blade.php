@@ -29,17 +29,17 @@
                 </h2>
                 <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"
                     class='text-white d-block text-decoration-none fw-light fs-tiny'>
-                    Instagram
+                    Instagram <i class="bi bi-arrow-right-short"></i>
                 </a>
 
                 <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08" target="_blank"
                     class="text-white d-block text-decoration-none fw-light fs-tiny">
-                    X (formerly twitter)
+                    X (formerly twitter) <i class="bi bi-arrow-right-short"></i>
                 </a>
 
                 <a href="https://www.facebook.com/owenahub?mibextid=ZbWKwL" target="_blank"
                     class="text-white d-block text-decoration-none fw-light fs-tiny">
-                    Facebook
+                    Facebook <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
 
@@ -57,22 +57,26 @@
                     FEATURES
                 </h2>
                 <a href="/articles" class="d-block text-decoration-none text-white fs-tiny fw-light">
-                    OwenaHub Blog
-                </a>
-                <a href="/articles" class="d-block text-decoration-none text-white fs-tiny fw-light">
-                    Slices: Swift Swips
+                    OwenaHub Blog <i class="bi bi-arrow-right-short"></i>
                 </a>
                 <a href="#" class="d-block text-decoration-none text-white fs-tiny fw-light">
-                    Private Sessions
+                    Slices: <span class="text-theme fw-semibold">Swift Swips</span> <i
+                        class="bi bi-arrow-right-short"></i>
+                </a>
+                <a href="#" class="d-block text-decoration-none text-white fs-tiny fw-light">
+                    Private Sessions <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
 
         </div>
 
 
-        <div class="fs-6 my-4">
+        <div class="my-4 d-md-flex justify-content-between align-items-center">
             <p class="m-0 fs-tiny">
-                &copy; 2023, OwenaHub. All Rights Reserved &middot; Privacy Policy &middot; Terms Of Service
+                &copy; 2023, OwenaHub. All Rights Reserved.
+            </p>
+            <p class="m-0 fs-tiny">
+                Privacy Policy &middot; Terms Of Service
             </p>
         </div>
     </div>

@@ -40,7 +40,7 @@
                                 <div class="d-flex justify-content-between align-items-center mt-2">
                                     <p class="text-theme fw-bold mt-1 mb-0">
                                         <a href="{{ route('guest.slices.show', $slice->id) }}"
-                                            class="btn btn-theme fs-tiny fw-semibold p-1 rounded rounded-0">
+                                            class="btn btn-theme fs-tiny px-3 fw-semibold p-1 rounded rounded-0">
                                             TAKE A BITE
                                         </a>
                                     </p>
@@ -67,9 +67,7 @@
                     <div class="text-center">
                         <h2 class="fs-1 fw-bold">Read Something Motivating.</h2>
                         <p class="text-secondary my-4 fs-5 font-monospace">
-                            Enriching Repository
-                            Access a Wealth of Informative Articles
-                            on Owena's Blogs
+                            Enriching Repository Access a Wealth of Informative <br>Articles on OwenaHub's Blogs
                         </p>
                     </div>
                     <div class="text-center">
