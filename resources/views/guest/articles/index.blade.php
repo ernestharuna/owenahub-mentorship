@@ -49,7 +49,7 @@
     <div class="mt-4">
         {{ $articles->links() }}
     </div>
-    <div class="bg-theme-light">
+    <div class="bg-premium">
         <section class="container py-5">
             <div>
                 <div class="text-center">
@@ -62,7 +62,7 @@
                 <div class="text-center">
                     <!-- Button trigger modal -->
                     <button type="button"
-                        class="btn rounded rounded-0 btn-theme text-decoration-none text-white fw-bold"
+                        class="btn rounded rounded-0 btn-light text-decoration-none text-dark fw-bold"
                         data-bs-toggle="modal" data-bs-target="#joinCommunity">
                         Check Us Out! 🤙🏽
                     </button>

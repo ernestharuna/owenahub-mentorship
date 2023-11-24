@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\User\AuthController;
@@ -23,10 +24,11 @@ Route::view('about', 'about')->name('about');
 | users of - Admin, Mentors, Users
 */
 Route::middleware('guest')->group(function () {
+
     Route::name('admin.')->group(function () {
         Route::prefix('admin')->group(function () {
             Route::view('login', 'admin.auth.login')->name('login');
-            Route::post('login', [AuthController::class, 'login'])->name('login.req');
+            Route::post('login', [AdminAuthController::class, 'login'])->name('login.req'); //uses Admin Auth Controller
         });
     });
 
@@ -35,7 +37,7 @@ Route::middleware('guest')->group(function () {
             Route::view('login', 'user.auth.login')->name('login');
             Route::view('register', 'user.auth.register')->name('register');
 
-            Route::post('login', [AuthController::class, 'login'])->name('login.req');
+            Route::post('login', [AuthController::class, 'login'])->name('login.req'); //uses users Auth Controller
             Route::post('register', [AuthController::class, 'register'])->name('register.req');
         });
     });

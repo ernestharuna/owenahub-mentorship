@@ -1,14 +1,26 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
-        <div class="col-md-3 col-lg-3 mx-3 my-5 px-4 py-3">
-            <div class="fw-bold mb-2">
+        <div class="col-md-3 col-lg-3 mx-3 my-5 px-4 py-3 animated-2 fadeIn">
+            <div class="fw-bold">
                 <img src="{{ asset('images/logo.png') }}" alt="..." width="30px"
                     style="position: relative; top: -4px;">
-                <span class="text-dark">User Login</span> | <span class="fw-light">Welcome Back!</span>
+                <span class="text-dark">User Login</span> | <span class="fw-light">Welcome Back! 😃</span>
             </div>
 
-            <form method="POST" action={{ route('user.login.req') }} class="row g-3">
+            <form method="POST" action={{ route('user.login.req') }} class="row g-3 ">
                 @csrf
+
+                {{-- FORM ERROR --}}
+                <div>
+                    @error('email')
+                        <x-error :message="$message" />
+                    @enderror
+                    @error('password')
+                        <x-error :message="$message" />
+                    @enderror
+                </div>
+                {{-- FORM ERROR ENDS --}}
+
                 <div class="form-floating mb-1">
                     <input type="email" name="email" class="form-control rounded rounded-0 border-dark border-1"
                         id="email" placeholder="doe@example.com">
@@ -21,7 +33,18 @@
                     <label for="password" class="fw-bold">Password</label>
                 </div>
 
-                <div class="col-12 mt-4">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="remember" id="remember"
+                            {{ old('remember') ? 'checked' : '' }} />
+
+                        <label class="form-check-label" for="remember">
+                            {{ __('Remember me') }}
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-2">
                     <button type="submit"
                         class="btn btn-theme rounded rounded-0 shadow fw-light text-uppercase fs-6 w-100">
                         Login
@@ -38,15 +61,6 @@
                     <a href="{{ route('user.register') }}" class="fw-semibold">
                         Sign Up
                     </a>
-                </div>
-
-                <div>
-                    @error('email')
-                        <x-error :message="$message" />
-                    @enderror
-                    @error('password')
-                        <x-error :message="$message" />
-                    @enderror
                 </div>
             </form>
         </div>

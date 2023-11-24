@@ -40,8 +40,8 @@
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5 text-danger" id="staticBackdropLabel">
-
+                                    <h1 class="modal-title fs-5 text-dark fw-bold" id="staticBackdropLabel">
+                                        Enroll Now
                                     </h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
@@ -50,7 +50,8 @@
                                     <a href="{{ route('user.login') }}" class="btn btn-theme w-100 mb-3 p-3">
                                         Log In
                                     </a>
-                                    <a href="#" class="btn btn-dark w-100 p-3">
+                                    <a href="{{ route('user.register') }}"
+                                        class="btn btn-light border shadow w-100 p-3">
                                         Register
                                     </a>
                                 </div>

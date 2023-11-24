@@ -34,9 +34,9 @@ class AuthController extends Controller
             ]);
 
             Auth::login($user);
-            // return redirect(route('admin.dashboard'))->with('status', 'Welcome!');
+            return redirect(route('user.dashboard'))->with('status', 'Welcome!');
         } catch (\Exception $e) {
-            return back()->with('error', 'Something went wrong');
+            return back()->with('error', $e->getMessage());
             throw $e;
         }
     }
@@ -49,17 +49,31 @@ class AuthController extends Controller
         ]);
 
         try {
-            if (Auth::guard('user')->attempt($data)) {
+            if (Auth::attempt($data, $request->filled('remember'))) {
                 $request->session()->regenerate();
-                // return redirect()->intended(route('admin.dashboard'))->with('status', 'Login Successful');
+                return redirect()->intended(route('user.dashboard'))->with('status', 'Login Successful');
             };
 
             return back()->withErrors([
                 'email' => 'Invalid credentials'
             ])->onlyInput('email');
         } catch (\Exception $e) {
-            return back()->with('error', 'Something went wrong');
+            return back()->with('error', $e->getMessage());
             throw $e;
+        }
+    }
+
+    public function logout(Request $request)
+    {
+        try {
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerate();
+
+            return redirect(route('user.login'))->with('status', "Logout successful!");
+        } catch (\Exception $e) {
+            throw $e;
+            return back()->with('error', $e->getMessage());
         }
     }
 }

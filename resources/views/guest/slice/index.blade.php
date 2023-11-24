@@ -71,12 +71,13 @@
                         </p>
                     </div>
                     <div class="text-center">
-                        <button type="button" class="btn rounded rounded-0 btn-theme">
+                        <a href="{{ route('guest.articles.index') }}" type="button"
+                            class="btn rounded rounded-0 btn-theme">
                             <span class="text-white fs-5 fw-medium"> Quick View
                             </span> — <small class="fw-light fs-tiny">
                                 it's free <i class="bi bi-cart-fill text-danger"></i>
                             </small>
-                        </button>
+                        </a>
                     </div>
                 </div>
 

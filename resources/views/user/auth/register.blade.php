@@ -1,14 +1,30 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
-        <div class="col-md-3 col-lg-3 mt-3 mb-3 px-4 py-3">
+        <div class="col-md-3 col-lg-3 mt-3 mb-3 px-4 py-3 animated-2 fadeIn">
             <div class="fw-bold mb-2">
                 <img src="{{ asset('images/logo.png') }}" alt="..." width="30px"
                     style="position: relative; top: -4px;">
                 <span class="text-dark">Sign up and start learning</span> | <span class="fw-light">Welcome! 😋</span>
             </div>
 
-            <form method="POST" action={{ route('user.login.req') }} class="row g-1">
+            <form method="POST" action={{ route('user.register.req') }} class="row g-1">
                 @csrf
+                {{-- Form errors --}}
+                <div class="mb-3">
+                    @error('first_name')
+                        <x-error :message="$message" />
+                    @enderror
+                    @error('last_name')
+                        <x-error :message="$message" />
+                    @enderror
+                    @error('email')
+                        <x-error :message="$message" />
+                    @enderror
+                    @error('password')
+                        <x-error :message="$message" />
+                    @enderror
+                </div>
+
                 <div class="form-floating mb-1">
                     <input type="text" name="first_name" class="form-control rounded rounded-0 border-dark border-1"
                         id="first_name" placeholder="Henry">
@@ -59,15 +75,6 @@
                             Log In
                         </a>
                     </small>
-                </div>
-
-                <div>
-                    @error('email')
-                        <x-error :message="$message" />
-                    @enderror
-                    @error('password')
-                        <x-error :message="$message" />
-                    @enderror
                 </div>
             </form>
         </div>

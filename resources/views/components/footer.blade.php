@@ -52,9 +52,10 @@
                 <a href="mailto:ernest@owenahub.com"
                     class="d-block text-decoration-none text-white fs-tiny fw-light">ernest@owenahub.com</a>
             </div>
+
             <div class="p-2 flex-fill">
                 <h2 class='fs-tiny'>
-                    FEATURES
+                    QUICK LINKS
                 </h2>
                 <a href="/articles" class="d-block text-decoration-none text-white fs-tiny fw-light">
                     OwenaHub Blog <i class="bi bi-arrow-right-short"></i>
@@ -66,8 +67,25 @@
                 <a href="#" class="d-block text-decoration-none text-white fs-tiny fw-light">
                     Private Sessions <i class="bi bi-arrow-right-short"></i>
                 </a>
+                <a href="{{ route('user.login') }}" class="d-block text-decoration-none text-white fs-tiny fw-light">
+                    User Login <i class="bi bi-arrow-right-short"></i>
+                </a>
             </div>
 
+            <div class="p-2 flex-fill">
+                <h2 class='fs-tiny'>
+                    COMMUNITIES
+                </h2>
+                <a href="https://www.facebook.com/groups/896520008575738/?ref=share"
+                    class="d-block text-decoration-none text-white fs-tiny fw-light">
+                    LinkedIn Community <i class="bi bi-arrow-right-short"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/ernestharuna"
+                    class="d-block text-decoration-none text-white fs-tiny fw-light">
+                    Facebook Community <i class="bi bi-arrow-right-short"></i>
+                </a>
+            </div>
         </div>
 
 
