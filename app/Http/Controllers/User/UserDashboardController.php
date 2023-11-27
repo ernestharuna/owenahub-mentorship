@@ -3,12 +3,19 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+// use Illuminate\Http\Request;
 
 class UserDashboardController extends Controller
 {
     public function __invoke()
     {
-        return view('user.dashboard');
+        $user = Auth::user();
+        $enrolled_slices = $user->slice_enrollment()->latest()->get();
+        // dd($enrolled_slices);
+
+        return view('user.dashboard', [
+            'enrolled_slices' => $enrolled_slices
+        ]);
     }
 }

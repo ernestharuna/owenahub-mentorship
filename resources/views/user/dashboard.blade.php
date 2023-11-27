@@ -43,53 +43,53 @@
         <div class="container py-3 w-64">
             <h3>Your Slices</h3>
 
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item #1
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
+            @forelse ($enrolled_slices as $enrolled)
+                <div class="accordion accordion-flush mb-1 border" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapse{{ $enrolled->slice->id }}" aria-expanded="false"
+                                aria-controls="flush-collapse{{ $enrolled->slice->id }}">
+                                <span class="fw-semibold">
+                                    {{ $enrolled->slice->title }} —
+                                </span>
+                                <span class="ms-2 fs-tiny text-secondary">
+                                    In Progress <i class="bi bi-clock-history"></i>
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="flush-collapse{{ $enrolled->slice->id }}" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="p-4">
+                                @forelse ($enrolled->slice->bite->sortBy('position') as $bite)
+                                    <div class="p-3 border d-flex align-items-center mb-2 rounded shadow-sm">
+                                        <i class="bi bi-circle text-theme d-block me-2"></i>
+                                        <div>
+                                            Bite {{ $bite->position }} - {{ $bite->title }}
+                                        </div>
+                                    </div>
+                                @empty
+                                    <p class="p-1 m-0 text-secondary fs-tiny">
+                                        Hungry? <br>
+                                        Nothing to bite for now 😣
+                                    </p>
+                                @endforelse
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
-                    </div>
+            @empty
+                <div>
+                    <p class="text-secondary">
+                        You are not having any slices right now 😩
+                    </p>
+                    <a href="{{ route('guest.slices.index') }}" class="btn btn-light border rounded rounded-1 shadow-sm"
+                        target="_blank">
+                        <i class="bi bi-plus-circle"></i> Have A Slice
+                    </a>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
-                    </div>
-                </div>
-            </div>
+            @endforelse
+
         </div>
     </section>
 

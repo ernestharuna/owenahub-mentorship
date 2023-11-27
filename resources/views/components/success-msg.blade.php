@@ -11,6 +11,6 @@
         </div>
     </div>
     <div class="p-2 fs-tiny">
-        <span class="py-0 px-2 bg-success rounded me-1"></span> {{ session('status') }}
+        <span class="py-0 px-2 bg-success bg-gradient shadow rounded me-1"></span> {{ session('status') }}
     </div>
 </div>

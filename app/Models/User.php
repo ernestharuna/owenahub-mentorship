@@ -30,6 +30,11 @@ class User extends Authenticatable
         return $this->hasMany(Review::class);
     }
 
+    public function slice_enrollment(): HasMany
+    {
+        return $this->hasMany(SliceEnrollment::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

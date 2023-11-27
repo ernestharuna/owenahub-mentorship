@@ -12,17 +12,20 @@
                 </p>
 
                 <div class="cta mt-4">
-                    <a href="{{ route('guest.slices.index') }}" class='text-decoration-none'>
-                        <button class="btn btn-theme rounded rounded-0 text-uppercase fs-6 fw-bold shadow text-dark">
-                            Start Learning Now <i class="bi bi-arrow-right"></i>
-                        </button>
+                    <a href="{{ route('guest.slices.index') }}"
+                        class='text-decoration-none btn btn-theme rounded rounded-0 text-uppercase fs-6 fw-bold shadow text-dark'>
+                        Start Learning Now
                     </a>
-                    <br />
-                    <div class="mt-2">
-                        <small class='fst-italic fs-tiny'>
-                            <i class="bi bi-stars text-primary"></i> 500+ weekly readers
-                        </small>
-                    </div>
+                    <a href="{{ route('guest.articles.index') }}"
+                        class='text-decoration-none btn btn-dark rounded rounded-0 text-uppercase fs-6 fw-bold shadow text-theme'>
+                        Blog
+                    </a>
+                </div>
+
+                <div class="mt-2">
+                    <small class='fst-italic fs-tiny'>
+                        <i class="bi bi-stars text-primary"></i> 100+ weekly readers
+                    </small>
                 </div>
 
                 <span class=glow></span>

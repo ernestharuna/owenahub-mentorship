@@ -12,6 +12,6 @@
         </div>
     </div>
     <div class="p-2 fs-tiny text-danger fw-semibold">
-        <span class="py-0 px-2 bg-danger rounded me-1"></span> {{ session('error') }}
+        <span class="py-0 px-2 bg-danger bg-gradient shadow rounded me-1"></span> {{ session('error') }}
     </div>
 </div>
