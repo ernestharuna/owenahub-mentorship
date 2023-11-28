@@ -11,6 +11,8 @@ class UserBite extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
+        'bite_id',
         'completed'
     ];
 

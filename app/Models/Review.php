@@ -12,6 +12,7 @@ class Review extends Model
 
     protected $fillable = [
         'user_id',
+        'slice_id',
         'rating',
         'comment'
     ];

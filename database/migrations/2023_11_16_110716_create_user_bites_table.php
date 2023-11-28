@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained(table: 'users', column: 'id')->cascadeOnDelete();
             $table->foreignId('bite_id')->constrained(table: 'bites', column: 'id')->cascadeOnDelete();
-            $table->string('completed')->default(false);
+            $table->string('completed')->default(true);
             $table->timestamps();
         });
     }

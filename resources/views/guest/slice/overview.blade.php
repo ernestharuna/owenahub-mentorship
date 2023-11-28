@@ -110,10 +110,15 @@
                         <p class="fs-4 fw-bold">
                             Featured Reviews
                         </p>
+                        @forelse ($slice->review as $review)
+                            <livewire:reviews :review="$review" />
 
-                        <livewire:reviews />
-                        <livewire:reviews />
-                        <livewire:reviews />
+                        @empty
+                            <p class="m-0 text-secondary fs-tiny">
+                                No reviews on this slice yet
+                            </p>
+                        @endforelse
+
                     </div>
                 </div>
             </div>
