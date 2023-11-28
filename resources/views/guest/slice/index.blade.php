@@ -18,10 +18,13 @@
             <div class="row row-cols-2 row-cols-md-4 g-4">
                 @forelse ($slices as $slice)
                     <div class="col">
-                        <div class="card h-100">
-                            <img src="{{ asset('images/generic_img.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card h-100 shadow-sm">
+                            {{-- <img src="{{ asset('images/generic_img.jpg') }}" class="card-img-top" alt="..."> --}}
                             <div class="card-body p-2">
                                 <h5 class="card-title fw-bold">{{ $slice->title }}</h5>
+                                <p class="">
+                                    {{ $slice->about }}
+                                </p>
                                 <p class="fs-tiny text-secondary fw-semibold m-0">
                                     {{ $slice->admin->first_name }} {{ $slice->admin->last_name }}
                                     <i class="bi bi-shield-fill-check"></i>
@@ -34,7 +37,7 @@
                                         <i class="bi bi-star-fill"></i>
                                         <i class="bi bi-star-half"></i>
 
-                                        <span class="fs-tiny text-secondary"> — (enroll now)</span>
+                                        <span class="fs-tiny text-secondary"> — (7,989 learners on this slice)</span>
                                     </span>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center mt-2">

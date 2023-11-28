@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Slice;
 use App\Models\SliceEnrollment;
 use Illuminate\Http\Request;
 
@@ -25,5 +26,18 @@ class SliceController extends Controller
             throw $e;
             return back()->with('error', $e->getMessage());
         }
+    }
+
+    public function show(Request $request, Slice $slice)
+    {
+        $params = $request->query();
+        $bite_id = $params['bite'] - 1;
+
+        // dd($slice->bite[$bite_id]);
+
+        return view('user.slices.show', [
+            'slice' => $slice,
+            'show_bite' => $slice->bite["$bite_id"],
+        ]);
     }
 }

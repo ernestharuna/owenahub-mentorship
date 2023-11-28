@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
-        <div class="col-md-3 col-lg-3 mx-3 my-5 px-4 py-3 animated-2 fadeIn">
+        <div class="col-md-3 col-lg-3 mx-3 my-5 px-4 py-3">
             <div class="fw-bold">
                 <img src="{{ asset('images/logo.png') }}" alt="..." width="30px"
                     style="position: relative; top: -4px;">
@@ -11,7 +11,7 @@
                 @csrf
 
                 {{-- FORM ERROR --}}
-                <div>
+                <div class="animated-2 fadeIn">
                     @error('email')
                         <x-error :message="$message" />
                     @enderror

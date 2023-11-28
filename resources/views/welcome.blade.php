@@ -125,21 +125,40 @@
                     <span class="circle shadow">
                         <i class="bi bi-box-seam-fill"></i>
                     </span>
-                    Explore: <span class="text-theme">Take A Slice</span>
+                    OwenaHub's <span class="text-theme">Slices</span>
                 </h2>
 
-                <div class="mb-3">
-                    <p class="m-0 container">
-                        We organise courses into short and impactful packages<br class="d-md-block d-none" />
-                        we call <b> SLICES</b> that allow you learn vital topics <b>within 1 month</b>
+                <div class="mb-3 container">
+                    <p>
+                        Embark on a learning journey with OwenaHub's innovative approach to education → Slices! 😃
+                    </p>
+                    <p>
+                        <strong>What Are Slices?
+                            <i class="fs-tiny text-theme fw-normal">
+                                ...like a course, but shorter 🚀
+                            </i>
+                        </strong><br>
+
+                        Slices are our unique method of delivering invaluable insights to learners.
+                        <br>
+                        Designed for flexibility, you can now learn on the go, thanks to our
+                        meticulously organized content,
+                        <br class="d-lg-block d-none">
+                        each encapsulated into bite-sized packages known as
+                        <b>Bites</b>.
+                    </p>
+
+                    Dive into a wealth of information and elevate your learning experience.
+
+                    <p>
+                        Try taking a slice!
                     </p>
                 </div>
             </div>
 
             <div class="d-block d-md-flex flex-wrap align-items-center">
-                <x-slice-card />
 
-                <div class="card m-2 bg-theme w-auto" style="width: 16rem;">
+                <div class="card m-2 bg-theme w-auto border-0" style="width: 16rem;">
                     {{-- <img src="..." class="card-img-top" alt="..."> --}}
                     <div class="card-body">
                         <h5 class="card-title">The Most Effective Way To Learn 🚀</h5>

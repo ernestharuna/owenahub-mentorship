@@ -10,6 +10,10 @@ Route::name('user.')->group(function () {
         Route::middleware('auth')->group(function () {
             Route::get('dashboard', UserDashboardController::class)->name('dashboard');
             Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+            Route::name('slice.')->group(function () {
+                Route::get('slices/{slice}', [SliceController::class, 'show'])->name('show');
+            });
         });
     });
 });

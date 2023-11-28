@@ -53,10 +53,10 @@
         <section class="container py-5">
             <div>
                 <div class="text-center">
-                    <h2 class="fs-1 fw-bold">Join Our Community 🚀</h2>
-                    <p class="text-secondary my-4 fs-5 font-monospace">
+                    <h2 class="fs-1 fw-bold">Join Our Community</h2>
+                    <p class=" my-4 fs-5">
                         🎊 Our community awaits your grand entrance! 🎊<br>
-                        <span class="fw-bold">Be Part oof inspiring platform</span>
+                        <span class="fw-bold">Be part of inspiring platform</span>
                     </p>
                 </div>
                 <div class="text-center">

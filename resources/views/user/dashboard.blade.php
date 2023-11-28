@@ -5,34 +5,34 @@
         </p>
 
         <div>
-            <p class="text-secondary mb-1">
-                Upcoming Sessions
+            <p class="text-secondary mb-2">
+                Upcoming Meetings — <span class="fs-tiny">(Coming Soon!)</span>
             </p>
-            <div class="border rounded py-1 px-2 me-3 d-inline-block position-relative">
+            <div class="border rounded py-1 px-2 my-1 me-3 d-inline-block position-relative">
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">
                     <i class="bi bi-clock"></i>
                     <span class="visually-hidden">unread messages</span>
                 </span>
                 <div>
                     <p class="fs-tiny m-0">
-                        Session starts in 2 days
+                        Talk with a mentor today!
                     </p>
                     <p class="fw-semibold m-0">
-                        Session with Ahmad
+                        Book a session
                     </p>
                 </div>
             </div>
-            <div class="border rounded py-1 px-2 d-inline-block position-relative">
+            <div class="border rounded py-1 px-2 my-1 d-inline-block position-relative">
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">
                     <i class="bi bi-clock"></i>
                     <span class="visually-hidden">unread messages</span>
                 </span>
                 <div>
                     <p class="fs-tiny m-0">
-                        Session starts in 2 days
+                        You will soon be able to book private session
                     </p>
                     <p class="fw-semibold m-0">
-                        Session with Ahmad
+                        Make sure to subscribe to be notified when its available.
                     </p>
                 </div>
             </div>
@@ -65,7 +65,10 @@
                                     <div class="p-3 border d-flex align-items-center mb-2 rounded shadow-sm">
                                         <i class="bi bi-circle text-theme d-block me-2"></i>
                                         <div>
-                                            Bite {{ $bite->position }} - {{ $bite->title }}
+                                            <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => $bite->id]) }}"
+                                                class="text-decoration-none text-dark">
+                                                Bite {{ $bite->position }} - {{ $bite->title }}
+                                            </a>
                                         </div>
                                     </div>
                                 @empty
