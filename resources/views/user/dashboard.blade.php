@@ -63,7 +63,8 @@
                             <div class="p-4">
                                 @forelse ($enrolled->slice->bite->sortBy('position') as $bite)
                                     <div class="p-3 border d-flex align-items-center mb-2 rounded shadow-sm">
-                                        <i class="bi bi-circle text-theme d-block me-2"></i>
+                                        {{-- <i class="bi bi-circle text-theme d-block me-2"></i> --}}
+                                        <livewire:user.checked-badge :bite="$bite->id" />
                                         <div>
                                             <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => $bite->id]) }}"
                                                 class="text-decoration-none text-dark">

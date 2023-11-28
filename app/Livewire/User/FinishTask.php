@@ -47,7 +47,6 @@ class FinishTask extends Component
         }
     }
 
-
     #[Rule('required')]
     public $comment = "";
 
@@ -56,7 +55,7 @@ class FinishTask extends Component
 
     public function save()
     {
-        dd($this->user_reviews);
+        // dd($this->user_reviews);
 
         $complete_task = [
             'user_id' => Auth::id(),
