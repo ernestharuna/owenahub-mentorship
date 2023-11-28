@@ -112,13 +112,11 @@
                         </p>
                         @forelse ($slice->review as $review)
                             <livewire:reviews :review="$review" />
-
                         @empty
                             <p class="m-0 text-secondary fs-tiny">
                                 No reviews on this slice yet
                             </p>
                         @endforelse
-
                     </div>
                 </div>
             </div>
