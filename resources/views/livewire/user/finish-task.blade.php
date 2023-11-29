@@ -42,8 +42,9 @@
             Digested Bite!
         </button>
     @else
-        <button type="button" class="btn btn-dark rounded-0 fw-light" data-bs-toggle="modal" data-bs-target="#finish-task">
-            Mark as done
+        <button type="button" class="btn btn-dark rounded-0 fw-semibold fs-tiny py-1" data-bs-toggle="modal"
+            data-bs-target="#finish-task">
+            NEXT →
         </button>
     @endif
 
@@ -55,7 +56,7 @@
                 <div class="modal-header">
 
                     <div>
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Good Job! 🎊</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Woa! Are you done with this? 😏</h1>
                         <p class="m-0 fs-tiny">
                             Your next slice awaits...
                         </p>
@@ -63,10 +64,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <div class="modal-body">
+                <div class="modal-body pt-0">
                     <form wire:submit="save" class="m-0">
                         @if ($can_review)
-                            <div class="input-group mb-3">
+                            <div class="input-group my-3">
                                 <input type="text" class="form-control rounded-0" wire:model="comment"
                                     placeholder="Write us a review . . . 😀" aria-label="Write us a review . . . 😀"
                                     aria-describedby="button-addon2" required>
@@ -76,14 +77,27 @@
                                 <input type="range" min="1" max="5" id="mySlider" class="w-100 slider"
                                     wire:model="rating" required>
                                 <p class="fw-bold">
-                                    <span id="sliderValue">5</span>
+                                    <span id="sliderValue"></span>
                                     star(s) <i class="bi bi-star-fill text-theme"></i>
                                 </p>
                             </div>
                         @endif
-
                         <div>
-                            <button type="submit" class="btn btn-theme rounded-0 shadow-sm">Complete!</button>
+                            <p class="my-2 fs-tiny">
+                                Are you done with this one? 🤔 <br>
+                                If you're not, you can navigate <b>bites</b> via the
+                                <span class="d-none d-md-inline-block">side panel</span>
+                                <span class="d-inline-block d-md-none">links above</span>
+                            </p>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-theme rounded-0 shadow-sm fw-semibold">
+                                Yes, digested!
+                            </button>
+                            <button type="button" class="btn btn-light border rounded-0 shadow-sm ms-2 fw-semibold"
+                                data-bs-dismiss="modal" aria-label="Close">
+                                Not yet
+                            </button>
                         </div>
                     </form>
                 </div>

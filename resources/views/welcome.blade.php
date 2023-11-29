@@ -17,7 +17,7 @@
                         Start Learning Now
                     </a>
                     <a href="{{ route('guest.articles.index') }}"
-                        class='text-decoration-none btn btn-dark rounded rounded-0 text-uppercase fs-6 fw-bold shadow text-theme'>
+                        class='text-decoration-none btn btn-dark rounded rounded-0 ms-2 text-uppercase fs-6 fw-bold shadow text-theme'>
                         Blog
                     </a>
                 </div>
@@ -134,7 +134,7 @@
                     </p>
                     <p>
                         <strong>What Are Slices?
-                            <i class="fs-tiny text-theme fw-normal">
+                            <i class="fs-tiny bg-theme text-dark p-1 rounded fw-normal">
                                 ...like a course, but shorter 🚀
                             </i>
                         </strong><br>

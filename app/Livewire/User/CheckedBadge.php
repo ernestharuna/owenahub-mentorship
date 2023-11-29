@@ -15,7 +15,10 @@ class CheckedBadge extends Component
         $this->bite = $bite;
 
         $this->completed = DB::table('user_bites')
-            ->where('bite_id', $bite)->exists();
+            ->where([
+                ['bite_id', '=', $bite],
+                ['user_id', '=', auth()->user()->id],
+            ])->exists();
     }
 
     public function render()

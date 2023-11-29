@@ -21,23 +21,26 @@
                         <div class="card h-100 shadow-sm">
                             {{-- <img src="{{ asset('images/generic_img.jpg') }}" class="card-img-top" alt="..."> --}}
                             <div class="card-body p-2">
-                                <h5 class="card-title fw-bold">{{ $slice->title }}</h5>
-                                <p class="">
+                                @if ($slice->admin)
+                                    <p class="fs-tiny text-secondary fw-semibold m-0 mb-2">
+                                        <span>Curated by OwenaHub</span>
+                                        <img src="{{ asset('images/logo.png') }}" alt="..." width="15"
+                                            style="position: relative; top: -2px;">
+                                    </p>
+                                @endif
+                                <h5 class="card-title fw-bold mb-0">{{ $slice->title }}</h5>
+
+                                <p class="mt-1 fs-6">
                                     {{ $slice->about }}
                                 </p>
-                                <p class="fs-tiny text-secondary fw-semibold m-0">
-                                    {{ $slice->admin->first_name }} {{ $slice->admin->last_name }}
-                                    <i class="bi bi-shield-fill-check"></i>
-                                </p>
-                                <p class="card-text fs-tiny m-0">
-                                    <span class="text-dark d-inline-block">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
 
-                                        <span class="fs-tiny text-secondary"> — (7,989 learners on this slice)</span>
+                                <p class="card-text fs-tiny m-0 text-secondary">
+                                    <span class="d-inline-block">
+                                        <i class="bi bi-tags-fill"></i> {{ $slice->category }}
+                                        <span class="fs-tiny"> <br>
+                                            <i class="bi bi-clock-history"></i>
+                                            {{ $slice->duration }} weeks
+                                        </span>
                                     </span>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center mt-2">

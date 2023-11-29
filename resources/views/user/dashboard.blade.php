@@ -6,11 +6,11 @@
 
         <div>
             <p class="text-secondary mb-2">
-                Upcoming Meetings — <span class="fs-tiny">(Coming Soon!)</span>
+                <i class="bi bi-bell-fill"></i> Announcements
             </p>
             <div class="border rounded py-1 px-2 my-1 me-3 d-inline-block position-relative">
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">
-                    <i class="bi bi-clock"></i>
+                    <i class="bi bi-bell-fill"></i>
                     <span class="visually-hidden">unread messages</span>
                 </span>
                 <div>
@@ -24,15 +24,15 @@
             </div>
             <div class="border rounded py-1 px-2 my-1 d-inline-block position-relative">
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">
-                    <i class="bi bi-clock"></i>
+                    <i class="bi bi-bell-fill"></i>
                     <span class="visually-hidden">unread messages</span>
                 </span>
                 <div>
                     <p class="fs-tiny m-0">
-                        You will soon be able to book private session
+                        Make sure to <a href="#footer">subscribe</a> to be notified when its available.
                     </p>
                     <p class="fw-semibold m-0">
-                        Make sure to subscribe to be notified when its available.
+                        You will soon be able to book private sessions.
                     </p>
                 </div>
             </div>
@@ -41,7 +41,7 @@
 
     <section class="bg-f2">
         <div class="container py-3 w-64">
-            <h3>Your Slices</h3>
+            <h3 class="fw-bold fs-4">Your Slices</h3>
 
             @forelse ($enrolled_slices as $enrolled)
                 <div class="accordion accordion-flush mb-1 border" id="accordionFlushExample">
@@ -66,7 +66,7 @@
                                         {{-- <i class="bi bi-circle text-theme d-block me-2"></i> --}}
                                         <livewire:user.checked-badge :bite="$bite->id" />
                                         <div>
-                                            <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => $bite->id]) }}"
+                                            <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => $loop->iteration]) }}"
                                                 class="text-decoration-none text-dark">
                                                 Bite {{ $bite->position }} - {{ $bite->title }}
                                             </a>
@@ -87,19 +87,20 @@
                     <p class="text-secondary">
                         You are not having any slices right now 😩
                     </p>
-                    <a href="{{ route('guest.slices.index') }}" class="btn btn-light border rounded rounded-1 shadow-sm"
-                        target="_blank">
-                        <i class="bi bi-plus-circle"></i> Have A Slice
-                    </a>
                 </div>
             @endforelse
-
+            <div>
+                <a href="{{ route('guest.slices.index') }}"
+                    class="btn btn-theme border-0 rounded-1 shadow-sm fw-semibold mt-1" target="_blank">
+                    <i class="bi bi-plus-circle"></i> Have a Slice
+                </a>
+            </div>
         </div>
     </section>
 
     <section class="bg-white">
         <div class="container my-4">
-            <h3>Recommended for you</h3>
+            <h3 class="fw-bold fs-4">Recommended for you</h3>
             <livewire:recommended-articles />
         </div>
     </section>

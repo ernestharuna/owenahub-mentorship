@@ -8,11 +8,13 @@
                     </h3>
                     @forelse ($slice->bite as $bite)
                         <div class="py-2 border-bottom rounded mb-1">
-                            <a href="?bite={{ $bite->id }}" class="d-block text-decoration-none text-dark">
+                            <a href="?bite={{ $loop->iteration }}" class="d-block text-decoration-none text-dark">
                                 <span class="fw-semibold">
                                     {{ $bite->title }}
                                 </span><br>
-                                <span class="fs-tiny">{{ $bite->description }}</span>
+                                <span class="fs-tiny">
+                                    {{ $bite->description }} | <span class="text-primary">start</span>
+                                </span>
                             </a>
                         </div>
                     @empty
@@ -29,9 +31,11 @@
                 </p>
                 <hr>
 
-                <p>
-                    {!! $show_bite->content !!}
-                </p>
+                <div class="animated-2 fadeIn">
+                    <p>
+                        {!! $show_bite->content !!}
+                    </p>
+                </div>
 
                 {{-- Complete button --}}
                 <hr>

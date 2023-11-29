@@ -1,6 +1,6 @@
 <!-- I begin to speak only when I am certain what I will say is not better left unsaid. - Cato the Younger -->
 <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
-<footer class='bg-dark py-4'>
+<footer class='bg-dark py-4' id="footer">
     <div class="container text-white fs-6">
         <div class="d-md-flex justify-content-between">
             <div>

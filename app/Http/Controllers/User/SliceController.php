@@ -11,7 +11,10 @@ class SliceController extends Controller
 {
     public function create_slice_enrollment(Request $request, $slice_id)
     {
-        if (SliceEnrollment::where('slice_id', $slice_id)->exists()) {
+        if (SliceEnrollment::where([
+            ['user_id', '=', auth()->user()->id],
+            ['slice_id', '=', $slice_id],
+        ])->exists()) {
             return redirect(route('user.dashboard'))->with('error', 'You\'ve already started this slice!');
         }
 
@@ -30,14 +33,16 @@ class SliceController extends Controller
 
     public function show(Request $request, Slice $slice)
     {
+        /**
+         * Uses the query parameter to find slice
+         */
         $params = $request->query();
-        $bite_id = $params['bite'] - 1;
+        $index = $params['bite'] - 1;
 
-        // dd($slice->bite[$bite_id]);
-
+        // dd($slice->bite);
         return view('user.slices.show', [
             'slice' => $slice,
-            'show_bite' => $slice->bite["$bite_id"],
+            'show_bite' => $slice->bite["$index"],
         ]);
     }
 }

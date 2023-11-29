@@ -18,19 +18,36 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('user.dashboard') }}">
-                            Dashboard
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start" aria-current="page"
+                            href="{{ route('user.dashboard') }}">
+                            <i class="bi bi-window-dash text-theme fs-5"></i> Dashboard
                         </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start"
+                            href="{{ route('guest.slices.index') }}">
+                            <i class="bi bi-box-fill text-theme fs-5"></i> Slices
+                            <span class="badge bg-premium fs-tiny">New!</span>
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Articles</a>
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start"
+                            href="{{ route('guest.articles.index') }}">
+                            <i class="bi bi-file-text-fill text-theme fs-5"></i> Articles
+                        </a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sessions</a>
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start" href="#">
+                            <i class="bi bi-people-fill text-theme fs-5"></i> Sessions
+                            <span class="badge bg-secondary fs-tiny fw-light">
+                                Coming Soon!
+                            </span>
+                        </a>
                     </li>
+                    <hr>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -38,7 +55,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Manage Mentors</a></li>
+                            <li><a class="dropdown-item" href="#">Manage Reviews</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

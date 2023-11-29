@@ -35,7 +35,9 @@ class FinishTask extends Component
 
         if ($user_reviews > 0) {
             $this->can_review = false;
-        };
+        } else {
+            $this->can_review = true;
+        }
 
         $bite_status = DB::table('user_bites')->where([
             ['user_id', '=', auth()->user()->id],
@@ -74,7 +76,7 @@ class FinishTask extends Component
             if ($this->can_review) {
                 Review::create($review);
             }
-            return redirect(route('user.dashboard'))->with('status', 'Thank you!');
+            return redirect(route('user.dashboard'))->with('status', 'Great job, ' . Auth::user()->first_name . '!');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', $e->getMessage());
