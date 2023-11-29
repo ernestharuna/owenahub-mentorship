@@ -12,6 +12,7 @@ class UserDashboardController extends Controller
     {
         $user = Auth::user();
         $enrolled_slices = $user->slice_enrollment()->latest()->get();
+
         return view('user.dashboard', [
             'enrolled_slices' => $enrolled_slices
         ]);

@@ -53,9 +53,7 @@
                                 <span class="fw-semibold">
                                     {{ $enrolled->slice->title }} —
                                 </span>
-                                <span class="ms-2 fs-tiny text-secondary">
-                                    In Progress <i class="bi bi-clock-history"></i>
-                                </span>
+                                <livewire:user.slice-progress :slice="$enrolled" />
                             </button>
                         </h2>
                         <div id="flush-collapse{{ $enrolled->slice->id }}" class="accordion-collapse collapse"
@@ -63,7 +61,6 @@
                             <div class="p-4">
                                 @forelse ($enrolled->slice->bite->sortBy('position') as $bite)
                                     <div class="p-3 border d-flex align-items-center mb-2 rounded shadow-sm">
-                                        {{-- <i class="bi bi-circle text-theme d-block me-2"></i> --}}
                                         <livewire:user.checked-badge :bite="$bite->id" />
                                         <div>
                                             <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => $loop->iteration]) }}"

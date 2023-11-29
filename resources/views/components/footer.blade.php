@@ -60,7 +60,8 @@
                 <a href="/articles" class="d-block text-decoration-none text-white fs-tiny fw-light">
                     OwenaHub Blog <i class="bi bi-arrow-right-short"></i>
                 </a>
-                <a href="#" class="d-block text-decoration-none text-white fs-tiny fw-light">
+                <a href="{{ route('guest.slices.index') }}"
+                    class="d-block text-decoration-none text-white fs-tiny fw-light">
                     Slices: <span class="text-theme fw-semibold">Swift Swips</span> <i
                         class="bi bi-arrow-right-short"></i>
                 </a>

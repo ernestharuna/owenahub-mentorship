@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <div class="container mt-4">
+    <div class="container my-4">
         <h1>
             <span class="text-theme fw-bold">OwenaHub</span> slices
         </h1>
@@ -18,8 +18,9 @@
             <div class="row row-cols-2 row-cols-md-4 g-4">
                 @forelse ($slices as $slice)
                     <div class="col">
-                        <div class="card h-100 shadow-sm">
+                        <div class="card h-100 shadow-sm 0">
                             {{-- <img src="{{ asset('images/generic_img.jpg') }}" class="card-img-top" alt="..."> --}}
+
                             <div class="card-body p-2">
                                 @if ($slice->admin)
                                     <p class="fs-tiny text-secondary fw-semibold m-0 mb-2">
@@ -30,30 +31,28 @@
                                 @endif
                                 <h5 class="card-title fw-bold mb-0">{{ $slice->title }}</h5>
 
-                                <p class="mt-1 fs-6">
+                                <p class="mt-1 fs-6 fw-semibold text-secondary lh-sm">
                                     {{ $slice->about }}
                                 </p>
 
-                                <p class="card-text fs-tiny m-0 text-secondary">
-                                    <span class="d-inline-block">
+                                <div class="card-text text-secondary fs-tiny">
+                                    <p class="m-0">
                                         <i class="bi bi-tags-fill"></i> {{ $slice->category }}
-                                        <span class="fs-tiny"> <br>
-                                            <i class="bi bi-clock-history"></i>
-                                            {{ $slice->duration }} weeks
-                                        </span>
-                                    </span>
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center mt-2">
-                                    <p class="text-theme fw-bold mt-1 mb-0">
-                                        <a href="{{ route('guest.slices.show', $slice->id) }}"
-                                            class="btn btn-theme fs-tiny px-3 fw-semibold p-1 rounded rounded-0">
-                                            TAKE A BITE
-                                        </a>
                                     </p>
+                                    <p class="m-0">
+                                        <i class="bi bi-clock-history"></i>
+                                        {{ $slice->duration }} weeks &middot;
 
-                                    <div class="text-theme fw-bold mt-1 mb-0">
-                                        {{ $slice->price ? 'N' . $slice->price : 'Free' }}
-                                    </div>
+                                        <span class="fw-semibold text-primary">
+                                            {{ $slice->price ? 'N' . $slice->price : 'FREE' }}
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="{{ route('guest.slices.show', $slice->id) }}"
+                                        class="btn btn-theme text-white py-1 rounded-1 w-100 fw-bold">
+                                        Slice In!
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +65,7 @@
             </div>
         </section>
     </div>
-    <section>
+    <section class="mt-5">
         <div class="bg-theme-light">
             <section class="container py-5">
                 <div>

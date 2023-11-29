@@ -41,4 +41,9 @@ class Slice extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    public function slice_enrollment(): HasMany
+    {
+        return $this->hasMany(SliceEnrollment::class);
+    }
 }
