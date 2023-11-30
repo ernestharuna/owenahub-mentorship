@@ -8,6 +8,7 @@ use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
@@ -15,11 +16,14 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $data = $request->validate([
-            'first_name' => ['required', 'min:2', 'max:20'],
-            'last_name' => ['required', 'min:2', 'max:20'],
+            'first_name' => ['required', 'min:2', 'max:20', 'alpha'],
+            'last_name' => ['required', 'min:2', 'max:20', 'alpha'],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => ['required', 'confirmed', Password::min(8)->letters()->symbols()]
         ]);
+
+        $data['first_name'] = ucwords($data['first_name']);
+        $data['last_name'] = ucwords($data['last_name']);
 
         /**
          * @var User $user
@@ -34,6 +38,7 @@ class AuthController extends Controller
             ]);
 
             Auth::login($user);
+            event(new Registered($user));
             return redirect(route('user.dashboard'))->with('status', 'Welcome!');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());

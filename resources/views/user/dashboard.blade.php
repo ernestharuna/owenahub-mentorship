@@ -4,7 +4,7 @@
             <i class="bi bi-house-gear-fill fs-5"></i> Dashboard
         </p>
         <p class="fw-bold text-secondary fs-2">
-            Hey, {{ Auth::user()->first_name }} 😍
+            Hey, {{ ucfirst(strtolower(Auth::user()->first_name)) }} 😍
         </p>
 
         <div>

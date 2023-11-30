@@ -62,8 +62,8 @@
                 <a class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle fs-6 fw-bold text-secondary" href="" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ Auth::user()->first_name }}
-                        {{ Auth::user()->last_name }}
+                        {{ ucfirst(strtolower(Auth::user()->first_name)) }}
+                        {{ ucfirst(strtolower(Auth::user()->last_name)) }}
                     </a>
                     <ul class="dropdown-menu fs-tiny py-0">
                         <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard</a></li>

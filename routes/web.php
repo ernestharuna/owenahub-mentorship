@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuestController;
 use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +57,31 @@ Route::name('guest.')->group(function () {
     Route::prefix('slices')->group(function () {
         Route::name('slices.')->group(function () {
             Route::get('/', [GuestController::class, 'slices'])->name('index');
-            Route::get('/{slice}/overview', [GuestController::class, 'show_slice'])->name('show');
+            Route::get('/{slice}/overview', [GuestController::class, 'show_slice'])->middleware('verified')->name('show');
         });
     });
 });
+
+/*
+| For Unverfied users
+| 
+| View for Email sent notification
+| Link to resend verification email
+*/
+
+Route::get('/email/verify', function () {
+    return view('user.auth.verify-email');
+})->name('verification.notice');
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
