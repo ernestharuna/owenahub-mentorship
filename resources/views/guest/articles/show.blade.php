@@ -4,30 +4,38 @@
     </x-slot>
 
     <div class='mb-4'>
-        <div>
-            <div class="pill fs-tiny fw-bold d-inline-block text-uppercase">{{ $article->category }}</div>
-            <div class="my-1 text-uppercase fs-tiny fw-bold text-secondary">
-                Last Updated at
+        <div class="fs-6 d-inline-block mb-2">
+            <span class="text-red text-uppercase fw-semibold">
+                {{ $article->category }}
+            </span>
+            <span class="text-secondary font-monospace">
+                — Last Updated at
                 @if ($article->created_at->eq($article->updated_at))
-                    {{ $article->created_at->format('j M Y, g:i a') }}
+                    {{ $article->created_at->format('j M Y') }}
                 @else
-                    {{ $article->updated_at->format('j M Y, g:i a') }}
+                    {{ $article->updated_at->format('j M Y') }}
                 @endif
-            </div>
+            </span>
         </div>
 
-        <h1 class='fw-medium fs-large'>{{ $article->title }}</h1>
-        <div class="p-2 mb-1 bg-f2">
-            <x-guest.author :fn="$article->admin->first_name" :ln="$article->admin->last_name" />
-            {{ $article->description }}
+        <h1 class='fw-medium fs-1'>{{ $article->title }}</h1>
+
+        <div class="mt-3 mb-4">
+            <x-guest.author :is_admin="$article->admin" />
+            <div class="fw-bold fst-italic">
+                The 411,
+                <span class="text-secondary">
+                    "...{{ $article->description }}..."
+                </span>
+            </div>
         </div>
 
         <div>
             <img src="{{ $article->image_path ? asset('storage/' . $article->image_path) : asset('images/generic_img.jpg') }}"
-                alt="..." class="img-fluid w-100 shadow animated fadeIn">
+                alt="..." class="img-fluid w-100 shadow animated-2 fadeIn">
         </div>
     </div>
-    <div class="animated-2 fadeIn mb-5">
+    <div class="animated-2 fadeIn mb-5 mt-3">
         {!! $article->content !!}
     </div>
     <livewire:share-page />

@@ -49,10 +49,17 @@
                                     </p>
                                 </div>
                                 <div class="mt-3">
-                                    <a href="{{ route('guest.slices.show', $slice->id) }}"
-                                        class="btn btn-theme text-white py-1 rounded-1 w-100 fw-bold">
-                                        Slice In!
-                                    </a>
+                                    @if (Auth::check())
+                                        <a href="{{ route('guest.slices.show', $slice->id) }}"
+                                            class="btn btn-theme text-white py-1 rounded-1 w-100 fw-bold">
+                                            Slice In!
+                                        </a>
+                                    @else
+                                        <a href="{{ route('user.register') }}"
+                                            class="btn btn-theme text-white py-1 rounded-1 w-100 fw-bold">
+                                            Slice In!
+                                        </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

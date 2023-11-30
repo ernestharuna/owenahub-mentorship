@@ -18,31 +18,32 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start" aria-current="page"
-                            href="{{ route('user.dashboard') }}">
-                            <i class="bi bi-window-dash text-theme fs-5"></i> Dashboard
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
+                            aria-current="page" href="{{ route('user.dashboard') }}">
+                            <i class="bi bi-house-gear-fill text-red fs-5 me-2"></i>
+                            Dashboard
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start"
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
                             href="{{ route('guest.slices.index') }}">
-                            <i class="bi bi-box-fill text-theme fs-5"></i> Slices
+                            <i class="bi bi-box-fill text-red fs-5 me-2"></i> Slices
                             <span class="badge bg-premium fs-tiny">New!</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start"
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
                             href="{{ route('guest.articles.index') }}">
-                            <i class="bi bi-file-text-fill text-theme fs-5"></i> Articles
+                            <i class="bi bi-file-text-fill text-red fs-5 me-2"></i> Articles
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start" href="#">
-                            <i class="bi bi-people-fill text-theme fs-5"></i> Sessions
-                            <span class="badge bg-secondary fs-tiny fw-light">
+                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold" href="#">
+                            <i class="bi bi-people-fill text-red fs-5 me-2"></i> Sessions
+                            <span class="badge bg-theme fs-tiny">
                                 Coming Soon!
                             </span>
                         </a>

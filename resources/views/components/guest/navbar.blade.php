@@ -58,12 +58,31 @@
         </div>
 
         <div class='fs-tiny fw-bold'>
-            @if (Route::is('guest.articles.index'))
-                <a href={{ route('guest.slices.index') }} class='text-secondary text-decoration-none mx-3'>SLICES</a>
+            @if (Auth::check())
+                <a class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fs-6 fw-bold text-secondary" href="" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ Auth::user()->first_name }}
+                        {{ Auth::user()->last_name }}
+                    </a>
+                    <ul class="dropdown-menu fs-tiny py-0">
+                        <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="{{ route('guest.slices.index') }}">View Slices</a></li>
+                        <hr class="m-0">
+                        <li cl>
+                            <a class="dropdown-item fw-bold text-danger" href="{{ route('user.logout') }}">Logout</a>
+                        </li>
+                    </ul>
+                </a>
             @else
-                <a href="/articles" class='text-secondary text-decoration-none mx-3'>BLOG</a>
+                @if (Route::is('guest.articles.index'))
+                    <a href={{ route('guest.slices.index') }}
+                        class='text-secondary text-decoration-none mx-3'>SLICES</a>
+                @else
+                    <a href="/articles" class='text-secondary text-decoration-none me-3'>BLOG</a>
+                @endif
+                <a href={{ route('about') }} class='text-secondary text-decoration-none'>ABOUT</a>
             @endif
-            <a href={{ route('about') }} class='text-secondary text-decoration-none'>ABOUT</a>
         </div>
     </div>
 </nav>

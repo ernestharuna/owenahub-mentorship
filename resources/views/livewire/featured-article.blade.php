@@ -24,7 +24,7 @@
             </div>
         </div>
     @else
-        <div class="bg-f2 p-1 text-secondary shadow">
+        <div class="bg-f2 border p-1 text-secondary shadow-sm">
             Some new articles are rolling up ... 🚀 <br>
             Email for adverts and inquiries hello@owenahub.com
         </div>

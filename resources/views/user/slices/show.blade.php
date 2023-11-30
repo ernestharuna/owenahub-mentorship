@@ -27,7 +27,10 @@
 
             <div class="col-md-8 col-12 py-4">
                 <p class="text-secondary fw-semibold">
-                    <span class="text-theme"> Bite {{ $show_bite->position }}: </span>{{ $show_bite->title }}
+                    <span class="text-theme fw-bold">
+                        Bite {{ $show_bite->position }}:
+                    </span>
+                    {{ $show_bite->title }}
                 </p>
                 <hr>
 

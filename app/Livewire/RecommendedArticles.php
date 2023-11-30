@@ -11,7 +11,7 @@ class RecommendedArticles extends Component
 
     public function mount()
     {
-        $this->articles = Article::inRandomOrder()->limit(4)->get();
+        $this->articles = Article::inRandomOrder()->limit(2)->get();
     }
 
     public function render()
