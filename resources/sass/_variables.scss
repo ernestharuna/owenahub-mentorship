@@ -6,11 +6,11 @@ $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+$emoji-red: #f70a8c !important;
 $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 $theme-gradient-light: linear-gradient(45deg, #ffeeca, #ffda8a) !important;
-$gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff51f3) !important;
+$gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 
-$emoji-red: #f70a8c;
 
 // Background
 .bg-fff {
@@ -115,10 +115,10 @@ $emoji-red: #f70a8c;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     background-size: 500% auto;
-    animation: textShine 4s ease-in-out infinite alternate;
+    animation: textgradient 4s ease-in-out infinite alternate;
 }
 
-@keyframes textShine {
+@keyframes textgradient {
     0% {
         background-position: 0% 50%;
     }
@@ -128,6 +128,36 @@ $emoji-red: #f70a8c;
     }
 }
 
+.opacity-animation {
+    background: #fff;
+    animation: opcaityanimation 1.5s ease-in;
+}
+
+@keyframes opcaityanimation {
+    0% {
+        background: #F6A700;
+    }
+
+    20% {
+        background: #ffffffcf;
+    }
+
+    40% {
+        background: #F6A700;
+    }
+
+    60% {
+        background: #ffffffcf;
+    }
+
+    80% {
+        background: #F6A700;
+    }
+
+    100% {
+        background: #ffffffcf;
+    }
+}
 
 .animated {
     -webkit-animation-duration: 2s;

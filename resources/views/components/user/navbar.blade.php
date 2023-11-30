@@ -29,7 +29,7 @@
                         <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
                             href="{{ route('guest.slices.index') }}">
                             <i class="bi bi-box-fill text-red fs-5 me-2"></i> Slices
-                            <span class="badge bg-premium fs-tiny">New!</span>
+                            <span class="badge bg-red text-white fs-tiny">New!</span>
                         </a>
                     </li>
 

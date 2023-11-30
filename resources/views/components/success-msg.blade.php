@@ -1,4 +1,4 @@
-<div class="border rounded text-dark bg-white shadow z-3 opacity-75" id="flash-message">
+<div class="border rounded text-dark shadow z-3 opacity-animation" id="flash-message">
     <div class="d-flex justify-content-between align-items-center border-bottom p-2">
         <div class="me-5">
             <img src="{{ asset('images/logo.png') }}" alt="..." width="20px" style="position: relative; top: -3px">
@@ -14,3 +14,4 @@
         <span class="py-0 px-2 bg-success bg-gradient shadow rounded me-1"></span> {{ session('status') }}
     </div>
 </div>
+bg

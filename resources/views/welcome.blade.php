@@ -188,19 +188,30 @@
                     Did You Know . . .
                 </h2>
                 {{-- Given Id so the style wont interfere with dashboard lists --}}
-                <ul id="list">
-                    <li class="m-0 fw-semibold">
-                        96% of mentees find mentoring very useful
-                    </li>
-                    <li class="m-0 fw-semibold">
-                        Approximately 75% of leaders say mentoring played a key role in their success
-                    </li>
-                    <li class="m-0 fw-semibold">
-                        The vast majority, 97% of individuals with a mentor say they find the experience to be a
-                        valuable
-                        one.
-                    </li>
-                </ul>
+                <div id="list">
+                    <ul>
+                        <li class="m-0 fw-semibold">
+                            96% of mentees find mentoring <span class="text-danger fw-bold">very useful</span>
+                        </li>
+                        <li class="m-0 fw-semibold">
+                            Approximately 75% of leaders say mentoring played a key role in their success
+                        </li>
+                        <li class="m-0 fw-semibold">
+                            The vast majority, 97% of individuals with a mentor say they find the experience to be a
+                            valuable
+                            one.
+                        </li>
+                        <li class="m-0 fw-semibold">
+                            Millennial and Gen Z workers who have a mentor are 21% to 23% more likely to
+                            <br class="d-none d-md-inline-block">
+                            report being <span class="text-danger fw-bold">satisfied with their current job</span>,
+                            compared to those without a mentor.
+                        </li>
+                    </ul>
+                </div>
+                <a href="{{ route('about') }}" class="btn bg-red border fw-bold text-white px-3" role="button">
+                    About OwenaHub
+                </a>
             </div>
         </div>
     </section>

@@ -1,5 +1,5 @@
 <!-- Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less. - Marie Curie -->
-<div class="border rounded text-dark bg-white shadow z-3 opacity-75" id="flash-message">
+<div class="border rounded text-dark opacity-animation shadow z-3" id="flash-message">
     <div class="d-flex justify-content-between align-items-center border-bottom p-2">
         <div class="me-5">
             <img src="{{ asset('images/logo.png') }}" alt="..." width="20px" style="position: relative; top: -3px">
