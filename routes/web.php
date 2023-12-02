@@ -22,7 +22,7 @@ Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
 
 /*
-| Authentication Routes for all
+| AUTHENTICATION Routes for all
 | users of - Admin, Mentors, Users
 */
 Route::middleware('guest')->group(function () {
@@ -45,7 +45,7 @@ Route::middleware('guest')->group(function () {
     });
 });
 
-// ------------------------ Guest Routes
+// ----------------- Guest Routes
 Route::name('guest.')->group(function () {
     Route::name('articles.')->group(function () {
         Route::get('/articles', [GuestController::class, 'articles'])->name('index');
@@ -69,19 +69,21 @@ Route::name('guest.')->group(function () {
 | Link to resend verification email
 */
 
-Route::get('/email/verify', function () {
-    return view('user.auth.verify-email');
-})->name('verification.notice');
+Route::middleware('auth')->group(function () {
+    Route::get('/email/verify', function () {
+        return view('user.auth.verify-email');
+    })->name('verification.notice');
 
-Route::post('/email/verification-notification', function (Request $request) {
-    $request->user()->sendEmailVerificationNotification();
+    Route::post('/email/verification-notification', function (Request $request) {
+        $request->user()->sendEmailVerificationNotification();
 
-    return back()->with('message', 'Verification link sent!');
-})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+        return back()->with('message', 'Verification link sent!');
+    })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
+    Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+        $request->fulfill();
 
-    return redirect('/home');
-})->middleware(['auth', 'signed'])->name('verification.verify');
+        return redirect('/home');
+    })->middleware(['auth', 'signed'])->name('verification.verify');
+});

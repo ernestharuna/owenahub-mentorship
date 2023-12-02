@@ -51,16 +51,20 @@
                     </button>
                 </div>
                 <div>
-                    <a href="#" class="fw-semibold">
-                        Forgot Password?
-                    </a>
+                    <small>
+                        <a href="#" class="fw-semibold">
+                            Forgot Password?
+                        </a>
+                    </small>
                 </div>
                 <hr>
                 <div class="m-0">
-                    Don't have an account?
-                    <a href="{{ route('user.register') }}" class="fw-semibold">
-                        Sign Up
-                    </a>
+                    <small>
+                        Don't have an account?
+                        <a href="{{ route('user.register') }}" class="fw-semibold">
+                            Sign Up
+                        </a>
+                    </small>
                 </div>
             </form>
         </div>

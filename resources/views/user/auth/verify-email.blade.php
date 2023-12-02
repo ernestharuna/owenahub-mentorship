@@ -11,12 +11,12 @@
                             </h2>
                             <p class="mt-3 fw-normal">
                                 An Email has been sent to
-                                <b>ernest@gmail.com</b> <br>
+                                <b>{{ Auth::user()->email }}</b> <br>
                                 Use the link below to verify your email
                                 address and start enjoying OwenaHub 😀
                             </p>
 
-                            <div class="mt-4">
+                            <div class="my-4">
                                 <a href="mailto:" class="btn btn-theme rounded-0 text-white shadow-sm fw-bold">
                                     Open Email
                                 </a>
@@ -27,7 +27,9 @@
                                 </a>
                             </div>
 
-                            <div class="fs-tiny text-start mt-3">
+                            <hr>
+
+                            <div class="fs-tiny text-start">
                                 Questions? email us at <a href="mailto:hello@owenahub.com">hello@owenahub.com</a>
                             </div>
 

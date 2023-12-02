@@ -9,14 +9,16 @@ Route::name('user.')->group(function () {
     Route::prefix('user')->group(function () {
         Route::middleware(['auth', 'verified'])->group(function () {
             Route::get('dashboard', UserDashboardController::class)->name('dashboard');
-            Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
             Route::name('slice.')->group(function () {
                 Route::get('slices/{slice}', [SliceController::class, 'show'])->name('show');
             });
         });
+
+        Route::get('logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
     });
 });
+
 
 Route::name('create.')->group(function () {
     Route::post(

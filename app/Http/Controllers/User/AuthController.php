@@ -13,7 +13,7 @@ use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
 {
-    public function register(Request $request)
+    public function  register(Request $request)
     {
         $data = $request->validate([
             'first_name' => ['required', 'min:2', 'max:20', 'alpha'],
@@ -22,13 +22,16 @@ class AuthController extends Controller
             'password' => ['required', 'confirmed', Password::min(8)->letters()->symbols()]
         ]);
 
+        /**
+         * Uppercase first letter of 
+         * First and Last Name
+         */
         $data['first_name'] = ucwords($data['first_name']);
         $data['last_name'] = ucwords($data['last_name']);
 
         /**
          * @var User $user
          */
-
         try {
             $user = User::create([
                 'first_name' => $data['first_name'],
