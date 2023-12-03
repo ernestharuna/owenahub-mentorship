@@ -1,15 +1,16 @@
 <x-guest.article>
     <x-slot name="title">
-        {{ $article->title ?? 'Tech Career Insights - OwenaHub' }}
+        {{ $article->title ?? 'The Mentorship Platform for Tech Enthusiasts - OwenaHub Blog' }}
     </x-slot>
 
     <div class='mb-4'>
         <div class="fs-6 d-inline-block mb-2">
-            <span class="text-red text-uppercase fw-semibold">
-                {{ $article->category }}
+            <span class="text-red font-monospace fw-bold">
+                <i class="bi bi-tags-fill"></i> {{ $article->category }}
             </span>
-            <span class="text-secondary font-monospace">
-                — Last Updated at
+            <span class="text-secondary fw-bold font-monospace">
+                <br>
+                Last Updated,
                 @if ($article->created_at->eq($article->updated_at))
                     {{ $article->created_at->format('j M Y') }}
                 @else
@@ -19,10 +20,10 @@
         </div>
 
         <h1 class='fw-medium fs-1'>{{ $article->title }}</h1>
-
+        <hr>
         <div class="mt-3 mb-4">
             <x-guest.author :is_admin="$article->admin" />
-            <div class="fw-bold fst-italic">
+            <div class="fw-bold fst-italic mt-3">
                 The 411,
                 <span class="text-secondary">
                     "...{{ $article->description }}..."

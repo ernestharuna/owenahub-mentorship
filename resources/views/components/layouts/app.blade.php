@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#F6A700">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <title>
-        {{ $title ?? 'Empowering learners to thrive through mentorship - OwenaHub' }}
+        {{ $title ?? 'The Mentorship Platform for Tech Enthusiasts - OwenaHub' }}
     </title>
 
     <!-- SEO SHIT -->
@@ -16,7 +16,7 @@
     <meta name="keywords" content="mentorship, career, guidance, learning, newbie, tech, learn">
     <meta name="author" content="Ernest Haruna">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="The Learners Hub - Empowering learners to thrive through mentorship.">
+    <meta property="og:title" content="The Learners Hub - The Mentorship Platform for Tech Enthusiasts.">
     <meta property="og:description"
         content="We offer a vibrant platform for learners to gain career insights from experienced mentors.">
     <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
     <meta property="og:image" content="https://owenahub.com/images/logo.png">
     <meta property="og:image:alt" content="The Learners Hub">
     <meta name="twitter:card" content="https://owenahub.com/images/logo.png">
-    <meta name="twitter:title" content="The Learners Hub - Empowering learners to thrive through mentorship">
+    <meta name="twitter:title" content="The Learners Hub - The Mentorship Platform for Tech Enthusiasts">
     <meta name="twitter:description"
         content="We offer a vibrant platform for learners to gain career insights from experienced mentors.">
     <meta name="twitter:image" content="https://www.owenahub.com/images/logo.png">

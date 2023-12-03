@@ -43,7 +43,7 @@
                                         <i class="bi bi-clock-history"></i>
                                         {{ $slice->duration }} weeks &middot;
 
-                                        <span class="fw-semibold text-primary">
+                                        <span class="fw-bold text-primary">
                                             {{ $slice->price ? 'N' . $slice->price : 'FREE' }}
                                         </span>
                                     </p>

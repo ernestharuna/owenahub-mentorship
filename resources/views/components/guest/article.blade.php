@@ -1,7 +1,7 @@
 <!-- Let all your things have their places; let each part of your business have its time. - Benjamin Franklin -->
 <x-layouts.app>
     <x-slot name="title">
-        {{ $title ?? 'Tech Career Insights - OwenaHub' }}
+        {{ $title ?? 'The Mentorship Platform for Tech Enthusiasts - OwenaHub Blog' }}
     </x-slot>
 
     <section class='container my-4'>
