@@ -38,6 +38,19 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     font-family: Soehne, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
 
+// -----------
+.bg-light-purple {
+    background: #cb97ff71 !important;
+}
+
+.bg-light-green {
+    background: #bfffc095 !important;
+}
+
+.bg-light-cyan {
+    background: #a8ffff9d !important;
+}
+
 // button
 .btn-theme {
     background: $theme-gradient;
@@ -78,7 +91,7 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 }
 
 .fw-boldest {
-    font-weight: 900 !important;
+    font-weight: 700 !important;
 }
 
 .circle {
@@ -129,33 +142,33 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 }
 
 .opacity-animation {
-    background: #fff;
+    background: #ffffffce;
     animation: opcaityanimation 1.5s ease-in;
 }
 
 @keyframes opcaityanimation {
     0% {
-        background: #F6A700;
+        background: #ffe2a5;
     }
 
     20% {
-        background: #ffffffcf;
+        background: #ffffffce;
     }
 
     40% {
-        background: #F6A700;
+        background: #ffe2a5;
     }
 
     60% {
-        background: #ffffffcf;
+        background: #ffffffce;
     }
 
     80% {
-        background: #F6A700;
+        background: #ffe2a5;
     }
 
     100% {
-        background: #ffffffcf;
+        background: #ffffffce;
     }
 }
 

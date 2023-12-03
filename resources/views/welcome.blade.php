@@ -2,13 +2,13 @@
     <div class='animated-2 fadeIn'>
         <header class="container mt-5">
             <div>
-                <h1 class='mb-3 fs-large fw-bold'>
+                <h1 class='mb-3 fs-large fw-boldest'>
                     The Mentorship Platform for <br class="d-none d-md-block">
                     <span class="animated-text">Tech Enthusiasts</span>.
                 </h1>
-                <p>
+                <p class="fs-5 fw-semibold">
                     We offer a vibrant platform for learners <br class="d-md-block d-none" />
-                    to gain <em>career insights</em> from experienced mentors.
+                    to gain <b>career insights</b> from experienced mentors.
                 </p>
 
                 <div class="cta mt-4">
@@ -90,7 +90,8 @@
                 <blockquote class="blockquote">
                     <p class='fs-6 lh-sm'>
                         <small>OwenaHub is resource rich for people wishing to pick up tips and tricks and gain
-                            perspective in their career path.</small>
+                            perspective in their career path.
+                        </small>
                     </p>
                 </blockquote>
                 <figcaption class="blockquote-footer">
@@ -100,18 +101,87 @@
         </div>
     </section>
 
-    <section class='py-5 bg-f2 z-3'>
+    <section class="bg-f2">
+        <div class="container">
+            <div class="py-5">
+                <div class="text-dark text-center container">
+                    <h2 class='fw-boldest fs-1'>
+                        Expand your skillset <br class="d-md-none"> with <span class="text-theme">OwenaHub</span>.
+                    </h2>
+                    <p class="fs-5 fw-semibold text-secondary mb-4">
+                        Find resources curated by our team from for Tech Enthusiasts.
+                    </p>
+                </div>
+
+                <div class="d-lg-flex justify-content-center">
+                    <div class="rounded-4 p-3 shadow-sm bg-white mb-3 d-flex align-items-center">
+                        <div class="me-3 rounded-5 bg-light-purple p-2">
+                            <img src="{{ asset('images/svg/sidebar-code.svg') }}" alt="..."
+                                class="d-block img-fluid" width="40">
+                        </div>
+                        <div>
+                            <h3 class="fs-4 fw-boldest m-0">Web Engineering</h3>
+                            <p class="m-0">View Resource</p>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        &nbsp;
+                        &nbsp;
+                    </div>
+                    <div class="rounded-4 p-3 shadow-sm bg-white mb-3 d-flex align-items-center">
+                        <div class="me-3 rounded-5 bg-theme-light p-2">
+                            <img src="{{ asset('images/svg/code-square.svg') }}" alt="..."
+                                class="d-block img-fluid" width="40">
+                        </div>
+                        <div>
+                            <h3 class="fs-4 fw-boldest m-0">Programming</h3>
+                            <p class="m-0">View Resource</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-lg-flex justify-content-center">
+                    <div class="rounded-4 p-3 shadow-sm bg-white mb-3 d-flex align-items-center">
+                        <div class="me-3 rounded-5 bg-light-cyan p-2">
+                            <img src="{{ asset('images/svg/widget.svg') }}" alt="..." class="d-block img-fluid"
+                                width="40">
+                        </div>
+                        <div>
+                            <h3 class="fs-4 fw-boldest m-0">Software Development Methodologies</h3>
+                            <p class="m-0">View Resource</p>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        &nbsp;
+                        &nbsp;
+                    </div>
+                    <div class="rounded-4 p-3 shadow-sm bg-white mb-3 d-flex align-items-center">
+                        <div class="me-3 rounded-5 bg-light-green p-2">
+                            <img src="{{ asset('images/svg/case-minimalistic.svg') }}" alt="..."
+                                class="d-block img-fluid" width="40">
+                        </div>
+                        <div>
+                            <h3 class="fs-4 fw-boldest m-0">Career & Development</h3>
+                            <p class="m-0">View Resource</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='pt-5'>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="{{ asset('images/generic_img.jpg') }}" alt="..." class="img-fluid shadow rounded-3">
+                    <img src="{{ asset('images/blog-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
                 </div>
                 <div class="col-lg-6">
                     <div class="py-5 px-4">
-                        <h2 class='fw-boldest fs-2 animated-text'>
+                        <h2 class='fw-bold fs-2 animated-text'>
                             Enriching Repository
                         </h2>
-                        <p class="fw-semibold lh-1">
+                        <p class="fw-semibold">
                             Want to read something inspiring, read through <br>
                             articles curated by experienced mentors.
                         </p>
@@ -119,7 +189,7 @@
                         <livewire:recommended-articles />
 
                         <a href="{{ route('guest.articles.index') }}"
-                            class="btn btn-theme px-4 text-dark fs-6 fw-bold mt-3" type='button'>
+                            class="btn btn-theme px-4 py-2 text-dark fs-6 fw-bold mt-3" type='button'>
                             View More
                         </a>
                     </div>
@@ -128,7 +198,7 @@
         </div>
     </section>
 
-    <section class="mb-2 bg-f2 py-2">
+    <section class="mb-2 py-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -138,7 +208,7 @@
                             <span class="circle shadow">
                                 <i class="bi bi-box-seam-fill"></i>
                             </span>
-                            <span class="fw-boldest fs-2 text-theme">
+                            <span class="fw-bold fs-2 text-theme">
                                 OwenaHub's <span class=" animated-text">Slices</span>
                             </span>
                         </h2>
@@ -170,20 +240,21 @@
                             </p>
                         </div>
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-theme px-4 text-dark fs-6 fw-bold mt-3" type='button'>
+                            class="btn btn-theme px-4 py-2 text-dark fs-6 fw-bold mt-3" type='button'>
                             Take A Slice
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="{{ asset('images/generic_img.jpg') }}" alt="..." class="img-fluid shadow rounded-3">
+                    <img src="{{ asset('images/slice-img.png') }}" alt="..."
+                        class="img-fluid shadow rounded-3">
                 </div>
             </div>
     </section>
 
     <section class="bg-white">
         <div class="container">
-            <div class="text-dark py-4">
+            <div class="text-dark py-5 px-4">
                 <h2 class='fw-bold fs-2'>
                     Did You Know . . .
                 </h2>
@@ -203,13 +274,14 @@
                         </li>
                         <li class="m-0 fw-semibold">
                             Millennial and Gen Z workers who have a mentor are 21% to 23% more likely to
-                            <br class="d-none d-md-inline-block">
+                            {{-- <br class="d-none d-md-inline-block"> --}}
                             report being <span class="text-danger fw-bold">satisfied with their current job</span>,
                             compared to those without a mentor.
                         </li>
                     </ul>
                 </div>
-                <a href="{{ route('about') }}" class="btn bg-red border fw-bold text-white px-3" role="button">
+                <a href="{{ route('about') }}" class="btn bg-red border fw-bold text-white px-4 py-2 mt-3"
+                    role="button">
                     About OwenaHub
                 </a>
             </div>
@@ -223,7 +295,7 @@
                     <div class="text-center">
                         <h2 class="fs-1 fw-bold">Join Our Community</h2>
                         <p class=" my-4 fs-5">
-                            🎊 Our community awaits your grand entrance! 🎊<br>
+                            Our community awaits your grand entrance!<br>
                             <span class="fw-bold">Be part of inspiring platform</span>
                         </p>
                     </div>
