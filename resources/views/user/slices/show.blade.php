@@ -42,8 +42,11 @@
 
                 {{-- Complete button --}}
                 <hr>
-                <div>
+                <div class="d-flex justify-content-between align-items-center">
                     <livewire:user.finish-task :slice_id="$slice->id" :bite_id="$show_bite->id" />
+                    {{-- <button class="btn btn-primary">
+                            Next
+                        </button> --}}
                 </div>
             </div>
         </section>

@@ -182,8 +182,8 @@
                             Enriching Repository
                         </h2>
                         <p class="fw-semibold">
-                            Want to read something inspiring, read through <br>
-                            articles curated by experienced mentors.
+                            Want to read something inspiring? <br>
+                            Read through articles curated by experienced mentors.
                         </p>
 
                         <livewire:recommended-articles />
@@ -230,7 +230,7 @@
                                 meticulously organized content,
                                 <br class="d-lg-block d-none">
                                 each encapsulated into bite-sized packages known as
-                                <b>Bites</b>.
+                                <b class="text-red">Bites</b>.
                             </p>
 
                             Dive into a wealth of information and elevate your learning experience.
@@ -262,7 +262,7 @@
                 <div id="list">
                     <ul>
                         <li class="m-0 fw-semibold">
-                            96% of mentees find mentoring <span class="text-danger fw-bold">very useful</span>
+                            96% of mentees find mentoring <span class="text-red fw-bold">very useful</span>
                         </li>
                         <li class="m-0 fw-semibold">
                             Approximately 75% of leaders say mentoring played a key role in their success
@@ -275,12 +275,12 @@
                         <li class="m-0 fw-semibold">
                             Millennial and Gen Z workers who have a mentor are 21% to 23% more likely to
                             {{-- <br class="d-none d-md-inline-block"> --}}
-                            report being <span class="text-danger fw-bold">satisfied with their current job</span>,
+                            report being <span class="text-red fw-bold">satisfied with their current job</span>,
                             compared to those without a mentor.
                         </li>
                     </ul>
                 </div>
-                <a href="{{ route('about') }}" class="btn bg-red border fw-bold text-white px-4 py-2 mt-3"
+                <a href="{{ route('about') }}" class="btn bg-dark border fw-bold text-white px-4 py-2 mt-3"
                     role="button">
                     About OwenaHub
                 </a>

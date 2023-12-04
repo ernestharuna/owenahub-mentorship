@@ -13,7 +13,7 @@ use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
 {
-    public function  register(Request $request)
+    public function register(Request $request)
     {
         $data = $request->validate([
             'first_name' => ['required', 'min:2', 'max:20', 'alpha'],
@@ -40,8 +40,8 @@ class AuthController extends Controller
                 'password' => Hash::make($data['password'])
             ]);
 
-            Auth::login($user);
             event(new Registered($user));
+            Auth::login($user);
             return redirect(route('user.dashboard'))->with('status', 'Welcome!');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());

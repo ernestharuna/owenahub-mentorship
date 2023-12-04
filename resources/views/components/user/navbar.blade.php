@@ -1,4 +1,4 @@
-<nav class="navbar bg-body-tertiary border-bottom">
+<nav class="navbar bg-body-light border-bottom">
     <div class="container ">
         <a href="/" class='text-decoration-none text-dark fs-6 fw-bold m-0'>
             <img src={{ asset('images/logo.png') }} alt="logo" width="28" style="position: relative; top: -2px;">
@@ -19,31 +19,32 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
+                        <a class="nav-link border rounded-1 rounded-0 btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
                             aria-current="page" href="{{ route('user.dashboard') }}">
-                            <i class="bi bi-house-gear-fill text-red fs-5 me-2"></i>
+                            <i class="bi bi-house-gear-fill text-dark fs-5 me-1"></i>
                             Dashboard
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
+                        <a class="nav-link border rounded-1 btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
                             href="{{ route('guest.slices.index') }}">
-                            <i class="bi bi-box-fill text-red fs-5 me-2"></i> Slices
-                            <span class="badge bg-red text-white fs-tiny">New!</span>
+                            <i class="bi bi-box-fill text-dark fs-5 me-1"></i> Slices
+                            <span class="badge bg-red text-white fs-tiny rounded-1">New!</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
+                        <a class="nav-link border rounded-1 btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
                             href="{{ route('guest.articles.index') }}">
-                            <i class="bi bi-file-text-fill text-red fs-5 me-2"></i> Articles
+                            <i class="bi bi-file-text-fill text-dark fs-5 me-1"></i> Articles
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link border btn btn-light shadow-sm mb-2 p-3 text-start fw-bold" href="#">
-                            <i class="bi bi-people-fill text-red fs-5 me-2"></i> Sessions
+                        <a class="nav-link border rounded-1 btn btn-light shadow-sm mb-2 p-3 text-start fw-bold"
+                            href="#">
+                            <i class="bi bi-people-fill text-dark fs-5 me-1"></i> Sessions
                             <span class="badge bg-theme fs-tiny">
                                 Coming Soon!
                             </span>
@@ -56,7 +57,7 @@
                             Account Settings
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('user.profile') }}">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Manage Reviews</a></li>
                             <li>
                                 <hr class="dropdown-divider">

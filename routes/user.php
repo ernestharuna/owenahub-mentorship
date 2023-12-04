@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\SliceController;
 use App\Http\Controllers\User\UserDashboardController;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,8 @@ Route::name('user.')->group(function () {
             Route::name('slice.')->group(function () {
                 Route::get('slices/{slice}', [SliceController::class, 'show'])->name('show');
             });
+
+            Route::get('profile', [ProfileController::class, 'index'])->name('profile');
         });
 
         Route::get('logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');

@@ -75,11 +75,13 @@
                     </ul>
                 </a>
             @else
-                @if (Route::is('guest.articles.index'))
-                    <a href={{ route('guest.slices.index') }}
-                        class='text-secondary text-decoration-none mx-3'>SLICES</a>
-                @else
+                @if (Route::is('guest.slices.index'))
                     <a href="/articles" class='text-secondary text-decoration-none me-3'>BLOG</a>
+                @else
+                    <a href={{ route('guest.slices.index') }} class='text-secondary text-decoration-none mx-3'>
+                        SLICES
+                        <span class="badge rounded-1 bg-red">New</span>
+                    </a>
                 @endif
                 <a href={{ route('about') }} class='text-secondary text-decoration-none'>ABOUT</a>
             @endif

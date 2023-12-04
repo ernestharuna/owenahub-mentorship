@@ -1,13 +1,13 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
-        <div class="col-md-3 col-lg-3 mx-3 my-5 px-4 py-3">
-            <div class="fw-bold">
+        <div class="col-md-6 col-lg-3 mt-4 mb-5 container">
+            <div class="fw-bold my-3">
                 <img src="{{ asset('images/logo.png') }}" alt="..." width="30px"
                     style="position: relative; top: -4px;">
                 <span class="text-dark">User Login</span> | <span class="fw-light">Welcome Back! 😃</span>
             </div>
 
-            <form method="POST" action={{ route('user.login.req') }} class="row g-3 ">
+            <form method="POST" action={{ route('user.login.req') }} class="row g-1 animated-2 fadeIn">
                 @csrf
 
                 {{-- FORM ERROR --}}
@@ -46,11 +46,12 @@
 
                 <div class="col-12 mt-2">
                     <button type="submit"
-                        class="btn btn-theme rounded rounded-0 shadow fw-light text-uppercase fs-6 w-100">
+                        class="btn btn-theme rounded rounded-0 shadow-sm fw-light text-uppercase fs-6 w-100">
                         Login
                     </button>
                 </div>
-                <div>
+
+                <div class="my-2">
                     <small>
                         <a href="#" class="fw-semibold">
                             Forgot Password?
@@ -66,6 +67,7 @@
                         </a>
                     </small>
                 </div>
+
             </form>
         </div>
     </div>

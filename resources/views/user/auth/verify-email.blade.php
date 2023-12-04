@@ -33,7 +33,7 @@
                                 Questions? email us at <a href="mailto:hello@owenahub.com">hello@owenahub.com</a>
                             </div>
 
-                            <form action="/email/verification-notification" class="d-none" method="POST"
+                            <form action="{{ route('verification.send') }}" class="d-none" method="POST"
                                 id="resend">
                                 @csrf
                             </form>

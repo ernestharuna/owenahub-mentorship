@@ -131,6 +131,16 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     animation: textgradient 4s ease-in-out infinite alternate;
 }
 
+.opacity-animation {
+    background: #ffffffce;
+    animation: opacity_animation 1.5s ease-in;
+}
+
+.cta-animation {
+    outline: 0px solid #ff7300;
+    animation: cta 1.8s infinite;
+}
+
 @keyframes textgradient {
     0% {
         background-position: 0% 50%;
@@ -141,12 +151,8 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     }
 }
 
-.opacity-animation {
-    background: #ffffffce;
-    animation: opcaityanimation 1.5s ease-in;
-}
 
-@keyframes opcaityanimation {
+@keyframes opacity_animation {
     0% {
         background: #ffe2a5;
     }
@@ -169,6 +175,16 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 
     100% {
         background: #ffffffce;
+    }
+}
+
+@keyframes cta {
+    from {
+        outline: 0px solid #2efc31;
+    }
+
+    to {
+        outline: 7px solid #2efc3200;
     }
 }
 

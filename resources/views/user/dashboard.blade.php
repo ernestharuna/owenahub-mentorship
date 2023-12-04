@@ -9,9 +9,10 @@
 
         <div>
             <p class="d-inline-flex gap-1">
-                <button class="btn btn-light shadow-sm border position-relative" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    <i class="bi bi-bell-fill"></i> Announcements
+                <button class="btn btn-light shadow-sm fs-tiny border position-relative" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    Notifications <i class="bi bi-chevron-down fs-tiny"></i>
                     <span
                         class="position-absolute top-0 start-100 translate-middle p-2 bg-red border border-light rounded-circle">
                         <span class="visually-hidden">New alerts</span>
@@ -125,9 +126,9 @@
                     </p>
                 </div>
             @endforelse
-            <div>
+            <div class="mt-2">
                 <a href="{{ route('guest.slices.index') }}"
-                    class="btn btn-theme border-0 rounded-1 shadow-sm fw-semibold mt-1" target="_blank">
+                    class="btn btn-theme border-0 rounded-0 shadow-sm fw-semibold mt-1 cta-animation" target="_blank">
                     <i class="bi bi-plus-circle"></i> Have a Slice
                 </a>
             </div>
