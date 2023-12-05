@@ -47,7 +47,7 @@
     </div>
 </div>
 
-<nav class='bg-f2'>
+<nav class='bg-f2 sticky-top shadow-sm'>
 
     <div class='container py-3 d-flex justify-content-between align-items-center'>
         <div>
@@ -68,6 +68,13 @@
                     <ul class="dropdown-menu fs-tiny py-0">
                         <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard</a></li>
                         <li><a class="dropdown-item" href="{{ route('guest.slices.index') }}">View Slices</a></li>
+                        <li>
+                            <a type="button" class="dropdown-item" data-bs-toggle="modal"
+                                data-bs-target="#joinCommunity">
+                                <span class="fw-bold">Community
+                            </a>
+                        </li>
+
                         <hr class="m-0">
                         <li cl>
                             <a class="dropdown-item fw-bold text-danger" href="{{ route('user.logout') }}">Logout</a>

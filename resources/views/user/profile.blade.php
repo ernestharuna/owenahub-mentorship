@@ -10,7 +10,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-4">
                     <p class="fw-bold m-0">Profile Information</p>
-                    <p>Update your account's profile information and email address</p>
+                    <p>Your account's profile information and email address</p>
                 </div>
 
                 <div class="bg-white rounded p-4 col-12 col-lg-6 shadow-sm">
@@ -36,12 +36,17 @@
                 </div>
             </div>
         </section>
-        <section class="w-32 container py-5">
+
+        <div class="container">
+            <hr>
+        </div>
+
+        <section class="w-32 container pb-5 pt-3">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-4">
                     <p class="fw-bold m-0">Contact Information</p>
                     <p>
-                        Update your account's contact information
+                        Your account's contact information
                     </p>
                 </div>
 

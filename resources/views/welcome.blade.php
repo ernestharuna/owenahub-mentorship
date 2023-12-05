@@ -104,11 +104,11 @@
     <section class="bg-f2">
         <div class="container">
             <div class="py-5">
-                <div class="text-dark text-center container">
+                <div class="text-dark text-center container pb-4">
                     <h2 class='fw-boldest fs-1'>
                         Expand your skillset <br class="d-md-none"> with <span class="text-theme">OwenaHub</span>.
                     </h2>
-                    <p class="fs-5 fw-semibold text-secondary mb-4">
+                    <p class="fs-5 fw-semibold text-secondary">
                         Find resources curated by our team from for Tech Enthusiasts.
                     </p>
                 </div>
@@ -170,15 +170,15 @@
         </div>
     </section>
 
-    <section class='pt-5'>
+    <section class='py-5'>
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <img src="{{ asset('images/blog-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
                 </div>
                 <div class="col-lg-6">
-                    <div class="py-5 px-4">
-                        <h2 class='fw-bold fs-2 animated-text'>
+                    <div class="pt-5 px-4">
+                        <h2 class='fw-bold fs-1 text-dark'>
                             Enriching Repository
                         </h2>
                         <p class="fw-semibold">
@@ -189,7 +189,7 @@
                         <livewire:recommended-articles />
 
                         <a href="{{ route('guest.articles.index') }}"
-                            class="btn btn-theme px-4 py-2 text-dark fs-6 fw-bold mt-3" type='button'>
+                            class="btn btn-theme px-4 py-2 text-dark fw-bold mt-3 shadow rounded-1" type='button'>
                             View More
                         </a>
                     </div>
@@ -198,7 +198,7 @@
         </div>
     </section>
 
-    <section class="mb-2 py-2">
+    <section class="mb-2 py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -208,7 +208,7 @@
                             <span class="circle shadow">
                                 <i class="bi bi-box-seam-fill"></i>
                             </span>
-                            <span class="fw-bold fs-2 text-theme">
+                            <span class="fw-bold fs-1 text-dark">
                                 OwenaHub's <span class=" animated-text">Slices</span>
                             </span>
                         </h2>
@@ -240,7 +240,7 @@
                             </p>
                         </div>
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-theme px-4 py-2 text-dark fs-6 fw-bold mt-3" type='button'>
+                            class="btn btn-theme px-4 py-2 text-dark rounded-1 shadow fw-bold mt-3" type='button'>
                             Take A Slice
                         </a>
                     </div>

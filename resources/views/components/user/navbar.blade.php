@@ -1,4 +1,4 @@
-<nav class="navbar bg-body-light border-bottom">
+<nav class="navbar bg-body-tertiary sticky-top border-bottom">
     <div class="container ">
         <a href="/" class='text-decoration-none text-dark fs-6 fw-bold m-0'>
             <img src={{ asset('images/logo.png') }} alt="logo" width="28" style="position: relative; top: -2px;">
