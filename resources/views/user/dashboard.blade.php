@@ -101,7 +101,9 @@
                             <div class="p-4">
                                 @forelse ($enrolled->slice->bite->sortBy('position') as $bite)
                                     <div class="p-3 border d-flex align-items-center mb-2 rounded shadow-sm">
-                                        <livewire:user.checked-badge :bite="$bite->id" />
+                                        <div class="text-theme">
+                                            <livewire:user.checked-badge :bite="$bite->id" />
+                                        </div>
                                         <div>
                                             <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => $loop->iteration]) }}"
                                                 class="text-decoration-none text-dark">
@@ -126,6 +128,7 @@
                     </p>
                 </div>
             @endforelse
+
             <div class="mt-2">
                 <a href="{{ route('guest.slices.index') }}"
                     class="btn btn-theme border-0 rounded-0 shadow-sm fw-semibold mt-1 cta-animation" target="_blank">

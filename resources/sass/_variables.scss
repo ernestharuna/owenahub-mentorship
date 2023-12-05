@@ -137,8 +137,13 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 }
 
 .cta-animation {
-    outline: 0px solid #ff7300;
-    animation: cta 1.8s infinite;
+    outline: 0px solid #fff;
+    animation: cta_success 1.8s infinite;
+}
+
+.cta-animation-error {
+    outline: 0px solid #fff;
+    animation: cta_error 1.8s infinite;
 }
 
 @keyframes textgradient {
@@ -178,13 +183,23 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     }
 }
 
-@keyframes cta {
+@keyframes cta_success {
     from {
         outline: 0px solid #2efc31;
     }
 
     to {
         outline: 7px solid #2efc3200;
+    }
+}
+
+@keyframes cta_error {
+    from {
+        outline: 0px solid #DD3A4A;
+    }
+
+    to {
+        outline: 7px solid #dd3a4a00;
     }
 }
 

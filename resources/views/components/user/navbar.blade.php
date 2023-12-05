@@ -4,15 +4,20 @@
             <img src={{ asset('images/logo.png') }} alt="logo" width="28" style="position: relative; top: -2px;">
             OwenaHub
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler rounded-0 shadow-sm" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            {{-- <span class="navbar-toggler-icon"></span> --}}
+            <span class="fs-tiny fw-semibold">
+                <i class="bi bi-chevron-right"></i>
+                {{ ucfirst(strtolower(Auth::user()->first_name)) }}
+                {{ ucfirst(strtolower(Auth::user()->last_name)) }}
+            </span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    {{ ucfirst(strtolower(Auth::user()->first_name)) }}
-                    {{ ucfirst(strtolower(Auth::user()->last_name)) }}
+                    <span class="fw-bold">OwenaHub</span> -
+                    <span class="fw-light">The learner's Hub</span>
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>

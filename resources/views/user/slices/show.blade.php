@@ -7,13 +7,32 @@
                         <span class="text-theme fw-bold">OwenaHub</span> <span class="fw-light">slices</span>
                     </h3>
                     @forelse ($slice->bite as $bite)
-                        <div class="py-2 border-bottom rounded mb-1">
-                            <a href="?bite={{ $loop->iteration }}" class="d-block text-decoration-none text-dark">
+                        @php
+                            $active = $bite->id === $show_bite->id;
+                        @endphp
+                        <div @class([
+                            'bg-theme' => $active,
+                            'text-light' => $active,
+                            'bg-white' => !$active,
+                            'p-2',
+                            'border-bottom',
+                            'rounded',
+                            'mb-1',
+                            'd-flex',
+                            'align-items-center',
+                        ])>
+                            <livewire:user.checked-badge :bite="$bite->id" />
+                            <a href="?bite={{ $loop->iteration }}" @class([
+                                'd-block',
+                                'text-decoration-none',
+                                'text-white' => $active,
+                                'text-dark' => !$active,
+                            ])>
                                 <span class="fw-semibold">
-                                    {{ $bite->title }}
+                                    {{ $bite->title }} {{ $active }}
                                 </span><br>
                                 <span class="fs-tiny">
-                                    {{ $bite->description }} | <span class="text-primary">start</span>
+                                    {{ $bite->description }}
                                 </span>
                             </a>
                         </div>
@@ -26,11 +45,13 @@
             </aside>
 
             <div class="col-md-8 col-12 py-4">
-                <p class="text-secondary fw-semibold">
+                <p class="fs-5">
                     <span class="text-theme fw-bold">
                         Bite {{ $show_bite->position }}:
                     </span>
-                    {{ $show_bite->title }}
+                    <span class="fw-semibold">
+                        {{ $show_bite->title }}
+                    </span>
                 </p>
                 <hr>
 

@@ -1,4 +1,4 @@
-<div class="border rounded text-dark shadow z-3 cta-animation" id="flash-message">
+<div class="border rounded text-dark shadow z-3 bg-white cta-animation" id="flash-message">
     <div class="d-flex justify-content-between align-items-center border-bottom p-2">
         <div class="me-5">
             <img src="{{ asset('images/logo.png') }}" alt="..." width="20px" style="position: relative; top: -3px">
