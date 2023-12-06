@@ -76,7 +76,7 @@ class FinishTask extends Component
             if ($this->can_review) {
                 Review::create($review);
             }
-            return back()->with('status', 'Great job, ' . Auth::user()->first_name . '!');
+            return redirect(route('user.dashboard'))->with('status', 'Great job, ' . Auth::user()->first_name . '!');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', $e->getMessage());

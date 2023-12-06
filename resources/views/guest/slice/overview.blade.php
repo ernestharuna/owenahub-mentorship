@@ -31,7 +31,8 @@
 
                     @if (Auth::check())
                         <!-- Button trigger modal -->
-                        <button type="button" class="w-100 btn btn-theme fw-bold p-3 fs-5 text-white shadow-sm"
+                        <button type="button"
+                            class="w-100 btn btn-dark fw-bold rounded-1 p-3 fs-5 text-white shadow-sm"
                             data-bs-toggle="modal" data-bs-target="#confirm_slice">
                             Add to plate!
                         </button>

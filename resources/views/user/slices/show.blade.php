@@ -16,8 +16,9 @@
                             'bg-white' => !$active,
                             'p-2',
                             'border-bottom',
+                            'border-start',
                             'rounded',
-                            'mb-1',
+                            'mb-2',
                             'd-flex',
                             'align-items-center',
                         ])>

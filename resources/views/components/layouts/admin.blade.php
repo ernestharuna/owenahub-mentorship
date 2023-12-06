@@ -12,15 +12,15 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>OwenaHub - Admin Panel</title>
 
-    <!-- Scripts -->
+    <!-- include libraries(jQuery, bootstrap) -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+
+    <!-- include summernote css/js-->
+    <link href="{{ asset('summernote/dist/summernote-lite.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('summernote/dist/summernote-lite.min.js') }}"></script>
+
+    <!-- Vite Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-    <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </head>
 
 <body>

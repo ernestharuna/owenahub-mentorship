@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="latest-articles bg-f2 shadow border p-3 rounded ">
+        <div class="latest-articles bg-f2 shadow-sm border p-3 rounded ">
             <h5 class="fw-bold">Latest Published Articles</h5>
             <div class="my-2">
                 <a href={{ route('admin.articles.create') }}>
@@ -51,7 +51,7 @@
             @endforelse
         </div>
 
-        <div class="featured-articles mt-4 bg-f2 shadow border p-3 rounded">
+        <div class="featured-articles mt-4 bg-f2 shadow-sm border p-3 rounded">
             <h5 class="fw-bold">Featured Articles</h5>
             <div class="my-2">
                 <a href={{ route('admin.feat_articles.create') }}>
@@ -91,7 +91,7 @@
             @endforelse
         </div>
 
-        <div class="featured-articles my-4 bg-f2 shadow border p-3 rounded">
+        <div class="featured-articles my-4 bg-f2 shadow-sm border p-3 rounded">
             <h5 class="fw-bold">Available Slices</h5>
             <div class="my-2">
                 <a href={{ route('admin.slice.create') }}>

@@ -7,7 +7,7 @@
         <button class="navbar-toggler rounded-0 shadow-sm" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             {{-- <span class="navbar-toggler-icon"></span> --}}
-            <span class="fs-tiny fw-semibold">
+            <span class="fs-tiny fw-semibold bg-white">
                 <i class="bi bi-chevron-right"></i>
                 {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                 {{ ucfirst(strtolower(Auth::user()->last_name)) }}

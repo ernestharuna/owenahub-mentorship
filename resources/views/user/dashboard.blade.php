@@ -63,7 +63,7 @@
                 <div class="accordion accordion-flush mb-1 border position-relative" id="accordionFlushExample">
                     {{-- Badge --}}
                     @php
-                        $data = $enrolled->slice->created_at;
+                        $data = $enrolled->created_at;
                         $datetime = \Carbon\Carbon::parse($data);
                         $now = \Carbon\Carbon::now();
 
@@ -76,6 +76,7 @@
                         }
                     @endphp
 
+                    {{-- Badge Start --}}
                     @if ($created_now == true)
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-red z-3">
                             New
@@ -83,15 +84,16 @@
                         </span>
                     @endif
                     {{-- Badge End --}}
+
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapse{{ $enrolled->slice->id }}" aria-expanded="false"
                                 aria-controls="flush-collapse{{ $enrolled->slice->id }}">
                                 <span class="fw-semibold">
-                                    {{ $enrolled->slice->title }}
+                                    {{ $enrolled->slice->title }} —
                                 </span>
-                                <div class="d-md-block d-none"> —
+                                <div class="d-md-block d-none">
                                     <livewire:user.slice-progress :slice="$enrolled" />
                                 </div>
                             </button>

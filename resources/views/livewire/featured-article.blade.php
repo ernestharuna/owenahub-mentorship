@@ -4,7 +4,7 @@
             $data = $feat_article->title;
             $title = strtolower(str_replace(' ', '-', $data));
         @endphp
-        <div class="bg-theme p-3 shadow my-3 animated-2 fadeIn">
+        <div class="bg-theme p-3 my-3 animated-2 fadeIn">
             <p class="fs-tiny text-white fw-bold font-monospace text-uppercase">
                 Posted on {{ $feat_article->created_at->format('j M Y') }}
             </p>
