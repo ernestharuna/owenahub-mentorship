@@ -18,9 +18,7 @@ class FinishTask extends Component
 
     /**
      * Accepts the current slice & bite ID
-     * 
      * Checks if the user has reviewed this slice
-     * 
      * Checks if bite is completed
      */
     public function mount($slice_id = null, $bite_id = null)
@@ -57,8 +55,6 @@ class FinishTask extends Component
 
     public function save()
     {
-        // dd($this->user_reviews);
-
         $complete_task = [
             'user_id' => Auth::id(),
             'bite_id' => $this->bite_id,
