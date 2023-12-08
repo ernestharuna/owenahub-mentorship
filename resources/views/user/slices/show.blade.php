@@ -1,10 +1,10 @@
 <x-layouts.user>
-    <div class="container">
+    <div>
         <section class="row">
-            <aside class="col-md-3 col-12 border-end bg-f2">
+            <aside class="col-md-4 col-12 border-end bg-f2">
                 <div class="py-4 fs-tiny">
                     <h3 class="mb-4">
-                        <span class="text-theme fw-bold">OwenaHub</span> <span class="fw-light">slices</span>
+                        <span class="fw-light">Your</span> <span class="text-theme fw-bold">Bites</span>
                     </h3>
                     @forelse ($slice->bite as $bite)
                         @php
@@ -64,12 +64,12 @@
 
                 {{-- Complete button --}}
                 <hr>
+
                 <div class="d-flex justify-content-between align-items-center">
                     <livewire:user.finish-task :slice_id="$slice->id" :bite_id="$show_bite->id" />
-                    {{-- <button class="btn btn-primary">
-                            Next
-                        </button> --}}
                 </div>
+
+                <hr class="mb-5">
             </div>
         </section>
     </div>

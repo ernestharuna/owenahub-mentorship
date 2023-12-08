@@ -21,8 +21,15 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(route('guest.slices.index'));
+                // return redirect(route('guest.slices.index'));
                 // return redirect(RouteServiceProvider::HOME);
+
+                // Check the guard type ---- custome written code ooo
+                if ($guard === 'admin') {
+                    return redirect(route('admin.dashboard'));
+                } else {
+                    return redirect(route('user.dashboard'));
+                }
             }
         }
 

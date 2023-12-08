@@ -13,11 +13,11 @@
 
                 <div class="cta mt-4">
                     <a href="{{ route('guest.slices.index') }}"
-                        class='text-decoration-none btn btn-theme rounded rounded-0 text-uppercase fs-6 fw-bold shadow text-dark'>
+                        class='text-decoration-none btn btn-theme rounded-1 text-uppercase fs-6 fw-bold shadow text-dark'>
                         Start Learning Now
                     </a>
                     <a href="{{ route('guest.articles.index') }}"
-                        class='text-decoration-none btn btn-dark rounded rounded-0 ms-2 text-uppercase fs-6 fw-bold shadow text-theme'>
+                        class='text-decoration-none btn btn-dark rounded-1 ms-2 text-uppercase fs-6 fw-bold shadow text-theme'>
                         Blog
                     </a>
                 </div>
@@ -280,7 +280,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="{{ route('about') }}" class="btn bg-dark border fw-bold text-white px-4 py-2 mt-3"
+                <a href="{{ route('about') }}" class="btn bg-dark rounded-1 border fw-bold text-white px-4 py-2 mt-3"
                     role="button">
                     About OwenaHub
                 </a>
@@ -301,7 +301,7 @@
                     </div>
                     <!-- Button trigger modal -->
                     <button type="button"
-                        class="btn rounded rounded-0 btn-light text-decoration-none text-dark fw-bold"
+                        class="btn rounded-1 shadow btn-light text-decoration-none text-dark fw-bold"
                         data-bs-toggle="modal" data-bs-target="#joinCommunity">
                         Check Us Out! 🤙🏽
                     </button>

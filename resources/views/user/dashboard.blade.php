@@ -1,9 +1,9 @@
 <x-layouts.user>
-    <section class="container mt-4">
-        <p class="text-secondary mb-2">
+    <section class="mt-4">
+        <p class="text-dark fw-bold mb-2">
             <i class="bi bi-house-gear-fill fs-5"></i> Dashboard
         </p>
-        <p class="fw-bold text-secondary fs-2">
+        <p class="fw-bold text-secondary fs-2 mb-4">
             Hey, {{ ucfirst(strtolower(Auth::user()->first_name)) }} 😍
         </p>
 
@@ -53,10 +53,19 @@
                 </div>
             </div>
         </div>
+
+        {{-- Banner --}}
+        <div class="p-4 rounded bg-theme mb-3">
+            <h3 class="fs-4 fw-bold text-white">Welcome to OwenaHub</h3>
+            <p class="m-0 fw-semibold">
+                We're thrilled to have you on board and part of our growing community. 🚀 <br>
+                {{-- You can join our social communities to be part of a community that fosters learning and growth --}}
+            </p>
+        </div>
     </section>
 
-    <section class="bg-f2">
-        <div class="container py-3 w-64">
+    <section>
+        <div class="p-3 bg-white shadow-sm border rounded">
             <h3 class="fw-bold fs-4">Your Slices</h3>
 
             @forelse ($enrolled_slices as $enrolled)
@@ -91,7 +100,7 @@
                                 data-bs-target="#flush-collapse{{ $enrolled->slice->id }}" aria-expanded="false"
                                 aria-controls="flush-collapse{{ $enrolled->slice->id }}">
                                 <span class="fw-semibold">
-                                    {{ $enrolled->slice->title }} —
+                                    {{ $enrolled->slice->title }}
                                 </span>
                                 <div class="d-md-block d-none">
                                     <livewire:user.slice-progress :slice="$enrolled" />
@@ -133,15 +142,32 @@
 
             <div class="mt-2">
                 <a href="{{ route('guest.slices.index') }}"
-                    class="btn btn-theme border-0 rounded-0 shadow-sm fw-semibold mt-1 cta-animation" target="_blank">
+                    class="btn btn-theme border-0 rounded-1 shadow-sm fw-semibold mt-1 cta-animation" target="_blank">
                     <i class="bi bi-plus-circle"></i> Have a Slice
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="bg-white">
-        <div class="container my-4">
+    <section class="mt-4">
+        <div class="p-3 bg-white shadow-sm border rounded">
+            <h3 class="fw-bold fs-4">Sessions</h3>
+            <div>
+                <p class="text-secondary">
+                    Sessions are unavailable at the moment.
+                </p>
+            </div>
+            <div class="mt-2">
+                <button href="{{ route('guest.slices.index') }}" disabled
+                    class="btn btn-theme border-0 rounded-1 shadow-sm fw-semibold mt-1" target="_blank">
+                    <i class="bi bi-plus-circle"></i> Create a session
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-4 mb-5">
+        <div class="bg-white shadow-sm border rounded p-3">
             <h3 class="fw-bold fs-4">Recommended for you</h3>
             <livewire:recommended-articles />
         </div>

@@ -22,13 +22,13 @@
                 {{-- FORM ERROR ENDS --}}
 
                 <div class="form-floating mb-1">
-                    <input type="email" name="email" class="form-control rounded rounded-0 border-dark border-1"
+                    <input type="email" name="email" class="form-control rounded-1 border-dark border-1"
                         id="email" placeholder="doe@example.com">
                     <label for="email" class="fw-bold">Email Address</label>
                 </div>
 
                 <div class="form-floating mb-1">
-                    <input type="password" name="password" class="form-control rounded rounded-0 border-dark border-1"
+                    <input type="password" name="password" class="form-control rounded-1 border-dark border-1"
                         id="password" placeholder="Password">
                     <label for="password" class="fw-bold">Password</label>
                 </div>
@@ -45,8 +45,7 @@
                 </div>
 
                 <div class="col-12 mt-2">
-                    <button type="submit"
-                        class="btn btn-theme rounded rounded-0 shadow-sm fw-light text-uppercase fs-6 w-100">
+                    <button type="submit" class="btn btn-theme rounded-1 shadow-sm text-uppercase fs-6 w-100">
                         Login
                     </button>
                 </div>

@@ -11,14 +11,8 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-    <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    <!-- Scripts --> <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script>
+    <!-- Google tag (gtag.js) -->
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -28,17 +22,25 @@
         gtag('js', new Date());
 
         gtag('config', 'G-HSLS7K2448');
-    </script>
+    </script> --}}
 </head>
 
 <body>
     <div id="app">
-        <x-user.navbar /> <!-- Header --->
-        <main>
-            {{ $slot }}
+        <div>
+            <div class="container-fluid bg-f2">
+                <div class="row">
+                    <div class="col-lg-3 d-none d-lg-block sticky-top" style="height: 100vh; overflow-y: auto;">
+                        <x-user.side-nav />
+                    </div>
+                    <div class="col-lg-8">
+                        {{ $slot }}
+                    </div>
+                </div>
+            </div>
             <x-session-message /> <!-- Session messages-->
-        </main>
-        <x-footer />
+            <x-user.mobile-nav /> <!-- Navigation for mobile phones -->
+        </div>
     </div>
 </body>
 

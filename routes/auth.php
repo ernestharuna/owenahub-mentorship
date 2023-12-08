@@ -11,11 +11,10 @@ use Illuminate\Http\Request;
  * sers of - Admin, Mentors, Users
  */
 Route::middleware('guest')->group(function () {
-
     Route::name('admin.')->group(function () {
         Route::prefix('admin')->group(function () {
-            Route::view('login', 'admin.auth.login')->name('login');
-            Route::post('login', [AdminAuthController::class, 'login'])->name('login.req'); //uses Admin Auth Controller
+            Route::view('login', 'admin.auth.login')->name('login')->middleware('auth:admin');
+            Route::post('login', [AdminAuthController::class, 'login'])->name('login.req')->middleware('auth:admin'); //uses Admin Auth Controller
         });
     });
 
@@ -36,7 +35,6 @@ Route::middleware('guest')->group(function () {
 | View for Email sent notification
 | Link to resend verification email
 */
-
 Route::middleware('auth')->group(function () {
     Route::get('/email/verify', function () {
         return view('user.auth.verify-email');
