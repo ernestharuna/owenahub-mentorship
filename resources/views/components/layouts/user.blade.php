@@ -12,7 +12,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     <!-- Google tag (gtag.js) -->
-    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HSLS7K2448"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -22,7 +22,7 @@
         gtag('js', new Date());
 
         gtag('config', 'G-HSLS7K2448');
-    </script> --}}
+    </script>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
             <div class="container-fluid bg-f2">
                 <div class="row">
                     <div class="col-lg-3 d-none d-lg-block sticky-top" style="height: 100vh; overflow-y: auto;">
-                        <x-user.side-nav />
+                        <x-user.side-nav /> <!-- Navigation for Desktops -->
                     </div>
                     <div class="col-lg-8">
                         {{ $slot }}
