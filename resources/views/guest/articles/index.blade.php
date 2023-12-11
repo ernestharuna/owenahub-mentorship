@@ -61,8 +61,7 @@
                 </div>
                 <div class="text-center">
                     <!-- Button trigger modal -->
-                    <button type="button"
-                        class="btn rounded rounded-0 btn-light text-decoration-none text-dark fw-bold"
+                    <button type="button" class="btn rounded-1 btn-light shadow text-dark fw-bold"
                         data-bs-toggle="modal" data-bs-target="#joinCommunity">
                         Check Us Out! 🤙🏽
                     </button>

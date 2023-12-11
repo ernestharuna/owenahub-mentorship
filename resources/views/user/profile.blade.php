@@ -66,8 +66,8 @@
                     <button class="btn btn-dark rounded-1 px-4 fs-tiny fw-bold" disabled>
                         SAVE
                     </button>
-                    <a href="{{ route('user.logout') }}" class="btn btn-danger rounded-1 px-4 ms-2 fs-tiny fw-bold">
-                        → LOGOUT
+                    <a href="{{ route('user.logout') }}" class="btn btn-danger rounded-1 px-3 ms-2 fs-tiny fw-bold">
+                        LOGOUT
                     </a>
                 </div>
             </div>

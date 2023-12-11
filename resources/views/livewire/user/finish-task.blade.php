@@ -42,7 +42,7 @@
             Digested Bite!
         </button>
     @else
-        <button type="button" class="btn btn-dark rounded-0 fw-semibold fs-tiny py-1" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark rounded-1 fw-semibold px-3" data-bs-toggle="modal"
             data-bs-target="#finish-task">
             NEXT →
         </button>

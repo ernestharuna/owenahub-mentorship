@@ -55,10 +55,18 @@
             </div>
             <hr>
             <div class="mt-5">
-                <a href="{{ route('user.logout') }}"
-                    class="btn btn-dark rounded-1 d-block text-start mb-2 py-3 fw-semibold fs-5">
-                    → Log Out
-                </a>
+                <div class="d-flex bg-theme rounded-1 p-2">
+                    <div class="px-1 py-2 rounded-5 bg-light me-2"></div>
+                    <div>
+                        <h2 class="fs-6 fw-bold m-0">
+                            {{ ucfirst(strtolower(Auth::user()->first_name)) }}
+                            {{ ucfirst(strtolower(Auth::user()->last_name)) }}
+                        </h2>
+                        <p class="text-white fs-tiny m-0">
+                            {{ Auth::user()->email }}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
