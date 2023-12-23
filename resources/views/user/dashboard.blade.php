@@ -100,8 +100,9 @@
                                 data-bs-target="#flush-collapse{{ $enrolled->slice->id }}" aria-expanded="false"
                                 aria-controls="flush-collapse{{ $enrolled->slice->id }}">
                                 <span class="fw-semibold">
-                                    {{ $enrolled->slice->title }}
+                                    {{ $enrolled->slice->title }} —
                                 </span>
+
                                 <div class="d-md-block d-none">
                                     <livewire:user.slice-progress :slice="$enrolled" />
                                 </div>

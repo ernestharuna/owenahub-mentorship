@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#F6A700">
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <title>
-        {{ $title ?? 'The Mentorship Platform for Tech Enthusiasts - OwenaHub' }}
+        {{ $title ?? 'OwenaHub: The Mentorship Platform for Tech Enthusiasts' }}
     </title>
 
     <!-- SEO SHIT -->

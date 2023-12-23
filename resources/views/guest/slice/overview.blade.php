@@ -5,14 +5,14 @@
                 {{ $slice->title }}
             </h1>
             <p class="">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
-            <p class="m-0 text-white" style="max-width: 300px;">
+            <p class="m-0 text-white" style="max-width: 500px;">
                 {{ $slice->about }}
             </p>
         </div>
     </section>
 
     <section class="bg-f2 py-3">
-        <div class="container">
+        <div class="container mt-3">
             <div class="row justify-content-between">
                 <div class="col-lg-8 p-4 bg-white rounded shadow-sm mb-5 container">
                     <h2 class="fs-5 fw-bold text-theme">Course Overview</h2>

@@ -25,7 +25,7 @@ class BiteController extends Controller
             }
 
             $slice->bite()->create($data);
-            return redirect(route('admin.slice.show', $slice->id))->with('status', 'Slice Created!');
+            return redirect(route('admin.slice.show', $slice->id))->with('status', 'Bite Created!');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', 'Something went wrong');

@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ Auth::user()->first_name }} - OwenaHub</title>
+    <title>{{ Auth::user()->first_name }} Dashboard - OwenaHub</title>
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
