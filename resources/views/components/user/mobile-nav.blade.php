@@ -17,9 +17,12 @@
                 @endif
             </a>
 
-            <a href="#" class="d-block text-dark">
-                <i class="bi bi-calendar2 fs-1"></i>
-                {{-- <i class="bi bi-calendar2-fill fs-1"></i> --}}
+            <a href="{{ route('user.session.index') }}" class="d-block text-dark">
+                @if (Route::is('user.session.index'))
+                    <i class="bi bi-calendar2-fill text-theme fs-1"></i>
+                @else
+                    <i class="bi bi-calendar2 fs-1"></i>
+                @endif
             </a>
 
             <a href="{{ route('user.profile') }}" class="d-block text-dark">

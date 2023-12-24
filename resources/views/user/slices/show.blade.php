@@ -64,11 +64,7 @@
 
                 {{-- Complete button --}}
                 <hr>
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <livewire:user.finish-task :slice_id="$slice->id" :bite_id="$show_bite->id" />
-                </div>
-
+                <livewire:user.finish-task :slice_id="$slice->id" :bite_id="$show_bite->id" />
                 <hr class="mb-5">
             </div>
         </section>

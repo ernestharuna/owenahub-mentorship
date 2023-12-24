@@ -59,7 +59,8 @@ class AuthController extends Controller
         try {
             if (Auth::attempt($data, $request->filled('remember'))) {
                 $request->session()->regenerate();
-                return redirect()->intended(route('user.dashboard'))->with('status', 'Login Successful');
+                return redirect(route('user.dashboard'))->with('status', 'Login Successful!');
+                // return redirect()->intended(route('user.dashboard'))->with('status', 'Login Successful');
             };
 
             return back()->withErrors([

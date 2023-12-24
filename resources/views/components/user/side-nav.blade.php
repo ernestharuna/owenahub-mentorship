@@ -36,10 +36,16 @@
                 </a>
             </div>
             <div>
-                <a href="#"
+                <a href="{{ route('user.session.index') }}"
                     class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-3 fw-semibold
                     fs-5">
-                    <i class="bi bi-calendar2 fs-5 me-2"></i> Sessions
+                    @if (Route::is('user.session.index'))
+                        <i class="bi bi-calendar2-fill text-theme fs-5 me-2"></i>
+                        {{-- <i class="bi bi-box-fill text-theme fs-5 me-2"></i> --}}
+                    @else
+                        <i class="bi bi-calendar2 fs-5 me-2"></i>
+                    @endif
+                    Sessions
                 </a>
             </div>
             <div class="mb-5">

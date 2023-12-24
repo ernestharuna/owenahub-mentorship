@@ -15,6 +15,10 @@ Route::name('user.')->group(function () {
                 Route::get('slices/{slice}', [SliceController::class, 'show'])->name('show');
             });
 
+            Route::name('session.')->group(function(){
+                Route::view('sessions', 'user.sessions.index')->name('index');
+            });
+
             Route::get('profile', [ProfileController::class, 'index'])->name('profile');
         });
 

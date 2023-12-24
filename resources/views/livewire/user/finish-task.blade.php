@@ -38,11 +38,11 @@
 
     <!-- Button trigger modal -->
     @if ($bite_completed)
-        <button type="button" class="btn btn-dark rounded-0 fw-light" disabled>
+        <button type="button" class="btn btn-dark rounded-0 fw-semibold p-3 w-100" disabled>
             Digested Bite!
         </button>
     @else
-        <button type="button" class="btn btn-dark rounded-1 fw-semibold px-3" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark rounded-1 fw-semibold p-3 w-100" data-bs-toggle="modal"
             data-bs-target="#finish-task">
             NEXT →
         </button>
@@ -54,7 +54,6 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-
                     <div>
                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Woa! Are you done with this? 😏</h1>
                         <p class="m-0 fs-tiny">
@@ -101,7 +100,6 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
