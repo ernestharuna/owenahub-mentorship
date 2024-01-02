@@ -21,6 +21,12 @@ Route::view('about', 'about')->name('about');
 
 // ----------------- Guest Routes
 Route::name('guest.')->group(function () {
+    Route::name('onboarding.')->group(function () {
+        Route::view('/getstarted/slices', 'guest.onboarding.slices')->name('slices');
+        Route::view('/getstarted/teams', 'guest.onboarding.teams')->name('teams');
+        Route::view('/getstarted/blog', 'guest.onboarding.blog')->name('blog');
+    });
+
     Route::name('articles.')->group(function () {
         Route::get('/articles', [GuestController::class, 'articles'])->name('index');
         Route::get('/articles/{article}/{title?}', [GuestController::class, 'show_article'])->name('show');

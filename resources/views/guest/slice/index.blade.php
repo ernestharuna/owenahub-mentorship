@@ -5,7 +5,9 @@
         </h1>
         <div>
             <p class="fw-semibold">
-                Our slices are like mini-courses that allow you learn vital topics from mentors on the Go.
+                Our slices are like mini-courses that allow you gain insights from mentors <br>
+                Gain perspective in what
+                direction to take in starting to learn the craft of web development.
             </p>
         </div>
         <section class="my-4">
