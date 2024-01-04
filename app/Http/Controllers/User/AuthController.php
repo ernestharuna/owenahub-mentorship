@@ -42,7 +42,7 @@ class AuthController extends Controller
 
             event(new Registered($user));
             Auth::login($user);
-            return redirect(route('user.dashboard'))->with('status', 'Welcome!');
+            return redirect(route('user.dashboard'))->with('status', 'Welcome to OwenaHub!');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());
             throw $e;
@@ -59,8 +59,7 @@ class AuthController extends Controller
         try {
             if (Auth::attempt($data, $request->filled('remember'))) {
                 $request->session()->regenerate();
-                return redirect(route('user.dashboard'))->with('status', 'Login Successful!');
-                // return redirect()->intended(route('user.dashboard'))->with('status', 'Login Successful');
+                return redirect(route('user.dashboard'))->with('status', 'Welcome back!');
             };
 
             return back()->withErrors([

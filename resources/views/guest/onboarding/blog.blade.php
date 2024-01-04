@@ -10,7 +10,7 @@
                         <h1 class="card-title fs-3 mb-4 fw-bold">Access To Our Blog</h1>
                         <div class="card-text mb-3">
                             OwenaHub features an insightful repository of articles that <br>
-                            cover interesting topics within the field.
+                            covers interesting topics within the field.
                         </div>
 
                         <a href="{{ route('user.register') }}" class="btn btn-theme rounded-1 fw-bold w-100 mt-3">
