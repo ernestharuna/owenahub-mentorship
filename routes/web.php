@@ -25,6 +25,7 @@ Route::name('guest.')->group(function () {
         Route::view('/getstarted/slices', 'guest.onboarding.slices')->name('slices');
         Route::view('/getstarted/teams', 'guest.onboarding.teams')->name('teams');
         Route::view('/getstarted/blog', 'guest.onboarding.blog')->name('blog');
+        Route::view('/getstarted/signup', 'guest.onboarding.signup')->name('signup');
     });
 
     Route::name('articles.')->group(function () {

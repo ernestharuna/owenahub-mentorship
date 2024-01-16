@@ -72,10 +72,10 @@
                     <div>
                         <i class="bi bi-people text-theme"></i>
                         <div>
-                            <strong>Private Session</strong><br />
+                            <strong>Virtual Teams</strong><br />
                             <p class="lh-sm">
-                                Private Sessions tailored to <br class="hidden" />
-                                your individual needs and goals.
+                                Join teams to work on <br class="hidden" />
+                                real-life projects.
                             </p>
                         </div>
                     </div>
@@ -170,46 +170,74 @@
         </div>
     </section>
 
-    <section class='py-5'>
-        <div class="container">
+    <section class="bg-white">
+        <div class="container my-5">
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="{{ asset('images/blog-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
-                </div>
-                <div class="col-lg-6">
-                    <div class="pt-5 px-4">
-                        <h2 class='fw-bold fs-1 text-dark'>
-                            Enriching Repository
+                    <div class="text-dark py-5 px-4">
+                        <h2 class='fw-bold fs-2 text-theme'>
+                            OwenaHub <span class="text-dark fw-normal">teams</span>
                         </h2>
-                        <p class="fw-semibold">
-                            Want to read something inspiring? <br>
-                            Read through articles curated by experienced mentors.
-                        </p>
-
-                        <livewire:recommended-articles />
-
-                        <a href="{{ route('guest.articles.index') }}"
-                            class="btn btn-theme px-4 py-2 text-dark fw-bold mt-3 shadow rounded-1" type='button'>
-                            View More
+                        <div>
+                            <p>
+                                Join virtual teams to work on real-life themed projects to boast your
+                                Resume and give you the real-world experience you need to start a great
+                                role as a techie.
+                                <br><br>
+                                <span class="text-danger">●</span> Get teams as you register for a slice
+                            </p>
+                        </div>
+                        {{-- Given Id so the style wont interfere with dashboard lists --}}
+                        {{-- <div id="list">
+                            <ul>
+                                <li class="m-0 fw-semibold">
+                                    96% of mentees find mentoring <span class="text-red fw-bold">very useful</span>
+                                </li>
+                                <li class="m-0 fw-semibold">
+                                    Approximately 75% of leaders say mentoring played a key role in their success
+                                </li>
+                                <li class="m-0 fw-semibold">
+                                    The vast majority, 97% of individuals with a mentor say they find the experience to
+                                    be a
+                                    valuable
+                                    one.
+                                </li>
+                                <li class="m-0 fw-semibold">
+                                    Millennial and Gen Z workers who have a mentor are 21% to 23% more likely to
+                                    report being <span class="text-red fw-bold">satisfied with their current
+                                        job</span>,
+                                    compared to those without a mentor.
+                                </li>
+                            </ul>
+                        </div> --}}
+                        <a href="{{ route('guest.onboarding.slices') }}"
+                            class="btn btn-theme px-5 py-2 text-dark rounded-1 shadow fw-bold mt-3" type='button'>
+                            Get Started
                         </a>
                     </div>
+                </div>
+                <div class="col-lg-6 order-first">
+                    <img src="{{ asset('images/team-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="mb-2 py-5">
+    <section class="mb-5">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-6">
+                    <img src="{{ asset('images/slice-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
+                </div>
+                <div class="col-lg-6 order-lg-first">
                     <div class="py-5 px-4">
                         {{-- <span class="circle shadow"><i class="bi bi-gift-fill"></i></span>  --}}
                         <h2>
                             <span class="circle shadow">
                                 <i class="bi bi-box-seam-fill"></i>
                             </span>
-                            <span class="fw-bold fs-1 text-dark">
-                                OwenaHub's <span class=" animated-text">Slices</span>
+                            <span class="fw-bold fs-2 text-theme">
+                                OwenaHub <span class="text-dark fw-normal">slices</span>
                             </span>
                         </h2>
 
@@ -240,68 +268,19 @@
                             </p>
                         </div>
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-theme px-4 py-2 text-dark rounded-1 shadow fw-bold mt-3" type='button'>
+                            class="btn btn-theme px-5 py-2 text-dark rounded-1 shadow fw-bold mt-3" type='button'>
                             Take A Slice
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <img src="{{ asset('images/slice-img.png') }}" alt="..."
-                        class="img-fluid shadow rounded-3">
-                </div>
             </div>
-    </section>
-
-    <section class="bg-white">
-        <div class="container my-5">
-            <div class="row order-last">
-                <div class="col-lg-6">
-                    <div class="text-dark py-5 px-4">
-                        <h2 class='fw-bold fs-2'>
-                            Did You Know . . .
-                        </h2>
-                        {{-- Given Id so the style wont interfere with dashboard lists --}}
-                        <div id="list">
-                            <ul>
-                                <li class="m-0 fw-semibold">
-                                    96% of mentees find mentoring <span class="text-red fw-bold">very useful</span>
-                                </li>
-                                <li class="m-0 fw-semibold">
-                                    Approximately 75% of leaders say mentoring played a key role in their success
-                                </li>
-                                <li class="m-0 fw-semibold">
-                                    The vast majority, 97% of individuals with a mentor say they find the experience to
-                                    be a
-                                    valuable
-                                    one.
-                                </li>
-                                <li class="m-0 fw-semibold">
-                                    Millennial and Gen Z workers who have a mentor are 21% to 23% more likely to
-                                    {{-- <br class="d-none d-md-inline-block"> --}}
-                                    report being <span class="text-red fw-bold">satisfied with their current
-                                        job</span>,
-                                    compared to those without a mentor.
-                                </li>
-                            </ul>
-                        </div>
-                        <a href="{{ route('about') }}"
-                            class="btn bg-dark rounded-1 border fw-bold text-white px-4 py-2 mt-3" role="button">
-                            About OwenaHub
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-first">
-                    <img src="{{ asset('images/team-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="bg-f2 py-5">
         <div class="container">
             <div class="text-center mb-4">
                 <h2 class='fw-bold fs-2'>
-                    Testimonials from <span class="text-theme">OwenaHub</span>
+                    Testimonials from <span class="animated-text">OwenaHub</span>
                 </h2>
                 <p>
                     Here's what people say about us
@@ -314,7 +293,16 @@
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/dan-senior.jpg') }}" alt="..."
                                     class="image-fluid rounded-4 me-2" width="30px">
-                                <h5 class="card-title mb-0">Vincent Paul</h5>
+                                <div>
+                                    <h5 class="card-title mb-0">Vincent Paul</h5>
+                                    <span class="text-warning fs-tiny m-0">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </span>
+                                </div>
                             </div>
                             <p class="card-text">
                                 OwenaHub has cracked the mentorship code! Actionable tips + perfect match = my mentor =
@@ -329,7 +317,16 @@
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/christopher-campbell.jpg') }}" alt="..."
                                     class="image-fluid rounded-4 me-2" width="30px">
-                                <h5 class="card-title">Esther Campbell</h5>
+                                <div>
+                                    <h5 class="card-title m-0">Esther Campbell</h5>
+                                    <span class="text-warning fs-tiny m-0">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </span>
+                                </div>
                             </div>
 
                             <p class="card-text">
@@ -345,8 +342,16 @@
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/andre-bush.jpg') }}" alt="..."
                                     class="image-fluid rounded-4 me-2" width="30px">
-                                {{-- <h5 class="card-title">Esther Campbell</h5> --}}
-                                <h5 class="card-title">Johnson Xavier</h5>
+                                <div>
+                                    <h5 class="card-title m-0">Johnson Xavier</h5>
+                                    <span class="text-warning fs-tiny m-0">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </span>
+                                </div>
                             </div>
                             <p class="card-text">
                                 This platform chased away my fear and helped me find my voice. My awesome mentor
@@ -361,13 +366,50 @@
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/timothy-barlin.jpg') }}" alt="..."
                                     class="image-fluid rounded-4 me-2" width="30px">
-                                <h5 class="card-title">Muhammed Abdulhameed</h5>
+                                <div>
+                                    <h5 class="card-title m-0">Muhammed Abdulhameed</h5>
+                                    <span class="text-warning fs-tiny m-0">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </span>
+                                </div>
                             </div>
                             <p class="card-text">
                                 Lost and adrift? Join OwenaHub today! I got to know what to do, how to do it!
                                 I fully recommend OwenaHub to anyone. ✨
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='py-5'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="{{ asset('images/blog-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
+                </div>
+                <div class="col-lg-6">
+                    <div class="pt-5 px-4">
+                        <h2 class='fw-bold fs-2 text-theme'>
+                            OwenaHub <span class="text-dark fw-normal">blog</span>
+                        </h2>
+                        <p class="fw-semibold">
+                            Want to read something inspiring? <br>
+                            Read through articles curated by experienced mentors.
+                        </p>
+
+                        <livewire:recommended-articles />
+
+                        <a href="{{ route('guest.articles.index') }}"
+                            class="btn btn-theme px-5 py-2 text-dark fw-bold mt-3 shadow rounded-1" type='button'>
+                            View More
+                        </a>
                     </div>
                 </div>
             </div>
@@ -429,7 +471,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </div>
 </x-layouts.app>

@@ -13,8 +13,9 @@
                             covers interesting topics within the field.
                         </div>
 
-                        <a href="{{ route('user.register') }}" class="btn btn-theme rounded-1 fw-bold w-100 mt-3">
-                            SIGN UP
+                        <a href="{{ route('guest.onboarding.signup') }}"
+                            class="btn btn-theme rounded-1 fw-bold w-100 mt-3">
+                            Continue
                         </a>
                     </div>
                 </div>

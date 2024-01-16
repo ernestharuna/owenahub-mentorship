@@ -92,7 +92,7 @@
 
         <div class="my-4 d-md-flex justify-content-between align-items-center">
             <p class="m-0 fs-tiny">
-                &copy; 2023, OwenaHub. All Rights Reserved.
+                &copy; 2024, OwenaHub. All Rights Reserved.
             </p>
             <p class="m-0 fs-tiny">
                 Privacy Policy &middot; Terms Of Service
