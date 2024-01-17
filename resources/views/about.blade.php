@@ -21,6 +21,11 @@
         <div class="w-64">
             <div class='my-5 d-inline-block'>
                 <image src={{ asset('images/about_img.png') }} alt='Owenahub' class="img-fluid img-thumbnail shadow" />
+                {{-- <video width="400" controls>
+                    <source src="mov_bbb.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support HTML video.
+                </video> --}}
             </div>
 
             <div class='mt-3 w-64'>

@@ -23,9 +23,9 @@
         <hr>
         <div class="mt-3 mb-4">
             <x-guest.author :is_admin="$article->admin" />
-            <div class="fw-bold fst-italic mt-3">
+            <div class="fw-bold fst-italic mt-1">
                 The 411,
-                <span class="text-secondary">
+                <span class="text-secondary fw-normal">
                     "...{{ $article->description }}..."
                 </span>
             </div>

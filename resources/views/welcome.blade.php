@@ -184,7 +184,10 @@
                                 Resume and give you the real-world experience you need to start a great
                                 role as a techie.
                                 <br><br>
-                                <span class="text-danger">●</span> Get teams as you register for a slice
+                                <span class="text-danger">●</span>
+                                <span class="fw-semibold">
+                                    Get teams as you register for a slice
+                                </span>
                             </p>
                         </div>
                         {{-- Given Id so the style wont interfere with dashboard lists --}}
@@ -211,8 +214,8 @@
                             </ul>
                         </div> --}}
                         <a href="{{ route('guest.onboarding.slices') }}"
-                            class="btn btn-theme px-5 py-2 text-dark rounded-1 shadow fw-bold mt-3" type='button'>
-                            Get Started
+                            class="btn btn-theme px-5 py-2 text-white rounded-1 shadow fw-semibold mt-3" type='button'>
+                            Get Started <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -268,8 +271,9 @@
                             </p>
                         </div>
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-theme px-5 py-2 text-dark rounded-1 shadow fw-bold mt-3" type='button'>
-                            Take A Slice
+                            class="btn btn-theme px-5 py-2 text-white rounded-1 shadow fw-semibold mt-3"
+                            type='button'>
+                            Take A Slice <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -407,8 +411,9 @@
                         <livewire:recommended-articles />
 
                         <a href="{{ route('guest.articles.index') }}"
-                            class="btn btn-theme px-5 py-2 text-dark fw-bold mt-3 shadow rounded-1" type='button'>
-                            View More
+                            class="btn btn-theme px-5 py-2 text-white fw-semibold mt-3 shadow rounded-1"
+                            type='button'>
+                            View More <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -429,7 +434,7 @@
                     </div>
                     <!-- Button trigger modal -->
                     <button type="button"
-                        class="btn rounded-1 shadow btn-light text-decoration-none text-dark fw-bold"
+                        class="btn rounded-1 shadow btn-light text-decoration-none text-dark fw-bold px-4"
                         data-bs-toggle="modal" data-bs-target="#joinCommunity">
                         Check Us Out! 🤙🏽
                     </button>
