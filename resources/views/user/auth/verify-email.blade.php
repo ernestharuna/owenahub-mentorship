@@ -5,15 +5,17 @@
                 <div class="col-md-4 col-sm-12 mb-4">
                     <div class="card border-0 my-5">
                         <div class="card-body text-start">
-
                             <h2 class="fw-bold">
                                 Verify Your Email Address
                             </h2>
-                            <p class="mt-3 fw-normal">
-                                An Email has been sent to
-                                <b>{{ Auth::user()->email }}</b> <br>
-                                Use the link below to verify your email
-                                address and start enjoying OwenaHub 😀
+                            <p class="my-3 fw-normal">
+                                An Email has been sent to <b>{{ Auth::user()->email }}</b>.
+                                <br>
+                                Open your email address and start enjoying OwenaHub 😀.
+                                <br>
+                                <span class="text-danger fs-tiny fw-bold">
+                                    Verification email might take about 5 minutes.
+                                </span>
                             </p>
 
                             <div class="my-4">
@@ -41,7 +43,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 </x-layouts.app>

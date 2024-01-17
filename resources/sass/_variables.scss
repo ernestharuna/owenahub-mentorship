@@ -131,6 +131,16 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     animation: textgradient 4s ease-in-out infinite alternate;
 }
 
+.animated-text-2 {
+    background: linear-gradient(65deg, #F74C08 20%, #B2006F 30%, #f70a8c 70%, #F70864 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textgradient 4s ease-in-out infinite alternate;
+}
+
 .opacity-animation {
     background: #ffffffce;
     animation: opacity_animation 1.5s ease-in;

@@ -6,7 +6,7 @@
                     The Mentorship Platform for <br class="d-none d-md-block">
                     <span class="animated-text">Tech Enthusiasts</span>.
                 </h1>
-                <p class="fs-5 fw-semibold">
+                <p class="fs-5">
                     We offer a vibrant platform for learners <br class="d-md-block d-none" />
                     to gain <b>career insights</b> from experienced mentors.
                 </p>

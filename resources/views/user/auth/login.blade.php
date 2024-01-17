@@ -52,7 +52,7 @@
 
                 <div class="my-2">
                     <small>
-                        <a href="#" class="fw-semibold">
+                        <a href="{{ route('password.request') }}" class="fw-semibold">
                             Forgot Password?
                         </a>
                     </small>
@@ -66,7 +66,6 @@
                         </a>
                     </small>
                 </div>
-
             </form>
         </div>
     </div>
