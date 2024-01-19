@@ -1,16 +1,26 @@
 <x-layouts.admin>
     <div class="container">
-        <div class="latest-articles">
-            <h5 class="fw-bold">Latest Published Articles</h5>
-            <div class="my-2">
+        <div class="latest-articles my-5">
+            <p class="fs-6 text-secondary">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('admin.dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Articles</li>
+                </ol>
+            </nav>
+            </p>
+            <h1 class="fw-semibold">Article Repository</h1>
+            <div class="mt-2 mb-4">
                 <a href={{ route('admin.articles.create') }}>
-                    <button class="btn btn-dark rounded rounded-0 px-2 py-1">
-                        <i class="bi bi-plus-square-fill"></i>
+                    <button class="btn btn-dark rounded-2 px-2 py-1">
+                        New Article <i class="bi bi-plus-square-fill"></i>
                     </button>
                 </a>
             </div>
             @forelse ($articles as $article)
-                <div class="bg-f2 p-2 d-flex align-items-center justify-content-between mb-1 border">
+                <div class="bg-f2 p-2 d-flex align-items-center justify-content-between mb-2 border rounded shadow-sm">
                     <div>
                         <a href={{ route('admin.articles.edit', $article->id) }}
                             class="d-block text-dark text-decoration-none">
@@ -21,8 +31,7 @@
                         </a>
                     </div>
                     <div>
-                        <button class="btn btn-danger text-white rounded rounded-0 py-0 px-2 fs-tiny fw-bold"
-                            type="button"
+                        <button class="btn btn-danger text-white rounded-1 py-0 px-2 fs-tiny fw-bold" type="button"
                             onclick="event.preventDefault(); document.getElementById('delete-article').submit();">
                             DELETE
                         </button>

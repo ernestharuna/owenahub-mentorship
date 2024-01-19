@@ -5,9 +5,18 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
+    public function index()
+    {
+        $articles = Article::latest()->paginate(10);
+        return view('admin.articles.index', [
+            'articles' => $articles
+        ]);
+    }
+
     /**
      * Store a newly created resource in storage.
      */

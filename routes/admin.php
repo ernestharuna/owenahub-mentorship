@@ -16,6 +16,7 @@ Route::name('admin.')->group(function () {
 
             // Articles
             Route::prefix('articles')->group(function () {
+                Route::get('index', [ArticleController::class, 'index'])->name('articles.index');
                 Route::view('create', 'admin.articles.create')->name('articles.create');
                 Route::post('store', [ArticleController::class, 'store'])->name('articles.create.req');
                 Route::patch('{article}/update', [ArticleController::class, 'update'])->name('articles.update');
