@@ -11,6 +11,113 @@
             </div>
         </div>
 
+        <section class="mb-3">
+            <div class="row">
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-secondary m-0 fs-6">
+                                Article Repository
+                            </h5>
+                            <p class="card-text mb-1">
+                                <b class="fs-4">{{ $article_count }} article(s)</b> published
+                            </p>
+                            <a href="#" class="btn btn-theme rounded-1 fw-semibold px-4">
+                                Go to articles
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-secondary m-0 fs-6">
+                                Manage Slices
+                            </h5>
+                            <p class="card-text mb-1">
+                                <b class="fs-4">{{ $slice_count }} slice(s)</b> published
+                            </p>
+                            <a href="#" class="btn btn-theme rounded-1 fw-semibold px-4">
+                                Go to slices
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-3 mb-sm-0">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-secondary m-0 fs-6">
+                                OweaHub Teams
+                            </h5>
+                            <p class="card-text mb-1">
+                                <b class="fs-4">5 teams</b> active
+                            </p>
+                            <a href="#" class="btn btn-theme rounded-1 fw-semibold px-4">
+                                See Teams
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="mb-3">
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card shadow-sm bg-theme">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-around">
+                                <div class="px-4">
+                                    <h5 class="card-title fs-6 text-red m-0">Verified Users</h5>
+                                    <p class="card-text m-0 text-white">
+                                        <span class="fs-1 fw-bold">{{ $verified_users }}</span>users
+                                    </p>
+                                </div>
+                                <div class="px-4 border-start">
+                                    <h5 class="card-title fs-6 text-red m-0">Unverified Users</h5>
+                                    <p class="card-text m-0 text-white">
+                                        <span class="fs-1 fw-bold">{{ $unverified_users }}</span>users
+                                    </p>
+                                </div>
+                                <div class="px-4 border-start">
+                                    <h5 class="card-title fs-6 text-red m-0">All Users</h5>
+                                    <p class="card-text m-0 text-white">
+                                        <span class="fs-1 fw-bold">{{ $all_users }}</span>users
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card shadow-sm bg-dark">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-around">
+                                <div class="px-4">
+                                    <h5 class="card-title fs-6 text-red m-0">Verified Mentors</h5>
+                                    <p class="card-text m-0 text-white">
+                                        <span class="fs-1 fw-bold">{{ $verified_mentors }}</span>mentors
+                                    </p>
+                                </div>
+                                <div class="px-4 border-start">
+                                    <h5 class="card-title fs-6 text-red m-0">Unverified Mentors</h5>
+                                    <p class="card-text m-0 text-white">
+                                        <span class="fs-1 fw-bold">{{ $unverified_mentors }}</span>mentors
+                                    </p>
+                                </div>
+                                <div class="px-4 border-start">
+                                    <h5 class="card-title fs-6 text-red m-0">All Mentors</h5>
+                                    <p class="card-text m-0 text-white">
+                                        <span class="fs-1 fw-bold">{{ $all_mentors }}</span>metnors
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="latest-articles bg-f2 shadow-sm border p-3 rounded ">
             <h5 class="fw-bold">Latest Published Articles</h5>
             <div class="my-2">
@@ -61,7 +168,8 @@
                 </a>
             </div>
             @forelse ($feat_articles as $featured)
-                <div class="bg-f2 p-2 d-flex align-items-center justify-content-between mb-1 border">
+                <div
+                    class="bg-light p-2 d-flex align-items-center justify-content-between mb-1 border rounded-2 shadow-sm">
                     <div>
                         <a href={{ route('admin.feat_articles.edit', $featured->id) }}
                             class="d-block text-dark text-decoration-none">

@@ -1,50 +1,13 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
-    <style>
-        .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 15px;
-            border-radius: 5px;
-            background: #ffd57b;
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-        }
-
-        .slider:hover {
-            opacity: 1;
-        }
-
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: #F6A700;
-            cursor: pointer;
-        }
-
-        .slider::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: #F6A700;
-            cursor: pointer;
-        }
-    </style>
-
     <!-- Button trigger modal -->
     @if ($bite_completed)
-        <button type="button" class="btn btn-dark rounded-0 fw-semibold p-3 w-100" disabled>
+        <button type="button" class="btn btn-dark rounded-2 fw-semibold p-3 w-100" disabled>
             Digested Bite!
         </button>
     @else
-        <button type="button" class="btn btn-dark rounded-1 fw-semibold p-3 w-100" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark rounded-2 font-monospace fw-semibold fs-5  px-4" data-bs-toggle="modal"
             data-bs-target="#finish-task">
-            NEXT →
+            mark as done
         </button>
     @endif
 
@@ -67,17 +30,17 @@
                     <form wire:submit="save" class="m-0">
                         @if ($can_review)
                             <div class="input-group my-3">
-                                <input type="text" class="form-control rounded-0" wire:model="comment"
-                                    placeholder="Write us a review . . . 😀" aria-label="Write us a review . . . 😀"
+                                <input type="text" class="form-control rounded-2 py-3 border-2 fs-5 fw-semibold"
+                                    wire:model="comment" placeholder="Rate this slice" aria-label="Rate This Slice"
                                     aria-describedby="button-addon2" required>
                             </div>
 
                             <div class="mt-4">
-                                <input type="range" min="1" max="5" id="mySlider" class="w-100 slider"
+                                <input type="range" class="form-range" min="1" max="5" id="mySlider"
                                     wire:model="rating" required>
                                 <p class="fw-bold">
-                                    <span id="sliderValue"></span>
-                                    star(s) <i class="bi bi-star-fill text-theme"></i>
+                                    <span id="sliderValue"></span> star(s)
+                                    <i class="bi bi-star-fill text-theme"></i>
                                 </p>
                             </div>
                         @endif
@@ -90,10 +53,10 @@
                             </p>
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-theme rounded-0 shadow-sm fw-semibold">
+                            <button type="submit" class="btn btn-theme rounded-2 shadow-sm fw-semibold">
                                 Yes, digested!
                             </button>
-                            <button type="button" class="btn btn-light border rounded-0 shadow-sm ms-2 fw-semibold"
+                            <button type="button" class="btn btn-light border rounded-2 shadow-sm ms-2 fw-semibold"
                                 data-bs-dismiss="modal" aria-label="Close">
                                 Not yet
                             </button>

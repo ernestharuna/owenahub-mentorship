@@ -69,7 +69,8 @@
             <h3 class="fw-bold fs-4">Your Slices</h3>
 
             @forelse ($enrolled_slices as $enrolled)
-                <div class="accordion accordion-flush mb-1 border position-relative" id="accordionFlushExample">
+                <div class="accordion accordion-flush mb-1 border-1 border  rounded-2 position-relative"
+                    id="accordionFlushExample">
                     {{-- Badge --}}
                     @php
                         $data = $enrolled->created_at;
@@ -89,12 +90,12 @@
                     @if ($created_now == true)
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-red z-3">
                             New
-                            <span class="visually-hidden">unread messages</span>
+                            <span class="visually-hidden">new item</span>
                         </span>
                     @endif
                     {{-- Badge End --}}
 
-                    <div class="accordion-item">
+                    <div class="accordion-item border border-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapse{{ $enrolled->slice->id }}" aria-expanded="false"
@@ -110,7 +111,7 @@
                         </h2>
                         <div id="flush-collapse{{ $enrolled->slice->id }}" class="accordion-collapse collapse"
                             data-bs-parent="#accordionFlushExample">
-                            <div class="p-4">
+                            <div class="p-3">
                                 @forelse ($enrolled->slice->bite->sortBy('position') as $bite)
                                     <div class="p-3 border d-flex align-items-center mb-2 rounded shadow-sm">
                                         <div class="text-theme">

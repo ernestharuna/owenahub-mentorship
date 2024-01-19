@@ -1,11 +1,7 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
-        <div class="bg-white border rounded-3 shadow col-md-4 col-lg-4 mx-3 my-5 px-4 py-3">
-            <h1 class="text-center fw-bold">
-                <img src="{{ asset('images/logo.png') }}" alt="..." width="40px"
-                    style="position: relative; top: -4px;">wenaHub
-            </h1>
-            <div class="text-center fw-bold mb-4">
+        <div class="bg-white border rounded-3 shadow-sm col-md-4 col-lg-3 mx-3 my-5 px-4 py-3">
+            <div class="text-start fw-bold mb-4">
                 <span class="text-primary">Admin Login</span>
             </div>
 
