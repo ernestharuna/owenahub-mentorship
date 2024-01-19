@@ -14,8 +14,8 @@ class DashboardController extends Controller
 {
     public function __invoke()
     {
-        $articles = Article::latest()->limit(5)->get();
-        $article_count = $articles->count();
+        // $articles = Article::get();
+        $article_count = Article::count();
 
         $feat_articles = FeaturedArticles::get();
 
@@ -31,7 +31,7 @@ class DashboardController extends Controller
         $unverified_mentors = $mentors->where('email_verified_at', null)->count();
 
         return view('admin.dashboard', [
-            'articles' => $articles,
+            // 'articles' => $articles,
             'article_count' => $article_count,
 
             'feat_articles' => $feat_articles,

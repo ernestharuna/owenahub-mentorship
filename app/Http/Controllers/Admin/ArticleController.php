@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -35,7 +34,7 @@ class ArticleController extends Controller
                 $data['image_path'] = $request->file('image_path')->store('article_images', 'public');
             }
             $request->user()->article()->create($data);
-            return redirect(route('admin.dashboard'))->with('status', 'Article Published');
+            return redirect(route('admin.articles.index'))->with('status', 'Article Published');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', 'Something went wrong');
@@ -57,7 +56,7 @@ class ArticleController extends Controller
                 $data['image_path'] = $request->file('image_path')->store('article_images', 'public');
             }
             $article->update($data);
-            return redirect(route('admin.dashboard'))->with('status', 'Update Succesful');
+            return redirect(route('admin.articles.index'))->with('status', 'Update Succesful');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('status', 'Update failed');

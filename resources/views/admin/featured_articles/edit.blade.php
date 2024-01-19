@@ -6,7 +6,7 @@
             </h4>
             <div class="my-3">
                 <a href={{ route('admin.dashboard') }}>
-                    <button class="btn btn-dark rounded rounded-0 px-2 py-1">
+                    <button class="btn btn-dark rounded-2 px-4 py-1">
                         ← Back
                     </button>
                 </a>

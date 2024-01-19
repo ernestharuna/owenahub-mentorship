@@ -1,12 +1,23 @@
 <x-layouts.admin>
     <div class="container">
         <div class="my-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.articles.index') }}">Articles</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Edit article</li>
+                </ol>
+            </nav>
             <h4 class="text-secondary fs-2 fw-bold">
-                Edit Post <br> <span class="fs-6 text-dark">{{ $article->title }}</span>
+                Edit Post
+                <br>
+                <span class="fs-4 text-dark fw-normal">
+                    {{ $article->title }}
+                </span>
             </h4>
             <div class="my-3">
-                <a href={{ route('admin.dashboard') }}>
-                    <button class="btn btn-dark rounded rounded-0 px-2 py-1">
+                <a href={{ route('admin.articles.index') }}>
+                    <button class="btn btn-dark rounded-2 px-4 py-1 fw-semibold">
                         ← Back
                     </button>
                 </a>
@@ -36,7 +47,7 @@
             <div class="col-12">
                 <label for="category" class="form-label m-0 text-uppercase fs-tiny">Category</label>
                 <select class="form-control rounded rounded-0 py-2" id="category" name="category" required>
-                    <option value="{{ old('category', $article->category) }}" selected disabled>
+                    <option value="{{ old('category', $slice->category) }}" selected disabled>
                         {{ $article->category }}
                     </option>
                     <option value="Career Development">Career Development</option>

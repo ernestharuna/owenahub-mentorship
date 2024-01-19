@@ -4,14 +4,11 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="#">Slices</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.slice.index') }}">Slices</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $slice->title }}</li>
                 </ol>
             </nav>
         </div>
-        {{-- <a href="{{ route('admin.bites.create') }}" class="btn btn-light border fw-light">
-            NEW BITE
-        </a> --}}
 
         <section class="mt-4 bg-f2 shadow rounded border p-3 d-lg-flex justify-content-between">
             <div class="p-2 mb-4 flex-grow-3 w-100">
@@ -47,7 +44,7 @@
                         Duration
                     </p>
                     <p class="m-0">
-                        {{ $slice->duration }} Weeks
+                        {{ $slice->duration }} Week(s)
                     </p>
                 </div>
 
@@ -70,9 +67,10 @@
                 </div>
 
                 <div>
-                    <button class="btn btn-outline-dark fw-bold rounded rounded-0">
+                    <a href="{{ route('admin.slice.edit', $slice->id) }}"
+                        class="btn btn-outline-dark fw-bold rounded-2">
                         <i class="bi bi-pencil-fill"></i> Edit Slice
-                    </button>
+                    </a>
                 </div>
             </div>
 

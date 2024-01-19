@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class SliceController extends Controller
 {
+    public function index()
+    {
+        $slices = Slice::latest()->paginate(10);
+        return view('admin.slices.index', [
+            'slices' => $slices
+        ]);
+    }
     /**
      * Store New Slice
      */
@@ -39,23 +46,33 @@ class SliceController extends Controller
         }
     }
 
+    public function edit(Slice $slice)
+    {
+        return view('admin.slices.edit', [
+            'slice' => $slice,
+        ]);
+    }
+
     public function update(Request $request, Slice $slice)
     {
         $data = $request->validate([
-            'title' => ['required', 'min:5', 'max:100'],
+            'title' => ['required', 'max:100'],
+            'about' => 'required',
+            'overview' => ['required', 'min:20'],
             'category' => 'required',
-            'description' => ['required', 'min:10', 'max:150'],
+            'duration' => 'required',
+            'price' => 'nullable|sometimes|numeric',
+            'is_paid' => 'nullable|sometimes|boolean',
             'image_path' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'price' => 'sometimes|numeric',
-            'is_paid' => 'nullable|boolean',
         ]);
 
         try {
             if ($request->hasFile('image_path')) {
                 $data['image_path'] = $request->file('image_path')->store('slice_images', 'public');
             }
+
             $slice->update($data);
-            return redirect(route('admin.dashboard'))->with('status', 'Update Succesful');
+            return redirect(route('admin.slice.index'))->with('status', 'Update Succesful');
         } catch (\Exception $e) {
             throw $e;
             return back()->with('status', 'Update failed');

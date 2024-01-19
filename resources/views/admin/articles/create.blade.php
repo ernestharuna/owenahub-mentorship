@@ -1,12 +1,19 @@
 <x-layouts.admin>
     <div class="container">
         <div class="my-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.articles.index') }}">Articles</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Create article</li>
+                </ol>
+            </nav>
             <h4 class="text-secondary fs-2 fw-bold">
                 Create Post
             </h4>
             <div class="my-3">
-                <a href={{ route('admin.dashboard') }}>
-                    <button class="btn btn-dark rounded rounded-0 px-2 py-1">
+                <a href={{ route('admin.articles.index') }}>
+                    <button class="btn btn-dark rounded-2 px-4 py-1 fw-semibold">
                         ← Back
                     </button>
                 </a>
@@ -15,7 +22,8 @@
 
         <hr>
 
-        <form method="POST" action={{ route('admin.articles.create.req') }} class="row g-3" enctype="multipart/form-data">
+        <form method="POST" action={{ route('admin.articles.create.req') }} class="row g-3"
+            enctype="multipart/form-data">
             @csrf
             {{-- Title --}}
             <div class="col-12">

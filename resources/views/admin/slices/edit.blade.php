@@ -9,7 +9,7 @@
                 </ol>
             </nav>
             <h4 class="text-secondary fs-2 fw-bold">
-                New Slice
+                Edit Slice
             </h4>
             <div class="my-3">
                 <a href={{ route('admin.slice.index') }}>
@@ -20,15 +20,17 @@
             </div>
         </div>
 
-        <form method="POST" action="{{ route('admin.slice.create.req') }}"
+        <form method="POST" action="{{ route('admin.slice.update', $slice->id) }}"
             class="row g-3 bg-f2 roundec px-2 border shadow rounded my-4" enctype="multipart/form-data">
             @csrf
+            @method('PATCH')
+
             {{-- Title --}}
             <div class="col-12">
                 <label for="title" class="form-label m-0 text-secondary fw-semibold">Title</label>
                 <input type="text" class="form-control rounded rounded-0 py-2" name="title" id="title" required
                     placeholder="Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh"
-                    value="{{ old('title') }}">
+                    value="{{ old('title', $slice->title) }}">
                 @error('title')
                     <p class="text-danger fs-6 mt-1">
                         {{ $message }}
@@ -40,8 +42,8 @@
             <div class="col-12">
                 <label for="category" class="form-label m-0 text-secondary fw-semibold">Category</label>
                 <select class="form-control rounded rounded-0 py-2" id="category" name="category" required>
-                    <option value="{{ old('category') }}" selected disabled>
-                        Choose category
+                    <option value="{{ old('category'), $slice->category }}" selected disabled>
+                        {{ old('category', $slice->category) }}
                     </option>
                     <option value="Career
                         Development">Career Development</option>
@@ -63,7 +65,7 @@
             <div class="col-12">
                 <label for="duration" class="form-label m-0 text-secondary fw-semibold">Slice Duration</label>
                 <input type="number" name="duration" id="duration" class="form-control rounded rounded-0 py-2"
-                    placeholder="2 Weeks" value="{{ old('duration') }}">
+                    placeholder="2 Weeks" value="{{ old('duration', $slice->duration) }}">
                 @error('duration')
                     <p class="text-danger fs-6 mt-1">
                         {{ $message }}
@@ -75,7 +77,8 @@
             <div class="col-12">
                 <label for="about" class="form-label m-0 text-secondary fw-semibold">Slice About</label>
                 <input type="text" name="about" id="about" class="form-control rounded rounded-0 py-2"
-                    placeholder="Write a short description of what the slice is about" value="{{ old('about') }}">
+                    placeholder="Write a short description of what the slice is about"
+                    value="{{ old('about', $slice->about) }}">
                 @error('about')
                     <p class="text-danger fs-6 mt-1">
                         {{ $message }}
@@ -86,7 +89,7 @@
             {{-- overview --}}
             <div class="col-12">
                 <label for="summernote" class="form-label m-0 text-secondary fw-semibold">Overview</label>
-                <textarea name="overview" id="summernote" required value="{{ old('overview') }}"></textarea>
+                <textarea name="overview" id="summernote" required>{{ old('overview', $slice->overview) }}</textarea>
                 @error('overview')
                     <p class="text-danger fs-6 mt-1">
                         {{ $message }}
@@ -98,7 +101,7 @@
             <div class="col-12">
                 <label for="image_path" class="form-label m-0 text-secondary fw-semibold">Image</label>
                 <input type="file" class="form-control rounded rounded-0 py-2" name="image_path" id="image_path"
-                    value="{{ old('image_path') }}">
+                    value="{{ old('image_path', $slice->image_path) }}">
                 @error('image_path')
                     <p class="text-danger fs-6 mt-1">
                         {{ $message }}
@@ -110,7 +113,7 @@
             <div class="col-12">
                 <label for="price" class="form-label m-0 text-secondary fw-semibold">Course Price</label>
                 <input name="price" id="price" type="number" class="form-control rounded rounded-0 py-2"
-                    value="{{ old('price') }}" />
+                    value="{{ old('price', $slice->price) }}" />
                 @error('content')
                     <p class="text-danger fs-6 mt-1">
                         {{ $message }}
@@ -131,8 +134,8 @@
             </div>
 
             <div class="col-12 my-4">
-                <button type="submit" class="btn btn-dark rounded rounded-0 shadow fs-6 w-100">
-                    PUBLISH
+                <button type="submit" class="btn btn-dark rounded-0 shadow fs-6 w-100">
+                    UPDATE SLICE
                 </button>
             </div>
         </form>
