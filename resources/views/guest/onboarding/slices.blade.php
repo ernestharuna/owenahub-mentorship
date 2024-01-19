@@ -13,7 +13,7 @@
                             Designed for flexibility, you can now learn on the go. <br>
                         </div>
                         <a href="{{ route('guest.onboarding.teams') }}"
-                            class="btn btn-theme rounded-1 fw-semibold w-100 mt-3">
+                            class="btn btn-theme rounded-5 fw-bold w-100 mt-3">
                             Continue
                         </a>
                     </div>

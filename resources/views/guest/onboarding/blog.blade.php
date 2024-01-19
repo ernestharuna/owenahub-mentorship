@@ -14,7 +14,7 @@
                         </div>
 
                         <a href="{{ route('guest.onboarding.signup') }}"
-                            class="btn btn-theme rounded-1 fw-bold w-100 mt-3">
+                            class="btn btn-theme rounded-5 fw-bold w-100 mt-3">
                             Continue
                         </a>
                     </div>

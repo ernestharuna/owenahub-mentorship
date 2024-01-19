@@ -12,7 +12,7 @@
                 </h1>
             </div>
             <div class="animated-2 fadeIn">
-                <a href="{{ route('user.register') }}" class="btn btn-light rounded-1 fw-bold w-100 mt-3">
+                <a href="{{ route('user.register') }}" class="btn btn-light rounded-5 fw-bold w-100 mt-3">
                     Create Account
                 </a>
             </div>
