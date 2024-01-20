@@ -53,6 +53,7 @@ Route::name('admin.')->group(function () {
                 Route::prefix('bites')->group(function () {
                     Route::name('bites.')->group(function () {
                         Route::post('{slice}/create', [BiteController::class, 'store'])->name('store');
+                        Route::delete('{bite}/delete', [BiteController::class, 'delete'])->name('delete');
                     });
                 });
 

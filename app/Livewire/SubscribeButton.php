@@ -19,12 +19,18 @@ class SubscribeButton extends Component
         $this->validate();
 
         try {
-            Subscriber::create(
-                $this->only(['name', 'email'])
-            );
-            $this->name = "";
-            $this->email = "";
-            return redirect('/articles')->with('status', 'Email Registered!');
+            if (Subscriber::where('email', $this->email)->exists()) {
+                $this->name = "";
+                $this->email = "";
+                return redirect('/articles')->with('status', "Great!, \nThis email has already subscribed! 🧐");
+            } else {
+                Subscriber::create(
+                    $this->only(['name', 'email'])
+                );
+                $this->name = "";
+                $this->email = "";
+                return redirect('/articles')->with('status', 'Email Subscribed! 👍🏽');
+            }
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', 'Something went wrong');

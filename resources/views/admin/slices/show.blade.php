@@ -122,14 +122,86 @@
                             <div id="collapse{{ $bite->id }}" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    {!! $bite->description !!}
+                                    <p class="m-0">{!! $bite->description !!}</p>
+                                    <div class="border-top mt-3 py-3">
+
+                                        <!-- Edit slice button & modal -->
+                                        <button type="button" class="btn btn-dark rounded-1 me-2 px-5"
+                                            data-bs-toggle="modal" data-bs-target="#editSlice-{{ $bite->id }}-">
+                                            Edit
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="editSlice-{{ $bite->id }}-" tabindex="-1"
+                                            aria-labelledby="editSlice-{{ $bite->id }}-Label" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5"
+                                                            id="editSlice-{{ $bite->id }}-Label">Modal title
+                                                        </h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save
+                                                            changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Delete Bite Button & Modal -->
+                                        <button type="button" class="btn btn-danger rounded-1 px-5"
+                                            data-bs-toggle="modal" data-bs-target="#deleteBite-{{ $bite->id }}-">
+                                            Delete
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="deleteBite-{{ $bite->id }}-" tabindex="-1"
+                                            aria-labelledby="deleteBite-{{ $bite->id }}-Label" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fw-bold text-danger fs-5"
+                                                            id="deleteBite-{{ $bite->id }}-Label">
+                                                            Delete {{ $bite->title }}
+                                                        </h1>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="submit" class="btn btn-danger"
+                                                            onclick="event.preventDefault(); document.getElementById('delete-bite-{{ $bite->id }}').submit();">
+                                                            Yes
+                                                        </button>
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">
+                                                            No
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <form action="{{ route('admin.bites.delete', $bite->id) }}" class="d-none"
+                                            method="POST" id="delete-bite-{{ $bite->id }}">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     @empty
                 </div>
                 <p class="p-1 bg-white">
-                    No Bites
+                    No bites yet
                 </p>
                 @endforelse
             </div>
@@ -160,8 +232,8 @@
                                     <div class="col-12">
                                         <label for="title"
                                             class="form-label m-0 text-secondary fw-semibold">Title</label>
-                                        <input type="text" class="form-control rounded rounded-0 py-2" name="title"
-                                            id="title" required
+                                        <input type="text" class="form-control rounded rounded-0 py-2"
+                                            name="title" id="title" required
                                             placeholder="Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh">
                                         @error('title')
                                             <p class="text-danger fs-6 mt-1">

@@ -9,7 +9,7 @@
     <!-- Modal -->
     <div class="modal fade" id="subscribe-button" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-start">
                 <div class="modal-header bg-theme">
                     <h3 class="modal-title fs-3" id="staticBackdropLabel">Subscribe</h3>
@@ -33,19 +33,21 @@
                         @csrf
                         <div class="col-12">
                             <label for="name" class="form-label m-0">Your Name:</label>
-                            <input type="text" id="name" class="form-control rounded rounded-0 py-2"
-                                wire:model="name" placeholder="Vlad Kowalski" required>
+                            <input type="text" id="name"
+                                class="form-control rounded-2 py-3 py-3 border-1 border-dark shadow" wire:model="name"
+                                placeholder="Vlad Kowalski" required>
                         </div>
 
                         <div class="col-12">
                             <label for="email" class="form-label m-0">Your Email:</label>
-                            <input type="email" id="email" class="form-control rounded rounded-0 py-2"
-                                wire:model="email" placeholder="valid@email.com" required>
+                            <input type="email" id="email"
+                                class="form-control rounded-2 py-3 border-1 border-dark shadow" wire:model="email"
+                                placeholder="valid@email.com" required>
                         </div>
 
                         <div class="col-12 mt-4">
                             <button type="submit"
-                                class="btn btn-dark rounded rounded-0 shadow fw-light text-uppercase fs-6 w-100">
+                                class="btn btn-dark rounded-2 shadow fw-semibold text-uppercase py-3 fs-6 w-100">
                                 Subscribe
                             </button>
                         </div>

@@ -4,8 +4,8 @@
             $data = $feat_article->title;
             $title = strtolower(str_replace(' ', '-', $data));
         @endphp
-        <div class="bg-theme p-3 my-3 animated-2 fadeIn">
-            <p class="fs-tiny text-white fw-bold font-monospace text-uppercase">
+        <div class="bg-theme p-3 my-3 animated-2 fadeIn rounded-2">
+            <p class="fs-tiny text-white fw-bold font-monospace text-uppercase m-0">
                 Posted on {{ $feat_article->created_at->format('j M Y') }}
             </p>
             <h4 class="fs-3 fw-bold mb-2">
@@ -15,7 +15,7 @@
                 {{ $feat_article->description }}
             </p>
             <div>
-                <a class="btn btn-light rounded rounded-0" role="button"
+                <a class="btn btn-light rounded-2" role="button"
                     href="{{ route('guest.feat_articles.show', ['article' => $feat_article->id, 'title' => $title]) }}">
                     <span class="text-dark fw-bold text-uppercase fs-tiny">
                         Read More 🔓
