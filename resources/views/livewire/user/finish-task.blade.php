@@ -5,9 +5,9 @@
             Digested Bite!
         </button>
     @else
-        <button type="button" class="btn btn-dark rounded-2 font-monospace fw-semibold fs-5  px-4" data-bs-toggle="modal"
+        <button type="button" class="btn btn-light shadow border rounded-2 fw-semibold p-3 w-100" data-bs-toggle="modal"
             data-bs-target="#finish-task">
-            mark as done
+            <i class="bi bi-check-circle-fill text-success"></i> mark as done
         </button>
     @endif
 

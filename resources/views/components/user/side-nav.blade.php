@@ -1,11 +1,17 @@
 <nav class="bg-light h-100 border-end sticky-top">
     <div class="container py-4">
-        <div>
-            <h1 class="text-theme text-start fs-5 fw-bold mb-4">
-                <img src="{{ asset('images/logo.png') }}" alt="..." style="position: relative; top: -3px"
-                    width="30">
-                OwenaHub <span class="fw-light text-dark">| The Learners Hub</span>
-            </h1>
+        <div class="d-flex gap-2 mb-4">
+            <div>
+                <img src="{{ asset('images/logo.png') }}" alt="..." style="position: relative; top: -2px"
+                    width="40">
+            </div>
+            <div>
+                <h1 class="text-theme text-start fs-4 fw-bold m-0">
+                    OwenaHub <br>
+                </h1>
+                <span class="fw-light text-dark" style="font-size: 12px; position: relative; top: -5px">The Learner's
+                    Hub</span>
+            </div>
             {{-- <h2 class="fs-4 my-5">
                 {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                 {{ ucfirst(strtolower(Auth::user()->last_name)) }}
@@ -15,46 +21,46 @@
         <div>
             <div>
                 <a href="{{ route('user.dashboard') }}"
-                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-3 fw-semibold fs-5">
+                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-2 font-monospace fs-5">
                     @if (Route::is('user.dashboard'))
-                        <i class="bi bi-house-fill text-theme fs-5 me-2"></i>
+                        <i class="bi bi-house-fill text-theme fs-5"></i>
                     @else
-                        <i class="bi bi-house fs-5 me-2"></i>
+                        <i class="bi bi-house fs-5"></i>
                     @endif
                     Dashboard
                 </a>
             </div>
             <div>
                 <a href="{{ route('guest.slices.index') }}"
-                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-3 fw-semibold fs-5">
+                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-2 font-monospace fs-5">
                     @if (Route::is('user.slice.show'))
-                        <i class="bi bi-box-fill text-theme fs-5 me-2"></i>
+                        <i class="bi bi-box-fill text-theme fs-5"></i>
                     @else
-                        <i class="bi bi-box fs-5 me-2"></i>
+                        <i class="bi bi-box fs-5"></i>
                     @endif
-                    Slice & Bites
+                    Slices
                 </a>
             </div>
             <div>
                 <a href="{{ route('user.session.index') }}"
-                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-3 fw-semibold
+                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-2 font-monospace
                     fs-5">
                     @if (Route::is('user.session.index'))
-                        <i class="bi bi-calendar2-fill text-theme fs-5 me-2"></i>
-                        {{-- <i class="bi bi-box-fill text-theme fs-5 me-2"></i> --}}
+                        <i class="bi bi-calendar2-fill text-theme fs-5"></i>
+                        {{-- <i class="bi bi-box-fill text-theme fs-5"></i> --}}
                     @else
-                        <i class="bi bi-calendar2 fs-5 me-2"></i>
+                        <i class="bi bi-calendar2 fs-5"></i>
                     @endif
                     Sessions
                 </a>
             </div>
             <div class="mb-5">
                 <a href="{{ route('user.profile') }}"
-                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-3 fw-semibold fs-5">
+                    class="btn btn-light border shadow-sm rounded-1 d-block text-start mb-2 py-2 font-monospace fs-5">
                     @if (Route::is('user.profile'))
-                        <i class="bi bi-person-fill text-theme fs-5 me-2"></i>
+                        <i class="bi bi-person-fill text-theme fs-5"></i>
                     @else
-                        <i class="bi bi-person fs-5 me-2"></i>
+                        <i class="bi bi-person fs-5"></i>
                     @endif
                     Profile
                 </a>

@@ -17,7 +17,7 @@
             <div>
                 <a class="btn btn-theme rounded-2" role="button"
                     href="{{ route('guest.feat_articles.show', ['article' => $feat_article->id, 'title' => $title]) }}">
-                    <span class="text-dark fw-bold text-uppercase fs-tiny">
+                    <span class="text-white fw-bold text-uppercase fs-tiny">
                         Read More 🔓
                     </span>
                 </a>

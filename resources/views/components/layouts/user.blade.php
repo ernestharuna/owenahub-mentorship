@@ -30,10 +30,10 @@
         <div>
             <div class="container-fluid bg-f2">
                 <div class="row">
-                    <div class="col-lg-3 d-none d-lg-block sticky-top" style="height: 100vh; overflow-y: auto;">
+                    <div class="col-lg-2 d-none d-lg-block sticky-top" style="height: 100vh; overflow-y: auto;">
                         <x-user.side-nav /> <!-- Navigation for Desktops -->
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-9 col-md-12">
                         {{ $slot }}
                     </div>
                 </div>

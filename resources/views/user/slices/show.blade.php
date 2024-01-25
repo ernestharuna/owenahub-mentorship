@@ -1,7 +1,32 @@
 <x-layouts.user>
     <div>
         <section class="row">
-            <aside class="col-md-4 col-12 border-end bg-f2">
+
+
+            <div class="col-md-7 col-12 py-4">
+                <p class="fs-5">
+                    <span class="text-theme fw-bold">
+                        Bite {{ $show_bite->position }}:
+                    </span>
+                    <span class="fw-semibold">
+                        {{ $show_bite->title }}
+                    </span>
+                </p>
+                <hr>
+
+                <div class="animated-2 fadeIn">
+                    <p>
+                        {!! $show_bite->content !!}
+                    </p>
+                </div>
+
+                {{-- Complete button --}}
+                <hr>
+                <livewire:user.finish-task :slice_id="$slice->id" :bite_id="$show_bite->id" />
+                {{-- <hr class="mb-5"> --}}
+            </div>
+
+            <aside class="col-md-5 col-12 border-start bg-f2 mb-5">
                 <div class="py-4 fs-tiny">
                     <h3 class="mb-4">
                         <span class="fw-light">Your</span> <span class="text-theme fw-bold">Bites</span>
@@ -44,29 +69,6 @@
                     @endforelse
                 </div>
             </aside>
-
-            <div class="col-md-8 col-12 py-4">
-                <p class="fs-5">
-                    <span class="text-theme fw-bold">
-                        Bite {{ $show_bite->position }}:
-                    </span>
-                    <span class="fw-semibold">
-                        {{ $show_bite->title }}
-                    </span>
-                </p>
-                <hr>
-
-                <div class="animated-2 fadeIn">
-                    <p>
-                        {!! $show_bite->content !!}
-                    </p>
-                </div>
-
-                {{-- Complete button --}}
-                <hr>
-                <livewire:user.finish-task :slice_id="$slice->id" :bite_id="$show_bite->id" />
-                <hr class="mb-5">
-            </div>
         </section>
     </div>
 </x-layouts.user>

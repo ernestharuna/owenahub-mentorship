@@ -69,7 +69,7 @@
             <h3 class="fw-bold fs-4">Your Slices</h3>
 
             @forelse ($enrolled_slices as $enrolled)
-                <div class="accordion accordion-flush mb-1 border-1 border  rounded-2 position-relative"
+                <div class="accordion accordion-flush mb-1 border-1 border rounded-2 position-relative"
                     id="accordionFlushExample">
                     {{-- Badge --}}
                     @php
@@ -95,13 +95,13 @@
                     @endif
                     {{-- Badge End --}}
 
-                    <div class="accordion-item border border-2">
+                    <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapse{{ $enrolled->slice->id }}" aria-expanded="false"
-                                aria-controls="flush-collapse{{ $enrolled->slice->id }}">
+                            <button class="accordion-button collapsed bg-body-secondary " type="button"
+                                data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $enrolled->slice->id }}"
+                                aria-expanded="false" aria-controls="flush-collapse{{ $enrolled->slice->id }}">
                                 <span class="fw-semibold">
-                                    {{ $enrolled->slice->title }} —
+                                    <i class="bi bi-box-fill text-red"></i> {{ $enrolled->slice->title }}
                                 </span>
 
                                 <div class="d-md-block d-none">
