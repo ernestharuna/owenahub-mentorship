@@ -12,9 +12,9 @@ Route::name('admin.')->group(function () {
     Route::prefix('admin')->group(function () {
         // ----------------------- middleware -------------------------
         Route::middleware('auth:admin')->group(function () {
-            Route::get('dashboard', DashboardController::class)->name('dashboard');
 
             Route::prefix('dashboard')->group(function () {
+                Route::get('/', DashboardController::class)->name('dashboard');
                 // Articles
                 Route::prefix('articles')->group(function () {
                     Route::get('/', [ArticleController::class, 'index'])->name('articles.index');

@@ -11,18 +11,17 @@
 
     <div class='mb-4'>
         <h3 class='fw-bold'>Latest Articles</h3>
-        <p class="m-0">
-            <a href="/" class='text-decoration-none'>← Back Home</a>
-        </p>
+        <a href="/" class='text-decoration-none btn btn-dark px-3 py-1 rounded-5 text-white mt-2 d-inline-block'>
+            ← Back Home</a>
     </div>
 
-    <div class="animated-2 fadeIn">
+    <div class="row row-cols-1 row-cols-md-3 g-3">
         @forelse ($articles as $article)
             @php
                 $data = $article->title;
                 $title = strtolower(str_replace(' ', '-', $data));
             @endphp
-
+            {{-- 
             <a href="{{ route('guest.articles.show', ['article' => $article->id, 'title' => $title]) }}"
                 class='text-decoration-none'>
                 <div class="card bg-light my-2 bg-gradient border border-none">
@@ -41,7 +40,30 @@
                         </div>
                     </div>
                 </div>
-            </a>
+            </a> --}}
+            <div class="col">
+                <div class="card h-100  border border-bg-body-tertiary shadow-sm">
+                    <div class="card-body pt-2">
+                        <a href="{{ route('guest.articles.show', ['article' => $article->id, 'title' => $title]) }}"
+                            class='text-decoration-none text-dark'>
+
+                            <p
+                                class="mb-2 shadow-sm border border-bg-body-tertiary rounded-5 d-inline-block px-2 fs-tiny bg-f2">
+                                {{ $article->category }}
+                            </p>
+                            <h5 class="card-title fw-bold">{{ $article->title }}</h5>
+                            <p class="card-text lh-sm">
+                                {{ $article->description }}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary text-uppercase fs-tiny">
+                            updated {{ $article->created_at->format('j M Y, g:i a') }}
+                        </small>
+                    </div>
+                </div>
+            </div>
         @empty
             <div class="p-2 bg-f2">No articles</div>
         @endforelse

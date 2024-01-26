@@ -1,13 +1,13 @@
 <div>
     <!-- Button trigger modal -->
     @if ($bite_completed)
-        <button type="button" class="btn btn-dark rounded-2 fw-semibold p-3 w-100" disabled>
-            Digested Bite!
+        <button type="button" class="btn btn-light border shadow-sm rounded-2 fw-semibold p-3 w-100" disabled>
+            <i class="bi bi-check-circle-fill text-success"></i> Digested Bite!
         </button>
     @else
-        <button type="button" class="btn btn-light shadow border rounded-2 fw-semibold p-3 w-100" data-bs-toggle="modal"
-            data-bs-target="#finish-task">
-            <i class="bi bi-check-circle-fill text-success"></i> mark as done
+        <button type="button" class="btn btn-light shadow-sm border rounded-2 fw-semibold p-3 w-100"
+            data-bs-toggle="modal" data-bs-target="#finish-task">
+            <i class="bi bi-check-circle text-success"></i> Continue
         </button>
     @endif
 

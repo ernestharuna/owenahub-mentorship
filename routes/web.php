@@ -38,7 +38,7 @@ Route::name('guest.')->group(function () {
     Route::prefix('slices')->group(function () {
         Route::name('slices.')->group(function () {
             Route::get('/', [GuestController::class, 'slices'])->name('index');
-            Route::get('/{slice}/overview', [GuestController::class, 'show_slice'])->middleware('verified')->name('show');
+            Route::get('/{slice}/overview', [GuestController::class, 'show_slice'])->name('show');
         });
     });
 });

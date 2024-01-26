@@ -30,48 +30,54 @@
 
                     <hr>
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="w-100 btn btn-dark fw-bold rounded-1 p-3 fs-5 text-white shadow-sm"
-                        data-bs-toggle="modal" data-bs-target="#confirm_slice">
-                        Add to plate!
-                    </button>
+                    @if (Auth::check())
+                        <!-- Button trigger modal -->
+                        <button type="button"
+                            class="w-100 btn btn-theme fw-bold rounded-1 p-3 fs-5 text-white shadow-sm"
+                            data-bs-toggle="modal" data-bs-target="#confirm_slice">
+                            Enroll Now!
+                        </button>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="confirm_slice" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5 text-dark fw-bold" id="staticBackdropLabel">
-                                        Are you sure you want to bite this slice?
-                                    </h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <a href="{{ route('user.login') }}" class="btn btn-theme w-100 mb-3 p-3 shadow-sm"
-                                        onclick="event.preventDefault(); document.getElementById('create-enrollment').submit();">
-                                        Yes
-                                    </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="confirm_slice" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-dark fw-bold" id="staticBackdropLabel">
+                                            Are you sure you want to bite this slice?
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <a href="#"
+                                            class="btn btn-theme w-100 mb-3 p-3 shadow-sm text-white fw-semibold"
+                                            onclick="event.preventDefault(); document.getElementById('create-enrollment').submit();">
+                                            Yes
+                                        </a>
 
-                                    {{-- Form to create new enrollment --}}
-                                    <form class="d-none" id="create-enrollment" method="POST"
-                                        action="{{ route('create.enrollment', [
-                                            'slice_id' => $slice->id,
-                                            'user_id' => Auth::id(),
-                                        ]) }}">
-                                        @csrf
-                                    </form>
-                                    {{-- Form to create new enrollment ends --}}
+                                        {{-- Form to create new enrollment --}}
+                                        <form class="d-none" id="create-enrollment" method="POST"
+                                            action="{{ route('create.enrollment', ['slice_id' => $slice->id]) }}">
+                                            @csrf
+                                        </form>
+                                        {{-- Form to create new enrollment ends --}}
 
-                                    <a class="btn btn-light shadow-sm w-100 p-3" data-bs-dismiss="modal"
-                                        aria-label="Close">
-                                        No
-                                    </a>
+                                        <a class="btn btn-light shadow-sm w-100 p-3 fw-semibold" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            No
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @else
+                        <a href="{{ route('user.login') }}"
+                            class="w-100 btn btn-theme fw-bold rounded-1 p-3 fs-5 text-white shadow-sm">
+                            Enroll Now!
+                        </a>
+                    @endif
 
 
                     <div class="p-4 mt-4 bg-white rounded border">

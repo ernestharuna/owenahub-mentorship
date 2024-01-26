@@ -15,10 +15,10 @@
                 {{ $feat_article->description }}
             </p>
             <div>
-                <a class="btn btn-theme rounded-2" role="button"
+                <a class="btn btn-theme rounded-1 px-4" role="button"
                     href="{{ route('guest.feat_articles.show', ['article' => $feat_article->id, 'title' => $title]) }}">
                     <span class="text-white fw-bold text-uppercase fs-tiny">
-                        Read More 🔓
+                        Read More
                     </span>
                 </a>
             </div>

@@ -46,17 +46,17 @@
                                     </p>
                                 </div>
                                 <div class="bg-theme text-end text-uppercase fw-bold">
-                                    @if (Auth::check())
-                                        <a href="{{ route('guest.slices.show', $slice->id) }}"
-                                            class="text-white p-2 d-block text-decoration-none w-100 fw-bold">
-                                            Slice In!
-                                        </a>
+                                    <a href="{{ route('guest.slices.show', $slice->id) }}"
+                                        class="text-white p-2 d-block text-decoration-none w-100 fw-bold">
+                                        Slice In!
+                                    </a>
+                                    {{-- @if (Auth::check())
                                     @else
                                         <a href="{{ route('user.register') }}"
                                             class="text-white p-2 d-block text-decoration-none w-100 fw-bold">
                                             Slice In!
                                         </a>
-                                    @endif
+                                    @endif --}}
                                 </div>
                             </div>
                         </div>

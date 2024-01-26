@@ -9,12 +9,11 @@
                                 Verify Your Email Address
                             </h2>
                             <p class="my-3 fw-normal">
-                                An Email has been sent to <b>{{ Auth::user()->email }}</b>.
+                                A verification email has been sent to <b>{{ Auth::user()->email }}</b>.
                                 <br>
-                                Open your email address and start enjoying OwenaHub 😀.
                                 <br>
                                 <span class="text-danger fs-tiny fw-bold">
-                                    Verification email might take about 5 minutes.
+                                    Verification email might take up to 5 minutes.
                                 </span>
                             </p>
 

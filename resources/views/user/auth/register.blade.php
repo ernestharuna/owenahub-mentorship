@@ -57,7 +57,8 @@
                 </div>
 
                 <div class="col-12 mt-4">
-                    <button type="submit" class="btn btn-theme rounded-1 shadow-sm fs-6 w-100">
+                    <button type="submit"
+                        class="btn btn-theme rounded-1 shadow-sm w-100 text-white fw-normal fs-5 py-3">
                         REGISTER
                     </button>
                 </div>

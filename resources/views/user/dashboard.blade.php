@@ -1,9 +1,10 @@
 <x-layouts.user>
     <section class="mt-4">
         <p class="text-dark fw-bold mb-2">
-            <i class="bi bi-house-gear-fill fs-5"></i> Dashboard
+            {{-- <i class="bi bi-house-gear-fill fs-5"></i> Dashboard --}}
+        <h2 class="fs-4 fw-bold text-secondary">Dashboard</h2>
         </p>
-        <p class="fw-bold text-secondary fs-2 mb-4">
+        <p class="fw-bold mb-4">
             Hey, {{ ucfirst(strtolower(Auth::user()->first_name)) }} 😍
         </p>
 
