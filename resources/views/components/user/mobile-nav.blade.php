@@ -3,33 +3,51 @@
         <div class="d-flex justify-content-around">
             <a href="{{ route('user.dashboard') }}" class="d-block text-dark">
                 @if (Route::is('user.dashboard'))
-                    <i class="bi bi-house-fill text-theme fs-1"></i>
+                    <i class="bi bi-house-fill text-theme fs-2"></i>
                 @else
-                    <i class="bi bi-house d-block fs-1"></i>
+                    <i class="bi bi-house d-block fs-2"></i>
                 @endif
             </a>
 
             <a href="{{ route('guest.slices.index') }}" class="d-block text-dark">
                 @if (Route::is('user.slice.show'))
-                    <i class="bi bi-box-fill text-theme fs-1"></i>
+                    <i class="bi bi-box-fill text-theme fs-2"></i>
                 @else
-                    <i class="bi bi-box fs-1"></i>
+                    <i class="bi bi-box fs-2"></i>
                 @endif
             </a>
 
             <a href="{{ route('user.session.index') }}" class="d-block text-dark">
                 @if (Route::is('user.session.index'))
-                    <i class="bi bi-calendar2-fill text-theme fs-1"></i>
+                    <i class="bi bi-calendar2-fill text-theme fs-2"></i>
                 @else
-                    <i class="bi bi-calendar2 fs-1"></i>
+                    <i class="bi bi-calendar2 fs-2"></i>
+                @endif
+            </a>
+
+            <a href="{{ route('user.notifications') }}" class="d-block text-dark">
+                @if (Route::is('user.notifications'))
+                    <i class="bi bi-bell-fill text-theme fs-2 position-relative">
+                        <span
+                            class="position-absolute top-1 start-75 translate-middle p-1 bg-red border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </i>
+                @else
+                    <i class="bi bi-bell d-block fs-2 position-relative">
+                        <span
+                            class="position-absolute top-1 start-75 translate-middle p-1 bg-red border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </i>
                 @endif
             </a>
 
             <a href="{{ route('user.profile') }}" class="d-block text-dark">
                 @if (Route::is('user.profile'))
-                    <i class="bi bi-person-fill text-theme fs-1"></i>
+                    <i class="bi bi-person-fill text-theme fs-2"></i>
                 @else
-                    <i class="bi bi-person fs-1"></i>
+                    <i class="bi bi-person fs-2"></i>
                 @endif
             </a>
         </div>

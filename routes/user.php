@@ -21,6 +21,7 @@ Route::name('user.')->group(function () {
                 });
 
                 Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+                Route::view('notifications', 'user.notifications')->name('notifications');
             });
         });
 

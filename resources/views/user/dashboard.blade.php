@@ -1,59 +1,14 @@
 <x-layouts.user>
     <section class="mt-4">
         <p class="text-dark fw-bold mb-2">
-            {{-- <i class="bi bi-house-gear-fill fs-5"></i> Dashboard --}}
-        <h2 class="fs-4 fw-bold text-secondary">Dashboard</h2>
+        <h2 class="fs-4 fw-bold text-secondary">
+            <i class="bi bi-house-fill text-theme"></i> Dashboard
+        </h2>
         </p>
         <p class="fw-bold mb-4">
             Hey, {{ ucfirst(strtolower(Auth::user()->first_name)) }} 😍
         </p>
 
-        <div>
-            <p class="d-inline-flex gap-1">
-                <button class="btn btn-light shadow-sm fs-tiny border position-relative" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-                    aria-controls="collapseExample">
-                    Notifications <i class="bi bi-chevron-down fs-tiny"></i>
-                    <span
-                        class="position-absolute top-0 start-100 translate-middle p-2 bg-red border border-light rounded-circle">
-                        <span class="visually-hidden">New alerts</span>
-                    </span>
-                </button>
-            </p>
-            <div class="collapse" id="collapseExample">
-                {{-- anouncement items --}}
-                <div class="mb-3">
-                    <div class="border rounded py-1 px-2 my-1 me-3 d-inline-block position-relative">
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">
-                            <i class="bi bi-bell-fill text-red"></i>
-                            <span class="visually-hidden">unread messages</span>
-                        </span>
-                        <div>
-                            <p class="fs-tiny m-0">
-                                Welcome to OwenaHub!
-                            </p>
-                            <p class="fw-semibold m-0">
-                                Pick a slice to get started.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="border rounded py-1 px-2 my-1 d-inline-block position-relative">
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">
-                            <i class="bi bi-bell-fill text-red"></i>
-                            <span class="visually-hidden">unread messages</span>
-                        </span>
-                        <div>
-                            <p class="fs-tiny m-0">
-                                Make sure to <a href="#footer">subscribe</a> to be notified when its available.
-                            </p>
-                            <p class="fw-semibold m-0">
-                                You will soon be able to book private sessions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         {{-- Banner --}}
         <div class="p-4 rounded bg-theme mb-3">
