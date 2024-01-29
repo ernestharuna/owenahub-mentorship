@@ -13,6 +13,7 @@ Route::name('user.')->group(function () {
             Route::prefix('dashboard')->group(function () {
                 Route::get('/', UserDashboardController::class)->name('dashboard');
                 Route::name('slice.')->group(function () {
+                    Route::get('slices', [SliceController::class, 'index'])->name('index');
                     Route::get('slices/{slice}', [SliceController::class, 'show'])->name('show');
                 });
 
@@ -28,7 +29,6 @@ Route::name('user.')->group(function () {
         Route::get('logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
     });
 });
-
 
 Route::name('create.')->group(function () {
     Route::post(

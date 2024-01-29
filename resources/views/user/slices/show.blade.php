@@ -1,8 +1,6 @@
 <x-layouts.user>
     <div>
         <section class="row">
-
-
             <div class="col-md-7 col-12 py-4">
                 <p class="fs-5">
                     <span class="text-theme fw-bold">

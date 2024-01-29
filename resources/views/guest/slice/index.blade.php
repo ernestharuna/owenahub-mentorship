@@ -14,7 +14,7 @@
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 @forelse ($slices as $slice)
                     <div class="col">
-                        <div class="card h-100 shadow-sm rounded-1">
+                        <div class="card h-100 shadow-sm rounded-3">
                             {{-- <img src="..." class="card-img-top" alt="..."> --}}
                             <div class="card-body p-2">
                                 @if ($slice->admin)
@@ -26,38 +26,36 @@
                                 @endif
                                 <h5 class="card-title fw-bold mb-0">{{ $slice->title }}</h5>
                                 <div class="card-text text-secondary fs-tiny">
-                                    <p class="mt-1 fs-6 fw-semibold text-secondary lh-sm">
+                                    <p class="mt-1 fs-6 text-secondary lh-sm">
                                         {{ $slice->about }}
                                     </p>
                                 </div>
                             </div>
                             <div class="card-footer p-0">
-                                <div class="text-secondary fs-tiny p-2">
-                                    <p class="m-0">
-                                        <i class="bi bi-tags-fill"></i> {{ $slice->category }}
-                                    </p>
-                                    <p class="m-0">
-                                        <i class="bi bi-clock-history"></i>
-                                        {{ $slice->duration }} weeks &middot;
+                                <div
+                                    class="text-secondary fs-tiny p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="m-0">
+                                            <i class="bi bi-tags-fill"></i> {{ $slice->category }}
+                                        </p>
+                                        <p class="m-0">
+                                            <i class="bi bi-clock-history"></i>
+                                            {{ $slice->duration }} weeks &middot;
 
-                                        <span class="fw-bold text-primary">
-                                            {{ $slice->price ? 'N' . $slice->price : 'FREE' }}
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="bg-theme text-end text-uppercase fw-bold">
-                                    <a href="{{ route('guest.slices.show', $slice->id) }}"
-                                        class="text-white p-2 d-block text-decoration-none w-100 fw-bold">
-                                        Slice In!
-                                    </a>
-                                    {{-- @if (Auth::check())
-                                    @else
-                                        <a href="{{ route('user.register') }}"
-                                            class="text-white p-2 d-block text-decoration-none w-100 fw-bold">
-                                            Slice In!
+                                            <span class="fw-bold text-primary">
+                                                {{ $slice->price ? 'N' . $slice->price : 'FREE' }}
+                                            </span>
+                                        </p>
+                                    </div>
+
+                                    <div class="bg-theme fw-bold rounded-5">
+                                        <a href="{{ route('guest.slices.show', $slice->id) }}"
+                                            class="text-white px-4 py-2 d-block text-decoration-none w-100 fw-bold">
+                                            View more
                                         </a>
-                                    @endif --}}
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

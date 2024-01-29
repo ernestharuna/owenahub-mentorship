@@ -2,13 +2,24 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Models\Slice;
-use App\Models\SliceEnrollment;
 use Illuminate\Http\Request;
+use App\Models\SliceEnrollment;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class SliceController extends Controller
 {
+    public function index()
+    {
+        $user = Auth::user();
+        $enrolled_slices = $user->slice_enrollment()->get();
+
+        return view('user.slices.index', [
+            'enrolled_slices' => $enrolled_slices
+        ]);
+    }
+
     public function create_slice_enrollment(Request $request, $slice_id)
     {
         if (SliceEnrollment::where([
@@ -37,9 +48,8 @@ class SliceController extends Controller
          * Uses the query parameter to find slice
          */
         $params = $request->query();
-        $index = $params['bite'] - 1;
+        $index = $params['bite'] ? $params['bite'] - 1 : 0;
 
-        // dd($slice->bite);
         return view('user.slices.show', [
             'slice' => $slice,
             'show_bite' => $slice->bite["$index"],

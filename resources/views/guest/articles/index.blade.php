@@ -71,12 +71,12 @@
     <div class="mt-4">
         {{ $articles->links() }}
     </div>
-    <div class="bg-premium">
+    <div class="bg-premium rounded-4">
         <section class="container py-5">
             <div>
                 <div class="text-center">
-                    <h2 class="fs-1 fw-bold">Join Our Community</h2>
-                    <p class=" my-4 fs-5">
+                    <h2 class="fs-1 fw-bold text-white">Join Our Community</h2>
+                    <p class=" my-4 fs-5 text-red">
                         🎊 Our community awaits your grand entrance! 🎊<br>
                         <span class="fw-bold">Be part of inspiring platform</span>
                     </p>

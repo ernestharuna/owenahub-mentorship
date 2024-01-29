@@ -9,8 +9,8 @@
                 @endif
             </a>
 
-            <a href="{{ route('guest.slices.index') }}" class="d-block text-dark">
-                @if (Route::is('user.slice.show'))
+            <a href="{{ route('user.slice.index') }}" class="d-block text-dark">
+                @if (Route::is('user.slice.show') || Route::is('user.slice.index'))
                     <i class="bi bi-box-fill text-theme fs-2"></i>
                 @else
                     <i class="bi bi-box fs-2"></i>

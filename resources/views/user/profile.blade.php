@@ -30,8 +30,8 @@
                             placeholder="name@example.com" value="{{ Auth::user()->email }}" disabled>
                     </div>
 
-                    <button class="btn btn-dark rounded-1 px-4 fs-tiny fw-semibold" disabled>
-                        SAVE
+                    <button class="btn btn-dark rounded-1 px-5 fs-tiny" disabled>
+                        Save
                     </button>
                 </div>
             </div>
@@ -65,11 +65,11 @@
                             placeholder="https://instagram.com/..." disabled>
                     </div>
 
-                    <button class="btn btn-dark rounded-1 px-4 fs-tiny fw-semibold" disabled>
-                        SAVE
+                    <button class="btn btn-dark rounded-1 px-5 fs-tiny" disabled>
+                        Save
                     </button>
-                    <a href="{{ route('user.logout') }}" class="btn btn-danger rounded-1 px-3 ms-2 fs-tiny fw-semibold">
-                        LOGOUT
+                    <a href="{{ route('user.logout') }}" class="btn btn-danger rounded-1 px-4 ms-2 fs-tiny">
+                        Logout <i class="bi bi-arrow-right-short"></i>
                     </a>
                 </div>
             </div>

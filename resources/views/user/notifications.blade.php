@@ -62,7 +62,7 @@
                 <p class="fs-tiny text-secondary fw-bold mb-1"> Account & Passwards! </p>
                 <p class="lh-sm m-0">
                     Make sure to have your account passswords handy. <br>
-                    You might wnat to book mark OwenaHub to allo you
+                    You might want to book mark OwenaHub to allow you
                     easy access to login and continue where you left off.
                 </p>
             </div>
