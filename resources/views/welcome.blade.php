@@ -190,29 +190,6 @@
                                 </span>
                             </p>
                         </div>
-                        {{-- Given Id so the style wont interfere with dashboard lists --}}
-                        {{-- <div id="list">
-                            <ul>
-                                <li class="m-0 fw-semibold">
-                                    96% of mentees find mentoring <span class="text-red fw-bold">very useful</span>
-                                </li>
-                                <li class="m-0 fw-semibold">
-                                    Approximately 75% of leaders say mentoring played a key role in their success
-                                </li>
-                                <li class="m-0 fw-semibold">
-                                    The vast majority, 97% of individuals with a mentor say they find the experience to
-                                    be a
-                                    valuable
-                                    one.
-                                </li>
-                                <li class="m-0 fw-semibold">
-                                    Millennial and Gen Z workers who have a mentor are 21% to 23% more likely to
-                                    report being <span class="text-red fw-bold">satisfied with their current
-                                        job</span>,
-                                    compared to those without a mentor.
-                                </li>
-                            </ul>
-                        </div> --}}
                         <a href="{{ route('guest.onboarding.slices') }}"
                             class="btn btn-theme px-5 py-2 text-white rounded-1 shadow fw-semibold mt-3" type='button'>
                             Get Started <i class="bi bi-arrow-right"></i>
@@ -308,9 +285,9 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="card-text">
-                                OwenaHub has cracked the mentorship code! Actionable tips + perfect match = my mentor =
-                                career growth.
+                            <p class="card-text lh-sm">
+                                OwenaHub has cracked the mentorship code! I've gotten the best actionable tips.
+                                Best boost for my career so far. Thank you OwenaHub
                             </p>
                         </div>
                     </div>
@@ -333,9 +310,9 @@
                                 </div>
                             </div>
 
-                            <p class="card-text">
-                                Thought I knew mentorship? This course schooled me! Now my team thrives, thanks to
-                                trust-building tactics and killer guidance.
+                            <p class="card-text lh-sm">
+                                Best thing I've come across this year, I've gotten the answers to many questions I've
+                                had in my head for ages now! 👌🏼
                             </p>
                         </div>
                     </div>
@@ -357,9 +334,9 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="card-text">
-                                This platform chased away my fear and helped me find my voice. My awesome mentor
-                                silenced the doubt and ignited my inner roar!
+                            <p class="card-text lh-sm">
+                                This platform chased away my fear and helped me find my voice. Using OwenaHub slices
+                                helped me stay on track. Fully recommend!
                             </p>
                         </div>
                     </div>
@@ -381,8 +358,8 @@
                                     </span>
                                 </div>
                             </div>
-                            <p class="card-text">
-                                Lost and adrift? Join OwenaHub today! I got to know what to do, how to do it!
+                            <p class="card-text lh-sm">
+                                If you're lost and adrift join OwenaHub today! I got to know what to do, how to do it!
                                 I fully recommend OwenaHub to anyone. ✨
                             </p>
                         </div>
@@ -403,9 +380,9 @@
                         <h2 class='fw-bold fs-2 text-theme'>
                             OwenaHub <span class="text-dark fw-normal">blog</span>
                         </h2>
-                        <p class="fw-semibold">
-                            Want to read something inspiring? <br>
-                            Read through articles curated by experienced mentors.
+                        <p>
+                            Want to read something inspiring?
+                            Browse through OwenaHub's Blog
                         </p>
 
                         <livewire:recommended-articles />

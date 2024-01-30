@@ -17,8 +17,8 @@
 
                     @if (Route::is('guest.articles.show'))
                         <a href="/articles" class='text-decoration-none d-block mt-3'>
-                            <button class="btn btn-dark w-100 text-uppercase fs-6 fw-light rounded rounded-0">
-                                Back to articles
+                            <button class="btn btn-theme text-white text-uppercase fs-6 fw-bold rounded-5">
+                                ← Back to articles
                             </button>
                         </a>
                     @endif

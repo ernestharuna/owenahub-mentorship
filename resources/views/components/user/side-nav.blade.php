@@ -6,8 +6,8 @@
                     width="40">
             </div>
             <div>
-                <h1 class="text-theme text-start fs-4 fw-bold m-0">
-                    OwenaHub <br>
+                <h1 class="text-start fs-4 fw-bold m-0">
+                    <a href="/" class="text-theme text-decoration-none">OwenaHub</a>
                 </h1>
                 <span class="fw-light text-dark" style="font-size: 12px; position: relative; top: -5px">
                     The Learners Hub
