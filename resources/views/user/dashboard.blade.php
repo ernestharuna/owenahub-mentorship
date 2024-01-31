@@ -125,23 +125,25 @@
             @empty
                 <div>
                     <p class="text-secondary">
-                        You are not having any slices right now 😩
+                        There's nothing on your plate
                     </p>
+                    <div class="mt-2">
+                        <a href="{{ route('guest.slices.index') }}"
+                            class="btn btn-light rounded-1 fw-semibold text-red border cta-animation-focus">
+                            Take a slice <i class="bi bi-box"></i>
+                        </a>
+                    </div>
                 </div>
             @endforelse
 
-            <div class="mt-2">
-                <a href="{{ route('guest.slices.index') }}"
-                    class="btn btn-theme border-0 rounded-1 shadow-sm fw-semibold mt-1 cta-animation" target="_blank">
-                    <i class="bi bi-plus-circle"></i> Have a Slice
-                </a>
-            </div>
+
         </div>
     </section>
 
     <section class="mt-4">
         <div class="p-3 bg-white shadow-sm border rounded">
             <h3 class="fw-bold fs-4 text-secondary">Sessions</h3>
+            <hr class="mb-4">
             <div>
                 <p class="text-secondary">
                     Sessions are unavailable at the moment.
@@ -159,6 +161,7 @@
     <section class="mt-4 mb-5">
         <div class="bg-white shadow-sm border rounded p-3">
             <h3 class="fw-bold fs-4 text-secondary">Recommended for you</h3>
+            <hr class="mb-4">
             <livewire:recommended-articles />
         </div>
     </section>

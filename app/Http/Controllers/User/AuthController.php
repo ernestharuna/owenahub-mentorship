@@ -59,7 +59,8 @@ class AuthController extends Controller
         try {
             if (Auth::attempt($data, $request->filled('remember'))) {
                 $request->session()->regenerate();
-                return redirect(route('user.dashboard'))->with('status', 'Welcome back!');
+                return redirect()->intended(route('user.dashboard'));
+                // return redirect(route('user.dashboard'))->with('status', 'Welcome back!');
             };
 
             return back()->withErrors([
@@ -78,7 +79,7 @@ class AuthController extends Controller
             $request->session()->invalidate();
             $request->session()->regenerate();
 
-            return redirect(route('user.login'))->with('status', "Logout successful!");
+            return redirect(route('user.login'))->with('status', "See you soon!");
         } catch (\Exception $e) {
             throw $e;
             return back()->with('error', $e->getMessage());

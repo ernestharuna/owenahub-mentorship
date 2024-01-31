@@ -151,6 +151,11 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     animation: cta_success 1.8s infinite;
 }
 
+.cta-animation-focus {
+    outline: 0px solid #fff;
+    animation: cta_focus 2s infinite;
+}
+
 .cta-animation-error {
     outline: 0px solid #fff;
     animation: cta_error 1.8s infinite;
@@ -196,6 +201,16 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 @keyframes cta_success {
     from {
         outline: 0px solid #2efc31;
+    }
+
+    to {
+        outline: 7px solid #2efc3200;
+    }
+}
+
+@keyframes cta_focus {
+    from {
+        outline: 0px solid #f70a8c;
     }
 
     to {

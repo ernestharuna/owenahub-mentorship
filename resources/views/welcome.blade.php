@@ -13,11 +13,11 @@
 
                 <div class="cta mt-4">
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class='text-decoration-none btn btn-theme rounded-1 text-uppercase fs-6 fw-bold shadow text-dark'>
-                        Get Started Today
+                        class='text-decoration-none text-uppercase btn btn-theme rounded-1 fw-semibold px-4 fs-6 shadow text-dark'>
+                        Get Started <i class="bi bi-arrow-right"></i>
                     </a>
                     <a href="{{ route('guest.articles.index') }}"
-                        class='text-decoration-none btn btn-dark rounded-1 ms-2 text-uppercase fs-6 fw-bold shadow text-theme'>
+                        class='text-decoration-none btn btn-dark rounded-1 ms-2 text-uppercase fs-6 fw-semibold shadow text-theme'>
                         Blog
                     </a>
                 </div>
@@ -108,7 +108,7 @@
                     <h2 class='fw-boldest fs-1'>
                         Expand your skillset <br class="d-md-none"> with <span class="text-theme">OwenaHub</span>.
                     </h2>
-                    <p class="fs-5 fw-semibold text-secondary">
+                    <p class="text-secondary">
                         Find resources curated by our team from for Tech Enthusiasts.
                     </p>
                 </div>
@@ -121,7 +121,11 @@
                         </div>
                         <div>
                             <h3 class="fs-4 fw-boldest m-0">Web Engineering</h3>
-                            <p class="m-0">View Resource</p>
+                            <p class="m-0">
+                                <a class="text-dark text-decoration-none" href="{{ route('guest.slices.index') }}">
+                                    View Resource
+                                </a>
+                            </p>
                         </div>
                     </div>
                     <div class="d-none d-lg-block">
@@ -135,7 +139,11 @@
                         </div>
                         <div>
                             <h3 class="fs-4 fw-boldest m-0">Programming</h3>
-                            <p class="m-0">View Resource</p>
+                            <p class="m-0">
+                                <a class="text-dark text-decoration-none" href="{{ route('guest.slices.index') }}">
+                                    View Resource
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -148,7 +156,11 @@
                         </div>
                         <div>
                             <h3 class="fs-4 fw-boldest m-0">Software Development Methodologies</h3>
-                            <p class="m-0">View Resource</p>
+                            <p class="m-0">
+                                <a class="text-dark text-decoration-none" href="{{ route('guest.slices.index') }}">
+                                    View Resource
+                                </a>
+                            </p>
                         </div>
                     </div>
                     <div class="d-none d-lg-block">
@@ -162,7 +174,11 @@
                         </div>
                         <div>
                             <h3 class="fs-4 fw-boldest m-0">Career & Development</h3>
-                            <p class="m-0">View Resource</p>
+                            <p class="m-0">
+                                <a class="text-dark text-decoration-none" href="{{ route('guest.slices.index') }}">
+                                    View Resource
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -191,8 +207,8 @@
                             </p>
                         </div>
                         <a href="{{ route('guest.onboarding.slices') }}"
-                            class="btn btn-theme px-5 py-2 text-white rounded-1 shadow fw-semibold mt-3" type='button'>
-                            Get Started <i class="bi bi-arrow-right"></i>
+                            class="btn btn-theme px-5 py-2 text-white rounded-1 fw-semibold mt-3" type='button'>
+                            Get started <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -207,7 +223,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <img src="{{ asset('images/slice-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
+                    <img src="{{ asset('images/slice-img.png') }}" alt="..."
+                        class="img-fluid shadow rounded-3">
                 </div>
                 <div class="col-lg-6 order-lg-first">
                     <div class="py-5 px-4">
@@ -221,7 +238,7 @@
                             </span>
                         </h2>
 
-                        <div class="fw-semibold">
+                        <div class="">
                             <p>
                                 Embark on a learning journey with OwenaHub's innovative approach to education.
                             </p>
@@ -243,14 +260,13 @@
 
                             Dive into a wealth of information and elevate your learning experience.
 
-                            <p>
-                                Try taking a slice!
+                            <p class="fw-bold">
+                                Try taking a slice! 👇🏼
                             </p>
                         </div>
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-theme px-5 py-2 text-white rounded-1 shadow fw-semibold mt-3"
-                            type='button'>
-                            Take A Slice <i class="bi bi-arrow-right"></i>
+                            class="btn btn-theme px-5 py-2 text-white rounded-1 fw-semibold mt-3" type='button'>
+                            Take a slice <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -273,7 +289,7 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/dan-senior.jpg') }}" alt="..."
-                                    class="image-fluid rounded-4 me-2" width="30px">
+                                    class="image-fluid rounded-4 me-2" width="40">
                                 <div>
                                     <h5 class="card-title mb-0">Vincent Paul</h5>
                                     <span class="text-warning fs-tiny m-0">
@@ -297,7 +313,7 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/christopher-campbell.jpg') }}" alt="..."
-                                    class="image-fluid rounded-4 me-2" width="30px">
+                                    class="image-fluid rounded-4 me-2" width="40">
                                 <div>
                                     <h5 class="card-title m-0">Esther Campbell</h5>
                                     <span class="text-warning fs-tiny m-0">
@@ -322,7 +338,7 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/andre-bush.jpg') }}" alt="..."
-                                    class="image-fluid rounded-4 me-2" width="30px">
+                                    class="image-fluid rounded-4 me-2" width="40">
                                 <div>
                                     <h5 class="card-title m-0">Johnson Xavier</h5>
                                     <span class="text-warning fs-tiny m-0">
@@ -346,7 +362,7 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <img src="{{ asset('images/people/timothy-barlin.jpg') }}" alt="..."
-                                    class="image-fluid rounded-4 me-2" width="30px">
+                                    class="image-fluid rounded-4 me-2" width="40">
                                 <div>
                                     <h5 class="card-title m-0">Muhammed Abdulhameed</h5>
                                     <span class="text-warning fs-tiny m-0">
@@ -388,9 +404,8 @@
                         <livewire:recommended-articles />
 
                         <a href="{{ route('guest.articles.index') }}"
-                            class="btn btn-theme px-5 py-2 text-white fw-semibold mt-3 shadow rounded-1"
-                            type='button'>
-                            View More <i class="bi bi-arrow-right"></i>
+                            class="btn btn-theme px-5 py-2 text-white fw-semibold mt-3 rounded-1" type='button'>
+                            View more <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -404,7 +419,7 @@
                 <div class="text-center">
                     <div class="text-center">
                         <h2 class="fs-1 fw-bold">Join Our Community</h2>
-                        <p class=" my-4 fs-5">
+                        <p class="my-3">
                             Our community awaits your grand entrance!<br>
                             <span class="fw-bold">Be part of inspiring platform</span>
                         </p>

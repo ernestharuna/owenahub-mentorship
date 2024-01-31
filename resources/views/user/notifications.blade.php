@@ -23,9 +23,9 @@
 
             <div class="p-2 mb-2 rounded-1">
                 <div>
-                    <p class="fs-tiny text-secondary fw-bold mb-1">
+                    <p class="fs-tiny text-secondary fw-semibold mb-1">
                         <img src="{{ asset('images/people/founder-img.jpg') }}" alt="..."
-                            class="image-fluid rounded-5" width="30">
+                            class="image-fluid rounded-4" width="30">
                         Message from <span class="text-dark">Ernest Haruna</span>
                     </p>
                     <p class="lh-sm m-0 ms-4 border p-2 rounded bg-white d-inline-block">
@@ -50,7 +50,7 @@
             </div>
 
 
-            <div class="bg-white border p-2 mt-5 mb-2 rounded-1 shadow-sm">
+            <div class="bg-white border p-2 mt-4 mb-2 rounded-1 shadow-sm">
                 <p class="fs-tiny text-secondary fw-bold mb-1"> More Slices Underway! </p>
                 <p class="lh-sm m-0">
                     Our team are still working tirelesly to allow you have more bites out of each slice. <br>

@@ -10,7 +10,7 @@
             <h1 class='text-theme mb-2 fs-5'>
                 About Us
             </h1>
-            <span class="fs-2 lh-1 fw-bold">
+            <span class="fs-2 lh-1">
                 We offer a vibrant platform for learners to <br class="d-md-inline-block d-none" />
                 gain career insights from experienced mentors.
             </span>
@@ -22,7 +22,7 @@
             <div class='mt-3'>
                 <div class="clearfix">
                     <img src={{ asset('images/about_img.png') }}
-                        class="col-md-6 float-md-end mb-3 ms-md-3 img-fluid img-thumbnail shadow" alt="OwenaHub icon">
+                        class="col-md-6 float-md-end mb-4 ms-md-3 img-fluid img-thumbnail" alt="OwenaHub icon">
                     <p>
                         Starting a career in tech, can be daunting. It cost time and resources trying to find a field
                         that fits you and your interest before for one.
@@ -47,8 +47,8 @@
                     </p>
 
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class="btn btn-theme rounded-1 text-white px-4 py-2 fs-5 mt-4 fw-bold">
-                        Sign Up for Free
+                        class="btn btn-light border rounded-1 text-dark shadow-sm px-4 py-2 fs-5 mt-4">
+                        SIGN UP FOR FREE →
                     </a>
                 </div>
             </div>

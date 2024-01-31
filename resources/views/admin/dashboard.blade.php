@@ -23,8 +23,8 @@
                                 <b class="fs-4">{{ $article_count }} article(s)</b> published
                             </p>
                             <a href="{{ route('admin.articles.index') }}"
-                                class="btn btn-theme rounded-1 fw-semibold px-4">
-                                Go to articles
+                                class="btn btn-theme text-white rounded-1 px-4">
+                                View all
                             </a>
                         </div>
                     </div>
@@ -38,8 +38,8 @@
                             <p class="card-text mb-1">
                                 <b class="fs-4">{{ $slice_count }} slice(s)</b> published
                             </p>
-                            <a href="{{ route('admin.slice.index') }}" class="btn btn-theme rounded-1 fw-semibold px-4">
-                                Go to slices
+                            <a href="{{ route('admin.slice.index') }}" class="btn btn-theme text-white rounded-1 px-4">
+                                View all
                             </a>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                             <p class="card-text mb-1">
                                 <b class="fs-4">5 teams</b> active
                             </p>
-                            <a href="#" class="btn btn-theme rounded-1 fw-semibold px-4">
+                            <a href="#" class="btn btn-theme rounded-1 px-4">
                                 See Teams
                             </a>
                         </div>

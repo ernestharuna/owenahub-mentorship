@@ -8,7 +8,7 @@
             <span class="text-red font-monospace fw-bold">
                 <i class="bi bi-tags-fill"></i> {{ $article->category }}
             </span>
-            <span class="text-secondary fw-bold font-monospace">
+            <span class="text-secondary font-monospace">
                 <br>
                 Last Updated,
                 @if ($article->created_at->eq($article->updated_at))
@@ -19,7 +19,7 @@
             </span>
         </div>
 
-        <h1 class='fw-medium fs-1'>{{ $article->title }}</h1>
+        <h1 class="fs-1 fw-bold">{{ $article->title }}</h1>
         <hr>
         <div class="mt-3 mb-4">
             <x-guest.author :is_admin="$article->admin" />

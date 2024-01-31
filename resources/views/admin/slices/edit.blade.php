@@ -42,7 +42,7 @@
             <div class="col-12">
                 <label for="category" class="form-label m-0 text-secondary fw-semibold">Category</label>
                 <select class="form-control rounded rounded-0 py-2" id="category" name="category" required>
-                    <option value="{{ old('category'), $slice->category }}" selected disabled>
+                    <option value="{{ old('category', $slice->category) }}" selected disabled>
                         {{ old('category', $slice->category) }}
                     </option>
                     <option value="Career

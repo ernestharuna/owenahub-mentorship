@@ -1,5 +1,5 @@
 <section>
-    <h4 class='fw-bold fs-6 text-secondary'>Share With Someone</h4>
+    <h4 class='fs-6 text-secondary'>Share to your network</h4>
     <section class="social-links row w-100 mx-auto">
         <button class="btn facebook text-white fw-light rounded rounded-0 col-sm-12 col-md-4" onclick="facebook()">
             <i class="bi bi-facebook"></i>

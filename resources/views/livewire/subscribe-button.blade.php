@@ -34,20 +34,20 @@
                         <div class="col-12">
                             <label for="name" class="form-label m-0">Your Name:</label>
                             <input type="text" id="name"
-                                class="form-control rounded-2 py-3 py-3 border-1 border-dark shadow" wire:model="name"
+                                class="form-control rounded-2 py-3 py-3 border-1 border-dark" wire:model="name"
                                 placeholder="Vlad Kowalski" required>
                         </div>
 
                         <div class="col-12">
                             <label for="email" class="form-label m-0">Your Email:</label>
                             <input type="email" id="email"
-                                class="form-control rounded-2 py-3 border-1 border-dark shadow" wire:model="email"
+                                class="form-control rounded-2 py-3 border-1 border-dark" wire:model="email"
                                 placeholder="valid@email.com" required>
                         </div>
 
                         <div class="col-12 mt-4">
                             <button type="submit"
-                                class="btn btn-dark rounded-2 shadow fw-semibold text-uppercase py-3 fs-6 w-100">
+                                class="btn btn-dark rounded-2 fw-semibold text-uppercase py-3 fs-6 w-100">
                                 Subscribe
                             </button>
                         </div>

@@ -25,7 +25,7 @@
                                 </p>
                                 <div class="mt-4">
                                     <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => 0]) }}"
-                                        class="btn btn-theme px-4 py-1 text-white fw-bold rounded-1">
+                                        class="btn btn-theme px-4 py-1 text-white rounded-1">
                                         continue <i class="bi bi-play-fill"></i>
                                     </a>
                                 </div>

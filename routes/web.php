@@ -16,6 +16,7 @@ use App\Http\Controllers\GuestController;
 */
 
 Route::redirect('/home', '/slices');
+Route::redirect('/getstarted', '/getstarted/slices');
 Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
 

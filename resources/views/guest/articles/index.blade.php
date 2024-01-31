@@ -1,8 +1,10 @@
 <x-guest.article>
     <div class="mb-3">
         <h1>
-            <span class="text-theme fw-bold">OwenaHub</span> blog
+            <span class="text-theme">OwenaHub</span> <span class="fw-light">blog</span>
         </h1>
+        <hr>
+        <h3>Featured articles</h3>
     </div>
     <div class="featured-articles mb-4">
         <livewire:featured-article />
@@ -10,57 +12,35 @@
     </div>
 
     <div class='mb-4'>
-        <h3 class='fw-bold'>Latest Articles</h3>
+        <h3 class=''>Latest Articles</h3>
         <a href="/" class='text-decoration-none btn btn-dark px-3 py-1 rounded-5 text-white mt-2 d-inline-block'>
             ← Back Home</a>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="row row-cols-1 row-cols-md-2 g-3">
         @forelse ($articles as $article)
             @php
                 $data = $article->title;
                 $title = strtolower(str_replace(' ', '-', $data));
             @endphp
-            {{-- 
-            <a href="{{ route('guest.articles.show', ['article' => $article->id, 'title' => $title]) }}"
-                class='text-decoration-none'>
-                <div class="card bg-light my-2 bg-gradient border border-none">
-                    <div class="card-body p-1 d-flex align-items-stretch">
-                        <div class="mx-2">
-                            <div class="text-primary">{{ $article->category }}</div>
-                            <small class="text-secondary fs-tiny">
-                                Posted on {{ $article->created_at->format('j M Y, g:i a') }}
-                            </small>
-                            <h4 class='fs-5 m-0 fw-medium'>
-                                {{ $article->title }}
-                            </h4>
-                            <p class='m-0 text-secondary fst-italic'>
-                                {{ $article->description }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </a> --}}
             <div class="col">
-                <div class="card h-100  border border-bg-body-tertiary shadow-sm">
+                <div class="card h-100 border border-bg-body-tertiary shadow-sm">
                     <div class="card-body pt-2">
                         <a href="{{ route('guest.articles.show', ['article' => $article->id, 'title' => $title]) }}"
                             class='text-decoration-none text-dark'>
-
-                            <p
-                                class="mb-2 shadow-sm border border-bg-body-tertiary rounded-5 d-inline-block px-2 fs-tiny bg-f2">
-                                {{ $article->category }}
+                            <p class="mb-1 text-red text-uppercase rounded-1 fs-tiny">
+                                {{ $article->category }} <br>
+                                <small class="text-body-secondary text-capitalize fs-tiny">
+                                    updated {{ $article->created_at->format('j M Y, g:i A') }}
+                                </small>
                             </p>
-                            <h5 class="card-title fw-bold">{{ $article->title }}</h5>
+
+                            <h5 class="card-title fw-semibold fs-5">{{ $article->title }}</h5>
+
                             <p class="card-text lh-sm">
                                 {{ $article->description }}
                             </p>
                         </a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-body-secondary text-uppercase fs-tiny">
-                            updated {{ $article->created_at->format('j M Y, g:i a') }}
-                        </small>
                     </div>
                 </div>
             </div>
@@ -76,7 +56,7 @@
             <div>
                 <div class="text-center">
                     <h2 class="fs-1 fw-bold text-white">Join Our Community</h2>
-                    <p class=" my-4 fs-5 text-red">
+                    <p class=" my-4 fs-6 text-red">
                         🎊 Our community awaits your grand entrance! 🎊<br>
                         <span class="fw-bold">Be part of inspiring platform</span>
                     </p>

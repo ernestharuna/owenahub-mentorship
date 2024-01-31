@@ -1,13 +1,11 @@
 <x-layouts.app>
     <div class="container my-4">
         <h1>
-            <span class="text-theme fw-bold">OwenaHub</span> slices
+            <span class="text-theme">OwenaHub</span> <span class="fw-light">slices</span>
         </h1>
         <div>
-            <p class="fw-semibold">
-                Our slices are like mini-courses that allow you gain insights from mentors <br>
-                Gain perspective in what
-                direction to take in starting to learn the craft of web development.
+            <p>
+                Our slices are like mini-courses that allow you gain insights from mentors. <br>
             </p>
         </div>
         <section class="my-4">
@@ -61,7 +59,7 @@
                     </div>
                 @empty
                     <p class="p-2 bg-f2 text-secondary">
-                        Slices Unavailable
+                        Slices Unavailable ☹
                     </p>
                 @endforelse
             </div>
@@ -73,7 +71,7 @@
                 <div>
                     <div class="text-center">
                         <h2 class="fs-1 fw-bold">Read Something Motivating.</h2>
-                        <p class="text-secondary my-4 fs-5 font-monospace">
+                        <p class="text-secondary my-4 fs-tiny font-monospace">
                             Enriching Repository Access a Wealth of Informative <br>Articles on OwenaHub's Blogs
                         </p>
                     </div>

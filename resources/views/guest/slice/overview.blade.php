@@ -1,11 +1,11 @@
 <x-layouts.app>
     <section class="bg-theme">
         <div class="container py-4">
-            <h1 class="fw-bold fs-2">
+            <h1 class="fw-bold fs-2 text-white text-shadow">
                 {{ $slice->title }}
             </h1>
-            <p class="">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
-            <p class="m-0 text-white" style="max-width: 500px;">
+            <p class="mb-1">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
+            <p class="m-0 text-light text-shadow lh-sm" style="max-width: 500px;">
                 {{ $slice->about }}
             </p>
         </div>
@@ -25,7 +25,7 @@
                 <div class="col-lg-3 col-12 p-4 bg-white rounded align-self-start shadow-sm container">
                     <p class="fs-3 ">
                         <span class="text-theme fw-bold">{!! $slice->price ? "<span>&#8358;$slice_price</span>" : 'FREE' !!}</span>
-                        <span class="text-decoration-line-through text-secondary">&#8358;5400.00</span>
+                        <span class="text-decoration-line-through text-secondary">&#8358;5,400.00</span>
                     </p>
 
                     <hr>

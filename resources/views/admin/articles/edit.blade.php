@@ -47,7 +47,7 @@
             <div class="col-12">
                 <label for="category" class="form-label m-0 text-uppercase fs-tiny">Category</label>
                 <select class="form-control rounded rounded-0 py-2" id="category" name="category" required>
-                    <option value="{{ old('category', $slice->category) }}" selected disabled>
+                    <option value="{{ old('category', $article->category) }}" selected disabled>
                         {{ $article->category }}
                     </option>
                     <option value="Career Development">Career Development</option>
