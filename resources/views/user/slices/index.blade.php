@@ -40,6 +40,32 @@
                         You have nothing on your plate.
                     </p>
                 @endforelse
+                <div class="col">
+                    <div class="card bg-theme h-100 border-0 shadow-sm border-start rounded-4">
+                        <div class="card-body">
+                            <p class="fs-tiny mb-1 text-red">
+                                Get mentored today!
+                            </p>
+                            <h5 class="card-title fw-bold m-0">
+                                More slices available for you
+                            </h5>
+                            <div class="d-flex align-items-center gap-4">
+                                {{-- <div>
+                                    <i class="bi bi-boxes"></i> {{ $enrolled->slice->bite->count() }} bites
+                                </div>|
+                                <div>
+                                    <i class="bi bi-clock"></i> {{ $enrolled->slice->duration }} weeks
+                                </div> --}}
+                            </div>
+                            <div class="mt-3">
+                                <a href="{{ route('guest.slices.index') }}"
+                                    class="btn btn-light p-4 py-1 text-dark fw-semibold rounded-3">
+                                    Pick a New Slice
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
