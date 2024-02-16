@@ -10,22 +10,25 @@
             <div class="row row-cols-1 row-cols-md-2 g-4">
                 @forelse ($enrolled_slices as $enrolled)
                     <div class="col">
-                        <div class="card h-100 border-0 shadow-sm border-start">
+                        <div class="card h-100 border-0 shadow-sm border-start rounded-4">
                             <div class="card-body">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h5 class="card-title fw-bold m-0">
-                                        {{ $enrolled->slice->title }}
-                                    </h5>
-                                    <p class="m-0 text-secondary fw-semibold">
-                                        <i class="bi bi-clock"></i> {{ $enrolled->slice->duration }} weeks
-                                    </p>
-                                </div>
-                                <p class="card-text m-0">
-                                    {{ $enrolled->slice->bite->count() }} bites
+                                <p class="fs-tiny mb-1 text-red">
+                                    {{ $enrolled->slice->category }}
                                 </p>
-                                <div class="mt-4">
+                                <h5 class="card-title fw-bold m-0">
+                                    {{ $enrolled->slice->title }}
+                                </h5>
+                                <div class="d-flex align-items-center gap-4">
+                                    <div>
+                                        <i class="bi bi-boxes"></i> {{ $enrolled->slice->bite->count() }} bites
+                                    </div>|
+                                    <div>
+                                        <i class="bi bi-clock"></i> {{ $enrolled->slice->duration }} weeks
+                                    </div>
+                                </div>
+                                <div class="mt-3">
                                     <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => 0]) }}"
-                                        class="btn btn-theme px-4 py-1 text-white rounded-1">
+                                        class="btn btn-theme px-4 py-1 text-white rounded-3">
                                         continue <i class="bi bi-play-fill"></i>
                                     </a>
                                 </div>

@@ -1,6 +1,6 @@
-<nav class="py-3 fixed-bottom d-lg-none d-block bg-body-tertiary border-top border-3 rounded-4">
+<nav class="py-2 fixed-bottom d-lg-none d-block bg-white border-top border-3 rounded-4">
     <div class="container">
-        <div class="d-flex justify-content-around">
+        <div class="d-flex justify-content-around bg-body-tertiary py-2 rounded-4 bg-gradient">
             <a href="{{ route('user.dashboard') }}" class="d-block text-dark">
                 @if (Route::is('user.dashboard'))
                     <i class="bi bi-house-fill text-theme fs-2"></i>

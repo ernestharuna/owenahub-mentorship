@@ -4,8 +4,8 @@
             <h1 class="fw-bold fs-2 text-white text-shadow">
                 {{ $slice->title }}
             </h1>
-            <p class="mb-1">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
-            <p class="m-0 text-light text-shadow lh-sm" style="max-width: 500px;">
+            <p class="mb-2">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
+            <p class="m-0 text-dark text-shadow lh-sm" style="max-width: 500px;">
                 {{ $slice->about }}
             </p>
         </div>
@@ -15,7 +15,7 @@
         <div class="container mt-3">
             <div class="row justify-content-between">
                 <div class="col-lg-8 p-4 bg-white rounded shadow-sm mb-5 container">
-                    <h2 class="fs-5 fw-bold text-theme">Course Overview</h2>
+                    <h2 class="fs-5 fw-bold text-theme">Slice Overview</h2>
 
                     <div class="mb-4">
                         {!! $slice->overview !!}

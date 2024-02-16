@@ -29,37 +29,37 @@
 
                 <div class="form-floating mb-1">
                     <input type="text" name="first_name" class="form-control rounded-4 border-dark border-1"
-                        id="first_name" placeholder="Henry" value="{{ old('first_name') }}">
+                        id="first_name" placeholder="Henry" value="{{ old('first_name') }}" required>
                     <label for="first_name" class="fw-semibold">First name</label>
                 </div>
 
                 <div class="form-floating mb-1">
                     <input type="text" name="last_name" class="form-control rounded-4 border-dark border-1"
-                        id="last_name" placeholder="Clinton" value="{{ old('last_name') }}">
+                        id="last_name" placeholder="Clinton" value="{{ old('last_name') }}" required>
                     <label for="last_name" class="fw-semibold">Last name</label>
                 </div>
 
                 <div class="form-floating mb-1">
                     <input type="email" name="email" class="form-control rounded-4 border-dark border-1"
-                        id="email" placeholder="name@example.com" value="{{ old('email') }}">
+                        id="email" placeholder="name@example.com" value="{{ old('email') }}" required>
                     <label for="email" class="fw-semibold">Email</label>
                 </div>
 
                 <div class="form-floating mb-1">
                     <input type="password" name="password" class="form-control rounded-4 border-dark border-1"
-                        id="password" placeholder="Password">
+                        id="password" placeholder="Password" required>
                     <label for="password" class="fw-semibold">Password</label>
                 </div>
 
                 <div class="form-floating mb-1">
                     <input type="password" name="password_confirmation"
                         class="form-control rounded-4 border-dark border-1" id="password_confirmation"
-                        placeholder="confirm password">
+                        placeholder="confirm password" required>
                     <label for="password_confirmation" class="fw-semibold">Confirm password</label>
                 </div>
 
                 <div class="col-12 mt-4">
-                    <button type="submit" class="btn btn-theme rounded-4 shadow-sm w-100 text-white fw-semibold py-3">
+                    <button type="submit" class="btn btn-theme rounded-4 shadow-sm w-100 text-white py-3">
                         REGISTER
                     </button>
                 </div>

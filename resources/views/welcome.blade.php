@@ -3,7 +3,7 @@
         <header class="container mt-5">
             <div>
                 <h1 class='mb-3 fs-large fw-boldest'>
-                    The Mentorship Platform for <br class="d-none d-md-block">
+                    The Mentorship Platform for <br class="d-none d-lg-block d-sm-block">
                     <span class="animated-text">Tech Enthusiasts</span>.
                 </h1>
                 <p>
@@ -13,11 +13,11 @@
 
                 <div class="cta mt-4">
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class='text-decoration-none text-uppercase btn btn-theme rounded-4 fw-semibold px-4 fs-6 shadow text-dark'>
+                        class='text-decoration-none text-uppercase btn btn-theme rounded-5 fw-semibold px-4 fs-6 shadow text-dark'>
                         Get Started <i class="bi bi-arrow-right"></i>
                     </a>
                     <a href="{{ route('guest.articles.index') }}"
-                        class='text-decoration-none btn btn-dark rounded-4 ms-2 text-uppercase fs-6 fw-semibold shadow text-theme'>
+                        class='text-decoration-none btn btn-dark rounded-5 px-3 ms-2 text-uppercase fs-6 fw-semibold shadow text-theme'>
                         Blog
                     </a>
                 </div>
@@ -38,7 +38,7 @@
 
         <section class=features>
             <div class="container">
-                <div class="shadow shadow-0 feature_box">
+                <div class="shadow shadow-0 feature_box rounded-4">
                     <div>
                         <i class="bi bi-play-btn text-theme"></i>
                         <div>
@@ -207,8 +207,8 @@
                             </p>
                         </div>
                         <a href="{{ route('guest.onboarding.slices') }}"
-                            class="btn btn-theme px-5 py-2 text-white rounded-1 fw-semibold mt-3" type='button'>
-                            Get started <i class="bi bi-arrow-right"></i>
+                            class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
+                            Get started <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
@@ -265,8 +265,8 @@
                             </p>
                         </div>
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-theme px-5 py-2 text-white rounded-1 fw-semibold mt-3" type='button'>
-                            Take a slice <i class="bi bi-arrow-right"></i>
+                            class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
+                            Take a slice <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
@@ -404,8 +404,8 @@
                         <livewire:recommended-articles />
 
                         <a href="{{ route('guest.articles.index') }}"
-                            class="btn btn-theme px-5 py-2 text-white fw-semibold mt-3 rounded-1" type='button'>
-                            View more <i class="bi bi-arrow-right"></i>
+                            class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
+                            View more <i class="bi bi-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
@@ -426,7 +426,7 @@
                     </div>
                     <!-- Button trigger modal -->
                     <button type="button"
-                        class="btn rounded-1 shadow btn-light text-decoration-none text-dark fw-bold px-4"
+                        class="btn rounded-5 shadow btn-light text-decoration-none text-dark fw-bold px-4"
                         data-bs-toggle="modal" data-bs-target="#joinCommunity">
                         Check Us Out! 🤙🏽
                     </button>
