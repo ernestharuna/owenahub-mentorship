@@ -23,3 +23,7 @@ Here's definition for how to the slices schema is built
 - **[Active Logic](https://activelogic.com)**
 - **[byte5](https://byte5.de)**
 - **[OP.GG](https://op.gg)**
+
+##### Color scheme
+- primary; #F6A700
+- secondary; #FDEDCC

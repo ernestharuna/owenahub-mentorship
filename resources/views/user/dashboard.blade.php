@@ -151,8 +151,8 @@
             </div>
             <div class="mt-2">
                 <button href="{{ route('guest.slices.index') }}" disabled
-                    class="btn btn-theme border-0 rounded-1 shadow-sm fw-semibold mt-1" target="_blank">
-                    <i class="bi bi-plus-circle"></i> Create a session
+                    class="btn btn-theme border-0 rounded-4 px-3 shadow-sm fw-semibold mt-1" target="_blank">
+                    <i class="bi bi-plus-circle me-1"></i> Create a session
                 </button>
             </div>
         </div>

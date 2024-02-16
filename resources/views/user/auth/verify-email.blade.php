@@ -8,22 +8,22 @@
                             <h2 class="fw-bold">
                                 Verify Your Email Address
                             </h2>
-                            <p class="my-3 fw-normal">
-                                A verification email has been sent to <b>{{ Auth::user()->email }}</b>.
-                                <br>
-                                <br>
-                                <span class="text-danger fs-tiny fw-bold">
+                            <div class="fs-tiny">
+                                <p class="m-0">
+                                    A verification email has been sent to <b>{{ Auth::user()->email }}</b>.
+                                </p>
+                                <p class="text-danger fw-semibold">
                                     Verification email might take up to 5 minutes.
-                                </span>
-                            </p>
+                                </p>
+                            </div>
 
                             <div class="my-4">
-                                <a href="mailto:" class="btn btn-theme rounded-0 text-white shadow-sm fw-bold">
+                                <a href="mailto:" class="btn btn-theme rounded-3 text-dark fw-semibold shadow-sm">
                                     Open Email
                                 </a>
                                 <a href="#"
                                     onclick="event.preventDefault(); document.getElementById('resend').submit();"
-                                    class="btn btn-dark rounded-0 text-white shadow-sm fw-bold ms-2">
+                                    class="btn btn-dark rounded-3 text-white fw-semibold shadow-sm ms-2">
                                     Resend Email
                                 </a>
                             </div>

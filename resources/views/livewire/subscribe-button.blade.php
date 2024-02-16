@@ -1,7 +1,7 @@
 {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
 <!-- Button trigger modal -->
 <div id="sub-btn">
-    <button type="button" class="btn rounded-1 btn-theme" data-bs-toggle="modal" data-bs-target="#subscribe-button">
+    <button type="button" class="btn rounded-4 px-4 btn-theme" data-bs-toggle="modal" data-bs-target="#subscribe-button">
         <span class="text-white fs-6 fw-semibold">SUBSCRIBE </span> — <small class="fw-light text-red fs-tiny">
             it's free ❤️</small>
     </button>

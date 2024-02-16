@@ -1,10 +1,12 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
         <div class="col-md-6 col-lg-3 mt-4 mb-5 container">
-            <div class="fw-bold my-3">
-                <img src="{{ asset('images/logo.png') }}" alt="..." width="30px"
-                    style="position: relative; top: -4px;">
-                <span class="text-dark">User Login</span> | <span class="fw-light">Welcome Back! 😃</span>
+            <div class="my-3">
+                {{-- <img src="{{ asset('images/logo.png') }}" alt="..." width="30px"
+                    style="position: relative; top: -4px;"> --}}
+                {{-- <span class="text-dark">User Login</span> | <span class="fw-light">Welcome Back! 😃</span> --}}
+                <h1 class="fs-3 m-0 fw-bold">Welcome back!</h1>
+                <p>Sign in to Continue</p>
             </div>
 
             <form method="POST" action={{ route('user.login.req') }} class="row g-1 animated-2 fadeIn">
@@ -22,15 +24,15 @@
                 {{-- FORM ERROR ENDS --}}
 
                 <div class="form-floating mb-1">
-                    <input type="email" name="email" class="form-control rounded-1 border-dark border-1"
+                    <input type="email" name="email" class="form-control rounded-4 border-dark border-1"
                         id="email" placeholder="doe@example.com" required>
-                    <label for="email" class="fw-bold">Email Address</label>
+                    <label for="email" class="fw-semibold">Email Address</label>
                 </div>
 
                 <div class="form-floating mb-1">
-                    <input type="password" name="password" class="form-control rounded-1 border-dark border-1"
+                    <input type="password" name="password" class="form-control rounded-4 border-dark border-1"
                         id="password" placeholder="Password" required>
-                    <label for="password" class="fw-bold">Password</label>
+                    <label for="password" class="fw-semibold">Password</label>
                 </div>
 
                 <div class="form-group">
@@ -45,8 +47,8 @@
                 </div>
 
                 <div class="col-12 mt-2">
-                    <button type="submit" class="btn btn-theme rounded-1 shadow-sm py-3 w-100 text-white fw-bold">
-                        LOGIN
+                    <button type="submit" class="btn btn-theme rounded-4 shadow-sm py-3 w-100 text-white fw-semibold">
+                        SIGN IN
                     </button>
                 </div>
 

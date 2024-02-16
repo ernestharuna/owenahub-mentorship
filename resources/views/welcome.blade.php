@@ -6,18 +6,18 @@
                     The Mentorship Platform for <br class="d-none d-md-block">
                     <span class="animated-text">Tech Enthusiasts</span>.
                 </h1>
-                <p class="fs-5">
-                    We offer a vibrant platform for learners <br class="d-md-block d-none" />
-                    to gain <b>career insights</b> from experienced mentors.
+                <p>
+                    We offer a vibrant platform for learners to gain <br class="d-md-block d-none" />
+                    <b>career insights</b> from experienced mentors.
                 </p>
 
                 <div class="cta mt-4">
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class='text-decoration-none text-uppercase btn btn-theme rounded-1 fw-semibold px-4 fs-6 shadow text-dark'>
+                        class='text-decoration-none text-uppercase btn btn-theme rounded-4 fw-semibold px-4 fs-6 shadow text-dark'>
                         Get Started <i class="bi bi-arrow-right"></i>
                     </a>
                     <a href="{{ route('guest.articles.index') }}"
-                        class='text-decoration-none btn btn-dark rounded-1 ms-2 text-uppercase fs-6 fw-semibold shadow text-theme'>
+                        class='text-decoration-none btn btn-dark rounded-4 ms-2 text-uppercase fs-6 fw-semibold shadow text-theme'>
                         Blog
                     </a>
                 </div>
