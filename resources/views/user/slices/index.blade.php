@@ -18,17 +18,17 @@
                                 <h5 class="card-title fw-bold m-0">
                                     {{ $enrolled->slice->title }}
                                 </h5>
-                                <div class="d-flex align-items-center gap-4">
-                                    <div>
+                                <div class="d-flex align-items-center gap-4 mt-2">
+                                    <div class="bg-f2 rounded-1 shadow-sm border px-2">
                                         <i class="bi bi-boxes"></i> {{ $enrolled->slice->bite->count() }} bites
-                                    </div>|
-                                    <div>
+                                    </div>
+                                    <div class="bg-f2 rounded-1 shadow-sm border px-2">
                                         <i class="bi bi-clock"></i> {{ $enrolled->slice->duration }} weeks
                                     </div>
                                 </div>
                                 <div class="mt-3">
                                     <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => 0]) }}"
-                                        class="btn btn-theme px-4 py-1 text-white rounded-3">
+                                        class="btn btn-theme px-4 py-1 text-white rounded-4">
                                         continue <i class="bi bi-play-fill"></i>
                                     </a>
                                 </div>

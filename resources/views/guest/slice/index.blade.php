@@ -1,7 +1,7 @@
 <x-layouts.app>
-    <div class="container my-4">
+    <div class="container py-5">
         <h1>
-            <span class="text-theme">OwenaHub</span> <span class="fw-light">slices</span>
+            <span class="animated-text-2">Courses</span> <span class="fw-light">(slices)</span>
         </h1>
         <div>
             <p>
@@ -46,10 +46,10 @@
                                         </p>
                                     </div>
 
-                                    <div class="bg-theme fw-bold rounded-5">
+                                    <div class="bg-secondary fw-bold rounded-5">
                                         <a href="{{ route('guest.slices.show', $slice->id) }}"
                                             class="text-white px-4 py-2 d-block text-decoration-none w-100 fw-bold">
-                                            View more
+                                            Start now
                                         </a>
                                     </div>
                                 </div>
@@ -66,19 +66,19 @@
         </section>
     </div>
     <section class="mt-5">
-        <div class="bg-theme-light">
+        <div class="bg-theme">
             <section class="container py-5">
                 <div>
                     <div class="text-center">
                         <h2 class="fs-1 fw-bold">Read Something Motivating.</h2>
-                        <p class="text-secondary my-4 fs-tiny font-monospace">
+                        <p class="my-4 fs-tiny font-monospace">
                             Enriching Repository Access a Wealth of Informative <br>Articles on OwenaHub's Blogs
                         </p>
                     </div>
                     <div class="text-center">
                         <a href="{{ route('guest.articles.index') }}" type="button"
-                            class="btn rounded-1 shadow btn-theme">
-                            <span class="text-white fs-5 fw-medium"> Quick View
+                            class="btn rounded-1 shadow btn-light">
+                            <span class="text-dark fs-5 fw-medium"> Quick View
                             </span> — <small class="fw-light fs-tiny">
                                 it's free <i class="bi bi-cart-fill text-danger"></i>
                             </small>

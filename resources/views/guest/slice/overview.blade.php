@@ -1,7 +1,7 @@
 <x-layouts.app>
-    <section class="bg-theme">
-        <div class="container py-4">
-            <h1 class="fw-bold fs-2 text-white text-shadow">
+    <section class="bg-theme-light">
+        <div class="container py-4 ">
+            <h1 class="fw-bold fs-2 text-dark">
                 {{ $slice->title }}
             </h1>
             <p class="mb-2">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
@@ -12,9 +12,9 @@
     </section>
 
     <section class="bg-f2 py-3">
-        <div class="container mt-3">
-            <div class="row justify-content-between">
-                <div class="col-lg-8 p-4 bg-white rounded shadow-sm mb-5 container">
+        <div class="px-md-0 px-4 container mt-3">
+            <div class="row">
+                <div class="col-lg-8 p-4 bg-white rounded-4 shadow-sm mb-5 container">
                     <h2 class="fs-5 fw-bold text-theme">Slice Overview</h2>
 
                     <div class="mb-4">
@@ -22,7 +22,7 @@
                     </div>
                     <livewire:share-page />
                 </div>
-                <div class="col-lg-3 col-12 p-4 bg-white rounded align-self-start shadow-sm container">
+                <div class="col-lg-3 col-12 p-4 bg-white rounded-4 align-self-start shadow-sm container">
                     <p class="fs-3 ">
                         <span class="text-theme fw-bold">{!! $slice->price ? "<span>&#8358;$slice_price</span>" : 'FREE' !!}</span>
                         <span class="text-decoration-line-through text-secondary">&#8358;5,400.00</span>
@@ -33,7 +33,7 @@
                     @if (Auth::check())
                         <!-- Button trigger modal -->
                         <button type="button"
-                            class="w-100 btn btn-theme fw-bold rounded-1 p-3 fs-5 text-white shadow-sm"
+                            class="w-100 btn btn-theme fw-bold rounded-4 p-3 fs-5 text-white shadow-sm"
                             data-bs-toggle="modal" data-bs-target="#confirm_slice">
                             Enroll Now!
                         </button>
@@ -80,7 +80,7 @@
                     @endif
 
 
-                    <div class="p-4 mt-4 bg-white rounded border">
+                    <div class="p-4 mt-4 bg-white rounded-4 border">
                         <p class="fs-4 fw-bold">
                             Featured Reviews
                         </p>

@@ -46,12 +46,11 @@
         </div>
     </div>
 </div>
-
-<nav class='sticky-top shadow-sm border-bottom bg-white'>
-
-    <div class='container py-2 d-flex justify-content-between align-items-center'>
+{{-- 
+<nav class='bg-theme-2'>
+    <div class='container py-3 d-flex justify-content-between align-items-center'>
         <div>
-            <a href="/" class='text-decoration-none text-theme fs-6 fw-bold m-0'>
+            <a href="/" class='text-decoration-none text-dark fs-6 fw-bold m-0'>
                 <img src={{ asset('images/logo.png') }} alt="logo" width="28"
                     style="position: relative; top: -4px;"><span style="font-size: 18px"> OwenaHub</span>
             </a>
@@ -60,7 +59,7 @@
         <div class='fs-tiny fw-bold'>
             @if (Auth::check())
                 <a class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fs-6 fw-bold text-secondary" href="" role="button"
+                    <a class="nav-link dropdown-toggle fs-6 fw-bold text-dark" href="" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                         {{ ucfirst(strtolower(Auth::user()->last_name)) }}
@@ -83,15 +82,88 @@
                 </a>
             @else
                 @if (Route::is('guest.slices.index'))
-                    <a href="/articles" class='text-secondary text-decoration-none me-3'>BLOG</a>
+                    <a href="/articles" class='text-dark text-decoration-none me-3'>Blog</a>
                 @else
-                    <a href={{ route('guest.slices.index') }} class='text-secondary text-decoration-none mx-3'>
-                        SLICES
+                    <a href={{ route('guest.slices.index') }} class='text-dark text-decoration-none mx-3'>
+                        Courses
                         <span class="badge rounded-1 bg-red">New</span>
                     </a>
                 @endif
-                <a href={{ route('about') }} class='text-secondary text-decoration-none'>ABOUT</a>
+                <a href={{ route('about') }} class='text-dark text-decoration-none'>About</a>
             @endif
+        </div>
+    </div>
+</nav> --}}
+
+<nav class="navbar navbar-expand-lg bg-theme-2">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">OwenaHub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            {{-- <span class="navbar-toggler-icon"></span> --}}
+            <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('guest.slices.index') }}">Courses</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Mentorship
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">See Mentors</a></li>
+                        <li><a class="dropdown-item" href="#">Book a session</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-red fw-semibold" href="#">Become a mentor</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-disabled="true">Invite</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ route('guest.articles.index') }}">Blog</a>
+                </li>
+            </ul>
+
+            <div class='fs-tiny fw-semibold'>
+                @if (Auth::check())
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active fw-bold bg-dark rounded-5 px-4 text-white"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ ucfirst(strtolower(Auth::user()->first_name)) }}
+                                {{ ucfirst(strtolower(Auth::user()->last_name)) }}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="{{ route('guest.slices.index') }}">View Slices</a>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a type="button" class="dropdown-item" data-bs-toggle="modal"
+                                        data-bs-target="#joinCommunity">
+                                        <span class="fw-bold">Community
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fw-bold text-danger"
+                                        href="{{ route('user.logout') }}">Logout</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                @else
+                    <a href="{{ route('user.login') }}" class="btn btn-dark rounded-5 px-4 me-2">Log in</a>
+                    <a href="{{ route('user.register') }}" class="btn btn-outline-dark rounded-5 px-4">Sign up</a>
+                @endif
+            </div>
         </div>
     </div>
 </nav>

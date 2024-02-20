@@ -1,33 +1,46 @@
 <x-layouts.app>
-    <div class='animated-2 fadeIn'>
-        <header class="container mt-5">
+    <style>
+        div.banner {
+            margin-top: 400px;
+            /* background-image: linear-gradient(rgba(50, 50, 50, 0.3), rgba(51, 51, 51, 0.3)), linear-gradient(rgba(50, 50, 50, 0.3), rgba(50, 50, 50, 0.3)), url('/assets/img/rewards-card.png'); */
+            background-image: linear-gradient(#3232324d, #3333334d), url('/images/logo.png'), linear-gradient(45deg, #3b598f, #658fde);
+            background-position: right bottom, 90% 30%, left bottom;
+            background-blend-mode: normal;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: cover, 240px 240px, cover;
+        }
+
+        .secondary-banner {
+            background-image: linear-gradient(#3232324d, #3333334d), url('/images/logo.png'), linear-gradient(45deg, purple, #f6a700);
+            background-position: right bottom, 100% 30%, left bottom;
+            background-blend-mode: normal;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: cover, 300px 300px, cover;
+        }
+    </style>
+    <div class='animated-2 fadeIn bg-theme-2 py-5'>
+        <header class="container py-lg-5 text-center">
             <div>
-                <h1 class='mb-3 fs-large fw-boldest'>
-                    The Mentorship Platform for <br class="d-none d-lg-block d-sm-block">
-                    <span class="animated-text">Tech Enthusiasts</span>.
+                <h1 class='mb-3 display-2 fw-boldest'>
+                    Start your <span class="animated-text-2">tech career</span> with
+                    <br class="d-none d-lg-block"> Africa's leading mentors
                 </h1>
-                <p>
-                    We offer a vibrant platform for learners to gain <br class="d-md-block d-none" />
-                    <b>career insights</b> from experienced mentors.
+                <p class="mt-4 mb-4">
+                    OwenaHub is a mentorship platform for tech enthusiansts. We offer a vibrant platform
+                    <br class="d-none d-lg-block"> for learners to
+                    gain <b>career insights</b> from experienced mentors.
                 </p>
 
-                <div class="cta mt-4">
+                <div class="cta">
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class='text-decoration-none text-uppercase btn btn-theme rounded-5 fw-semibold px-4 fs-6 shadow text-dark'>
-                        Get Started <i class="bi bi-arrow-right"></i>
+                        class='text-decoration-none  btn btn-dark rounded-5 fw-semibold px-5 py-2 shadow text-white d-md-inline-block d-block'>
+                        Get Started <i class="bi bi-arrow-right ms-2"></i>
                     </a>
-                    <a href="{{ route('guest.articles.index') }}"
-                        class='text-decoration-none btn btn-dark rounded-5 px-3 ms-2 text-uppercase fs-6 fw-semibold shadow text-theme'>
-                        Blog
+                    <a href="{{ route('guest.slices.index') }}"
+                        class='fw-semibold px-4 py-3 text-dark text-center d-md-inline-block d-block'>
+                        Start with courses <i class="bi bi-stars text-primary"></i>
                     </a>
                 </div>
-
-                <div class="mt-2">
-                    <small class='fst-italic fs-tiny'>
-                        <i class="bi bi-stars text-primary"></i> 100+ weekly readers
-                    </small>
-                </div>
-
 
                 {{-- <span class=glow> --}}
                 <img src="{{ asset('images/logo.png') }}" alt="..." class="glow">
@@ -40,7 +53,7 @@
             <div class="container">
                 <div class="shadow shadow-0 feature_box rounded-4">
                     <div>
-                        <i class="bi bi-play-btn text-theme"></i>
+                        <i class="bi bi-play-btn text-red"></i>
                         <div>
                             <strong>Swift Sips</strong><br />
                             <p class="lh-sm">
@@ -50,7 +63,7 @@
                         </div>
                     </div>
                     <div>
-                        <i class="bi bi-person-workspace text-theme"></i>
+                        <i class="bi bi-person-workspace text-primary"></i>
                         <div>
                             <strong>Expert Sessions</strong><br />
                             <p class="lh-sm">
@@ -70,7 +83,7 @@
                         </div>
                     </div>
                     <div>
-                        <i class="bi bi-people text-theme"></i>
+                        <i class="bi bi-people text-success"></i>
                         <div>
                             <strong>Virtual Teams</strong><br />
                             <p class="lh-sm">
@@ -84,29 +97,12 @@
         </section>
     </div>
 
-    <section class='quote container'>
-        <div class="text-center py-2">
-            <figure class="text-center text-dark m-0">
-                <blockquote class="blockquote">
-                    <p class='fs-6 lh-sm'>
-                        <small>OwenaHub is resource rich for people wishing to pick up tips and tricks and gain
-                            perspective in their career path.
-                        </small>
-                    </p>
-                </blockquote>
-                <figcaption class="blockquote-footer">
-                    <span>Ernest Haruna, <i>founder</i></span>
-                </figcaption>
-            </figure>
-        </div>
-    </section>
-
     <section class="bg-f2">
         <div class="container">
             <div class="py-5">
                 <div class="text-dark text-center container pb-4">
                     <h2 class='fw-boldest fs-1'>
-                        Expand your skillset <br class="d-md-none"> with <span class="text-theme">OwenaHub</span>.
+                        Expand your skillset <br class="d-md-none"> with <span class="animated-text">OwenaHub</span>.
                     </h2>
                     <p class="text-secondary">
                         Find resources curated by our team from for Tech Enthusiasts.
@@ -186,34 +182,40 @@
         </div>
     </section>
 
-    <section class="bg-white">
+    <section class="bg-white mb-5">
         <div class="container my-5">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-dark py-5 px-4">
-                        <h2 class='fw-bold fs-2 text-theme'>
-                            OwenaHub <span class="text-dark fw-normal">teams</span>
-                        </h2>
-                        <div>
-                            <p>
-                                Join virtual teams to work on real-life themed projects to boast your
-                                Resume and give you the real-world experience you need to start a great
-                                role as a techie.
-                                <br><br>
-                                <span class="text-danger">●</span>
-                                <span class="fw-semibold">
-                                    Get teams as you register for a slice
-                                </span>
-                            </p>
-                        </div>
-                        <a href="{{ route('guest.onboarding.slices') }}"
-                            class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
-                            Get started <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
+            <div class="py-4 px-4 my-5 bg-dark rounded-4 banner">
+                <h2 class='fw-boldest fs-1 text-white mb-3'>
+                    Fast-track your tech career <br class="d-none d-md-block">
+                    <span class="d-md-inline-block d-none"> with <span class="animated-text-2">OwenaHub</span></span>
+                </h2>
+                <p class="m-0 text-white">
+                    Access a lineup of extraordinary mentors from various backgrounds with just a click,
+                    <br class="d-none d-lg-block"> designed to
+                    provide quick wins and valuable insights.
+                </p>
+            </div>
+
+            <div class="d-md-flex align-items-center justify-content-evenly gap-5 pt-5">
+                <div>
+                    <img src="{{ asset('images/personalised.png') }}" alt="..." class="img-fluid">
                 </div>
-                <div class="col-lg-6 order-first">
-                    <img src="{{ asset('images/team-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
+                <div>
+                    <div class="text-dark pt-5 px-4">
+                        <div>
+                            <div>
+                                <h3 class="text-success display-5 fw-bold mb-4">
+                                    Personalised learning
+                                </h3>
+                                <p class="fs-4 lh-sm mb-4">
+                                    Schedule your mentorship session & get advice and <br class="d-none d-lg-block">
+                                    insights to move faster with your work.
+                                </p>
+                                <a href="" class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">Learn
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,57 +223,74 @@
 
     <section class="mb-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <img src="{{ asset('images/slice-img.png') }}" alt="..."
-                        class="img-fluid shadow rounded-3">
+            <div class="d-md-flex align-items-center justify-content-evenly gap-5 flex-row-reverse">
+                <div class="pt-5">
+                    <img src="{{ asset('images/long-term-goals.png') }}" alt="..." class="img-fluid">
                 </div>
-                <div class="col-lg-6 order-lg-first">
-                    <div class="py-5 px-4">
-                        {{-- <span class="circle shadow"><i class="bi bi-gift-fill"></i></span>  --}}
-                        <h2>
-                            <span class="circle shadow">
-                                <i class="bi bi-box-seam-fill"></i>
-                            </span>
-                            <span class="fw-bold fs-2 text-theme">
-                                OwenaHub <span class="text-dark fw-normal">slices</span>
-                            </span>
-                        </h2>
-
-                        <div class="">
-                            <p>
-                                Embark on a learning journey with OwenaHub's innovative approach to education.
-                            </p>
-                            <p>
-                                <strong>What Are Slices?
-                                    <i class="fs-tiny bg-premium text-dark p-1 rounded fw-normal">
-                                        ...like a course, but shorter 🚀
-                                    </i>
-                                </strong><br>
-
-                                Slices are our unique method of delivering invaluable insights to learners.
-                                <br>
-                                Designed for flexibility, you can now learn on the go, thanks to our
-                                meticulously organized content,
-                                <br class="d-lg-block d-none">
-                                each encapsulated into bite-sized packages called
-                                <b class="text-red">Bites</b>.
-                            </p>
-
-                            Dive into a wealth of information and elevate your learning experience.
-
-                            <p class="fw-bold">
-                                Try taking a slice! 👇🏼
-                            </p>
+                <div>
+                    <div class="text-dark pt-5 px-4">
+                        <div class="mb-5">
+                            <div>
+                                <span class="text-red text-uppercase fs-5 fw-bold">Talk with experts</span>
+                                <h3 class="text-dark display-4 fw-bold mb-4 mt-3">
+                                    Acheive long-term <br class="d-none d-lg-block"> goals with ease
+                                </h3>
+                                <p class="fs-4 lh-sm mb-4">
+                                    Connect with mentors for recurring sessions <br class="d-none d-lg-block">
+                                    and work towards a long-term goal.
+                                </p>
+                                <a href="" class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">Learn
+                                    more</a>
+                            </div>
                         </div>
-                        <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
-                            Take a slice <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
                     </div>
                 </div>
             </div>
     </section>
+
+    <section class="mb-md-5">
+        <div class="container">
+            <div class="d-md-flex align-items-center justify-content-evenly gap-5">
+                <div class="pt-5">
+                    <img src="{{ asset('images/get-access.png') }}" alt="..." class="img-fluid">
+                </div>
+                <div>
+                    <div class="text-dark py-5 px-4">
+                        <div class="mb-5">
+                            <div>
+                                <span class="text-theme text-uppercase fs-5 fw-bold">Talk with experts</span>
+                                <h3 class="text-dark display-4 fw-bold mb-4">
+                                    Easy access to the <br class="d-none d-lg-block"> world’s best.
+                                </h3>
+                                <p class="fs-4 lh-sm mb-4">
+                                    From Web Development to Software Engineering, <br class="d-none d-lg-block"> there
+                                    are thousands of
+                                    top experts, you can get access for free.
+                                </p>
+                                <a href="" class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">Learn
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <div class='py-5 bg-dark secondary-banner'>
+        <div class="container">
+            <div>
+                <h3 class="fw-bold text-theme">Start your Tech Career Today!</h3>
+                <p class="text-light">
+                    Join the learners hub today; find mentorship that meets your learning goals
+                </p>
+                <a href="{{ route('guest.articles.index') }}"
+                    class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
+                    Learn more <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+            <img src="{{ asset('images/logo.png') }}" alt="..." class="glow">
+        </div>
+    </div>
 
     <section class="bg-f2 py-5">
         <div class="container">
@@ -385,86 +404,30 @@
         </div>
     </section>
 
-    <section class='py-5'>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img src="{{ asset('images/blog-img.png') }}" alt="..." class="img-fluid shadow rounded-3">
-                </div>
-                <div class="col-lg-6">
-                    <div class="pt-5 px-4">
-                        <h2 class='fw-bold fs-2 text-theme'>
-                            OwenaHub <span class="text-dark fw-normal">blog</span>
-                        </h2>
-                        <p>
-                            Want to read something inspiring?
-                            Browse through OwenaHub's Blog
-                        </p>
-
-                        <livewire:recommended-articles />
-
-                        <a href="{{ route('guest.articles.index') }}"
-                            class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
-                            View more <i class="bi bi-arrow-right ms-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <div class="bg-theme-light">
         <section class="container py-5">
             <div>
                 <div class="text-center">
-                    <div class="text-center">
-                        <h2 class="fs-1 fw-bold">Join Our Community</h2>
+                    <div class="text-center mb-4">
+                        <h2 class="display-3 fw-normal">Get started <br class="hidden d-md-block"> for free today
+                        </h2>
                         <p class="my-3">
-                            Our community awaits your grand entrance!<br>
-                            <span class="fw-bold">Be part of inspiring platform</span>
+                            Our community awaits your grand entrance! <br>
+                            Be part of an inspiring platform
                         </p>
                     </div>
-                    <!-- Button trigger modal -->
-                    <button type="button"
-                        class="btn rounded-5 shadow btn-light text-decoration-none text-dark fw-bold px-4"
-                        data-bs-toggle="modal" data-bs-target="#joinCommunity">
-                        Check Us Out! 🤙🏽
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="joinCommunity" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header border border-0">
-                                    <p class="modal-title fs-4 text-dark fw-bold" id="exampleModalLabel">Join Our
-                                        Community</p>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="social-links fw-semibold fs-5">
-                                        <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
-                                            class="py-4 mt-3 rounded shadow text-white text-decoration-none d-block instagram">
-                                            Follow Us On Instagram
-                                        </a>
-                                        <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08"
-                                            class="py-4 my-3 rounded shadow text-white text-decoration-none d-block twitter">
-                                            Follow Us On X
-                                        </a>
-                                        <hr class="bg-dak text-dark" />
-                                        <a href="https://www.facebook.com/groups/896520008575738/?ref=share"
-                                            class="py-4 rounded shadow text-white text-decoration-none d-block facebook">
-                                            Facebook Community
-                                        </a>
-                                        <a href="https://linkedin.com/in/ernestharuna"
-                                            class="py-4 rounded shadow text-white text-decoration-none d-block my-3 linkedin">
-                                            LinkedIn Community
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="text-center">
+                        <!-- Button trigger modal -->
+                        <a class="btn rounded-5 shadow btn-dark text-decoration-none text-white fw-bold px-5 py-2 d-inline-block mx-auto"
+                            href="/getstarted">
+                            Get Started
+                        </a>
+                        <br>
+                        <a type="button" class="text-dark px-4 mt-3 fw-semibold" data-bs-toggle="modal"
+                            data-bs-target="#joinCommunity">
+                            Our communities
+                        </a>
+                        <!-- Modal: exists on the navbar component -->
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+$theme-color: #F6A700;
 $emoji-red: #f70a8c !important;
 $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 $theme-gradient-light: linear-gradient(45deg, #ffeeca, #ffda8a) !important;
@@ -23,6 +24,10 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 
 .bg-theme {
     background: $theme-gradient;
+}
+
+.bg-theme-2 {
+    background: $theme-color;
 }
 
 .bg-red {
@@ -47,6 +52,10 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     background: #bfffc095 !important;
 }
 
+.bg-light-red {
+    background: #f77b7ba1 !important;
+}
+
 .bg-light-cyan {
     background: #a8ffff9d !important;
 }
@@ -59,14 +68,6 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     &:hover {
         opacity: 0.7;
     }
-}
-
-.pill {
-    background-color: #ffe8b6;
-    border: 3px solid #F6A700;
-    border-radius: 5px;
-    padding: 0 5px;
-    color: #9E0094;
 }
 
 // Font
@@ -128,7 +129,7 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     background-size: 500% auto;
-    animation: textgradient 4s ease-in-out infinite alternate;
+    animation: textgradient 3s ease-in-out infinite alternate;
 }
 
 .animated-text-2 {
@@ -138,7 +139,7 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     background-size: 500% auto;
-    animation: textgradient 4s ease-in-out infinite alternate;
+    animation: textgradient 3s ease-in-out infinite alternate;
 }
 
 .opacity-animation {

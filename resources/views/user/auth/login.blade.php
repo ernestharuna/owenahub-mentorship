@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="d-flex align-items-center justify-content-center">
-        <div class="col-md-6 col-lg-3 mt-4 mb-5 container">
+        <div class="col-md-6 col-lg-3 mt-4 mt-lg-5 mb-5 container">
             <div class="my-3">
                 {{-- <img src="{{ asset('images/logo.png') }}" alt="..." width="30px"
                     style="position: relative; top: -4px;"> --}}
