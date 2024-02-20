@@ -46,9 +46,9 @@
                                         </p>
                                     </div>
 
-                                    <div class="bg-secondary fw-bold rounded-5">
+                                    <div class="btn btn-secondary btn-sm fw-bold rounded-5">
                                         <a href="{{ route('guest.slices.show', $slice->id) }}"
-                                            class="text-white px-4 py-2 d-block text-decoration-none w-100 fw-bold">
+                                            class="text-white px-3 d-block text-decoration-none w-100 fw-bold">
                                             Start now
                                         </a>
                                     </div>

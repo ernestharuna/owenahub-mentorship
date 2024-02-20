@@ -3,7 +3,7 @@
         div.banner {
             margin-top: 400px;
             /* background-image: linear-gradient(rgba(50, 50, 50, 0.3), rgba(51, 51, 51, 0.3)), linear-gradient(rgba(50, 50, 50, 0.3), rgba(50, 50, 50, 0.3)), url('/assets/img/rewards-card.png'); */
-            background-image: linear-gradient(#3232324d, #3333334d), url('/images/logo.png'), linear-gradient(45deg, #3b598f, #658fde);
+            background-image: linear-gradient(#3232324d, #3333334d), url('/images/logo.png'), linear-gradient(45deg, #D13863, #6649D7);
             background-position: right bottom, 90% 30%, left bottom;
             background-blend-mode: normal;
             background-repeat: no-repeat, no-repeat, no-repeat;
@@ -11,13 +11,15 @@
         }
 
         .secondary-banner {
-            background-image: linear-gradient(#3232324d, #3333334d), url('/images/logo.png'), linear-gradient(45deg, purple, #f6a700);
-            background-position: right bottom, 100% 30%, left bottom;
+            background-image: linear-gradient(#3232324d, #3333334d), url('/images/owenabulb.png'), linear-gradient(45deg, purple, #f6a700);
+            background-position: right bottom, 70% 30%, left bottom;
             background-blend-mode: normal;
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-size: cover, 300px 300px, cover;
         }
     </style>
+
+
     <div class='animated-2 fadeIn bg-theme-2 py-5'>
         <header class="container py-lg-5 text-center">
             <div>
@@ -187,7 +189,7 @@
             <div class="py-4 px-4 my-5 bg-dark rounded-4 banner">
                 <h2 class='fw-boldest fs-1 text-white mb-3'>
                     Fast-track your tech career <br class="d-none d-md-block">
-                    <span class="d-md-inline-block d-none"> with <span class="animated-text-2">OwenaHub</span></span>
+                    <span class="d-md-inline-block d-none"> with <span class="animated-text">OwenaHub</span></span>
                 </h2>
                 <p class="m-0 text-white">
                     Access a lineup of extraordinary mentors from various backgrounds with just a click,
@@ -198,7 +200,7 @@
 
             <div class="d-md-flex align-items-center justify-content-evenly gap-5 pt-5">
                 <div>
-                    <img src="{{ asset('images/personalised.png') }}" alt="..." class="img-fluid">
+                    <img src="{{ asset('images/personalised.png') }}" alt="..." class="img-fluid w-100">
                 </div>
                 <div>
                     <div class="text-dark pt-5 px-4">
@@ -225,7 +227,7 @@
         <div class="container">
             <div class="d-md-flex align-items-center justify-content-evenly gap-5 flex-row-reverse">
                 <div class="pt-5">
-                    <img src="{{ asset('images/long-term-goals.png') }}" alt="..." class="img-fluid">
+                    <img src="{{ asset('images/long-term-goals.png') }}" alt="..." class="img-fluid w-100">
                 </div>
                 <div>
                     <div class="text-dark pt-5 px-4">
@@ -252,7 +254,7 @@
         <div class="container">
             <div class="d-md-flex align-items-center justify-content-evenly gap-5">
                 <div class="pt-5">
-                    <img src="{{ asset('images/get-access.png') }}" alt="..." class="img-fluid">
+                    <img src="{{ asset('images/get-access.png') }}" alt="..." class="img-fluid w-100">
                 </div>
                 <div>
                     <div class="text-dark py-5 px-4">

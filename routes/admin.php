@@ -36,6 +36,17 @@ Route::name('admin.')->group(function () {
                         Route::get('show/{slice}', [SliceController::class, 'show'])->name('show');
                         Route::delete('{slice}/delete', [SliceController::class, 'delete'])->name('delete');
                     });
+
+                    // BITES
+                    // ...slice/bite/...
+                    Route::prefix('bites')->group(function () {
+                        Route::name('bites.')->group(function () {
+                            Route::post('{slice}/create', [BiteController::class, 'store'])->name('store');
+                            Route::patch('{bite}/update', [BiteController::class, 'update'])->name('update');
+                            Route::get('{bite}/edit', [BiteController::class, 'show'])->name('show');
+                            Route::delete('{bite}/delete', [BiteController::class, 'delete'])->name('delete');
+                        });
+                    });
                 });
 
                 // Featured Articles
@@ -46,14 +57,6 @@ Route::name('admin.')->group(function () {
                         Route::patch('{article}/update', [FeaturedArticleController::class, 'update'])->name('update');
                         Route::get('{article}/edit', [FeaturedArticleController::class, 'show'])->name('edit');
                         Route::delete('{article}/delete', [FeaturedArticleController::class, 'delete'])->name('delete');
-                    });
-                });
-
-                // Bites
-                Route::prefix('bites')->group(function () {
-                    Route::name('bites.')->group(function () {
-                        Route::post('{slice}/create', [BiteController::class, 'store'])->name('store');
-                        Route::delete('{bite}/delete', [BiteController::class, 'delete'])->name('delete');
                     });
                 });
 

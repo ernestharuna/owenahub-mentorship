@@ -124,7 +124,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">Invite</a>
+                    <a class="nav-link active" href="{{ route('about') }}">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="{{ route('guest.articles.index') }}">Blog</a>

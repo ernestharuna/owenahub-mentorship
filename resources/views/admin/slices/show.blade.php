@@ -4,7 +4,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.slice.index') }}">Slices</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.slice.index') }}">Slices & Bites</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $slice->title }}</li>
                 </ol>
             </nav>
@@ -126,35 +126,10 @@
                                     <div class="border-top mt-3 py-3">
 
                                         <!-- Edit slice button & modal -->
-                                        <button type="button" class="btn btn-dark rounded-1 me-2 px-5"
-                                            data-bs-toggle="modal" data-bs-target="#editSlice-{{ $bite->id }}-">
+                                        <a href="{{ route('admin.bites.show', $bite->id) }}"
+                                            class="btn btn-dark rounded-1 me-2 px-5">
                                             Edit
-                                        </button>
-
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="editSlice-{{ $bite->id }}-" tabindex="-1"
-                                            aria-labelledby="editSlice-{{ $bite->id }}-Label" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h1 class="modal-title fs-5"
-                                                            id="editSlice-{{ $bite->id }}-Label">Modal title
-                                                        </h1>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        ...
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save
-                                                            changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </a>
 
                                         <!-- Delete Bite Button & Modal -->
                                         <button type="button" class="btn btn-danger rounded-1 px-5"
@@ -172,8 +147,8 @@
                                                             id="deleteBite-{{ $bite->id }}-Label">
                                                             Delete {{ $bite->title }}
                                                         </h1>
-                                                        <button type="button" class="btn-close"
-                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
                                                     </div>
 
                                                     <div class="modal-footer">
@@ -232,8 +207,8 @@
                                     <div class="col-12">
                                         <label for="title"
                                             class="form-label m-0 text-secondary fw-semibold">Title</label>
-                                        <input type="text" class="form-control rounded rounded-0 py-2"
-                                            name="title" id="title" required
+                                        <input type="text" class="form-control rounded py-2" name="title"
+                                            id="title" required
                                             placeholder="Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh">
                                         @error('title')
                                             <p class="text-danger fs-6 mt-1">
@@ -247,8 +222,8 @@
                                         <label for="description" class="form-label m-0 text-secondary fw-semibold">
                                             Description
                                         </label>
-                                        <input type="text" class="form-control rounded rounded-0 py-2"
-                                            name="description" id="description" required
+                                        <input type="text" class="form-control rounded py-2" name="description"
+                                            id="description" required
                                             placeholder="Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh">
                                         @error('description')
                                             <p class="text-danger fs-6 mt-1">
@@ -262,8 +237,8 @@
                                         <label for="position" class="form-label m-0 text-secondary fw-semibold">
                                             Position
                                         </label>
-                                        <input type="number" class="form-control rounded rounded-0 py-2"
-                                            name="position" id="position" required placeholder="1">
+                                        <input type="number" class="form-control rounded py-2" name="position"
+                                            id="position" required placeholder="1">
                                         @error('position')
                                             <p class="text-danger fs-6 mt-1">
                                                 {{ $message }}
@@ -285,8 +260,7 @@
                                     </div>
 
                                     <div class="col-12 my-4">
-                                        <button type="submit"
-                                            class="btn btn-dark rounded rounded-0 shadow fs-6 w-100">
+                                        <button type="submit" class="btn btn-dark rounded shadow fs-6 w-100">
                                             ADD BITE
                                         </button>
                                     </div>

@@ -22,7 +22,8 @@
             <div class='mt-3'>
                 <div class="clearfix">
                     <img src={{ asset('images/about_img.png') }}
-                        class="col-md-6 float-md-end mb-4 ms-md-3 img-fluid img-thumbnail" alt="OwenaHub icon">
+                        class="col-md-6 float-md-end mb-4 ms-md-3 img-fluid img-thumbnail rounded-5 shadow"
+                        alt="OwenaHub icon">
                     <p>
                         Starting a career in tech, can be daunting. It cost time and resources trying to find a field
                         that fits you and your interest before for one.
