@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 
 /**
  * AUTHENTICATION Routes for all
- * sers of - Admin, Mentors, Users
+ * Admin, Mentors, Users
  */
 Route::middleware('guest')->group(function () {
     Route::name('admin.')->group(function () {
@@ -34,11 +34,6 @@ Route::middleware('guest')->group(function () {
         });
     });
 });
-
-
-Route::get('auth/google', [AuthController::class, 'redirectToGmail']);
-Route::get('auth/google/callback',  [AuthController::class, 'handleGmailCallback']);
-
 
 /*
 | For Unverfied users
