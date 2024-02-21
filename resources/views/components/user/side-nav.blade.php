@@ -15,10 +15,10 @@
             </div>
         </div>
 
-        <div class="fw-bold text-secondary fs-tiny">
+        <div class="fs-tiny">
             <div>
                 <a href="{{ route('user.dashboard') }}"
-                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-bold text-secondary">
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
                     @if (Route::is('user.dashboard'))
                         <i class="me-2 fs-5 bi bi-house-fill text-red"></i>
                         <span class="text-red text">Dashboard</span>
@@ -29,7 +29,7 @@
             </div>
             <div>
                 <a href="{{ route('user.slice.index') }}"
-                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-bold text-secondary">
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
                     @if (Route::is('user.slice.show') || Route::is('user.slice.index'))
                         <i class="me-2 fs-5 bi bi-box-fill text-red"></i>
                         <span class="text-red">Slices</span>
@@ -41,7 +41,7 @@
             </div>
             <div>
                 <a href="{{ route('user.session.index') }}"
-                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-bold text-secondary">
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
                     @if (Route::is('user.session.index'))
                         <i class="me-2 fs-5 bi bi-calendar2-fill text-red"></i>
                         <span class="text-red">Sessions</span>
@@ -52,7 +52,7 @@
             </div>
             <div>
                 <a href="{{ route('user.notifications') }}"
-                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-bold text-secondary position-relative">
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary position-relative">
                     @if (Route::is('user.notifications'))
                         <i class="me-2 fs-5 bi bi-bell-fill text-red"></i>
                         <span class="text-red">Notifications</span>
@@ -67,7 +67,7 @@
             </div>
             <div class="mb-5">
                 <a href="{{ route('user.profile') }}"
-                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-bold text-secondary">
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
                     @if (Route::is('user.profile'))
                         <i class="me-2 fs-5 bi bi-person-fill text-red"></i>
                         <span class="text-red">Profile</span>
