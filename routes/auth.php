@@ -24,6 +24,13 @@ Route::middleware('guest')->group(function () {
         });
     });
 
+    Route::name('mentor.')->group(function () {
+        Route::prefix('mentor')->group(function () {
+            Route::view('login', 'mentor.auth.login')->name('login');
+            Route::view('register', 'mentor.auth.register')->name('register');
+        });
+    });
+
     Route::name('user.')->group(function () {
         Route::prefix('user')->group(function () {
             Route::view('login', 'user.auth.login')->name('login');
@@ -36,6 +43,7 @@ Route::middleware('guest')->group(function () {
 });
 
 /*
+| CUSTOM LARAVEL CODE
 | For Unverfied users
 | 
 | View for Email sent notification
