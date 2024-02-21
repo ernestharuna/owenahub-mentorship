@@ -73,7 +73,7 @@
 
                 </div>
             </form>
-            <div class="my-2">
+            <div class="my-3 text-center">
                 <small>
                     <a href="{{ route('password.request') }}" class="fw-semibold text-decoration-none text-red">
                         Forgot Password?
@@ -86,7 +86,7 @@
                 <hr>
             </div>
             <livewire:user.google-signin />
-            <div class="mt-3">
+            <div class="mt-3 text-center">
                 <small>
                     Don't have an account?
                     <a href="{{ route('user.register') }}" class="fw-semibold text-decoration-none text-red">
