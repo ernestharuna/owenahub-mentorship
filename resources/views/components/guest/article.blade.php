@@ -1,7 +1,7 @@
 <!-- Let all your things have their places; let each part of your business have its time. - Benjamin Franklin -->
 <x-layouts.app>
     <x-slot name="title">
-        {{ $title ?? 'The Mentorship Platform for Tech Enthusiasts - OwenaHub Blog' }}
+        {{ $title ?? 'OwenaHub Blog: The Mentorship Platform for Tech Enthusiasts' }}
     </x-slot>
 
     <section class='container my-4'>
@@ -17,7 +17,7 @@
 
                     @if (Route::is('guest.articles.show'))
                         <a href="/articles" class='text-decoration-none d-block mt-3'>
-                            <button class="btn btn-theme text-white text-uppercase fs-6 fw-bold rounded-5">
+                            <button class="btn btn-theme text-dark fs-6 fw-semibold px-4 rounded-5">
                                 ← Back to articles
                             </button>
                         </a>

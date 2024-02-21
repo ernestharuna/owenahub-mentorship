@@ -6,7 +6,7 @@
                     <div class="card shadow-sm border my-5">
                         <div class="card-body text-start">
                             <div>
-                                <h1 class="fs-4 fw-bold text-theme mb-3">
+                                <h1 class="fs-4 fw-bold text-dark mb-3">
                                     Forgot Password
                                 </h1>
 
@@ -14,7 +14,7 @@
                                     @csrf
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email address</label>
-                                        <input type="email" class="form-control rounded-2 py-2" id="email"
+                                        <input type="email" class="form-control rounded-2 py-3" id="email"
                                             name="email" placeholder="name@example.com" required>
                                     </div>
 

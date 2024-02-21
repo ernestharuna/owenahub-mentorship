@@ -1,6 +1,6 @@
 <x-guest.article>
     <x-slot name="title">
-        {{ $article->title ?? 'The Mentorship Platform for Tech Enthusiasts - OwenaHub Blog' }}
+        {{ $article->title . ' | OwenaHub Blog' ?? 'OwenaHub Blog: The Mentorship Platform for Tech Enthusiasts' }}
     </x-slot>
 
     <div class='mb-4'>

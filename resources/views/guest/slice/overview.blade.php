@@ -22,10 +22,10 @@
                     </div>
                     <livewire:share-page />
                 </div>
-                <div class="col-lg-3 col-12 p-4 bg-white rounded-4 align-self-start shadow-sm container">
+                <div class="col-lg-3 col-12 p-4 bg-white rounded-5 align-self-start shadow-sm container">
                     <p class="fs-3 ">
-                        <span class="text-theme fw-bold">{!! $slice->price ? "<span>&#8358;$slice_price</span>" : 'FREE' !!}</span>
-                        <span class="text-decoration-line-through text-secondary">&#8358;5,400.00</span>
+                        <span class="text-theme fw-bold">{!! $slice->price ? "<span>$$slice_price</span>" : 'FREE' !!}</span>
+                        <span class="text-decoration-line-through text-secondary">$2.00</span>
                     </p>
 
                     <hr>
@@ -74,7 +74,7 @@
                         </div>
                     @else
                         <a href="{{ route('user.login') }}"
-                            class="w-100 btn btn-theme fw-bold rounded-1 p-3 fs-5 text-white shadow-sm">
+                            class="w-100 btn btn-theme fw-bold rounded-5 p-3 fs-5 text-white shadow-sm">
                             Enroll Now!
                         </a>
                     @endif

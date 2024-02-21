@@ -44,4 +44,5 @@ Route::name('guest.')->group(function () {
     });
 });
 
+
 require __DIR__ . '/auth.php';

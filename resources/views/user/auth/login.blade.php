@@ -1,4 +1,23 @@
 <x-layouts.app>
+    <style>
+        .horizontal-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .horizontal-line hr {
+            flex-grow: 1;
+            height: 1px;
+            border: none;
+            background-color: #000;
+            /* Change this to adjust the line color */
+        }
+
+        .text-in-between {
+            margin: 0 10px;
+            /* Adjust spacing as needed */
+        }
+    </style>
     <div class="d-flex align-items-center justify-content-center">
         <div class="col-md-6 col-lg-3 mt-4 mt-lg-5 mb-5 container">
             <div class="my-3">
@@ -48,27 +67,32 @@
 
                 <div class="col-12 mt-2">
                     <button type="submit" class="btn btn-theme rounded-4 shadow-sm py-3 w-100 text-white">
-                        SIGN IN
+                        LOG IN
                     </button>
-                </div>
 
-                <div class="my-2">
-                    <small>
-                        <a href="{{ route('password.request') }}" class="fw-semibold">
-                            Forgot Password?
-                        </a>
-                    </small>
-                </div>
-                <hr>
-                <div class="m-0">
-                    <small>
-                        Don't have an account?
-                        <a href="{{ route('user.register') }}" class="fw-semibold">
-                            Sign Up
-                        </a>
-                    </small>
                 </div>
             </form>
+            <div class="my-2">
+                <small>
+                    <a href="{{ route('password.request') }}" class="fw-semibold text-decoration-none text-red">
+                        Forgot Password?
+                    </a>
+                </small>
+            </div>
+            <div class="horizontal-line">
+                <hr>
+                <span class="text-in-between text-secondary">OR SIGN IN WITH</span>
+                <hr>
+            </div>
+            <livewire:user.google-signin />
+            <div class="mt-3">
+                <small>
+                    Don't have an account?
+                    <a href="{{ route('user.register') }}" class="fw-semibold text-decoration-none text-red">
+                        Sign Up
+                    </a>
+                </small>
+            </div>
         </div>
     </div>
 </x-layouts.app>

@@ -1,19 +1,19 @@
 <section>
-    <h4 class='fs-6 text-secondary'>Share to your network</h4>
-    <section class="social-links row w-100 mx-auto">
-        <button class="btn facebook text-white fw-light rounded rounded-0 col-sm-12 col-md-4" onclick="facebook()">
-            <i class="bi bi-facebook"></i>
-            Share to Facebook
+    <h4 class='fs-tiny text-red'>Share to your network</h4>
+    <section class="social-links">
+        <button class="btn btn-sm rounded-4 mb-1 facebook text-white" onclick="facebook()">
+            <i class="bi bi-facebook me-1"></i>
+            Facebook
         </button>
 
-        <button class="btn whatsapp text-white fw-light rounded rounded-0 col-sm-12 col-md-4" onclick="whatsapp()">
-            <i class="bi bi-whatsapp"></i>
-            Share to WhatsApp
+        <button class="btn btn-sm rounded-4 mb-1 whatsapp text-white fw-light" onclick="whatsapp()">
+            <i class="bi bi-whatsapp me-1"></i>
+            WhatsApp
         </button>
 
-        <button class="btn twitter text-white fw-light rounded rounded-0 col-sm-12 col-md-4" onclick="twitter()">
-            <i class="bi bi-twitter"></i>
-            Share to Twitter
+        <button class="btn btn-sm btn-dark rounded-4 mb-1 text-white fw-light" onclick="twitter()">
+            <i class="bi bi-twitter-x me-1"></i>
+            Twitter
         </button>
     </section>
 </section>

@@ -29,7 +29,7 @@
                     <h3 class="mb-4">
                         <span class="fw-light">Your</span> <span class="text-theme fw-bold">Bites</span>
                     </h3>
-                    @forelse ($slice->bite as $bite)
+                    @forelse ($slice->bite->sortBy('position') as $bite)
                         @php
                             $active = $bite->id === $show_bite->id;
                         @endphp

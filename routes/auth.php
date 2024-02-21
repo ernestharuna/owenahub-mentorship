@@ -35,6 +35,11 @@ Route::middleware('guest')->group(function () {
     });
 });
 
+
+Route::get('auth/google', [AuthController::class, 'redirectToGmail']);
+Route::get('auth/google/callback',  [AuthController::class, 'handleGmailCallback']);
+
+
 /*
 | For Unverfied users
 | 

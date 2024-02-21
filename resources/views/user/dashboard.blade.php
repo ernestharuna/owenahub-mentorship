@@ -1,9 +1,6 @@
 <x-layouts.user>
     <section class="mt-4">
         <p class="text-dark fw-bold mb-2">
-            {{-- <h2 class="fs-4 fw-bold text-secondary">
-            <i class="bi bi-house-fill text-theme"></i> Dashboard
-        </h2> --}}
         <section class="mb-4">
             <p class="m-0">Welcome To OwenaHub,</p>
             <h2 class="fw-bold fs-2">
@@ -12,43 +9,7 @@
             </h2>
         </section>
         </p>
-
-        {{-- <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
-            <div class="col">
-                <div class="card py-4 px-3 h-100 border-none shadow-sm">
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="rounded-5 p-3 bg-theme">
-                            <i class="bi bi-box fs-5 text-white"></i>
-                        </div>
-                        <div>
-                            <p class="m-0 fw-bold fs-4">
-                                <b class="text-red">3</b> slices
-                            </p>
-                            <h3 class="fs-tiny text-secondary m-0">Completed Bites</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card py-4 px-3 h-100 border-none shadow-sm">
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="rounded-5 p-3 bg-theme">
-                            <i class="bi bi-box fs-5 text-white"></i>
-                        </div>
-                        <div>
-                            <p class="m-0 fw-bold fs-4">
-                                <b class="text-red">3</b> slices
-                            </p>
-                            <h3 class="fs-tiny text-secondary m-0">Completed Bites</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div> --}}
     </section>
-
-
 
     <section>
         <div class="p-3 bg-white shadow-sm border rounded">
