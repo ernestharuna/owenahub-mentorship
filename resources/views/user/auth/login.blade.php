@@ -18,6 +18,7 @@
             /* Adjust spacing as needed */
         }
     </style>
+
     <div class="d-flex align-items-center justify-content-center">
         <div class="col-md-6 col-lg-3 mt-4 mt-lg-5 mb-5 container">
             <div class="my-3">
@@ -81,7 +82,7 @@
             </div>
             <div class="horizontal-line">
                 <hr>
-                <span class="text-in-between text-secondary">OR SIGN IN WITH</span>
+                <span class="text-in-between text-secondary fs-tiny">OR LOG IN WITH</span>
                 <hr>
             </div>
             <livewire:user.google-signin />

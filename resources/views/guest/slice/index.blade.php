@@ -77,7 +77,7 @@
                     </div>
                     <div class="text-center">
                         <a href="{{ route('guest.articles.index') }}" type="button"
-                            class="btn rounded-1 shadow btn-light">
+                            class="btn rounded-5 px-5 shadow btn-light">
                             <span class="text-dark fs-5 fw-medium"> Quick View
                             </span> — <small class="fw-light fs-tiny">
                                 it's free <i class="bi bi-cart-fill text-danger"></i>

@@ -82,7 +82,7 @@ class AuthController extends Controller
     public function handleGmailCallback(): RedirectResponse
     {
         $user = Socialite::driver('google')->user();
-        dd($user->user);
+        // dd($user->user);
 
         $existing_user = User::where('email', $user->email)->first();
 
@@ -90,8 +90,8 @@ class AuthController extends Controller
             Auth::login($existing_user);
         } else {
             $new_user = new User();
-            $new_user->first_name = $user->user->given_name;
-            $new_user->last_name = $user->user->family_name;
+            $new_user->first_name = $user->user["given_name"];
+            $new_user->last_name = $user->user["family_name"];
             $new_user->email = $user->email;
             $new_user->email_verified_at = Carbon::now();
             $new_user->password = bcrypt(request(Str::random(8)));

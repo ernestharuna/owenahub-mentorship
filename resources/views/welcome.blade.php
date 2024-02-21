@@ -420,7 +420,7 @@
                     </div>
                     <div class="text-center">
                         <!-- Button trigger modal -->
-                        <a class="btn rounded-5 shadow btn-dark text-decoration-none text-white fw-bold px-5 py-2 d-inline-block mx-auto"
+                        <a class="btn btn-dark rounded-5 shadow text-decoration-none text-white fw-bold px-5 py-2 fs-5 d-inline-block mx-auto"
                             href="/getstarted">
                             Get Started
                         </a>

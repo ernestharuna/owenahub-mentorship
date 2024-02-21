@@ -37,7 +37,7 @@
                     </div>
                 @empty
                     <p class="p-2 rounded text-secondary">
-                        You have nothing on your plate.
+                        😐 You have nothing on your plate.
                     </p>
                 @endforelse
                 <div class="col">
@@ -59,8 +59,8 @@
                             </div>
                             <div class="mt-3">
                                 <a href="{{ route('guest.slices.index') }}"
-                                    class="btn btn-light p-4 py-1 text-dark fw-semibold rounded-3">
-                                    Pick a New Slice
+                                    class="btn btn-light p-4 py-1 text-dark fw-semibold rounded-4">
+                                    See courses
                                 </a>
                             </div>
                         </div>

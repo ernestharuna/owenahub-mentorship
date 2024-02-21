@@ -13,24 +13,24 @@
                     <p>Your account's profile information and email address</p>
                 </div>
 
-                <div class="bg-white rounded p-4 col-12 col-lg-6 shadow-sm border">
+                <div class="bg-white rounded-4 p-4 col-12 col-lg-6 shadow-sm border">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label fw-semibold m-0">First name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John"
-                            value="{{ Auth::user()->first_name }}" disabled>
+                        <input type="text" class="form-control rounded-4" id="exampleFormControlInput1"
+                            placeholder="John" value="{{ Auth::user()->first_name }}" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label fw-semibold m-0">Last name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Doe"
-                            value="{{ Auth::user()->last_name }}" disabled>
+                        <input type="text" class="form-control rounded-4" id="exampleFormControlInput1"
+                            placeholder="Doe" value="{{ Auth::user()->last_name }}" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label fw-semibold m-0">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                        <input type="email" class="form-control rounded-4" id="exampleFormControlInput1"
                             placeholder="name@example.com" value="{{ Auth::user()->email }}" disabled>
                     </div>
 
-                    <button class="btn btn-dark rounded-1 px-5 fs-tiny" disabled>
+                    <button class="btn btn-dark rounded-4 px-5 fs-tiny" disabled>
                         Save
                     </button>
                 </div>
@@ -48,28 +48,28 @@
                     </p>
                 </div>
 
-                <div class="bg-white rounded p-4 col-12 col-lg-6 shadow-sm border mb-5">
+                <div class="bg-white rounded-4 p-4 col-12 col-lg-6 shadow-sm border mb-5">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label fw-semibold m-0">Facebook</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <input type="text" class="form-control rounded-4" id="exampleFormControlInput1"
                             placeholder="https://facebook.com/..." disabled>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label fw-semibold m-0">X (twitter)</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <input type="text" class="form-control rounded-4" id="exampleFormControlInput1"
                             placeholder="https://x.com.com/..." disabled>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label fw-semibold m-0">Instagram </label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                        <input type="text" class="form-control rounded-4" id="exampleFormControlInput1"
                             placeholder="https://instagram.com/..." disabled>
                     </div>
 
-                    <button class="btn btn-dark rounded-1 px-5 fs-tiny" disabled>
+                    <button class="btn btn-dark rounded-4 px-5 fs-tiny" disabled>
                         Save
                     </button>
-                    <a href="{{ route('user.logout') }}" class="btn btn-danger rounded-1 px-4 ms-2 fs-tiny">
-                        Logout <i class="bi bi-arrow-right-short"></i>
+                    <a href="{{ route('user.logout') }}" class="btn btn-danger rounded-4 px-4 ms-2 fs-tiny">
+                        <i class="bi bi-box-arrow-right me-1"></i> Logout
                     </a>
                 </div>
             </div>

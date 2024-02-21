@@ -90,14 +90,12 @@
                     </p>
                     <div class="mt-2">
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-light rounded-1 fw-semibold text-red border cta-animation-focus">
-                            Take a slice <i class="bi bi-box"></i>
+                            class="btn btn-light rounded-4 px-3 fw-semibold text-red border cta-animation-focus">
+                            <i class="bi bi-box me-1"></i> Take a slice
                         </a>
                     </div>
                 </div>
             @endforelse
-
-
         </div>
     </section>
 
@@ -111,8 +109,7 @@
                 </p>
             </div>
             <div class="mt-2">
-                <button href="{{ route('guest.slices.index') }}" disabled
-                    class="btn btn-theme border-0 rounded-4 px-3 shadow-sm fw-semibold mt-1" target="_blank">
+                <button class="btn btn-theme rounded-4 px-3 shadow-sm fw-semibold border-0 mt-1" disabled>
                     <i class="bi bi-plus-circle me-1"></i> Create a session
                 </button>
             </div>

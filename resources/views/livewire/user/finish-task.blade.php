@@ -30,9 +30,9 @@
                     <form wire:submit="save" class="m-0">
                         @if ($can_review)
                             <div class="input-group my-3">
-                                <input type="text" class="form-control rounded-2 py-3 border-2 fs-5 fw-semibold"
-                                    wire:model="comment" placeholder="Rate this slice" aria-label="Rate This Slice"
-                                    aria-describedby="button-addon2" required>
+                                <input type="text" class="form-control rounded-4 py-2 border-2 fw-semibold"
+                                    wire:model="comment" placeholder="Type a review for this slice"
+                                    aria-label="Rate This Slice" aria-describedby="button-addon2" required>
                             </div>
 
                             <div class="mt-4">
@@ -53,10 +53,11 @@
                             </p>
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-theme rounded-2 shadow-sm fw-semibold">
+                            <button type="submit" class="btn btn-theme rounded-4 px-4 shadow-sm fw-semibold">
                                 Yes, digested!
                             </button>
-                            <button type="button" class="btn btn-light border rounded-2 shadow-sm ms-2 fw-semibold"
+                            <button type="button"
+                                class="btn btn-light border rounded-4 px-4 shadow-sm ms-2 fw-semibold"
                                 data-bs-dismiss="modal" aria-label="Close">
                                 Not yet
                             </button>

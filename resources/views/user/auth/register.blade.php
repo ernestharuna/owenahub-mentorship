@@ -1,4 +1,24 @@
 <x-layouts.app>
+    <style>
+        .horizontal-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .horizontal-line hr {
+            flex-grow: 1;
+            height: 1px;
+            border: none;
+            background-color: #000;
+            /* Change this to adjust the line color */
+        }
+
+        .text-in-between {
+            margin: 0 10px;
+            /* Adjust spacing as needed */
+        }
+    </style>
+
     <div class="d-flex align-items-center justify-content-center">
         <div class="col-md-6 col-lg-3 my-4 container">
             <div class="mt-3">
@@ -63,19 +83,27 @@
                         REGISTER
                     </button>
                 </div>
-
-                <div class="fs-tiny my-3 text-center">
-                    By signing up, you agree to our <a href="#">Terms of Use</a> and
-                    <a href="#">Privacy Policy</a>.
-                </div>
-                <hr>
-                <div class="m-0 text-center">
+                <div class="my-3 text-center">
                     <small>
                         Already registered?
-                        <a href="{{ route('user.login') }}" class="fw-semibold">
+                        <a href="{{ route('user.login') }}" class="fw-semibold text-decoration-none text-red">
                             Log In
                         </a>
                     </small>
+                </div>
+
+                <div class="horizontal-line">
+                    <hr>
+                    <span class="text-in-between text-secondary fs-tiny">OR REGISTER WITH</span>
+                    <hr>
+                </div>
+                <livewire:user.google-signin />
+
+                <div class="fs-tiny my-3 text-center">
+                    By signing up, you agree to our
+                    <a href="#" class="fw-semibold text-decoration-none text-red">
+                        Terms of Use</a> and
+                    <a href="#" class="fw-semibold text-decoration-none text-red">Privacy Policy</a>.
                 </div>
             </form>
         </div>
