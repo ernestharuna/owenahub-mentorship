@@ -86,7 +86,7 @@
                 <span class="text-in-between text-secondary fs-tiny">OR LOG IN WITH</span>
                 <hr>
             </div>
-            <livewire:user.google-signin />
+            <livewire:mentor.google-signin />
             <div class="mt-3 text-center">
                 <small>
                     Don't have an account?

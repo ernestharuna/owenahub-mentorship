@@ -71,6 +71,9 @@
                 <a href="{{ route('user.login') }}" class="d-block text-decoration-none text-white fs-tiny fw-light">
                     User Login <i class="bi bi-arrow-right-short"></i>
                 </a>
+                <a href="{{ route('mentor.login') }}" class="d-block text-decoration-none text-white fs-tiny fw-light">
+                    Mentor Login <i class="bi bi-arrow-right-short"></i>
+                </a>
             </div>
 
             <div class="p-2 flex-fill">

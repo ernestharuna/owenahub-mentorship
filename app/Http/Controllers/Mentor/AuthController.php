@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers\Mentor;
 
-use Carbon\Carbon;
 use App\Models\Mentor;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Auth\Events\Registered;
-use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
@@ -72,33 +68,6 @@ class AuthController extends Controller
             throw $e;
             return back()->with('error', $e->getMessage());
         }
-    }
-
-    public function redirectToGmail(): RedirectResponse
-    {
-        return Socialite::driver('google')->redirect();
-    }
-
-    public function handleGmailCallback(): RedirectResponse
-    {
-        $user = Socialite::driver('google')->user();
-        // dd($user->user);
-
-        $existing_user = Mentor::where('email', $user->email)->first();
-
-        if ($existing_user) {
-            Auth::login($existing_user);
-        } else {
-            $new_mentor = new Mentor();
-            $new_mentor->first_name = $user->user["given_name"];
-            $new_mentor->last_name = $user->user["family_name"];
-            $new_mentor->email = $user->email;
-            $new_mentor->email_verified_at = Carbon::now();
-            $new_mentor->password = bcrypt(request(Str::random(8)));
-            $new_mentor->save();
-            Auth::login($new_mentor);
-        }
-        return redirect()->intended(route('user.dashboard'));
     }
 
     public function logout(Request $request)

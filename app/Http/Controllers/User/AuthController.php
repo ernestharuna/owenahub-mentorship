@@ -3,16 +3,12 @@
 namespace App\Http\Controllers\User;
 
 use App\Models\User;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Auth\Events\Registered;
-use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
@@ -72,33 +68,6 @@ class AuthController extends Controller
             throw $e;
             return back()->with('error', $e->getMessage());
         }
-    }
-
-    public function redirectToGmail(): RedirectResponse
-    {
-        return Socialite::driver('google')->redirect();
-    }
-
-    public function handleGmailCallback(): RedirectResponse
-    {
-        $user = Socialite::driver('google')->user();
-        // dd($user->user);
-
-        $existing_user = User::where('email', $user->email)->first();
-
-        if ($existing_user) {
-            Auth::login($existing_user);
-        } else {
-            $new_user = new User();
-            $new_user->first_name = $user->user["given_name"];
-            $new_user->last_name = $user->user["family_name"];
-            $new_user->email = $user->email;
-            $new_user->email_verified_at = Carbon::now();
-            $new_user->password = bcrypt(request(Str::random(8)));
-            $new_user->save();
-            Auth::login($new_user);
-        }
-        return redirect()->intended(route('user.dashboard'));
     }
 
     public function logout(Request $request)

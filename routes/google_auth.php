@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\GoogleAuthController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User\AuthController;
 
-Route::get('auth/google', [AuthController::class, 'redirectToGmail']);
-Route::get('auth/google/callback',  [AuthController::class, 'handleGmailCallback']);
+Route::get('user/auth/google', [GoogleAuthController::class, 'redirectToGmail']);
+// Route::get('mentor/auth/google', [GoogleAuthController::class, 'redirectToGmailMentor']);
+
+Route::get('auth/google/callback',  [GoogleAuthController::class, 'gmailCallback']);
