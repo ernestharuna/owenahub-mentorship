@@ -46,7 +46,7 @@ Route::name('guest.')->group(function () {
 
 
 require __DIR__ . '/auth.php';
-require __DIR__ . '/admin.php';
-require __DIR__ . '/mentor.php';
-require __DIR__ . '/user.php';
+require __DIR__ . '/admin/admin.php';
+require __DIR__ . '/mentor/mentor.php.php';
+require __DIR__ . '/user/user.php.php';
 require __DIR__ . '/google_auth.php';

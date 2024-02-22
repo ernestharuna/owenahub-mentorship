@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Mentor\AuthController as MentorAuthController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
@@ -28,6 +29,9 @@ Route::middleware('guest')->group(function () {
         Route::prefix('mentor')->group(function () {
             Route::view('login', 'mentor.auth.login')->name('login');
             Route::view('register', 'mentor.auth.register')->name('register');
+
+            Route::post('login', [MentorAuthController::class, 'login'])->name('login.req'); //uses users Auth Controller
+            Route::post('register', [MentorAuthController::class, 'register'])->name('register.req');
         });
     });
 
@@ -37,7 +41,6 @@ Route::middleware('guest')->group(function () {
             Route::post('login', [AuthController::class, 'login'])->name('login.req'); //uses users Auth Controller
 
             Route::view('register', 'user.auth.register')->name('register');
-            Route::post('register', [AuthController::class, 'register'])->name('register.req');
         });
     });
 });

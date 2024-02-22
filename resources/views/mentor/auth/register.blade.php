@@ -30,7 +30,7 @@
                 <p>Join the Learner's Hub</p>
             </div>
 
-            <form method="POST" action="#" class="row g-1 animated-2 fadeIn">
+            <form method="POST" action="{{ route('mentor.register.req') }}" class="row g-1 animated-2 fadeIn">
                 @csrf
                 {{-- Form errors --}}
                 <div class="animated-2 fadeIn">

@@ -27,8 +27,10 @@ class RedirectIfAuthenticated
                 // Check the guard type ---- custome written code ooo
                 if ($guard === 'admin') {
                     return redirect(route('admin.dashboard'));
+                } else if ($guard === 'mentor') {
+                    return redirect(route('mentor.dashboard'));
                 } else {
-                    return redirect(route('user.dashboard'));
+                    return redirect(route('mentor.dashboard'));
                 }
             }
         }
