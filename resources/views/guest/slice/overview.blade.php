@@ -22,7 +22,7 @@
                     </div>
                     <livewire:share-page />
                 </div>
-                <div class="col-lg-3 col-12 p-4 bg-white rounded-5 align-self-start shadow-sm container">
+                <div class="col-lg-3 col-12 p-4 bg-white rounded-4 align-self-start shadow-sm container">
                     <p class="fs-3 ">
                         <span class="text-theme fw-bold">{!! $slice->price ? "<span>$$slice_price</span>" : 'FREE' !!}</span>
                         <span class="text-decoration-line-through text-secondary">$2.00</span>
