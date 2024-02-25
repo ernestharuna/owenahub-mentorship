@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('private_sessions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('mentor_id')->nullable()->constrained()->cascadeOnDelete();
-            $table->string('title');
+            $table->foreignId('mentor_id')->nullable()->constrained();
             $table->text('description');
             $table->string('session_code', 8)->unique()->nullable();
             $table->string('meeting_link')->nullable();
             $table->string('meeting_date')->nullable();
             $table->boolean('paid')->default(false);
-            $table->boolean('accepted')->default(false);
+            $table->enum('type', ['one-time', 'long-term']);
+            $table->enum('status', ['accepted', 'pending', 'declined'])->default('pending');
             $table->timestamps();
         });
     }

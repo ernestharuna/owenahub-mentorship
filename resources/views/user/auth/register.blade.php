@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="col-12 mt-4">
-                    <button type="submit" class="btn btn-theme rounded-4 shadow-sm w-100 text-white py-3">
+                    <button type="submit" class="btn btn-theme rounded-4 shadow-sm w-100 text-dark py-3">
                         REGISTER
                     </button>
                 </div>

@@ -1,12 +1,13 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
-use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\BiteController;
+use App\Http\Controllers\Admin\SliceController;
+use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeaturedArticleController;
-use App\Http\Controllers\Admin\SliceController;
 
 Route::name('admin.')->group(function () {
     Route::prefix('admin')->group(function () {
@@ -15,6 +16,16 @@ Route::name('admin.')->group(function () {
 
             Route::prefix('dashboard')->group(function () {
                 Route::get('/', DashboardController::class)->name('dashboard');
+
+                Route::get('create-storage-link/abs', function () {
+                    try {
+                        Artisan::call('storage:link');
+                        return redirect()->back()->with('status', 'Storage link created successfully');
+                    } catch (\Exception $e) {
+                        return redirect()->back()->with('error', $e->getMessage());
+                    }
+                })->name('create-storage-link');
+
                 // Articles
                 Route::prefix('articles')->group(function () {
                     Route::get('/', [ArticleController::class, 'index'])->name('articles.index');

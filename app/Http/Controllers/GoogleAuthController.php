@@ -83,7 +83,7 @@ class GoogleAuthController extends Controller
                 return redirect()->back()->with('error', "$e");
             }
         } else {
-            return redirect(back()->with('error', 'Authentication failed!'));
+            return redirect()->back()->with('error', 'Authentication failed!');
         }
     }
 }

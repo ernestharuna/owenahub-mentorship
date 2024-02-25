@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-12 mt-2">
-                    <button type="submit" class="btn btn-theme rounded-4 shadow-sm py-3 w-100 text-white">
+                    <button type="submit" class="btn btn-theme rounded-4 shadow-sm py-3 w-100 text-dark">
                         LOG IN
                     </button>
 

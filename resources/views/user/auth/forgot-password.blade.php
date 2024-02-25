@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4 col-sm-12 my-5">
-                    <div class="card shadow-sm border my-5">
+                    <div class="card border-0 my-5">
                         <div class="card-body text-start">
                             <div>
                                 <h1 class="fs-4 fw-bold text-dark mb-3">
@@ -14,11 +14,12 @@
                                     @csrf
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email address</label>
-                                        <input type="email" class="form-control rounded-2 py-3" id="email"
-                                            name="email" placeholder="name@example.com" required>
+                                        <input type="email"
+                                            class="form-control rounded-4 border border-dark border-1 py-3"
+                                            id="email" name="email" placeholder="name@example.com" required>
                                     </div>
 
-                                    <button class="btn btn-theme rounded-2 w-100 fw-semibold" type="submit">
+                                    <button class="btn btn-theme rounded-4 w-100 fw-semibold py-3" type="submit">
                                         Get Reset Link
                                     </button>
                                     @error('email')

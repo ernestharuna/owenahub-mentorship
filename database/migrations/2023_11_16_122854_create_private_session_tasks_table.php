@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('private_session_tasks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('private_session_id')->constrained(table: 'private_sessions', column: 'id')->cascadeOnDelete();
             $table->string('title');
             $table->text('content');
-            $table->foreignId('private_session_id')->constrained(table: 'private_sessions', column: 'id')->cascadeOnDelete();
             $table->timestamps();
         });
     }

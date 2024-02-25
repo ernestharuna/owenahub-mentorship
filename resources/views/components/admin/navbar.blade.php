@@ -18,14 +18,14 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('admin.dashboard') }}">
-                            Dashboard
+                            Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
+                        <a class="nav-link" href="{{ route('admin.slice.index') }}">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Articles</a>
+                        <a class="nav-link" href="{{ route('admin.articles.index') }}">Articles</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sessions</a>
@@ -36,7 +36,11 @@
                             Account Settings
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li>
+                                <a class="dropdown-item mb-2" href="{{ route('admin.create-storage-link') }}">
+                                    Create storage link
+                                </a>
+                            </li>
                             <li><a class="dropdown-item" href="#">Manage Mentors</a></li>
                             <li>
                                 <hr class="dropdown-divider">
