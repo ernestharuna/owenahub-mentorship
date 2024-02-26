@@ -1,12 +1,19 @@
 <x-layouts.app>
     <section class="bg-theme-light">
         <div class="container py-4 ">
+            <p class="mb-2"><span class="fw-bold">{{ $slice->category }}</span></p>
             <h1 class="fw-bold fs-2 text-dark">
                 {{ $slice->title }}
             </h1>
-            <p class="mb-2">Duration: <span class="fw-bold">{{ $slice->duration }} Week(s)</span></p>
-            <p class="m-0 text-dark text-shadow lh-sm" style="max-width: 500px;">
+            <p class="text-dark text-shadow lh-sm" style="max-width: 500px;">
                 {{ $slice->about }}
+            </p>
+            <p class="m-0">
+                <span class="fw-semibold">By OwenaHub</span>
+            </p>
+            <p class="m-0">
+                <i class="bi bi-clock"></i>
+                <span class="fw-semibold">{{ $slice->duration }} Week(s)</span>
             </p>
         </div>
     </section>
@@ -33,7 +40,7 @@
                     @if (Auth::check())
                         <!-- Button trigger modal -->
                         <button type="button"
-                            class="w-100 btn btn-theme fw-bold rounded-4 p-3 fs-5 text-white shadow-sm"
+                            class="w-100 btn btn-theme fw-bold rounded-4 p-3 fs-5 text-dark shadow-sm"
                             data-bs-toggle="modal" data-bs-target="#confirm_slice">
                             Enroll Now!
                         </button>
@@ -74,7 +81,7 @@
                         </div>
                     @else
                         <a href="{{ route('user.login') }}"
-                            class="w-100 btn btn-theme fw-bold rounded-5 p-3 fs-5 text-white shadow-sm">
+                            class="w-100 btn btn-theme fw-bold rounded-5 p-3 fs-5 text-dark shadow-sm">
                             Enroll Now!
                         </a>
                     @endif
