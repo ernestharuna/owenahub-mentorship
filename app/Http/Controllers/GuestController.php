@@ -44,7 +44,7 @@ class GuestController extends Controller
         $slice_price = '';
 
         if ($slice->price) {
-            $slice_price = number_format($slice->price, 2, '.', ',');
+            $slice_price = number_format($slice->price, 0, '', ',');
         }
         return view('guest.slice.overview', [
             'slice' => $slice,

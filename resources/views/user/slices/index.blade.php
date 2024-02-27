@@ -1,8 +1,8 @@
 <x-layouts.user>
     <div class="container mt-2 animated-2 fadeIn">
         <section class="py-3 border-bottom">
-            <h2 class="fs-4 fw-bold text-secondary">
-                <i class="bi bi-box-fill text-theme"></i> All slices
+            <h2 class="fs-4 fw-bold text-dark">
+                <i class="bi bi-box-fill text-secondary"></i> Slices
             </h2>
         </section>
 
@@ -18,11 +18,11 @@
                                 <h5 class="card-title fw-bold m-0">
                                     {{ $enrolled->slice->title }}
                                 </h5>
-                                <div class="d-flex align-items-center gap-4 mt-2">
-                                    <div class="bg-f2 rounded-1 shadow-sm border px-2">
+                                <div class="d-flex align-items-center gap-3 mt-2">
+                                    <div class="bg-f2 rounded-4 shadow-sm  px-3">
                                         <i class="bi bi-boxes"></i> {{ $enrolled->slice->bite->count() }} bites
                                     </div>
-                                    <div class="bg-f2 rounded-1 shadow-sm border px-2">
+                                    <div class="bg-f2 rounded-4 shadow-sm  px-3">
                                         <i class="bi bi-clock"></i> {{ $enrolled->slice->duration }} weeks
                                     </div>
                                 </div>
@@ -50,12 +50,6 @@
                                 More slices available for you
                             </h5>
                             <div class="d-flex align-items-center gap-4">
-                                {{-- <div>
-                                    <i class="bi bi-boxes"></i> {{ $enrolled->slice->bite->count() }} bites
-                                </div>|
-                                <div>
-                                    <i class="bi bi-clock"></i> {{ $enrolled->slice->duration }} weeks
-                                </div> --}}
                             </div>
                             <div class="mt-3">
                                 <a href="{{ route('guest.slices.index') }}"

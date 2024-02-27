@@ -12,14 +12,14 @@
             }
         }
     </style>
-    <div class="card h-100 border-0 shadow-sm">
+    <div class="card h-100 border-0 border-start shadow-sm">
         <div class="mb-2" id="course-card-img">
             @if ($slice->image_path)
                 <img src="{{ asset('storage/' . $slice->image_path) }}" alt="..."
-                    class="rounded-top border d-block img-fluid w-100 h-100 object-fit-cover">
+                    class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover">
             @else
                 <img src="{{ asset('images/generic_img.jpg') }}" alt="..."
-                    class="rounded-top border d-block img-fluid w-100 h-100 object-fit-cover">
+                    class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover">
             @endif
         </div>
         <div class="card-body mb-2 px-2 py-0">
@@ -32,9 +32,11 @@
                 @endif
             </div>
             <div class="fs-tiny d-md-flex justify-content-between align-items-center pb-2">
-                <p class="m-md-0 mb-2 bg-theme-light secondary px-2 rounded d-inline-block">
+                <p class="m-md-0 mb-2 bg-body-secondary secondary px-2 rounded d-inline-block">
                     <span class="fw-bold text-dark">
-                        {!! $slice->price ? 'N' . $slice->price : "FREE - <s class='text-secondary'>N1,299</s>" !!}
+                        {!! $slice->price
+                            ? 'N' . number_format($slice->price, 0, '', ',') . " <s class='text-secondary fw-normal'>N3,599</s>"
+                            : "FREE - <s class='text-secondary fw-normal'>N1,299</s>" !!}
                     </span>
                 </p>
                 <div>

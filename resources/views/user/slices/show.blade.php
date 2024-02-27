@@ -2,16 +2,22 @@
     <div>
         <section class="row">
             <div class="col-md-7 col-12 py-4">
-                <p class="fs-5">
-                    <span class="text-theme fw-bold">
-                        Bite {{ $show_bite->position }}:
-                    </span>
-                    <span class="fw-semibold">
-                        {{ $show_bite->title }}
-                    </span>
-                </p>
-                <hr>
 
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb fs-4 ">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('user.slice.index') }}" class="fw-bold text-dark">
+                                <i class="bi bi-box-fill text-secondary"></i> Slices
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <span class="fw-semibold">
+                                {{ $show_bite->title }}
+                            </span>
+                        </li>
+                    </ol>
+                </nav>
+                <hr>
                 <div class="animated-2 fadeIn">
                     <p>
                         {!! $show_bite->content !!}

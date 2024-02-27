@@ -1,8 +1,8 @@
 <x-layouts.user>
     <div class="container mt-2 animated-2 fadeIn">
         <section class="py-3 border-bottom">
-            <h2 class="fs-4 fw-bold text-secondary">
-                <i class="bi bi-person-fill text-theme"></i> Profile
+            <h2 class="fs-4 fw-bold text-dark">
+                <i class="bi bi-person-fill text-secondary"></i> Profile
             </h2>
         </section>
 

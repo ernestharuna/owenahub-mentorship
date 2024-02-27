@@ -114,7 +114,7 @@
                         aria-expanded="false">
                         Mentorship
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu rounded-4">
                         <li><a class="dropdown-item" href="#">See Mentors</a></li>
                         <li><a class="dropdown-item" href="#">Book a session</a></li>
                         <li>
@@ -140,21 +140,29 @@
                                 {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                                 {{ ucfirst(strtolower(Auth::user()->last_name)) }}
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard</a></li>
-                                <li><a class="dropdown-item" href="{{ route('guest.slices.index') }}">View Slices</a>
+                            <ul class="dropdown-menu rounded-4">
+                                <li class="animated-2 fadeIn">
+                                    <a class="dropdown-item" href="{{ route('user.dashboard') }}">
+                                        <i class="me-1 bi bi-house"></i> Dashboard
+                                    </a>
+                                </li>
+                                <li class="animated-2 fadeIn">
+                                    <a class="dropdown-item" href="{{ route('guest.slices.index') }}">
+                                        <i class="me-2 bi bi-box"></i> View Slices
+                                    </a>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li>
+                                <li class="animated-2 fadeIn">
                                     <a type="button" class="dropdown-item" data-bs-toggle="modal"
                                         data-bs-target="#joinCommunity">
-                                        <span class="fw-bold">Community
+                                        <i class="bi bi-people me-1"></i> Community
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item fw-bold text-danger"
-                                        href="{{ route('user.logout') }}">Logout</a>
+                                <li class="animated fadeIn">
+                                    <a class="dropdown-item fw-bold text-danger" href="{{ route('user.logout') }}">
+                                        <i class="bi bi-box-arrow-right me-1"></i> Logout
+                                    </a>
                                 </li>
                             </ul>
                         </li>
