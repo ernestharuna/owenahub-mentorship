@@ -27,12 +27,14 @@
                         @if ($slice->price)
                             <a href="#" class="btn btn-dark w-100 mb-3 p-3 shadow-sm text-white fw-semibold"
                                 onclick="event.preventDefault(); document.getElementById('start-payment').submit();">
-                                Pay now
+                                Buy now
                             </a>
                             <form class="d-none" id="start-payment" method="GET"
                                 action="{{ route('user.pay-init') }}">
                                 <input type="hidden" name="email" value="{{ Auth::user()->email }}">
                                 <input type="hidden" name="amount" value="{{ $slice->price }}">
+                                <input type="hidden" name="product_id" value="{{ $slice->id }}">
+                                <input type="hidden" name="product_type" value="slice">
                                 @csrf
                             </form>
                         @else

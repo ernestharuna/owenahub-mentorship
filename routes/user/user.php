@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\Payments\PaystackController;
+use App\Http\Controllers\User\Payments\VerifyPaymentController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\User\SliceController;
 use App\Http\Controllers\User\UserDashboardController;
@@ -25,7 +26,8 @@ Route::name('user.')->group(function () {
                 Route::get('profile', [ProfileController::class, 'index'])->name('profile');
                 Route::view('notifications', 'user.notifications')->name('notifications');
 
-                Route::get('paystack', [PaystackController::class, 'redirectToPaystack'])->name('pay-init');
+                Route::get('paystack', [PaystackController::class, 'user_payment'])->name('pay-init');
+                Route::get('paystack/verify', [VerifyPaymentController::class, 'verify_payment'])->name('pay-verify');
             });
         });
 

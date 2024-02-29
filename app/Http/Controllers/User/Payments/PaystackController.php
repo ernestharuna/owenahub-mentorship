@@ -7,24 +7,32 @@ use Illuminate\Http\Request;
 
 class PaystackController extends Controller
 {
-    public function redirectToPaystack(Request $request)
+    public function user_payment(Request $request)
     {
-        $url = "https://api.paystack.co/transaction/initialize";
-        $sectret_key = env('PAYSTACK_TEST_SECRET_KEY');
-
         $email = $request->input('email');
+        $product_id = $request->input('product_id');
+        $product_type = $request->input('product_type');
         $amount = number_format($request->input('amount'), 2, '', '');
 
         $fields = [
             // 'email' => $email,
-            // 'amount' => $amount,
             'email' => "customer@email.com",
-            'amount' => "20000",
-            'callback_url' => "http://localhost:8000/user/dashboard",
+            'amount' => $amount,
+            'callback_url' => route('user.pay-verify'),
             'metadata' => [
-                "cancel_action" => "https://owenahub.com",
+                "product_id" => $product_id,
+                "product_type" => $product_type,
+                "cancel_action" => "https://owenahub.com/slices",
             ],
         ];
+
+        return $this->redirectToPaystack($fields);
+    }
+
+    protected function redirectToPaystack($fields)
+    {
+        $url = "https://api.paystack.co/transaction/initialize";
+        $s_key = env('PAYSTACK_TEST_SECRET_KEY');
 
         $fields_string = http_build_query($fields);
 
@@ -36,7 +44,7 @@ class PaystackController extends Controller
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            "Authorization: Bearer $sectret_key",
+            "Authorization: Bearer $s_key",
             "Cache-Control: no-cache",
         ));
 
@@ -46,7 +54,6 @@ class PaystackController extends Controller
         //execute post
         $result = curl_exec($ch);
 
-        // Decode JSON string to associative array
         $response_array = json_decode($result, true);
 
         // Check if the response contains the "authorization_url"

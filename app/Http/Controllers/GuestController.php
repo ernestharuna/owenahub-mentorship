@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
-use App\Models\FeaturedArticles;
 use App\Models\Slice;
+use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Models\SliceEnrollment;
+use App\Models\FeaturedArticles;
+use Illuminate\Support\Facades\Auth;
 
 class GuestController extends Controller
 {
@@ -42,13 +44,24 @@ class GuestController extends Controller
     public function show_slice(Slice $slice)
     {
         $slice_price = '';
+        $is_enrolled = false;
 
         if ($slice->price) {
             $slice_price = number_format($slice->price, 0, '', ',');
         }
+
+        if (Auth::check()) {
+            if (SliceEnrollment::where([
+                ['user_id', '=', auth()->user()->id], ['slice_id', '=', $slice->id]
+            ])->exists()) {
+                $is_enrolled = true;
+            }
+        }
+
         return view('guest.slice.overview', [
             'slice' => $slice,
-            'slice_price' => $slice_price
+            'slice_price' => $slice_price,
+            'is_enrolled' => $is_enrolled
         ]);
     }
 }

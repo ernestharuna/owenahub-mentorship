@@ -37,7 +37,16 @@
 
                     <hr>
 
-                    <x-enroll-button :slice="$slice" />
+                    {{-- Removes button if user is logged in --}}
+                    @if ($is_enrolled)
+                        <div>
+                            <p>
+                                You own this slice already 😎
+                            </p>
+                        </div>
+                    @else
+                        <x-enroll-button :slice="$slice" />
+                    @endif
 
                     <div class="p-4 mt-4 bg-white rounded-4 border">
                         <p class="fs-4 fw-bold">
