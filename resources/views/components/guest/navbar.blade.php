@@ -46,54 +46,6 @@
         </div>
     </div>
 </div>
-{{-- 
-<nav class='bg-theme-2'>
-    <div class='container py-3 d-flex justify-content-between align-items-center'>
-        <div>
-            <a href="/" class='text-decoration-none text-dark fs-6 fw-bold m-0'>
-                <img src={{ asset('images/logo.png') }} alt="logo" width="28"
-                    style="position: relative; top: -4px;"><span style="font-size: 18px"> OwenaHub</span>
-            </a>
-        </div>
-
-        <div class='fs-tiny fw-bold'>
-            @if (Auth::check())
-                <a class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fs-6 fw-bold text-dark" href="" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ ucfirst(strtolower(Auth::user()->first_name)) }}
-                        {{ ucfirst(strtolower(Auth::user()->last_name)) }}
-                    </a>
-                    <ul class="dropdown-menu fs-tiny py-0">
-                        <li><a class="dropdown-item" href="{{ route('user.dashboard') }}">Dashboard</a></li>
-                        <li><a class="dropdown-item" href="{{ route('guest.slices.index') }}">View Slices</a></li>
-                        <li>
-                            <a type="button" class="dropdown-item" data-bs-toggle="modal"
-                                data-bs-target="#joinCommunity">
-                                <span class="fw-bold">Community
-                            </a>
-                        </li>
-
-                        <hr class="m-0">
-                        <li cl>
-                            <a class="dropdown-item fw-bold text-danger" href="{{ route('user.logout') }}">Logout</a>
-                        </li>
-                    </ul>
-                </a>
-            @else
-                @if (Route::is('guest.slices.index'))
-                    <a href="/articles" class='text-dark text-decoration-none me-3'>Blog</a>
-                @else
-                    <a href={{ route('guest.slices.index') }} class='text-dark text-decoration-none mx-3'>
-                        Courses
-                        <span class="badge rounded-1 bg-red">New</span>
-                    </a>
-                @endif
-                <a href={{ route('about') }} class='text-dark text-decoration-none'>About</a>
-            @endif
-        </div>
-    </div>
-</nav> --}}
 
 <nav class="navbar navbar-expand-lg bg-theme-2">
     <div class="container">
@@ -132,7 +84,7 @@
             </ul>
 
             <div class='fs-tiny fw-semibold'>
-                @if (Auth::check())
+                @auth
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle active fw-bold bg-dark rounded-5 px-4 text-white"
@@ -167,7 +119,46 @@
                             </ul>
                         </li>
                     </ul>
-                @else
+                @endauth
+
+                @auth('mentor')
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active fw-bold bg-dark rounded-5 px-4 text-white"
+                                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ ucfirst(strtolower(Auth::guard('mentor')->user()->first_name)) }}
+                                {{ ucfirst(strtolower(Auth::guard('mentor')->user()->last_name)) }}
+                            </a>
+                            <ul class="dropdown-menu rounded-4">
+                                <li class="animated-2 fadeIn">
+                                    <a class="dropdown-item" href="{{ route('mentor.dashboard') }}">
+                                        <i class="me-1 bi bi-house"></i> Dashboard
+                                    </a>
+                                </li>
+                                <li class="animated-2 fadeIn">
+                                    <a class="dropdown-item" href="{{ route('guest.slices.index') }}">
+                                        <i class="me-2 bi bi-box"></i> View Slices
+                                    </a>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="animated-2 fadeIn">
+                                    <a type="button" class="dropdown-item" data-bs-toggle="modal"
+                                        data-bs-target="#joinCommunity">
+                                        <i class="bi bi-people me-1"></i> Community
+                                    </a>
+                                </li>
+                                <li class="animated fadeIn">
+                                    <a class="dropdown-item fw-bold text-danger" href="{{ route('mentor.logout') }}">
+                                        <i class="bi bi-box-arrow-right me-1"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                @endauth
+
+                @if (!Auth::check() && !Auth::guard('mentor')->check())
                     <a href="{{ route('user.login') }}" class="btn btn-dark rounded-5 px-4 me-2">Log in</a>
                     <a href="{{ route('user.register') }}" class="btn btn-outline-dark rounded-5 px-4">Sign up</a>
                 @endif

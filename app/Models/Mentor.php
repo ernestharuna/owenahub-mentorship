@@ -7,10 +7,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Sanctum\HasApiTokens;
 
 class Mentor extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
+    protected $guard = "mentor";
+    protected $table = 'mentors';
 
     /**
      * The attributes that are mass assignable.
@@ -22,6 +25,7 @@ class Mentor extends Authenticatable implements MustVerifyEmail
         'last_name',
         'email',
         'password',
+        'email_verified_at'
     ];
 
     public function article(): HasMany

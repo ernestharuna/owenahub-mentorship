@@ -10,7 +10,7 @@ class MentorDashboardController extends Controller
 {
     public function __invoke()
     {
-        $user = Auth::user();
+        // $user = Auth::user();
         return view('mentor.dashboard');
     }
 }

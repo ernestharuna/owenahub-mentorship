@@ -73,7 +73,7 @@ class GoogleAuthController extends Controller
 
                             Auth::guard('mentor')->login($mentor);
                             setcookie("auth_type", "", time() - 3600);
-                            return redirect()->route('mentor.dashboard')->with('status', 'Account created 🎉');
+                            return redirect()->route('mentor.dashboard')->with('status', 'Welcome aboard mentor! 🎉');
                         }
                         break;
                     default:

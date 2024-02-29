@@ -42,7 +42,7 @@ class AuthController extends Controller
 
             event(new Registered($mentor));
             Auth::login($mentor);
-            return redirect(route('mentor.dashboard'))->with('status', 'Welcome to OwenaHub!');
+            return redirect(route('mentor.dashboard'))->with('status', 'Welcome to OwenaHub! 🎉');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());
             throw $e;
@@ -59,7 +59,7 @@ class AuthController extends Controller
         try {
             if (Auth::guard('mentor')->attempt($data, $request->filled('remember'))) {
                 $request->session()->regenerate();
-                return redirect()->intended(route('mentor.dashboard'));
+                return redirect(route('mentor.dashboard'))->with('status', 'Welcome back 🤩');
             };
             return back()->withErrors([
                 'email' => 'Invalid credentials'

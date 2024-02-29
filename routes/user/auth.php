@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\User\AuthController;
-use App\Http\Controllers\Admin\AuthController as AdminAuthController;
-use App\Http\Controllers\Mentor\AuthController as MentorAuthController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
@@ -17,7 +15,7 @@ use Illuminate\Http\Request;
  * AUTHENTICATION Routes for all
  * Admin, Mentors, Users
  */
-Route::middleware('guest')->group(function () {
+Route::middleware('guest:web')->group(function () {
     Route::prefix('user')->group(function () {
         Route::name('user.')->group(function () {
             Route::view('login', 'user.auth.login')->name('login');
@@ -27,26 +25,25 @@ Route::middleware('guest')->group(function () {
             Route::post('register', [AuthController::class, 'register'])->name('register.req'); //uses users Auth Controller
         });
 
-        // Forgot password link ---------------------------------
         Route::middleware('auth')->group(function () {
+            // Verify email page
             Route::get('/email/verify', function () {
                 return view('user.auth.verify-email');
             })->name('verification.notice');
 
+            // Resent verification email
             Route::post('/email/verification-notification', function (Request $request) {
                 $request->user()->sendEmailVerificationNotification();
-
-                return back()->with('message', 'Verification link sent!');
+                return back()->with('status', 'Verification link sent!');
             })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
-
 
             Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
                 $request->fulfill();
-
                 return redirect('/home');
             })->middleware(['auth', 'signed'])->name('verification.verify');
         });
 
+        // Forgot password page
         Route::get('/forgot-password', function () {
             return view('user.auth.forgot-password');
         })->middleware('guest')->name('password.request');

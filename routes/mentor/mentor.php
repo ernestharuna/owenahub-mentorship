@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::name('mentor.')->group(function () {
     Route::prefix('mentor')->group(function () {
-        Route::middleware('auth:mentor')->group(function () {
+        Route::middleware(['auth:mentor'])->group(function () {
 
             Route::prefix('dashboard')->group(function () {
                 Route::get('/', MentorDashboardController::class)->name('dashboard');

@@ -18,19 +18,17 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next, string ...$guards): Response
     {
         $guards = empty($guards) ? [null] : $guards;
-
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                // return redirect(route('guest.slices.index'));
-                // return redirect(RouteServiceProvider::HOME);
-
-                // Check the guard type ---- custome written code ooo
-                if ($guard === 'admin') {
-                    return redirect(route('admin.dashboard'));
-                } else if ($guard === 'mentor') {
-                    return redirect(route('mentor.dashboard'));
-                } else {
-                    return redirect(route('mentor.dashboard'));
+                switch ($guard) {
+                    case 'web':
+                        return redirect('/user/dashboard'); // Redirect users to user dashboard
+                    case 'mentor':
+                        return redirect('/mentor/dashboard'); // Redirect mentors to mentor dashboard
+                    case 'admin':
+                        return redirect('/admin/dashboard'); // Redirect admins to admin dashboard
+                    default:
+                        return redirect(RouteServiceProvider::HOME);
                 }
             }
         }
