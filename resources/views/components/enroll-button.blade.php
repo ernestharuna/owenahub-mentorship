@@ -11,7 +11,7 @@
         <div class="modal fade" id="confirm_slice" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content rounded-4">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5 text-dark fw-bold" id="staticBackdropLabel">
                             @if ($slice->price)
@@ -25,7 +25,8 @@
                     </div>
                     <div class="modal-body">
                         @if ($slice->price)
-                            <a href="#" class="btn btn-dark w-100 mb-3 p-3 shadow-sm text-white fw-semibold"
+                            <a href="#"
+                                class="btn btn-dark w-100 mb-3 p-3 shadow-sm text-white fw-semibold rounded-4"
                                 onclick="event.preventDefault(); document.getElementById('start-payment').submit();">
                                 Buy now
                             </a>
@@ -38,7 +39,8 @@
                                 @csrf
                             </form>
                         @else
-                            <a href="#" class="btn btn-dark w-100 mb-3 p-3 shadow-sm text-white fw-semibold"
+                            <a href="#"
+                                class="btn btn-dark w-100 mb-3 p-3 shadow-sm text-white fw-semibold rounded-4"
                                 onclick="event.preventDefault(); document.getElementById('create-enrollment').submit();">
                                 Yes
                             </a>
@@ -48,8 +50,8 @@
                             </form>
                         @endif
 
-                        <a class="btn btn-light border shadow-sm w-100 p-3 fw-semibold" data-bs-dismiss="modal"
-                            aria-label="Close">
+                        <a class="btn btn-light border shadow-sm w-100 p-3 fw-semibold rounded-4"
+                            data-bs-dismiss="modal" aria-label="Close">
                             No
                         </a>
                     </div>

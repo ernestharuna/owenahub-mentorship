@@ -11,6 +11,7 @@ class SliceEnrollment extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'slice_id',
         'completed'
     ];

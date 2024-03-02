@@ -26,12 +26,14 @@
                                         <i class="bi bi-clock"></i> {{ $enrolled->slice->duration }} weeks
                                     </div>
                                 </div>
-                                <div class="mt-3">
-                                    <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => 0]) }}"
-                                        class="btn btn-theme px-4 py-1 text-white rounded-4">
-                                        continue <i class="bi bi-play-fill"></i>
-                                    </a>
-                                </div>
+                                @if ($enrolled->slice->bite->count() > 0)
+                                    <div class="mt-3">
+                                        <a href="{{ route('user.slice.show', ['slice' => $enrolled->slice->id, 'bite' => 0]) }}"
+                                            class="btn btn-theme px-4 py-1 text-white rounded-4">
+                                            continue <i class="bi bi-play-fill"></i>
+                                        </a>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>

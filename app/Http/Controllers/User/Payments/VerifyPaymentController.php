@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User\Payments;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\User\SliceController;
+use App\Http\Controllers\PaymentController;
 
 class VerifyPaymentController extends Controller
 {
@@ -28,20 +28,39 @@ class VerifyPaymentController extends Controller
                 "Cache-Control: no-cache",
             ),
         ));
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-
+        // $err = curl_error($curl);
+        $json_data = curl_exec($curl);
+        $response = json_decode($json_data);
         curl_close($curl);
 
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        } else {
-            $data = json_decode($response, true);
-            dd($data);
-            // return redirect()->route('user.dashboard')->with('status', 'Purchase succesfull');
-        }
+        if ($response->data->status) {
+            $res = $response->data;
 
-        // $data['data']['status'];
+            $data = [
+                'amount' => number_format($res->amount / 100, 2, '.', ''),
+                'currency' => $res->currency,
+
+                'product_id' => $res->metadata->product_id,
+                'product_type' => $res->metadata->product_type,
+                'product_owner' => $res->metadata->product_owner,
+
+                'payment_ref' => $res->reference,
+                'payment_status' => $res->status,
+                'payment_channel' => $res->channel,
+            ];
+
+            Log::info('Transaction success:', (array) $response);
+
+            PaymentController::store($data);
+
+            if ($data['payment_status'] == 'success') {
+                return redirect('/user/dashboard')->with('status', 'Purchase successful 🎉');
+            } else if ($data['payment_status'] ==  'failed') {
+                return redirect('/user/dashboard')->with('error', 'Purchase failed! 🎉');
+            } else {
+                return redirect('/user/dashboard')->with('error', 'Unable to verify payment status, email hello@owenahub.com');
+            }
+        };
 
         // Retrieve the request's body and parse it as JSON
         // $input = @file_get_contents("php://input");
@@ -50,7 +69,6 @@ class VerifyPaymentController extends Controller
         // // Do something with $event
         // $this->processWebhookEvent($event);
         // http_response_code(200); // PHP 5.4 or greater
-
     }
 
     protected function processWebhookEvent($event)

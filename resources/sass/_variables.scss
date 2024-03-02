@@ -7,6 +7,7 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 $theme-color: #F6A700;
+$purple: #4F2CAB;
 $emoji-red: #f70a8c !important;
 $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 $theme-gradient-light: linear-gradient(45deg, #ffeeca, #ffda8a) !important;
@@ -24,6 +25,10 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 
 .bg-theme {
     background: $theme-gradient;
+}
+
+.bg-purple {
+    background: $purple;
 }
 
 .bg-theme-2 {

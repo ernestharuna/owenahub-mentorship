@@ -33,8 +33,8 @@
 
                     <h3 class='fs-4 fw-bold mt-4'>What OwenaHub is</h3>
                     <p>
-                        OwenaHub is the mentorship platform for tech enthusiasts who want to get clarity and guidance as
                         they venture into building a career in tech.
+                        OwenaHub is the mentorship platform for tech enthusiasts who want to get clarity and guidance as
                         We are fueled by the passion to help people start a career the right way.
                     </p>
                     <p>
@@ -48,8 +48,8 @@
                     </p>
 
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class="btn btn-light border rounded-1 text-dark shadow-sm px-4 py-2 fs-5 mt-4">
-                        SIGN UP FOR FREE →
+                        class="btn btn-light border rounded-4 text-dark shadow-sm px-4 py-2 fs-5 mt-4">
+                        Get started today
                     </a>
                 </div>
             </div>

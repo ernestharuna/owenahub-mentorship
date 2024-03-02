@@ -15,16 +15,19 @@ use Illuminate\Http\Request;
  * AUTHENTICATION Routes for all
  * Admin, Mentors, Users
  */
-Route::middleware('guest:web')->group(function () {
+Route::middleware('guest')->group(function () {
     Route::prefix('user')->group(function () {
         Route::name('user.')->group(function () {
-            Route::view('login', 'user.auth.login')->name('login');
-            Route::view('register', 'user.auth.register')->name('register');
+            Route::middleware('guest:web')->group(function () {
+                Route::view('login', 'user.auth.login')->name('login');
+                Route::view('register', 'user.auth.register')->name('register');
 
-            Route::post('login', [AuthController::class, 'login'])->name('login.req'); //uses users Auth Controller
-            Route::post('register', [AuthController::class, 'register'])->name('register.req'); //uses users Auth Controller
+                Route::post('login', [AuthController::class, 'login'])->name('login.req'); //uses users Auth Controller
+                Route::post('register', [AuthController::class, 'register'])->name('register.req'); //uses users Auth Controller
+            });
         });
 
+        // ------------------------------------------------------
         Route::middleware('auth')->group(function () {
             // Verify email page
             Route::get('/email/verify', function () {
@@ -43,6 +46,7 @@ Route::middleware('guest:web')->group(function () {
             })->middleware(['auth', 'signed'])->name('verification.verify');
         });
 
+        // ------------------------------------------------------
         // Forgot password page
         Route::get('/forgot-password', function () {
             return view('user.auth.forgot-password');

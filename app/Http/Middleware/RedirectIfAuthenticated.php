@@ -22,13 +22,13 @@ class RedirectIfAuthenticated
             if (Auth::guard($guard)->check()) {
                 switch ($guard) {
                     case 'web':
-                        return redirect('/user/dashboard'); // Redirect users to user dashboard
+                        return redirect(RouteServiceProvider::USER_HOME); // Redirect users to user dashboard
                     case 'mentor':
-                        return redirect('/mentor/dashboard'); // Redirect mentors to mentor dashboard
+                        return redirect(RouteServiceProvider::MENTOR_HOME); // Redirect mentors to mentor dashboard
                     case 'admin':
-                        return redirect('/admin/dashboard'); // Redirect admins to admin dashboard
+                        return redirect(RouteServiceProvider::ADMIN_HOME); // Redirect admins to admin dashboard
                     default:
-                        return redirect(RouteServiceProvider::HOME);
+                        // return redirect(RouteServiceProvider::HOME);
                 }
             }
         }

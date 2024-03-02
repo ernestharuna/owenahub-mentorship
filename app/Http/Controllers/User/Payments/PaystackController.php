@@ -12,6 +12,7 @@ class PaystackController extends Controller
         $email = $request->input('email');
         $product_id = $request->input('product_id');
         $product_type = $request->input('product_type');
+        $product_owner = "owenahub";
         $amount = number_format($request->input('amount'), 2, '', '');
 
         $fields = [
@@ -22,6 +23,7 @@ class PaystackController extends Controller
             'metadata' => [
                 "product_id" => $product_id,
                 "product_type" => $product_type,
+                "product_owner" => $product_owner,
                 "cancel_action" => "https://owenahub.com/slices",
             ],
         ];
