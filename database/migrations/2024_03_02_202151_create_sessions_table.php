@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('achievements', function (Blueprint $table) {
+        Schema::create('sessions', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
-            $table->integer('points');
+            $table->foreignId('mentor_id')->constrained('mentors')->cascadeOnDelete();
+            $table->enum('status', ['open', 'closed'])->default('open');
+            $table->dateTime('date');
+            $table->integer('duration');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('achievements');
+        Schema::dropIfExists('sessions');
     }
 };

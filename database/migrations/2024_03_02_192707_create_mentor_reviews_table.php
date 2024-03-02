@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('private_session_tasks', function (Blueprint $table) {
+        Schema::create('mentor_reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('private_session_id')->constrained(table: 'private_sessions', column: 'id')->cascadeOnDelete();
-            $table->string('title');
-            $table->text('content');
+            $table->foreignId('user_id')->constrained(table: 'users', column: 'id')->cascadeOnDelete();
+            $table->foreignId('mentor_id')->constrained(table: 'mentors', column: 'id')->cascadeOnDelete();
+            $table->string('rating');
+            $table->text('comment');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('private_session_tasks');
+        Schema::dropIfExists('mentor_reviews');
     }
 };

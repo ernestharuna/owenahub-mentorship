@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class MiscInfo extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'expertise',
+        'skills',
+        'bio'
+    ];
 }
