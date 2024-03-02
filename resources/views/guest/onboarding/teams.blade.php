@@ -1,7 +1,7 @@
 <x-layouts.onboard>
     <section class="bg-theme" id="onboard">
         <div id="b-items">
-            <div class="card shadow p-3 mx-3 animated-2 fadeIn">
+            <div class="card shadow p-3 mx-3 animated-2 fadeIn rounded-4">
                 <div class="card-body">
                     <div class="text-start">
                         <div>
@@ -9,9 +9,9 @@
                         </div>
                         <h1 class="card-title fs-3 mb-4 fw-bold">Work With Like Minds</h1>
                         <div class="card-text mb-3">
-                            <b>OwenaHub Teams</b> allow you work on <u>real-world</u> projects along with other learners
-                            <br>
-                            <b>Teams</b> come along with the slices enroll in. <br>
+                            <p>
+                                <b>Connect with mentors</b> that inspire you and give you career clarity
+                            </p>
                         </div>
                         <a href="{{ route('guest.onboarding.blog') }}"
                             class="btn btn-theme rounded-5 fw-bold w-100 mt-3">

@@ -1,7 +1,7 @@
 <x-layouts.onboard>
     <section class="bg-theme" id="onboard">
         <div id="b-items">
-            <div class="card shadow p-3 mx-3 animated-2 fadeIn">
+            <div class="card shadow p-3 mx-3 animated-2 fadeIn rounded-4">
                 <div class="card-body">
                     <div class="text-start">
                         <div>

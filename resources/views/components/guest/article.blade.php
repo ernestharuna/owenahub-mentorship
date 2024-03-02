@@ -90,9 +90,7 @@
                             </small>
                         </div>
                     </div>
-                    <livewire:subscribe-button />
                 </div>
-
             </aside>
         </div>
     </section>

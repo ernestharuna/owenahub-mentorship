@@ -1,7 +1,7 @@
 <x-layouts.app>
     <div class="container py-5">
         <h1>
-            <span class="animated-text-2 fw-bold">Courses</span> <span class="fw-light">(slices)</span>
+            <span class="animated-text-2">Courses</span> <span class="fw-light">(slices)</span>
         </h1>
         <div>
             <p>
