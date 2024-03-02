@@ -17,6 +17,8 @@ use App\Http\Controllers\GuestController;
 
 Route::redirect('/home', '/slices');
 Route::redirect('/getstarted', '/getstarted/slices');
+Route::redirect('/mentor/getstarted', '/mentor/getstarted/empower');
+
 Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
 
@@ -27,6 +29,12 @@ Route::name('guest.')->group(function () {
         Route::view('/getstarted/teams', 'guest.onboarding.teams')->name('teams');
         Route::view('/getstarted/blog', 'guest.onboarding.blog')->name('blog');
         Route::view('/getstarted/signup', 'guest.onboarding.signup')->name('signup');
+        // ------------------------------------------
+        Route::prefix('mentor')->group(function () {
+            Route::view('getstarted/empower', 'guest.onboarding_2.screen_1')->name('empower');
+            Route::view('getstarted/flexible-timing', 'guest.onboarding_2.screen_2')->name('schedule');
+            Route::view('getstarted/earn', 'guest.onboarding_2.screen_3')->name('earn');
+        });
     });
 
     Route::name('articles.')->group(function () {

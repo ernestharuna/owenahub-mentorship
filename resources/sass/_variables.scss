@@ -6,8 +6,8 @@ $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-$theme-color: #F6A700;
-$purple: #4F2CAB;
+$theme-color: #F6A700 !important;
+$purple: #6338d0;
 $emoji-red: #f70a8c !important;
 $theme-gradient: linear-gradient(45deg, #ffbd2d, #F6A700) !important;
 $theme-gradient-light: linear-gradient(45deg, #ffeeca, #ffda8a) !important;
@@ -90,6 +90,10 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
 
 .text-red {
     color: $emoji-red;
+}
+
+.text-purple {
+    color: $purple;
 }
 
 .text-shadow {

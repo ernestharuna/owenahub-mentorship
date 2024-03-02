@@ -281,13 +281,15 @@
     <div class='py-5 bg-dark secondary-banner'>
         <div class="container">
             <div>
-                <h3 class="fw-bold text-theme">Start your Tech Career Today!</h3>
+                <h3 class="fw-bold text-theme fs-1 text-shadow">
+                    Contribute to the future
+                </h3>
                 <p class="text-light">
-                    Join the learners hub today; find mentorship that meets your learning goals
+                    Shape the future of the tech industry by fostering the next generation of talent.
                 </p>
-                <a href="{{ route('guest.articles.index') }}"
-                    class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3" type='button'>
-                    Learn more <i class="bi bi-arrow-right ms-2"></i>
+                <a href="/getstarted/mentor"
+                    class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3 shadow">
+                    Become a mentor <i class="bi bi-arrow-right ms-2"></i>
                 </a>
             </div>
             <img src="{{ asset('images/logo.png') }}" alt="..." class="glow">

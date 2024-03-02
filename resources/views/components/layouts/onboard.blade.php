@@ -51,7 +51,7 @@
 
 <style>
     #onboard {
-        height: 100vh;
+        height: 100dvh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -61,12 +61,9 @@
 
 <body>
     <div id="app">
-        {{-- <x-guest.navbar /> <!-- Header ---> --}}
         <main>
             {{ $slot }}
-            {{-- <x-session-message /> <!-- Session messages--> --}}
         </main>
-        {{-- <x-footer /> <!-- Footer ---> --}}
     </div>
 </body>
 

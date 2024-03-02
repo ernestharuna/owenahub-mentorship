@@ -72,7 +72,8 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item text-red fw-semibold" href="#">Become a mentor</a></li>
+                        <li><a class="dropdown-item text-red fw-semibold" href="/mentor/getstarted">Become a mentor</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
