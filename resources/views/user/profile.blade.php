@@ -4,6 +4,9 @@
             <h2 class="fs-4 fw-bold text-dark">
                 <i class="bi bi-person-fill text-secondary"></i> Profile
             </h2>
+            <div>
+                <img src="{{ Auth::user()->social_handle->image_path }}" alt="..." width="50">
+            </div>
         </section>
 
         <section class="w-32 pt-5 pb-3">

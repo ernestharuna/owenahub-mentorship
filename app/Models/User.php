@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -35,6 +36,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function slice_enrollment(): HasMany
     {
         return $this->hasMany(SliceEnrollment::class);
+    }
+
+    public function social_handle(): HasOne
+    {
+        return $this->hasOne(SocialHandle::class);
     }
 
     /**

@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Mentor\ProfileController as MentorProfileController;
+use App\Http\Controllers\User\ProfileController;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Mentor;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Log;
 use Laravel\Socialite\Facades\Socialite;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class GoogleAuthController extends Controller
 {
@@ -42,7 +47,7 @@ class GoogleAuthController extends Controller
                             setcookie("auth_type", "", time() - 3600);
                             return redirect()->route('user.dashboard')->with('status', 'Welcome back 😎');
                         } else {
-                            $user = User::create([
+                            $new_user = User::create([
                                 "first_name" => $user->user["given_name"] ?? $user->email,
                                 "last_name" => $user->user["family_name"] ?? " ",
                                 "email" => $user->email,
@@ -50,7 +55,9 @@ class GoogleAuthController extends Controller
                                 "password" => bcrypt(request(Str::random(8))),
                             ]);
 
-                            Auth::login($user);
+                            Auth::login($new_user);
+                            ProfileController::store_profile_image($user->avatar);
+
                             setcookie("auth_type", "", time() - 3600);
                             return redirect()->route('user.dashboard')->with('status', 'Account created 🎉');
                         }
@@ -72,6 +79,8 @@ class GoogleAuthController extends Controller
                             ]);
 
                             Auth::guard('mentor')->login($mentor);
+                            MentorProfileController::store_profile_image($user->avatar);
+
                             setcookie("auth_type", "", time() - 3600);
                             return redirect()->route('mentor.dashboard')->with('status', 'Welcome aboard mentor! 🎉');
                         }

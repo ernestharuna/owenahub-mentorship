@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Sanctum\HasApiTokens;
 
 class Mentor extends Authenticatable implements MustVerifyEmail
 {
@@ -31,6 +32,11 @@ class Mentor extends Authenticatable implements MustVerifyEmail
     public function article(): HasMany
     {
         return $this->hasMany(Article::class);
+    }
+
+    public function social_handle(): HasOne
+    {
+        return $this->hasOne(SocialHandle::class);
     }
 
     /**
