@@ -1,5 +1,5 @@
 <x-layouts.user>
-    <div class="container mt-2 animated-2 fadeIn">
+    <div class="mt-2 container animated-2 fadeIn">
         <section class="py-3 border-bottom">
             <h2 class="fs-4 fw-bold text-dark">
                 <i class="bi bi-box-fill text-secondary"></i> Slices

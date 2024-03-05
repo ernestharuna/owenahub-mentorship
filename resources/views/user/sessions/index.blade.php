@@ -1,5 +1,5 @@
 <x-layouts.user>
-    <div class="container">
+    <div class="">
         <div class="my-5 p-3 bg-light shadow-sm rounded-1 border">
             <h2 class="fw-bold">
                 Coming Soon!

@@ -1,14 +1,15 @@
 <x-layouts.user>
     <section class="mt-4">
-        <p class="text-dark fw-bold mb-2">
         <section class="mb-4">
-            <p class="m-0">Welcome To OwenaHub,</p>
+            <p class="m-0 fs-tiny">
+                Welcome 👋🏼
+            </p>
             <h2 class="fw-bold fs-2">
                 {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                 {{ ucfirst(strtolower(Auth::user()->last_name)) }}
             </h2>
         </section>
-        </p>
+
     </section>
 
     <section class="my-4">
@@ -21,7 +22,7 @@
                 </p>
             </div>
             <div class="mt-2">
-                <button class="btn btn-light rounded-4 px-3 shadow-sm fw-semibold border-0 mt-1">
+                <button class="btn btn-light rounded-4 px-3 py-2 shadow-sm fw-semibold border-0 mt-1">
                     <i class="bi bi-plus-circle me-1"></i> Create a session
                 </button>
             </div>
@@ -107,7 +108,7 @@
                     </p>
                     <div class="mt-2">
                         <a href="{{ route('guest.slices.index') }}"
-                            class="btn btn-light rounded-4 px-3 fw-semibold text-red border cta-animation-focus">
+                            class="btn btn-light rounded-4 px-4 fw-semibold text-red border cta-animation-focus">
                             <i class="bi bi-box me-1"></i> Take a slice
                         </a>
                     </div>
@@ -116,9 +117,9 @@
         </div>
     </section>
 
-    <section class="mt-4 mb-5">
+    <section class="mt-4 mb-4">
         <div class="bg-white shadow-sm border rounded-4 p-3">
-            <h3 class="fw-bold fs-4 text-theme">Recommended for you</h3>
+            <h3 class="fw-bold fs-4 text-secondary">Recommended</h3>
             <hr class="mb-4">
             <livewire:recommended-articles />
         </div>

@@ -23,7 +23,13 @@ Route::name('user.')->group(function () {
                     Route::view('sessions', 'user.sessions.index')->name('index');
                 });
 
-                Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+                Route::prefix('profile')->group(function () {
+                    Route::name('profile.')->group(function () {
+                        Route::get('/', [ProfileController::class, 'index'])->name('index');
+                        Route::get('account-information', [ProfileController::class, 'account_info'])->name('account-info');
+                    });
+                });
+
                 Route::view('notifications', 'user.notifications')->name('notifications');
 
                 Route::get('paystack', [PaystackController::class, 'user_payment'])->name('pay-init');

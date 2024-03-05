@@ -10,7 +10,12 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return view('user.profile');
+        return view('user.profile.index');
+    }
+
+    public function account_info()
+    {
+        return view('user.profile.account-info');
     }
 
     public static function store_profile_image($img_path)

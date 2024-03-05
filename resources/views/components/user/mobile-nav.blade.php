@@ -1,4 +1,4 @@
-<nav class="py-2 fixed-bottom d-lg-none d-block bg-white border-top border-3 border-secondary rounded-4">
+<nav class="py-2 fixed-bottom d-lg-none d-block bg-white border-top border-3 border-bg-body-tertiary rounded-4">
     <div class="container">
         <div class="d-flex justify-content-around bg-f2 py-2 rounded-4 bg-gradient">
             <a href="{{ route('user.dashboard') }}" class="d-block text-dark">
@@ -43,8 +43,8 @@
                 @endif
             </a>
 
-            <a href="{{ route('user.profile') }}" class="d-block text-dark">
-                @if (Route::is('user.profile'))
+            <a href="{{ route('user.profile.index') }}" class="d-block text-dark">
+                @if (Route::is('user.profile.*'))
                     <i class="bi bi-person-fill text-theme fs-2"></i>
                 @else
                     <i class="bi bi-person fs-2"></i>
