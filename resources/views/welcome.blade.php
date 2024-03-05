@@ -287,7 +287,7 @@
                 <p class="text-light">
                     Shape the future of the tech industry by fostering the next generation of talent.
                 </p>
-                <a href="/getstarted/mentor"
+                <a href="/mentor/getstarted"
                     class="btn btn-theme px-4 py-2 text-dark rounded-5 fw-semibold mt-3 shadow">
                     Become a mentor <i class="bi bi-arrow-right ms-2"></i>
                 </a>

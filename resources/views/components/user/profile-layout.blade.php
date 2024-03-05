@@ -11,11 +11,14 @@
                 @endif
             </div>
             <section>
-                <p class="m-0 mt-2">My profile</p>
-                <h2 class="fw-bold fs-2">
+                <h2 class="fw-bold fs-2 m-0 mt-2">
+                    My Profile
+
+                </h2>
+                <p class="m-0">
                     {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                     {{ ucfirst(strtolower(Auth::user()->last_name)) }}
-                </h2>
+                </p>
             </section>
         </section>
 

@@ -26,7 +26,11 @@ Route::name('user.')->group(function () {
                 Route::prefix('profile')->group(function () {
                     Route::name('profile.')->group(function () {
                         Route::get('/', [ProfileController::class, 'index'])->name('index');
-                        Route::get('account-information', [ProfileController::class, 'account_info'])->name('account-info');
+                        Route::view('account-information', 'user.profile.account-info')->name('account-info');
+                        Route::view('manage-socials', 'user.profile.manage-socials')->name('manage-socials');
+                        Route::view('achievements', 'user.profile.achievements')->name('achievements');
+                        Route::view('course-reviews', 'user.profile.course-reviews')->name('course-reviews');
+                        Route::view('payments', 'user.profile.payments')->name('payments');
                     });
                 });
 

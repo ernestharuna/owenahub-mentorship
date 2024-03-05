@@ -18,7 +18,7 @@
             <div class="card h-100 border-0 shadow-sm rounded-4">
                 <div class="card-body">
                     <h5 class="card-title m-0">
-                        <a href="" class="text-dark text-decoration-none">
+                        <a href="{{ route('user.profile.manage-socials') }}" class="text-dark text-decoration-none">
                             Manage your socials
                         </a>
                     </h5>
@@ -32,7 +32,7 @@
             <div class="card h-100 border-0 shadow-sm rounded-4">
                 <div class="card-body">
                     <h5 class="card-title m-0">
-                        <a href="" class="text-dark text-decoration-none">
+                        <a href="{{ route('user.profile.achievements') }}" class="text-dark text-decoration-none">
                             Achievements
                         </a>
                     </h5>
@@ -46,7 +46,7 @@
             <div class="card h-100 border-0 shadow-sm rounded-4">
                 <div class="card-body">
                     <h5 class="card-title m-0">
-                        <a href="" class="text-dark text-decoration-none">
+                        <a href="{{ route('user.profile.course-reviews') }}" class="text-dark text-decoration-none">
                             Course reviews
                         </a>
                     </h5>
@@ -60,8 +60,9 @@
             <div class="card h-100 border-0 shadow-sm rounded-4">
                 <div class="card-body">
                     <h5 class="card-title m-0">
-                        <a href="" class="text-dark text-decoration-none">
-                            Payments </a>
+                        <a href="{{ route('user.profile.payments') }}" class="text-dark text-decoration-none">
+                            Payments
+                        </a>
                     </h5>
                     <p class="card-text">
                         View your payment history on OwenaHub
