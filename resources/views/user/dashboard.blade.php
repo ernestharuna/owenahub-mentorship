@@ -1,12 +1,13 @@
 <x-layouts.user>
     <section class="mt-4">
         <section class="mb-4">
-            <p class="m-0 fs-tiny">
-                Welcome 👋🏼
+            <p class="m-0">
+                Welcome <span class="fw-semibold">{{ ucfirst(strtolower(Auth::user()->first_name)) }}</span> 👋🏼
             </p>
             <h2 class="fw-bold fs-2">
-                {{ ucfirst(strtolower(Auth::user()->first_name)) }}
-                {{ ucfirst(strtolower(Auth::user()->last_name)) }}
+                {{-- {{ ucfirst(strtolower(Auth::user()->first_name)) }}
+                {{ ucfirst(strtolower(Auth::user()->last_name)) }} --}}
+                Dashboard
             </h2>
         </section>
 

@@ -5,11 +5,14 @@
                 Course reviews
             </h2>
             <p class="m-0">
-                You can efit reviews for courses here
+                A list of the courses you've put a review for
             </p>
         </div>
         <div>
-            @if ($course_reviews->count() > 0)
+            {{-- @if ($course_reviews->count() > 0)
+                <x-edit-form-fields />
+            @endif --}}
+            @if (false)
                 <x-edit-form-fields />
             @endif
         </div>
@@ -22,11 +25,9 @@
                     {{ $review->slice->title }}
                 </label>
                 <input type="text" class="form-control rounded-3 py-2 border-2" id="review-{{ $review->id }}"
-                    placeholder="https://instagram.com/..." disabled>
+                    placeholder="Write us a review on this one" value="{{ $review->comment }}" disabled>
             </div>
-            <button class="btn btn-dark rounded-3 px-4 fs-tiny fw-semibold">
-                SAVE
-            </button>
+            <x-profile-submit-btn />
         </form>
     @empty
         <p class="bg-body-secondary p-3 rounded-3">

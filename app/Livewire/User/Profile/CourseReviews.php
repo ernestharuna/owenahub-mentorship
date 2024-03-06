@@ -11,14 +11,17 @@ class CourseReviews extends Component
 
     public function mount()
     {
-        $this->course_reviews = Review::where('user_id', auth()->id())->latest()->get() ?? [];
+        $this->course_reviews = Review::where('user_id', auth()->id())->with('slice')->latest()->get() ?? [];
     }
 
     public function updateReview($id)
     {
+        dd($id);
         $post = Review::findOrFail($id);
-
-        dd($post);
+        $post->update([
+            // 'comment' => $comment
+        ]);
+        // dd($post);
     }
 
     public function render()

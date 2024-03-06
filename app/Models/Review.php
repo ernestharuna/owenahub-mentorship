@@ -21,4 +21,9 @@ class Review extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function slice(): BelongsTo
+    {
+        return $this->belongsTo(Slice::class);
+    }
 }

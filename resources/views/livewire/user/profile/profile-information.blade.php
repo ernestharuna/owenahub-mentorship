@@ -37,9 +37,6 @@
                 placeholder="John" value="{{ Auth::user()->email }}" disabled>
         </div>
 
-        <button wire:loading.attr="disabled" class="btn btn-dark rounded-3 px-4 fs-tiny mt-3 fw-semibold editable"
-            type="submit" disabled>
-            SAVE
-        </button>
+        <x-profile-submit-btn />
     </form>
 </section>

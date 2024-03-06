@@ -1,5 +1,5 @@
 <section>
-    <header class="d-flex align-items-center justify-content-between mb-4">
+    <header class="d-flex align-items-center justify-content-between mb-4 gap-3">
         <div>
             <h2 class="fs-5 m-0 fw-semibold">
                 Socials
@@ -40,8 +40,6 @@
                 name="image_path" disabled>
         </div>
 
-        <button class="btn btn-dark rounded-3 px-4 fs-tiny mt-3 fw-semibold editable" disabled>
-            SAVE
-        </button>
+        <x-profile-submit-btn />
     </form>
 </section>
