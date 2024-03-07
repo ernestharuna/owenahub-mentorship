@@ -60,7 +60,7 @@
         </div>
     @else
         <a href="{{ route('user.register') }}"
-            class="w-100 btn btn-theme fw-bold rounded-5 p-3 fs-5 text-dark shadow-sm">
+            class="w-100 btn btn-theme fw-bold rounded-4 p-3 fs-5 text-dark shadow-sm">
             Enroll Now!
         </a>
     @endif

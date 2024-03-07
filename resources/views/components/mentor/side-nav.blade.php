@@ -55,7 +55,7 @@
                 </a>
             </div>
             <div class="mb-5">
-                <a href="{{ route('mentor.profile') }}"
+                <a href="{{ route('mentor.profile.index') }}"
                     class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
                     @if (Route::is('user.profile'))
                         <i class="me-2 fs-5 bi bi-person-fill text-red"></i>

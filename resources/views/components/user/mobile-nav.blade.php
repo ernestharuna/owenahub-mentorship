@@ -24,7 +24,7 @@
             </a>
 
             <a href="{{ route('user.session.index') }}" class="d-block text-dark text-center text-decoration-none">
-                @if (Route::is('user.session.index'))
+                @if (Route::is('user.session.*'))
                     <i class="bi bi-calendar2-fill d-block text-theme fs-2"></i>
                 @else
                     <i class="bi bi-calendar2 d-block fs-2"></i>

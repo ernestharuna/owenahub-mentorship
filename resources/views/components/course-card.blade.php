@@ -30,8 +30,17 @@
                         <span>By OwenaHub</span>
                     </p>
                 @endif
+                <div class="text-theme fs-tiny">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <span class="text-dark">
+                        (4.8)
+                    </span>
+                </div>
             </div>
-
         </div>
         <div class="card-footer px-2 pt-0 border-0 bg-white rounded-4">
             <div class="fs-tiny d-md-flex justify-content-between align-items-center pb-1">

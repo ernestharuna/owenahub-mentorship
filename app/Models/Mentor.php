@@ -39,6 +39,11 @@ class Mentor extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(SocialHandle::class);
     }
 
+    public function misc_info(): HasOne
+    {
+        return $this->hasOne(MiscInfo::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

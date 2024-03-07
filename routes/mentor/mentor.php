@@ -12,7 +12,17 @@ Route::name('mentor.')->group(function () {
             Route::prefix('dashboard')->group(function () {
                 Route::get('/', MentorDashboardController::class)->name('dashboard');
 
-                Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+                Route::prefix('profile')->group(function () {
+                    Route::name('profile.')->group(function () {
+                        Route::view('/', 'mentor.profile.index')->name('index');
+                        Route::view('account-information', 'mentor.profile.account-info')->name('account-info');
+                        Route::view('manage-socials', 'mentor.profile.manage-socials')->name('manage-socials');
+                        // Route::view('achievements', 'mentor.profile.achievements')->name('achievements');
+                        // Route::view('course-reviews', 'mentor.profile.course-reviews')->name('course-reviews');
+                        // Route::view('payments', 'mentor.profile.payments')->name('payments');
+                    });
+                });
+                Route::view('notifications', 'mentor.notifications')->name('notifications');
             });
 
             Route::get('logput', [AuthController::class, 'logout'])->name('logout');
