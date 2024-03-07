@@ -17,8 +17,8 @@ Route::name('mentor.')->group(function () {
                         Route::view('/', 'mentor.profile.index')->name('index');
                         Route::view('account-information', 'mentor.profile.account-info')->name('account-info');
                         Route::view('manage-socials', 'mentor.profile.manage-socials')->name('manage-socials');
-                        // Route::view('achievements', 'mentor.profile.achievements')->name('achievements');
-                        // Route::view('course-reviews', 'mentor.profile.course-reviews')->name('course-reviews');
+                        Route::view('achievements', 'mentor.profile.achievements')->name('achievements');
+                        Route::view('session-reviews', 'mentor.profile.session-reviews')->name('session-reviews');
                         // Route::view('payments', 'mentor.profile.payments')->name('payments');
                     });
                 });

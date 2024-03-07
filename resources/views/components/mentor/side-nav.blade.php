@@ -40,9 +40,9 @@
                 </a>
             </div>
             <div>
-                <a href="{{ route('user.notifications') }}"
+                <a href="{{ route('mentor.notifications') }}"
                     class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary position-relative">
-                    @if (Route::is('user.notifications'))
+                    @if (Route::is('mentor.notifications'))
                         <i class="me-2 fs-5 bi bi-bell-fill text-red"></i>
                         <span class="text-red">Notifications</span>
                     @else

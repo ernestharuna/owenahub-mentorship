@@ -6,7 +6,17 @@
         </a>
     </div>
     <div class="mt-3 bg-white rounded-4 shadow-sm p-4">
-        <livewire:mentor.profile.manage-socials />
-    </div>
+        <section>
+            <header>
+                <h2 class="fs-5 m-0 fw-semibold">
+                    Reviews
+                </h2>
+                <p>
+                    Your session reviews so far 🎉
+                </p>
 
+                <livewire:mentor.profile.session-reviews />
+            </header>
+        </section>
+    </div>
 </x-mentor.profile-layout>
