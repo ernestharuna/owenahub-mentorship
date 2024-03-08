@@ -29,9 +29,7 @@
                 <div>
                     <h4 class='fw-bold'>Top Contributors</h4>
 
-                    <p class="text-secondary">
-                        There are no mentors available at the moment
-                    </p>
+                    <livewire:top-contributors />
                 </div>
 
                 <hr />

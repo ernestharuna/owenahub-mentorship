@@ -2,7 +2,7 @@
     <div class="container mt-2">
         <section class="my-4 d-flex align-item-center gap-3">
             <div class="" style="min-width: 70px; min-height: 70px; max-width: 70px">
-                @if (Auth::user()->social_handle->image_path)
+                @if (Auth::user()->social_handle && Auth::user()->social_handle->image_path)
                     <img src="{{ Auth::user()->social_handle->image_path }}" alt="..."
                         class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
                 @else

@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('sessions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mentor_id')->constrained('mentors')->cascadeOnDelete();
-            $table->enum('status', ['open', 'closed'])->default('open');
-            $table->dateTime('date');
-            $table->integer('duration');
+            $table->tinyInteger('week_day'); // 1 for Monday, 2 for Tuesday etc
+            $table->time('start_time');
+            $table->time('end_time');
             $table->timestamps();
         });
     }

@@ -13,8 +13,10 @@
 
     <div class='mb-4'>
         <h3 class=''>Latest Articles</h3>
-        <a href="/" class='text-decoration-none btn btn-dark px-3 py-1 rounded-5 text-white mt-2 d-inline-block'>
-            ← Back Home</a>
+        <a href="/"
+            class='text-decoration-none btn btn-sm btn-dark px-3 py-1 fw-semibold rounded-3 text-white mt-2 d-inline-block'>
+            ← Go back
+        </a>
     </div>
 
     <div class="row row-cols-1 row-cols-md-2 g-3">
