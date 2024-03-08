@@ -38,7 +38,7 @@ class ManageAvailability extends Component
         ]);
         $this->toggle = false;
 
-        return redirect()->back();
+        return redirect('mentor/dashboard/profile/manage-availability')->back()->with('status', 'Date created');
     }
 
     public function render()

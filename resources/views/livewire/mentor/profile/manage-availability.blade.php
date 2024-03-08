@@ -14,7 +14,7 @@
     </header>
 
     @if ($toggle)
-        <form wire:submit="saveSession" class="col-12 col-md-6">
+        <form wire:submit="saveSession" class="col-12 col-md-6 animated-2 fadeIn">
             <div class="mb-3">
                 <label for="week_day" class="form-label fw-semibold m-0">Pick a day of the week</label>
                 <select wire:model="week_day" id="week_day" class="form-control rounded-3 py-2 border-2 editable">
@@ -72,7 +72,7 @@
         </form>
     @else
         <div>
-            <button class="btn btn-dark rounded-4 py-2 px-3 fw-semibold" wire:click="toggler" type="button">
+            <button class="btn btn-dark rounded-3 py-2 px-3 fw-semibold" wire:click="toggler" type="button">
                 <i class="bi bi-plus-square me-2"></i> Create a schedule
             </button>
         </div>
