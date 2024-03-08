@@ -46,8 +46,8 @@
             <div class="card h-100 border-0 shadow-sm rounded-4">
                 <div class="card-body">
                     <h5 class="card-title m-0">
-                        <a href="{{ route('user.profile.course-reviews') }}" class="text-dark text-decoration-none">
-                            Manage sessions
+                        <a href="{{ route('mentor.profile.availability') }}" class="text-dark text-decoration-none">
+                            Manage availability
                         </a>
                     </h5>
                     <p class="card-text">

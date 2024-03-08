@@ -19,7 +19,7 @@ Route::name('mentor.')->group(function () {
                         Route::view('manage-socials', 'mentor.profile.manage-socials')->name('manage-socials');
                         Route::view('achievements', 'mentor.profile.achievements')->name('achievements');
                         Route::view('session-reviews', 'mentor.profile.session-reviews')->name('session-reviews');
-                        // Route::view('payments', 'mentor.profile.payments')->name('payments');
+                        Route::view('manage-availability', 'mentor.profile.manage-availability')->name('availability');
                     });
                 });
                 Route::view('notifications', 'mentor.notifications')->name('notifications');

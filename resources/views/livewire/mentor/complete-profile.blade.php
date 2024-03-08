@@ -66,7 +66,7 @@
 
                 <div class="border rounded-4 p-2 shadow-sm">
                     <p class="m-0 fw-semibold">
-                        <a href="" @class([
+                        <a href="{{ route('mentor.profile.availability') }}" @class([
                             'text-decoration-line-through' => $complete['part_3'],
                             'text-secondary' => $complete['part_3'],
                             'text-decoration-none' => !$complete['part_3'],
