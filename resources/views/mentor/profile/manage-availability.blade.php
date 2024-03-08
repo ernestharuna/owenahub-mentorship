@@ -13,12 +13,12 @@
         <livewire:calender />
     </div>
 
-    <div class="mt-3 rounded-4">
-        <livewire:mentor.profile.manage-availability />
+    <div class="mt-3 bg-white rounded-4 shadow-sm p-2 col-12 col-md-6 mb-4">
+        <livewire:mentor.profile.session-list />
     </div>
 
-    <div class="mt-3 bg-white rounded-4 shadow-sm p-2 col-12 col-md-6 mb-4">
-        {{-- TODO create component --}}
+    <div class="mt-3 rounded-4">
+        <livewire:mentor.profile.manage-availability />
     </div>
 
 </x-mentor.profile-layout>
