@@ -1,32 +1,24 @@
 <x-layouts.user>
-    <div class="">
-        <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
-            <h2 class="fw-bold">
-                Mentors
+    <div class="mt-2 container">
+        <section class="py-3 mb-5 border-bottom">
+            <h2 class="fs-4 fw-bold text-dark">
+                <i class="bi bi-people-fill text-secondary"></i> Support
             </h2>
+        </section>
 
-            <p class="lh-sm fs-5 text-secondary">
-                We picked these mentors based on your interest
-            </p>
+        <section class="animated-2 fadeIn pb-5">
+            <div class="bg-white p-3 mb-2 rounded-4 shadow-sm">
+                <h3 class="fw-bold">Send us a message</h3>
+                <p>
+                    Did you encounter errors or glitches? <br>
+                    <b>Send us a message and we'll get back to you as soon as possible</b>
+                </p>
 
-            <section class="my-4">
-                <div class="row row-cols-1 row-cols-lg-4 g-3">
-                    @forelse ($mentors as $mentor)
-                        <x-mentor-card :mentor="$mentor" />
-                    @empty
-                        <p class="p-2 bg-f2 text-secondary">
-                            Slices Unavailable ☹
-                        </p>
-                    @endforelse
-                </div>
-            </section>
-
-            <div>
-                <a href="#" class="btn btn-theme rounded-3 fw-semibold">
-                    Explore mentors
+                <a href="mailto:hello@owenahub.com" class="btn btn-theme rounded-3 px-4 fw-semibold">
+                    Contact us
                 </a>
             </div>
-        </div>
+        </section>
 
         <div class="bg-theme rounded-4">
             <section class="container py-5">
@@ -85,6 +77,6 @@
             </section>
         </div>
     </div>
-    <hr class="opacity-0 my-5">
 
+    <hr class="opacity-0 my-5">
 </x-layouts.user>

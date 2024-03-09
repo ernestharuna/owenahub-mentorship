@@ -54,7 +54,7 @@
                     comma)</i>
             </label>
             <input wire:model="skills" type="text" class="form-control rounded-3 py-2 border-2 editable"
-                id="skills" name="skills" placeholder="Javascript, TypeScript, Angular" disabled>
+                id="skills" name="skills" placeholder="Javascript, TypeScript, Angular" max="20" disabled>
             @error('skills')
                 <x-error :message="$message" />
             @enderror
