@@ -43,8 +43,7 @@ class ProfileBiography extends Component
             'skills' => $this->skills,
             'bio' => $this->bio,
         ]);
-
-        return back()->with('status', 'Saved!');
+        return redirect('/mentor/dashboard')->with('status', 'Profile updated!');
     }
 
     public function render()

@@ -39,7 +39,7 @@ class ManageSocials extends Component
             'x_twitter' => $this->x_twitter,
             'facebook' => $this->facebook,
         ]);
-        return back()->with('status', 'Saved!');
+        return redirect('/mentor/dashboard')->with('status', 'Profile updated!');
     }
 
     public function render()

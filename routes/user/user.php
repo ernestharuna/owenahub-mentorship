@@ -23,7 +23,13 @@ Route::name('user.')->group(function () {
                 Route::prefix('session')->group(function () {
                     Route::name('session.')->group(function () {
                         Route::get('/', [SessionController::class, 'index'])->name('index');
-                        Route::get('mentors/{mentor}', [SessionController::class, 'show_mentor'])->name('mentors');
+                    });
+                });
+
+                Route::prefix('mentor')->group(function () {
+                    Route::name('mentor.')->group(function () {
+                        Route::get('/', [SessionController::class, 'all_mentors'])->name('index');
+                        Route::get('{mentor}', [SessionController::class, 'show_mentor'])->name('show');
                     });
                 });
 

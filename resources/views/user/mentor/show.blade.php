@@ -22,7 +22,7 @@
             </div>
 
             <div class="mt-5 row mx-auto justify-content-between">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 pe-md-5">
                     <h2 class="fs-5 fw-semibold">Overview</h2>
                     <hr>
                     <p class="">

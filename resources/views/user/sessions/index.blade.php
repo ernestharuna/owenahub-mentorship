@@ -2,10 +2,10 @@
     <div class="">
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
             <h2 class="fw-bold">
-                Mentors
+                Meet a mentor
             </h2>
 
-            <p class="lh-sm fs-5 text-secondary">
+            <p class="lh-sm text-secondary">
                 We picked these mentors based on your interest
             </p>
 

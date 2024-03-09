@@ -15,10 +15,12 @@
     <div class="card h-100 border-0 border-start shadow-sm rounded-4">
         <div class="mb-2" id="course-card-img">
             @if ($mentor->social_handle && $mentor->social_handle->image_path)
-                <img src="{{ asset('storage/' . $mentor->image_path) }}" alt="..."
+                {{-- <img src="{{ asset('storage/' . $mentor->image_path) }}" alt="{{ $mentor->first_name }}'s photo"
+                    class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover"> --}}
+                <img src="{{ $mentor->social_handle->image_path }}" alt="{{ $mentor->first_name }}'s photo"
                     class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover">
             @else
-                <img src="{{ asset('images/default-dp.png') }}" alt="..."
+                <img src="{{ asset('images/default-dp.png') }}" alt="{{ $mentor->first_name }}'s photo"
                     class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover">
             @endif
         </div>
@@ -47,7 +49,7 @@
                     {{ $mentor->misc_info->skills }}
                 </p>
                 <div>
-                    <a href="{{ route('user.session.mentors', $mentor->id) }}"
+                    <a href="{{ route('user.mentor.show', $mentor->id) }}"
                         class="px-3 text-decoration-none w-100 fw-bold fs-tiny btn btn-outline-dark btn-sm rounded-4">
                         View profile
                     </a>

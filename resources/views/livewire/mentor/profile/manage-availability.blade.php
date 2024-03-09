@@ -53,12 +53,18 @@
                 <input wire:model="start_time" type="time" class="form-control rounded-3 py-2 border-2 editable"
                     id="start_time">
             </div>
+            @error('start_time')
+                <x-error :message="$message" />
+            @enderror
 
             <div class="mb-3">
                 <label for="end_time" class="form-label fw-semibold m-0">Your close time</label>
                 <input wire:model="end_time" type="time" class="form-control rounded-3 py-2 border-2 editable"
                     id="end_time">
             </div>
+            @error('end_time')
+                <x-error :message="$message" />
+            @enderror
 
             <div class="d-flex align-items-center">
                 <button wire:loading.attr="disabled" class="btn btn-dark rounded-3 px-4 fs-tiny fw-semibold editable">

@@ -25,7 +25,7 @@
             <div class="mt-2">
                 <a href="{{ route('user.session.index') }}"
                     class="btn btn-light rounded-4 px-3 py-2 shadow-sm fw-semibold border-0 mt-1">
-                    <i class="bi bi-plus-circle me-1"></i> Create a session
+                    <i class="bi bi-plus-circle me-1"></i> Meet a mentor
                 </a>
             </div>
         </div>

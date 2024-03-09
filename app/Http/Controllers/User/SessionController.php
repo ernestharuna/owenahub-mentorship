@@ -16,6 +16,14 @@ class SessionController extends Controller
         ]);
     }
 
+    public function all_memntors()
+    {
+        $mentors = Mentor::get();
+        return view('user.mentor.index', [
+            'mentors' => $mentors
+        ]);
+    }
+
     public function show_mentor(Mentor $mentor)
     {
         return view('user.mentor.show', [
