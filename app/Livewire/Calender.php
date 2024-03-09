@@ -12,7 +12,7 @@ class Calender extends Component
 
     public function mount()
     {
-        $this->all_dates = Session::get();
+        // $this->all_dates = Session::get();
         foreach ($this->all_dates as $date) {
             array_push($this->arr, $date->week_day);
         }

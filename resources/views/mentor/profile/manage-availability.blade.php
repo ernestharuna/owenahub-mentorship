@@ -10,7 +10,10 @@
         <p class="fw-semibold">
             Your availability calender
         </p>
-        <livewire:calender />
+        @php
+            $dates = Auth::user()->session()->get();
+        @endphp
+        <livewire:calender :all_dates="$dates" />
     </div>
 
     <div class="mt-3 bg-white rounded-4 shadow-sm p-2 col-12 col-md-6 mb-4">

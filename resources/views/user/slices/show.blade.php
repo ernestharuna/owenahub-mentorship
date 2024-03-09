@@ -3,9 +3,9 @@
         <section class="row">
             <div class="col-md-7 col-12 py-4">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb fs-5">
+                    <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('user.slice.index') }}" class="text-decoration-none text-dark">
+                            <a href="{{ route('user.slice.index') }}" class="text-dark">
                                 <i class="bi bi-box-fill text-secondary me-2 d-none d-md-inline-block"></i> Slices
                             </a>
                         </li>

@@ -21,7 +21,7 @@
                 @forelse ($payments as $payment)
                     <tr class="fs-tiny">
                         <th scope="row">1</th>
-                        <td>
+                        <td class="text-uppercase">
                             {{ $payment->product_type }}
                         </td>
                         <td>
