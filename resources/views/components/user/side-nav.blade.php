@@ -36,7 +36,6 @@
                     @else
                         <i class="me-2 fs-5 bi bi-box"></i> Slices
                     @endif
-
                 </a>
             </div>
             <div>
@@ -80,9 +79,9 @@
             <hr>
 
             <div class="mt-4">
-                <a href="{{ route('user.support') }}"
+                <a href="{{ route('user.mentor.index') }}"
                     class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
-                    @if (Route::is('user.support'))
+                    @if (Route::is('user.mentor.*'))
                         <i class="me-2 fs-5 bi bi-people-fill text-red"></i>
                         <span class="text-red">Mentors</span>
                     @else
@@ -96,10 +95,11 @@
                 <a href="{{ route('user.support') }}"
                     class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
                     @if (Route::is('user.support'))
-                        <i class="me-2 fs-5 bi bi-people-fill text-red"></i>
+                        {{-- <i class="me-2 fs-5 bi bi-people-fill text-red"></i> --}}
+                        <i class="bi bi-gear-fill me-2 fs-5 text-red"></i>
                         <span class="text-red">Support</span>
                     @else
-                        <i class="bi bi-people fs-5 me-2"></i>
+                        <i class="bi bi-gear me-2 fs-5"></i>
                         Support
                     @endif
                 </a>

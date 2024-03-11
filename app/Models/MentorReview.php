@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class MentorReview extends Model
 {
@@ -14,4 +15,14 @@ class MentorReview extends Model
         'rating',
         'comment',
     ];
+
+    /**
+     * Get the mentor that owns the MentorReview
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function mentor(): BelongsTo
+    {
+        return $this->belongsTo(Mentor::class);
+    }
 }

@@ -2,7 +2,7 @@
     <header class="d-flex align-items-center justify-content-between mb-4">
         <div>
             <h2 class="fs-5 m-0 fw-semibold">
-                Misc Information
+                Other Information
             </h2>
             <p class="m-0">
                 Ensure you fill this correctly

@@ -9,7 +9,9 @@
                             Flexible schedule
                         </h1>
                         <div class="card-text mb-3">
-                            Set your own availability and choose how much time you want to dedicate to mentoring.
+                            <p class="fs-5">
+                                Set your own availability and choose how much time you want to dedicate to mentoring.
+                            </p>
                         </div>
                         <div class="">
                             <a href="{{ route('guest.onboarding.earn') }}"

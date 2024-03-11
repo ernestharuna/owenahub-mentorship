@@ -29,6 +29,11 @@ class Mentor extends Authenticatable implements MustVerifyEmail
         'email_verified_at'
     ];
 
+    /**
+     * Get all of the mentorReview for the Mentor
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function article(): HasMany
     {
         return $this->hasMany(Article::class);
@@ -44,9 +49,24 @@ class Mentor extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(MiscInfo::class);
     }
 
+    /**
+     * Get all of the mentorReview for the Mentor
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function session(): HasMany
     {
         return $this->hasMany(Session::class);
+    }
+
+    /**
+     * Get all of the mentorReview for the Mentor
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function mentorReview(): HasMany
+    {
+        return $this->hasMany(MentorReview::class);
     }
 
     /**

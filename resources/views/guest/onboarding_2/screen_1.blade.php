@@ -7,8 +7,10 @@
                         {{-- <divs --}}
                         <h1 class="card-title display-3 mb-4 fw-bold">Make real impact</h1>
                         <div class="card-text mb-3">
-                            Guide learners through their tech journeys,
-                            helping them achieve their career goals.
+                            <p class="fs-5">
+                                Guide learners through their tech journeys,
+                                helping them achieve their career goals.
+                            </p>
                         </div>
                         <div class="">
                             <a href="{{ route('guest.onboarding.schedule') }}"

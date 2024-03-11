@@ -46,11 +46,11 @@
         <div class="card-footer px-2 pt-0 border-0 bg-white rounded-4">
             <div class="fs-tiny d-md-flex justify-content-between align-items-center pb-1">
                 <p class="m-md-0 mb-2 fw-semibold bg-body-secondary secondary px-2 rounded d-inline-block">
-                    {{ $mentor->misc_info->skills }}
+                    {{ $mentor->misc_info ? $mentor->misc_info->skills : 'New mentor' }}
                 </p>
                 <div>
                     <a href="{{ route('user.mentor.show', $mentor->id) }}"
-                        class="px-3 text-decoration-none w-100 fw-bold fs-tiny btn btn-outline-dark btn-sm rounded-4">
+                        class="px-3 text-decoration-none w-100 fw-bold fs-tiny btn btn-outline-dark rounded-4">
                         View profile
                     </a>
                 </div>

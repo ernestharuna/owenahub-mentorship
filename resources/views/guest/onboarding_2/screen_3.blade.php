@@ -13,7 +13,9 @@
                             Earn while you share
                         </h1>
                         <div class="card-text mb-3">
-                            Get compensated for your time and expertise.
+                            <p class="fs-5">
+                                Get compensated for your time and expertise.
+                            </p>
                         </div>
                         <div class="">
                             <a href="{{ route('mentor.register') }}"
