@@ -61,7 +61,7 @@
                             </div>
                         </div>
                     @empty
-                        <p class="m-0 p-2 text-secondary bg-body-secondary">
+                        <p class="m-0 p-2 text-secondary bg-body-secondary rounded-2 ">
                             You have no upcoming bookings 🙂
                         </p>
                     @endforelse

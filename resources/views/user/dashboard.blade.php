@@ -23,12 +23,12 @@
                         </a>
                     </p>
                 @else
-                    <p class="m-0">
+                    <p class="m-0 fs-5 fw-semibold text-secondary">
                         You have no upcoming sessions
                     </p>
                     <div class="mt-2">
                         <a href="{{ route('user.session.index') }}"
-                            class="btn btn-light rounded-4 px-3 py-2 shadow-sm fw-semibold border-0 mt-1">
+                            class="btn btn-theme rounded-4 px-3 py-2 shadow-sm fw-semibold border-0 mt-1">
                             <i class="bi bi-plus-circle me-1"></i> Meet a mentor
                         </a>
                     </div>

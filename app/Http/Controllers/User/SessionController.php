@@ -72,6 +72,7 @@ class SessionController extends Controller
     public function create_bookingInfo(Request $request)
     {
         $data = $request->validate([
+            'user_id' => 'required',
             'booking_id' => 'required',
             'content' => 'required'
         ]);

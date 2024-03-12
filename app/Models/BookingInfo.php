@@ -11,6 +11,8 @@ class BookingInfo extends Model
     use HasFactory;
 
     protected $fillable = [
+        'mentor_id',
+        'user_id',
         'booking_id',
         'content'
     ];

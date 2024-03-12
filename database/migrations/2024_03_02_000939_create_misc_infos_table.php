@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete();
             $table->foreignId('mentor_id')->nullable()->constrained()->cascadeOnDelete();
+            $table->string('role')->nullable();
+            $table->string('company')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('country')->nullable();
             $table->string('hourly_rate')->nullable();
             $table->string('expertise');
             $table->string('skills');

@@ -6,7 +6,7 @@
                 <span class="text-secondary">{{ $booking->session->mentor->first_name }}</span>
                 <br>
                 <small class="fs-6 fw-normal text-secondary">
-                    {{ $booking->topic }}
+                    <span class="fw-semibold text-dark">Topic:</span> {{ $booking->topic }}
                 </small>
             </h1>
 
@@ -68,6 +68,7 @@
                         method="POST">
                         @csrf
                         <input type="hidden" name="booking_id" value="{{ $booking->id }}">
+                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                         <textarea name="content" id="content" cols="30" rows="10" placeholder="Message" class="form-control mb-3"
                             required></textarea>
                         <button class="btn btn-theme rounded-2 px-4 py-1 fw-semibold">
