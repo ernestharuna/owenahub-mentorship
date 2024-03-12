@@ -1,9 +1,6 @@
 <x-layouts.user>
     <section class="mt-4">
         <section class="mb-4">
-            <p class="m-0">
-                Welcome <span class="fw-semibold">{{ ucfirst(strtolower(Auth::user()->first_name)) }}</span> 👋🏼
-            </p>
             <h2 class="fw-bold fs-2">
                 {{-- {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                 {{ ucfirst(strtolower(Auth::user()->last_name)) }} --}}
@@ -13,27 +10,37 @@
 
     </section>
 
-    <section class="my-4">
-        <div class="p-3 bg-theme shadow-sm border rounded-4">
-            <h3 class="fw-bold fs-4 text-dark">Sessions</h3>
-            <hr class="bg-light text-dark">
+    <section class="mb-4 mt-5">
+        <div>
+            <h3 class="fs-4 m-0 text-red fw-semibold">
+                Welcome {{ ucfirst(strtolower(Auth::user()->first_name)) }} 👋🏼
+            </h3>
             <div>
-                <p class="text-dark">
-                    Sessions are unavailable at the moment.
-                </p>
+                @if ($booking->count() > 0)
+                    <p class="m-0 fs-5 fw-semibold text-secondary">
+                        You have <a class="text-purple" href="{{ route('user.session.index') }}">
+                            {{ $booking->count() }} upcoming sessions
+                        </a>
+                    </p>
+                @else
+                    <p class="m-0">
+                        You have no upcoming sessions
+                    </p>
+                    <div class="mt-2">
+                        <a href="{{ route('user.session.index') }}"
+                            class="btn btn-light rounded-4 px-3 py-2 shadow-sm fw-semibold border-0 mt-1">
+                            <i class="bi bi-plus-circle me-1"></i> Meet a mentor
+                        </a>
+                    </div>
+                @endif
             </div>
-            <div class="mt-2">
-                <a href="{{ route('user.session.index') }}"
-                    class="btn btn-light rounded-4 px-3 py-2 shadow-sm fw-semibold border-0 mt-1">
-                    <i class="bi bi-plus-circle me-1"></i> Meet a mentor
-                </a>
-            </div>
+
         </div>
     </section>
 
     <section>
         <div class="p-3 bg-white shadow-sm border rounded-4">
-            <h3 class="fw-bold fs-4 text-dark">Your learning</h3>
+            <h3 class="fw-semibold fs-4 text-dark">Your courses</h3>
 
             <hr class="mb-4">
 

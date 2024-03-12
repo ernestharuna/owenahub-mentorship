@@ -23,6 +23,7 @@ Route::name('user.')->group(function () {
                 Route::prefix('session')->group(function () {
                     Route::name('session.')->group(function () {
                         Route::get('/', [SessionController::class, 'index'])->name('index');
+                        Route::post('create_booking', [SessionController::class, 'create_booking'])->name('create-booking');
                     });
                 });
 

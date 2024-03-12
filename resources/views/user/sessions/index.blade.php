@@ -5,8 +5,9 @@
                 Meet a mentor
             </h2>
 
-            <p class="lh-sm text-secondary">
-                We picked these mentors based on your interest
+            <p class="lh-sm fw-semibold">
+                <i class="bi bi-stars text-red"></i> Your best matches — <span class="text-secondary fw-normal">
+                    We picked these mentors based on your interest</span>
             </p>
 
             <section class="my-4">
@@ -22,7 +23,7 @@
             </section>
 
             <div>
-                <a href="#" class="btn btn-theme rounded-3 fw-semibold">
+                <a href="{{ route('user.mentor.index') }}" class="btn btn-theme rounded-3 fw-semibold">
                     Explore mentors
                 </a>
             </div>

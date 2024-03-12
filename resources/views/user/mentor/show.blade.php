@@ -92,6 +92,7 @@
                                         {{ $session->start_time }} — {{ $session->end_time }}
                                     </p>
                                 </div>
+                                {{-- Button --}}
                                 <div>
                                     <button class="btn btn-secondary btn-sm rounded-2 px-3 fw-semibold fs-tiny"
                                         data-bs-toggle="modal" data-bs-target="#book-session-{{ $session->id }}">
@@ -115,21 +116,49 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <p class="lh-sm">
-                                                        We'll notify <span
+                                                        We'll notify
+                                                        <span
                                                             class="fw-semibold">{{ $session->mentor->first_name }}</span>
-                                                        that you want to meet. <br>
-                                                        Kindly wait for his response after comfirming your booking.
+                                                        that you want to meet.
                                                     </p>
 
-                                                    <p class="fw-semibold">
-                                                        {{ $session->mentor->first_name }} is available
-                                                        <span class="text-red">{{ $session->start_time }}</span>
-                                                        to <span class="text-red">{{ $session->end_time }}</span> on
-                                                        {{ $day }}
-                                                    </p>
-                                                    <button class="btn btn-dark rounded-3 py-2 w-100">
-                                                        Confirm booking
-                                                    </button>
+                                                    <form action="{{ route('user.session.create-booking') }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        <label for="topic" class="fw-bold">Select session
+                                                            topic
+                                                        </label>
+                                                        <select name="topic" id="topic"
+                                                            class="form-control bg-body-tertiary rounded-3 mb-2 py-2 shadow-sm fs-5"
+                                                            required>
+                                                            <option value="General mentorship">
+                                                                General mentorship
+                                                            </option>
+                                                            <option value="Transitioning to tech">
+                                                                Transitioning to tech
+                                                            </option>
+                                                            <option value="Landing a job">
+                                                                Landing a job
+                                                            </option>
+                                                            <option value="Career advancement">
+                                                                Career advancement
+                                                            </option>
+                                                        </select>
+                                                        <input type="hidden" name="session_id" id="session_id"
+                                                            value="{{ $session->id }}">
+
+                                                        <p class="fw-semibold">
+                                                            {{ $session->mentor->first_name }} is available
+                                                            <span class="text-red">{{ $session->start_time }}</span>
+                                                            to <span class="text-red">{{ $session->end_time }}</span>
+                                                            on {{ $day }}
+                                                        </p>
+
+                                                        <button class="btn btn-dark rounded-3 py-2 w-100 fw-semibold">
+                                                            Confirm booking
+                                                        </button>
+                                                    </form>
+
                                                 </div>
                                             </div>
                                         </div>

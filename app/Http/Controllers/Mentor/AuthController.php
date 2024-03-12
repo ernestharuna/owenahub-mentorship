@@ -19,7 +19,7 @@ class AuthController extends Controller
             'first_name' => ['required', 'min:2', 'max:20', 'alpha'],
             'last_name' => ['required', 'min:2', 'max:20', 'alpha'],
             'email' => ['required', 'email', Rule::unique('mentors', 'email')],
-            'password' => ['required', 'confirmed', Password::min(8)->letters()->symbols()]
+            'password' => ['required', 'confirmed', Password::min(8)->letters()]
         ]);
 
         /**

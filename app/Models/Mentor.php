@@ -16,6 +16,15 @@ class Mentor extends Authenticatable implements MustVerifyEmail
     protected $guard = "mentor";
     protected $table = 'mentors';
 
+    // Mentor.php (Model)
+    public static function search($search)
+    {
+        return self::where('first_name', 'like', '%' . $search . '%')
+            ->orWhere('last_name', 'like', '%' . $search . '%')
+            ->get();
+    }
+
+
     /**
      * The attributes that are mass assignable.
      *

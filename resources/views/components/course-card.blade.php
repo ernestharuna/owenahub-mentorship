@@ -8,7 +8,7 @@
         @media screen and (max-width: 760px) {
             #course-card-img {
                 width: 100%;
-                height: 100px;
+                height: 140px;
             }
         }
     </style>
@@ -16,14 +16,14 @@
         <div class="mb-2" id="course-card-img">
             @if ($slice->image_path)
                 <img src="{{ asset('storage/' . $slice->image_path) }}" alt="..."
-                    class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover">
+                    class="rounded-top-4 border d-block img-fluid w-100 h-100 object-fit-cover">
             @else
                 <img src="{{ asset('images/generic_img.jpg') }}" alt="..."
-                    class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover">
+                    class="rounded-top-4 border d-block img-fluid w-100 h-100 object-fit-cover">
             @endif
         </div>
         <div class="card-body mb-2 px-2 py-0">
-            <h5 class="card-title fw-bold fs-6 m-0">{{ $slice->title }}</h5>
+            <h5 class="card-title fw-semibold m-0">{{ $slice->title }}</h5>
             <div class="mb-2">
                 @if ($slice->admin)
                     <p class="fs-tiny fw-normal m-0">

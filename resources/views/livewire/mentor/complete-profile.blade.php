@@ -2,7 +2,7 @@
     <section class="mt-4">
         <div class="p-3 bg-theme shadow-sm border rounded-4 row mx-auto gap-4 justify-content-between">
             <div class="col-12 col-md-5 px-0">
-                <h3 class="fw-bold fs-4">Complete you profile</h3>
+                <h3 class="fw-bold fs-4">Complete your profile</h3>
                 <p>
                     Complete your profile to be able to recieve session requests. <br>
                     <span class="fw-semibold">

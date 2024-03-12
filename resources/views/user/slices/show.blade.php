@@ -5,12 +5,12 @@
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('user.slice.index') }}" class="fw-bold text-secondary">
-                                <i class="bi bi-box-fill text-secondary me-2 d-none d-md-inline-block"></i> Slices
+                            <a href="{{ route('user.slice.index') }}" class="fw-semibold text-secondary">
+                                Slices
                             </a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">
-                            <span class="fw-bold">
+                            <span class="fw-semibold">
                                 {{ $show_bite->slice->title }}
                             </span>
                         </li>
@@ -22,7 +22,6 @@
                     </ol>
                 </nav>
 
-                <hr>
                 <div class="animated-2 fadeIn">
                     <p>
                         {!! $show_bite->content !!}

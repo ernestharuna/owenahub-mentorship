@@ -30,4 +30,16 @@ class SessionController extends Controller
             'mentor' => $mentor
         ]);
     }
+
+    public function create_booking(Request $request)
+    {
+        $data = $request->validate([
+            'topic' => 'required',
+            'session_id' => 'required'
+        ]);
+
+        $request->user()->booking()->create($data);
+
+        return redirect(route('user.session.index'))->with('status', 'Session booked!');
+    }
 }
