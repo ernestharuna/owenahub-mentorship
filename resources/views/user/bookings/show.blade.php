@@ -53,8 +53,13 @@
                 <hr>
                 <div>
                     @forelse ($booking->booking_info as $info)
-                        <div>
-                            <div class="border p-2 rounded d-inline-block">
+                        <div class="mb-2">
+                            <span class="fs-tiny d-block fw-bold">
+                                @if ($info->user_id)
+                                    Me
+                                @endif
+                            </span>
+                            <div class="p-2 rounded d-inline-block bg-theme-light">
                                 {!! $info->content !!}
                             </div>
                         </div>
@@ -69,8 +74,8 @@
                         @csrf
                         <input type="hidden" name="booking_id" value="{{ $booking->id }}">
                         <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-                        <textarea name="content" id="content" cols="30" rows="10" placeholder="Message" class="form-control mb-3"
-                            required></textarea>
+                        <textarea name="content" id="content" cols="30" rows="10" placeholder="Message"
+                            class="form-control mb-3 fw-semibold" required></textarea>
                         <button class="btn btn-theme rounded-2 px-4 py-1 fw-semibold">
                             Send
                         </button>

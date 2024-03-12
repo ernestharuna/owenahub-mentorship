@@ -52,7 +52,7 @@
                             </div>
                             <div class="mt-3">
                                 <a href="{{ route('user.session.show', $booking->id) }}"
-                                    class="btn btn-sm btn-secondary px-3 rounded-1 py-0 text-decoration-none fw-semibold">
+                                    class="btn btn-sm btn-secondary px-3 rounded-4 py-0 text-decoration-none fw-semibold">
                                     View
                                 </a>
                                 <a href="#" class="text-danger text-decoration-none fw-semibold ms-2 mt-2">
