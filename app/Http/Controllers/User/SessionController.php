@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use App\Models\Mentor;
 use Illuminate\Http\Request;
 
@@ -11,8 +12,10 @@ class SessionController extends Controller
     public function index()
     {
         $mentors = Mentor::get();
+        $bookings = Booking::where('user_id', auth()->id())->with('session')->latest()->get();
         return view('user.sessions.index', [
-            'mentors' => $mentors
+            'mentors' => $mentors,
+            'bookings' => $bookings
         ]);
     }
 
