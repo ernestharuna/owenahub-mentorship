@@ -15,15 +15,18 @@ Route::name('user.')->group(function () {
 
             Route::prefix('dashboard')->group(function () { # user/dashboard..
                 Route::get('/', UserDashboardController::class)->name('dashboard');
+
                 Route::name('slice.')->group(function () {
                     Route::get('slices', [SliceController::class, 'index'])->name('index');
                     Route::get('slices/{slice}', [SliceController::class, 'show'])->name('show');
                 });
 
-                Route::prefix('session')->group(function () {
+                Route::prefix('sessions')->group(function () {
                     Route::name('session.')->group(function () {
-                        Route::get('/', [SessionController::class, 'index'])->name('index');
+                        Route::get('bookings', [SessionController::class, 'index'])->name('index');
+                        Route::get('bookings/{booking}', [SessionController::class, 'show_booking'])->name('show');
                         Route::post('create_booking', [SessionController::class, 'create_booking'])->name('create-booking');
+                        Route::post('create_bookingInfo', [SessionController::class, 'create_bookingInfo'])->name('create-booking-info');
                     });
                 });
 

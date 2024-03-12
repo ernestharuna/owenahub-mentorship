@@ -41,7 +41,7 @@
             <div>
                 <a href="{{ route('user.session.index') }}"
                     class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
-                    @if (Route::is('user.session.index'))
+                    @if (Route::is('user.session.*'))
                         <i class="me-2 fs-5 bi bi-calendar2-fill text-red"></i>
                         <span class="text-red">Sessions</span>
                     @else

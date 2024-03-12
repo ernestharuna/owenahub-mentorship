@@ -6,7 +6,7 @@
             </h2>
             <p class="lh-sm fw-semibold">
                 The session timings are following your local timezone <span class="text-red fw-semibold">Africa/Lagos
-                    Update</span>
+                </span>
             </p>
 
             <div class="mt-4">
@@ -51,10 +51,11 @@
                                 {{ $day }}, {{ $booking->session->start_time }}
                             </div>
                             <div class="mt-3">
-                                <button class="btn btn-sm btn-outline-dark rounded-3">
-                                    Add message
-                                </button>
-                                <a href="#" class="text-danger text-decoration-none fw-semibold ms-2">
+                                <a href="{{ route('user.session.show', $booking->id) }}"
+                                    class="btn btn-sm btn-secondary px-3 rounded-1 py-0 text-decoration-none fw-semibold">
+                                    View
+                                </a>
+                                <a href="#" class="text-danger text-decoration-none fw-semibold ms-2 mt-2">
                                     Cancel
                                 </a>
                             </div>
