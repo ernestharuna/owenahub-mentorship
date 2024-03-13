@@ -34,16 +34,16 @@
                 </span>
             </a>
 
-            <a href="{{ route('user.notifications') }}" class="d-block text-dark text-center text-decoration-none">
-                @if (Route::is('user.notifications'))
-                    <i class="bi bi-bell-fill text-theme d-block fs-2 position-relative">
+            <a href="{{ route('user.mentor.index') }}" class="d-block text-dark text-center text-decoration-none">
+                @if (Route::is('user.mentor.*'))
+                    <i class="bi bi-people-fill text-theme d-block fs-2 position-relative">
                         <span
                             class="position-absolute top-1 start-75 translate-middle p-1 bg-red border border-light rounded-circle">
                             <span class="visually-hidden">New alerts</span>
                         </span>
                     </i>
                 @else
-                    <i class="bi bi-bell d-block fs-2 position-relative">
+                    <i class="bi bi-people fs-2 position-relative d-block">
                         <span
                             class="position-absolute top-1 start-75 translate-middle p-1 bg-red border border-light rounded-circle">
                             <span class="visually-hidden">New alerts</span>
@@ -51,7 +51,7 @@
                     </i>
                 @endif
                 <span class="fs-tiny">
-                    Pings
+                    Mentors
                 </span>
             </a>
 

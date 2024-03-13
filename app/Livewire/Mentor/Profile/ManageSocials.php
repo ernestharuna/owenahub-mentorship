@@ -5,12 +5,20 @@ namespace App\Livewire\Mentor\Profile;
 use Livewire\Component;
 use App\Models\SocialHandle;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Validate;
 
 class ManageSocials extends Component
 {
+    #[Validate('max:30')]
     public $instagram;
+
+    #[Validate('max:30')]
     public $linkedin;
+
+    #[Validate('max:30')]
     public $x_twitter;
+
+    #[Validate('max:30')]
     public $facebook;
 
     public function mount()
@@ -30,7 +38,7 @@ class ManageSocials extends Component
                 'x_twitter' => $this->x_twitter,
                 'facebook' => $this->facebook,
             ]);
-            return back()->with('status', 'Updated!');
+            return redirect('/mentor/dashboard/profile/manage-socials')->with('status', 'Updated!');
         }
 
         request()->user('mentor')->social_handle()->create([

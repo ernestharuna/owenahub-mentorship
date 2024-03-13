@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('hourly_rate')->nullable();
             $table->string('expertise');
             $table->string('skills');
-            $table->string('bio');
+            $table->text('bio');
             $table->timestamps();
         });
     }

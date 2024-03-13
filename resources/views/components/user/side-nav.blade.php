@@ -50,18 +50,15 @@
                 </a>
             </div>
             <div>
-                <a href="{{ route('user.notifications') }}"
-                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary position-relative">
-                    @if (Route::is('user.notifications'))
-                        <i class="me-2 fs-5 bi bi-bell-fill text-red"></i>
-                        <span class="text-red">Notifications</span>
+                <a href="{{ route('user.mentor.index') }}"
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
+                    @if (Route::is('user.mentor.*'))
+                        <i class="me-2 fs-5 bi bi-people-fill text-red"></i>
+                        <span class="text-red">Mentors</span>
                     @else
-                        <i class="me-2 fs-5 bi bi-bell"></i> Notifications
+                        <i class="bi bi-people fs-5 me-2"></i>
+                        Mentors
                     @endif
-                    <span
-                        class="position-absolute top-0 start-100 translate-middle p-2 bg-red border border-light rounded-circle">
-                        <span class="visually-hidden">New alerts</span>
-                    </span>
                 </a>
             </div>
             <div class="mb-4">
@@ -79,15 +76,18 @@
             <hr>
 
             <div class="mt-4">
-                <a href="{{ route('user.mentor.index') }}"
-                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
-                    @if (Route::is('user.mentor.*'))
-                        <i class="me-2 fs-5 bi bi-people-fill text-red"></i>
-                        <span class="text-red">Mentors</span>
+                <a href="{{ route('user.notifications') }}"
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary position-relative">
+                    @if (Route::is('user.notifications'))
+                        <i class="me-2 fs-5 bi bi-bell-fill text-red"></i>
+                        <span class="text-red">Notifications</span>
                     @else
-                        <i class="bi bi-people fs-5 me-2"></i>
-                        Mentors
+                        <i class="me-2 fs-5 bi bi-bell"></i> Notifications
                     @endif
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle p-2 bg-red border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
                 </a>
             </div>
 

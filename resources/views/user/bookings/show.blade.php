@@ -4,7 +4,8 @@
             <x-status :status="$booking->status" />
             <h1 class="fw-bold">
                 Session with
-                <span class="text-secondary">{{ $booking->session->mentor->first_name }}</span>
+                <a href="{{ route('user.mentor.show', $booking->session->mentor->id) }}"
+                    class="text-secondary">{{ $booking->session->mentor->first_name }}</a>
                 <br>
                 <small class="fs-6 fw-normal text-secondary">
                     <span class="fw-semibold text-dark">Topic:</span> {{ $booking->topic }}
@@ -81,7 +82,7 @@
                             This meeting has been cancelled!
                         </p>
                     @elseif($booking->status === 'completed')
-                        <p class="mt-3 text-success bg-light-green d-inline fw-semibold rounded-3 p-2">
+                        <p class="mt-3 text-success bg-light-green d-inline-block fw-semibold rounded-3 p-2">
                             Mentor considers this session completed! 😎🎉
                         </p>
                     @else

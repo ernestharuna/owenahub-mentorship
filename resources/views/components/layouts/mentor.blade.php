@@ -24,7 +24,7 @@
                         style="height: 100vh; overflow-y: auto;">
                         <x-mentor.side-nav /> <!-- Navigation for Desktops -->
                     </div>
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-9 col-md-12" style="height: 100vh; overflow-y: auto;">
                         {{ $slot }}
                     </div>
                 </div>

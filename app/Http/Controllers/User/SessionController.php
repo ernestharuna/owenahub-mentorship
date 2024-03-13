@@ -7,6 +7,7 @@ use App\Models\Booking;
 use App\Models\BookingInfo;
 use App\Models\Mentor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SessionController extends Controller
 {
@@ -15,13 +16,30 @@ class SessionController extends Controller
      */
     public function index()
     {
-        $mentors = Mentor::get();
-        $bookings = Booking::where('user_id', auth()->id())->with('session')->latest()->get();
+        $bookings = Booking::where('user_id', auth()->id())
+            ->with('session')
+            ->latest()
+            ->get();
+
+        // If the user has expertise information available
+        if (Auth::user()->misc_info && Auth::user()->misc_info->expertise) {
+            $userExpertise = Auth::user()->misc_info->expertise;
+
+            // Query mentors whose expertise matches the current user's expertise
+            $mentors = Mentor::whereHas('misc_info', function ($query) use ($userExpertise) {
+                $query->where('expertise', $userExpertise);
+            })->take(3)->get();
+        } else {
+            // If user's expertise information is not available, fetch all mentors
+            $mentors = Mentor::take(3)->get();
+        }
+
         return view('user.bookings.index', [
             'mentors' => $mentors,
             'bookings' => $bookings
         ]);
     }
+
 
     /**
      * Show the data for a booking

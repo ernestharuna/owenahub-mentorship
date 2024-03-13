@@ -34,7 +34,7 @@
                         style="height: 100vh; overflow-y: auto;">
                         <x-user.side-nav /> <!-- Navigation for Desktops -->
                     </div>
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-9 col-md-12 full-mobile-body-length">
                         {{ $slot }}
                     </div>
                 </div>

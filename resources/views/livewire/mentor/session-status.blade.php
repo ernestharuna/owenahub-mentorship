@@ -16,7 +16,7 @@
     @if ($current_status === 'confirmed')
         <h3 class="fs-6 mb-2">Are you done with this session?</h3>
         <div>
-            <button wire:click="updateStatus('completed')" class="btn btn-sm btn-light rounded-3 px-4 fw-semibold me-2">
+            <button wire:click="updateStatus('completed')" class="btn btn-sm btn-light rounded-4 px-4 fw-semibold me-2">
                 Yes
             </button>
         </div>

@@ -2,88 +2,88 @@
     <div class="row row-cols-1 row-cols-md-3 g-3 my-3">
         <div class="col">
             <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body">
-                    <h5 class="card-title m-0">
-                        <a href="{{ route('user.profile.account-info') }}" class="text-dark text-decoration-none">
+                <a href="{{ route('user.profile.account-info') }}" class="text-dark text-decoration-none">
+                    <div class="card-body">
+                        <h5 class="card-title m-0">
                             Account information
-                        </a>
-                    </h5>
-                    <p class="card-text">
-                        Update your account information
-                    </p>
-                </div>
+                        </h5>
+                        <p class="card-text">
+                            Update your account information
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="col">
             <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body">
-                    <h5 class="card-title m-0">
-                        <a href="{{ route('user.profile.manage-socials') }}" class="text-dark text-decoration-none">
+                <a href="{{ route('user.profile.manage-socials') }}" class="text-dark text-decoration-none">
+                    <div class="card-body">
+                        <h5 class="card-title m-0">
                             Manage your socials
-                        </a>
-                    </h5>
-                    <p class="card-text">
-                        Manage links to your social media accounts.
-                    </p>
-                </div>
+                        </h5>
+                        <p class="card-text">
+                            Manage links to your social media accounts.
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="col">
             <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body">
-                    <h5 class="card-title m-0">
-                        <a href="{{ route('user.profile.achievements') }}" class="text-dark text-decoration-none">
+                <a href="{{ route('user.profile.achievements') }}" class="text-dark text-decoration-none">
+                    <div class="card-body">
+                        <h5 class="card-title m-0">
                             Achievements
-                        </a>
-                    </h5>
-                    <p class="card-text">
-                        Update your account information
-                    </p>
-                </div>
+                        </h5>
+                        <p class="card-text">
+                            Update your account information
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="col">
             <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body">
-                    <h5 class="card-title m-0">
-                        <a href="{{ route('user.profile.course-reviews') }}" class="text-dark text-decoration-none">
+                <a href="{{ route('user.profile.course-reviews') }}" class="text-dark text-decoration-none">
+                    <div class="card-body">
+                        <h5 class="card-title m-0">
                             Course reviews
-                        </a>
-                    </h5>
-                    <p class="card-text">
-                        See reviews made on courses you enrolled.
-                    </p>
-                </div>
+                        </h5>
+                        <p class="card-text">
+                            See reviews made on courses you enrolled.
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="col">
             <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body">
-                    <h5 class="card-title m-0">
-                        <a href="{{ route('user.profile.payments') }}" class="text-dark text-decoration-none">
+                <a href="{{ route('user.profile.payments') }}" class="text-dark text-decoration-none">
+                    <div class="card-body">
+                        <h5 class="card-title m-0">
                             Payments
-                        </a>
-                    </h5>
-                    <p class="card-text">
-                        View your payment history on OwenaHub
-                    </p>
-                </div>
+                        </h5>
+                        <p class="card-text">
+                            View your payment history on OwenaHub
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
 
         <div class="col">
             <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body">
-                    <h5 class="card-title text-danger m-0">
-                        <a type="button" class="text-decoration-none text-red" data-bs-toggle="modal"
-                            data-bs-target="#logout-modal">
-                            Exit Account
-                        </a>
-                    </h5>
-                    <p class="card-text">
-                        Log out of your account
-                    </p>
-                </div>
+                <a type="button" class="text-decoration-none text-dark" data-bs-toggle="modal"
+                    data-bs-target="#logout-modal">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger m-0">
+                            Exit account
+                        </h5>
+                        <p class="card-text">
+                            Log out of your account
+                        </p>
+                    </div>
+                </a>
             </div>
 
             <!-- Modal -->

@@ -12,10 +12,10 @@ class ProfileBiography extends Component
     #[Validate('required')]
     public $expertise;
 
-    #[Validate('required')]
+    #[Validate('required|max:50')]
     public $skills;
 
-    #[Validate('required')]
+    #[Validate('required|max:500')]
     public $bio;
 
     public function mount()

@@ -78,7 +78,9 @@
         </form>
     @else
         <div>
-            <button class="btn btn-sm btn-dark rounded-3 py-2 px-3 fw-semibold" wire:click="toggler" type="button">
+            <button
+                class="btn btn-sm btn-theme rounded-3 py-2 px-3 fw-bold @if (Auth::user()->session->count() < 1) cta-animation @endif "
+                wire:click="toggler" type="button">
                 <i class="bi bi-plus-square me-2"></i> Create a schedule
             </button>
         </div>

@@ -2,15 +2,25 @@
 
 namespace App\Livewire\User\Profile;
 
-use App\Models\SocialHandle;
-use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use App\Models\SocialHandle;
+use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Auth;
 
 class ManageSocials extends Component
 {
+    #[Validate('max:30')]
     public $instagram;
+
+    #[Validate('max:30')]
     public $linkedin;
+
+    #[Validate('max:30')]
+
+    #[Validate('max:30')]
     public $x_twitter;
+
+    #[Validate('max:30')]
     public $facebook;
 
     public function mount()
@@ -30,7 +40,7 @@ class ManageSocials extends Component
                 'x_twitter' => $this->x_twitter,
                 'facebook' => $this->facebook,
             ]);
-            return back()->with('status', 'Updated!');
+            return redirect('/user/dashboard')->with('status', 'Updated!');
         }
 
         request()->user()->social_handle()->create([
@@ -39,7 +49,7 @@ class ManageSocials extends Component
             'x_twitter' => $this->x_twitter,
             'facebook' => $this->facebook,
         ]);
-        return back()->with('status', 'Saved!');
+        return redirect('/user/dashboard')->with('status', 'Saved!');
     }
 
     public function render()

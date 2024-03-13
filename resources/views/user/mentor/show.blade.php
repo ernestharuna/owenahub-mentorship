@@ -26,7 +26,7 @@
                     <h2 class="fs-5 fw-semibold">Overview</h2>
                     <hr>
                     <p>
-                        {{ $mentor->misc_info ? $mentor->misc_info->bio : 'No information' }}
+                        {!! $mentor->misc_info ? nl2br($mentor->misc_info->bio) : 'No information' !!}
                     </p>
 
                     @if ($mentor->social_handle)

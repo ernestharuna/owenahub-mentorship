@@ -8,7 +8,12 @@
             </h2>
             <div class="d-block d-md-none">
                 <a href="{{ route('user.mentor.index') }}" class="text-decoration-none text-dark">
-                    <i class="bi bi-people fs-5 me-2 bg-body-secondary px-3 py-2 rounded-4 border"></i>
+                    {{-- <i class="bi bi-people fs-5 me-2 bg-body-secondary px-3 py-2 rounded-4 border"></i> --}}
+                    <i class="bi bi-bell fs-5 me-2 bg-body-secondary px-3 py-2 rounded-4 border position-relative">
+                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-red rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </i>
                 </a>
                 <a href="{{ route('user.support') }}" class="text-decoration-none text-dark">
                     <i class="bi bi-gear me-2 fs-5 bg-body-secondary px-3 py-2 rounded-4 border"></i>
@@ -18,7 +23,7 @@
 
     </section>
 
-    <section class="mb-4 mt-5">
+    <section class="mb-5 mt-5">
         <div>
             <h3 class="fs-4 m-0 text-red fw-semibold">
                 Welcome {{ ucfirst(strtolower(Auth::user()->first_name)) }} 👋🏼
@@ -27,7 +32,8 @@
                 @if ($booking->count() > 0)
                     <p class="m-0 fs-5 fw-semibold text-secondary">
                         You have <a class="text-purple" href="{{ route('user.session.index') }}">
-                            {{ $booking->count() }} upcoming sessions
+                            {{ $booking->where('status', 'pending')->count() + $booking->where('status', 'confirmed')->count() }}
+                            upcoming sessions
                         </a>
                     </p>
                 @else
@@ -42,7 +48,6 @@
                     </div>
                 @endif
             </div>
-
         </div>
     </section>
 

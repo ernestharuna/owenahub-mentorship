@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('x_twitter')->nullable();
             $table->string('linkedin')->nullable();
             $table->string('instagram')->nullable();
+            $table->string('github')->nullable();
             $table->string('image_path')->nullable();
             $table->timestamps();
         });

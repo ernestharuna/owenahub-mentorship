@@ -54,7 +54,7 @@
                     </span>
                 </a>
             </div>
-            <div class="mb-5">
+            <div class="mb-4">
                 <a href="{{ route('mentor.profile.index') }}"
                     class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
                     @if (Route::is('mentor.profile.*'))
@@ -66,6 +66,19 @@
                 </a>
             </div>
             <hr>
+            <div class="my-4">
+                <a href="{{ route('mentor.support') }}"
+                    class="btn bg-body-secondary rounded-4 d-block text-start mb-2 py-3 fw-semibold text-secondary">
+                    @if (Route::is('mentor.support'))
+                        {{-- <i class="me-2 fs-5 bi bi-people-fill text-red"></i> --}}
+                        <i class="bi bi-gear-fill me-2 fs-5 text-red"></i>
+                        <span class="text-red">Support</span>
+                    @else
+                        <i class="bi bi-gear me-2 fs-5"></i>
+                        Support
+                    @endif
+                </a>
+            </div>
             <div class="mt-5">
                 <div class="bg-dark rounded-4 p-3 mt-3">
                     <h3 class="fs-5 fw-bold text-theme">Welcome to OwenaHub</h3>

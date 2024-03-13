@@ -56,6 +56,7 @@
                 <livewire:mentor.session-status :id="$booking->id" :current_status="$booking->status" />
 
                 <hr>
+
                 <div>
                     @forelse ($booking->booking_info as $info)
                         <div class="mb-2">
@@ -84,8 +85,12 @@
                             This meeting has been cancelled!
                         </p>
                     @elseif($booking->status === 'completed')
-                        <p class="mt-3 text-success bg-light-green d-inline fw-semibold rounded-3 p-2">
+                        <p class="mt-3 text-success bg-light-green d-inline-block fw-semibold rounded-3 p-2">
                             Session complete 🎉
+                        </p>
+                    @elseif($booking->status === 'pending')
+                        <p class="mt-3 text-success bg-body-secondary d-inline-block fw-semibold rounded-3 p-2">
+                            Accept the request to be able to reply
                         </p>
                     @else
                         <form action="{{ route('mentor.session.create-booking-info') }}" class="col-12 col-md-6 mt-4"
