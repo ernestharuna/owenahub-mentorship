@@ -8,13 +8,12 @@ use App\Models\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class MentorDashboardController extends Controller
+class SessionController extends Controller
 {
-    public function __invoke()
+    public function index()
     {
-        $sessions = Session::where('mentor_id', auth('mentor')->id())->get();
-
-        return view('mentor.dashboard', [
+        $sessions = Auth::user()->session()->get();
+        return view('mentor.booking.index', [
             'sessions' => $sessions
         ]);
     }

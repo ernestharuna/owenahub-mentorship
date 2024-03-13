@@ -3,6 +3,7 @@
 use App\Http\Controllers\Mentor\AuthController;
 use App\Http\Controllers\Mentor\MentorDashboardController;
 use App\Http\Controllers\Mentor\ProfileController;
+use App\Http\Controllers\Mentor\SessionController;
 use Illuminate\Support\Facades\Route;
 
 Route::name('mentor.')->group(function () {
@@ -22,6 +23,13 @@ Route::name('mentor.')->group(function () {
                         Route::view('manage-availability', 'mentor.profile.manage-availability')->name('availability');
                     });
                 });
+
+                Route::prefix('sessions')->group(function () {
+                    Route::name('session.')->group(function () {
+                        Route::get('bookings', [SessionController::class, 'index'])->name('index');
+                    });
+                });
+
                 Route::view('notifications', 'mentor.notifications')->name('notifications');
             });
 

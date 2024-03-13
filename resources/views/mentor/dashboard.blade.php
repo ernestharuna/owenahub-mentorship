@@ -2,13 +2,37 @@
     <section class="mt-4">
         <p class="text-dark fw-bold mb-2">
         <section class="mb-4">
-            <p class="m-0">Welcome Mentor 😎,</p>
             <h2 class="fw-bold fs-2">
-                {{ ucfirst(strtolower(Auth::user()->first_name)) }}
-                {{ ucfirst(strtolower(Auth::user()->last_name)) }}
+                {{-- {{ ucfirst(strtolower(Auth::user()->first_name)) }}
+                {{ ucfirst(strtolower(Auth::user()->last_name)) }} --}}
+                Dashboard
             </h2>
         </section>
         </p>
+    </section>
+
+    <section class="mb-4 mt-5">
+        <div>
+            <h3 class="fs-4 m-0 text-red fw-semibold">
+                Welcome {{ ucfirst(strtolower(Auth::user()->first_name)) }} 👋🏼
+            </h3>
+            <div class="mt-1 fs-5 fw-semibold text-secondary">
+                @php
+                    $r_count = 0;
+                    foreach ($sessions as $session) {
+                        if ($session->booking->where('status', 'pending')->count() > 0) {
+                            $r_count++;
+                        }
+                    }
+                @endphp
+                @if ($r_count > 0)
+                    You have <a href="#" class="text-purple ">{{ $r_count }} session requests</a>
+                @else
+                    You have no session requests
+                @endif
+            </div>
+
+        </div>
     </section>
 
     <livewire:mentor.complete-profile />

@@ -37,4 +37,14 @@ class Booking extends Model
     {
         return $this->hasMany(BookingInfo::class);
     }
+
+    /**
+     * Get the user that owns the Booking
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }
