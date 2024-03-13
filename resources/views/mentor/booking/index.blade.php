@@ -59,8 +59,10 @@
                                     @forelse ($session->booking as $booking)
                                         <li class="list-group-item d-flex justify-content-between align-items-start">
                                             <div class="ms-2 me-auto lh-sm">
-                                                <a href="" class="text-dark text-decoration-none">
-                                                    <div class="fw-bold">{{ $booking->user->first_name }}'s booking
+                                                <a href="{{ route('mentor.session.show', $booking->id) }}"
+                                                    class="text-dark text-decoration-none">
+                                                    <div class="fw-bold">
+                                                        {{ $booking->user->first_name }}'s booking
                                                     </div>
                                                     <span>{{ $booking->topic }}</span>
                                                 </a>

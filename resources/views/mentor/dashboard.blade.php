@@ -26,7 +26,8 @@
                     }
                 @endphp
                 @if ($r_count > 0)
-                    You have <a href="#" class="text-purple ">{{ $r_count }} session requests</a>
+                    You have <a href="{{ route('mentor.session.index') }}" class="text-purple ">{{ $r_count }}
+                        session requests</a>
                 @else
                     You have no session requests
                 @endif

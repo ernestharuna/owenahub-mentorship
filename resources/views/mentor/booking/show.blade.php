@@ -1,9 +1,9 @@
-<x-layouts.user>
+<x-layouts.mentor>
     <div>
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
             <h1 class="fw-bold">
                 Session with
-                <span class="text-secondary">{{ $booking->session->mentor->first_name }}</span>
+                <span class="text-secondary">{{ $booking->user->first_name }} {{ $booking->user->last_name }}</span>
                 <br>
                 <small class="fs-6 fw-normal text-secondary">
                     <span class="fw-semibold text-dark">Topic:</span> {{ $booking->topic }}
@@ -54,18 +54,17 @@
                 <div>
                     @forelse ($booking->booking_info as $info)
                         <div class="mb-2">
-                            <span class="fs-tiny d-block fw-bold text-red">
-                                @if ($info->user_id)
+                            @if ($info->mentor_id)
+                                <span class="fs-tiny d-block fw-bold text-theme">
                                     Me
-                                @endif
-                                @if ($info->mentor_id)
-                                    <span class="fs-tiny d-block fw-bold text-theme">
-                                        {{ $info->booking->session->mentor->first_name }} <span
-                                            class="fw-normal text-dark">(mentor)</span>
-                                    </span>
-                                @endif
-                            </span>
-                            <div class="p-2 rounded d-inline-block bg-light bg-body-secondary border">
+                                </span>
+                            @endif
+                            @if ($info->user_id)
+                                <span class="fs-tiny d-block fw-bold text-danger">
+                                    {{ $booking->user->first_name }}
+                                </span>
+                            @endif
+                            <div class="p-2 rounded d-inline-block bg-light bg-gradient border">
                                 {!! nl2br($info->content) !!}
                             </div>
                         </div>
@@ -75,15 +74,15 @@
                         </p>
                     @endforelse
 
-                    <form action="{{ route('user.session.create-booking-info') }}" class="col-12 col-md-6 mt-4"
+                    <form action="{{ route('mentor.session.create-booking-info') }}" class="col-12 col-md-6 mt-4"
                         method="POST">
                         @csrf
                         <input type="hidden" name="booking_id" value="{{ $booking->id }}">
-                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
+                        <input type="hidden" name="mentor_id" value="{{ auth()->id() }}">
                         <textarea name="content" id="content" cols="30" rows="10" placeholder="Message"
                             class="form-control mb-3 fw-semibold" required></textarea>
                         <button class="btn btn-theme rounded-2 px-4 py-1 fw-semibold">
-                            Send
+                            Send <i class="bi bi-send ms-2"></i>
                         </button>
                     </form>
                 </div>
@@ -95,4 +94,4 @@
 
     <hr class="opacity-0 my-5">
 
-</x-layouts.user>
+</x-layouts.mentor>
