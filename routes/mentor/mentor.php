@@ -33,6 +33,7 @@ Route::name('mentor.')->group(function () {
                 });
 
                 Route::view('notifications', 'mentor.notifications')->name('notifications');
+                Route::view('support', 'mentor.support')->name('support');
             });
 
             Route::get('logput', [AuthController::class, 'logout'])->name('logout');

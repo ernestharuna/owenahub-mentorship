@@ -1,8 +1,8 @@
 <x-layouts.user>
     <div class="mt-2 container">
         <section class="py-3 mb-5 border-bottom">
-            <h2 class="fs-4 fw-bold text-dark">
-                <i class="bi bi-bell-fill text-secondary"></i> Notifications
+            <h2 class="fw-bold text-dark">
+                Notifications
             </h2>
         </section>
 

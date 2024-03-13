@@ -1,14 +1,17 @@
 <x-layouts.mentor>
     <section class="mt-4">
-        <p class="text-dark fw-bold mb-2">
-        <section class="mb-4">
-            <h2 class="fw-bold fs-2">
+        <section class="mb-4 d-flex align-items-center justify-content-between">
+            <h2 class="fw-bold fs-2 m-0">
                 {{-- {{ ucfirst(strtolower(Auth::user()->first_name)) }}
                 {{ ucfirst(strtolower(Auth::user()->last_name)) }} --}}
                 Dashboard
             </h2>
+            <div class="d-block d-md-none">
+                <a href="{{ route('mentor.support') }}" class="text-decoration-none text-dark">
+                    <i class="bi bi-gear me-2 fs-5 bg-body-secondary px-3 py-2 rounded-4 border"></i>
+                </a>
+            </div>
         </section>
-        </p>
     </section>
 
     <section class="mb-4 mt-5">

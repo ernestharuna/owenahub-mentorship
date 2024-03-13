@@ -1,8 +1,8 @@
-<x-layouts.user>
+<x-layouts.mentor>
     <div class="mt-2 container">
         <section class="py-3 mb-5 border-bottom">
             <h2 class="fs-4 fw-bold text-dark">
-                <i class="bi bi-gear-fill fs-5 text-secondary"></i> Support
+                <i class="bi bi-gear fs-5 text-secondary"></i> Support
             </h2>
         </section>
 
@@ -79,4 +79,4 @@
     </div>
 
     <hr class="opacity-0 my-5">
-</x-layouts.user>
+</x-layouts.mentor>
