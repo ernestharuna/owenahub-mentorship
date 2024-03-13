@@ -1,6 +1,8 @@
 <x-layouts.mentor>
     <div>
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
+            <x-status :status="$booking->status" />
+
             <h1 class="fw-bold">
                 Session with
                 <span class="text-secondary">{{ $booking->user->first_name }} {{ $booking->user->last_name }}</span>
@@ -39,7 +41,7 @@
                             $day = 'Someday';
                     }
                 @endphp
-                <div class="fw-semibold">
+                <div class="fw-semibold mb-3">
                     <div class="d-inline-block me-2">
                         <i class="bi bi-calendar3-week"></i>
                         {{ $day }}
@@ -50,6 +52,9 @@
                         {{ $booking->session->start_time }} — {{ $booking->session->end_time }}
                     </div>
                 </div>
+
+                <livewire:mentor.session-status :id="$booking->id" :current_status="$booking->status" />
+
                 <hr>
                 <div>
                     @forelse ($booking->booking_info as $info)
@@ -74,17 +79,27 @@
                         </p>
                     @endforelse
 
-                    <form action="{{ route('mentor.session.create-booking-info') }}" class="col-12 col-md-6 mt-4"
-                        method="POST">
-                        @csrf
-                        <input type="hidden" name="booking_id" value="{{ $booking->id }}">
-                        <input type="hidden" name="mentor_id" value="{{ auth()->id() }}">
-                        <textarea name="content" id="content" cols="30" rows="10" placeholder="Message"
-                            class="form-control mb-3 fw-semibold" required></textarea>
-                        <button class="btn btn-theme rounded-2 px-4 py-1 fw-semibold">
-                            Send <i class="bi bi-send ms-2"></i>
-                        </button>
-                    </form>
+                    @if ($booking->status === 'cancelled')
+                        <p class="m-0 text-danger">
+                            This meeting has been cancelled!
+                        </p>
+                    @elseif($booking->status === 'completed')
+                        <p class="mt-3 text-success bg-light-green d-inline fw-semibold rounded-3 p-2">
+                            Session complete 🎉
+                        </p>
+                    @else
+                        <form action="{{ route('mentor.session.create-booking-info') }}" class="col-12 col-md-6 mt-4"
+                            method="POST">
+                            @csrf
+                            <input type="hidden" name="booking_id" value="{{ $booking->id }}">
+                            <input type="hidden" name="mentor_id" value="{{ auth()->id() }}">
+                            <textarea name="content" id="content" cols="30" rows="10" placeholder="Message"
+                                class="form-control mb-3 fw-semibold rounded-3" required></textarea>
+                            <button class="btn btn-theme rounded-4 px-4 py-1 fw-semibold">
+                                Send <i class="bi bi-send ms-2"></i>
+                            </button>
+                        </form>
+                    @endif
                 </div>
             </div>
         </div>

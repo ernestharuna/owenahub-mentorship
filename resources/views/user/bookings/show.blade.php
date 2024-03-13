@@ -1,6 +1,7 @@
 <x-layouts.user>
     <div>
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
+            <x-status :status="$booking->status" />
             <h1 class="fw-bold">
                 Session with
                 <span class="text-secondary">{{ $booking->session->mentor->first_name }}</span>
@@ -75,17 +76,29 @@
                         </p>
                     @endforelse
 
-                    <form action="{{ route('user.session.create-booking-info') }}" class="col-12 col-md-6 mt-4"
-                        method="POST">
-                        @csrf
-                        <input type="hidden" name="booking_id" value="{{ $booking->id }}">
-                        <input type="hidden" name="user_id" value="{{ auth()->id() }}">
-                        <textarea name="content" id="content" cols="30" rows="10" placeholder="Message"
-                            class="form-control mb-3 fw-semibold" required></textarea>
-                        <button class="btn btn-theme rounded-2 px-4 py-1 fw-semibold">
-                            Send
-                        </button>
-                    </form>
+                    @if ($booking->status === 'cancelled')
+                        <p class="mt-3 text-danger">
+                            This meeting has been cancelled!
+                        </p>
+                    @elseif($booking->status === 'completed')
+                        <p class="mt-3 text-success bg-light-green d-inline fw-semibold rounded-3 p-2">
+                            Mentor considers this session completed! 😎🎉
+                        </p>
+                    @else
+                        <form action="{{ route('user.session.create-booking-info') }}" class="col-12 col-md-6 mt-4"
+                            method="POST">
+                            @csrf
+                            <input type="hidden" name="booking_id" value="{{ $booking->id }}">
+                            <input type="hidden" name="user_id" value="{{ auth()->id() }}">
+                            <textarea name="content" id="content" cols="30" rows="10" placeholder="Message"
+                                class="form-control mb-3 fw-semibold" required></textarea>
+                            <button class="btn btn-theme rounded-4 px-4 py-1 fw-semibold">
+                                Send <i class="bi bi-send ms-2"></i>
+                            </button>
+                        </form>
+                    @endif
+
+
                 </div>
             </div>
         </div>
