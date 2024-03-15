@@ -2,7 +2,7 @@
     <div class="">
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
             <div class="d-flex align-items-center gap-3">
-                <div style="width: 100px; max-width: 100px; min-height: 100px;">
+                <div style="width: 100px; max-width: 100px; height: 100px; max-height: 100px;">
                     @if ($mentor->social_handle && $mentor->social_handle->image_path)
                         <img src="{{ $mentor->social_handle->image_path }}" alt="..."
                             class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
@@ -143,6 +143,9 @@
                                                             <option value="Career advancement">
                                                                 Career advancement
                                                             </option>
+                                                            <option value="Ask AI">
+                                                                Ask AI
+                                                            </option>
                                                         </select>
                                                         <input type="hidden" name="session_id" id="session_id"
                                                             value="{{ $session->id }}">
@@ -176,9 +179,13 @@
                 <div class="rounded-4 p-3 mt-4 mt-md-0 bg-theme-light col-12 col-md-6">
                     <h2 class="fs-5 fw-semibold mb-3">Reviews</h2>
                     <div class="bg-white shadow p-2 rounded-4">
-                        @forelse ($mentor->mentorReview as $review)
-                            <div class="fs-tiny p-2 border-bottom">
-                                <h4 class="m-0 fs-6">{{ $review->user->first_name }}</h4>
+                        @forelse ($mentor->mentor_review as $review)
+                            <div class="fs-tiny p-2">
+                                <h4 class="m-0 fs-6">{{ $review->user->first_name }}
+                                    @if ($review->user_id === auth()->id())
+                                        <span class="fw-normal fs-tiny">(Me)</span>
+                                    @endif
+                                </h4>
                                 <div class="text-theme fs-tiny">
                                     <!-- for filled stars-->
                                     @for ($i = 0; $i < $review->rating; $i++)
@@ -190,10 +197,10 @@
                                         <i class="bi bi-star"></i>
                                     @endfor
                                 </div>
+                                <p class="m-0">
+                                    {{ $review->comment }}
+                                </p>
                             </div>
-                            <p class="m-0">
-                                {{ $review->comment }}
-                            </p>
                         @empty
                             <div class="fs-tiny p-2">
                                 <p class="m-0">

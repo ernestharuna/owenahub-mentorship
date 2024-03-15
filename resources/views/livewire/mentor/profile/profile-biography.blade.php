@@ -17,9 +17,6 @@
         <div class="mb-3">
             <label for="expertise" class="form-label fw-semibold m-0">Expertise</label>
             <select wire:model="expertise" id="expertise" class="form-control rounded-3 py-2 border-2 editable" disabled>
-                <option value="" selected disabled>
-                    Choose category
-                </option>
                 <option value="Software Engineer">
                     Software Engineer
                 </option>
@@ -27,19 +24,25 @@
                     Web Developer
                 </option>
                 <option value="Mobile Application Developer">
-                    Mobile Application Developer
+                    Mobile Developer
                 </option>
                 <option value="DevOps">
-                    DevOps
+                    DevOps Engineer
                 </option>
-                <option value="Product Management">
-                    Product Management
+                <option value="Product Manager">
+                    Product Manager
                 </option>
                 <option value="UI/UX Designer">
                     UI/UX Designer
                 </option>
-                <option value="Not sure yet">
-                    Not sure yet
+                <option value="Data Scientist">
+                    Data Scientist
+                </option>
+                <option value="Career Coach">
+                    Career Coach
+                </option>
+                <option value="Tech Enthusiast">
+                    Tech Enthusiast
                 </option>
             </select>
             @error('expertise')

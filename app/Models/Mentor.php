@@ -73,7 +73,7 @@ class Mentor extends Authenticatable implements MustVerifyEmail
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function mentorReview(): HasMany
+    public function mentor_review(): HasMany
     {
         return $this->hasMany(MentorReview::class);
     }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Booking;
 use App\Models\BookingInfo;
 use App\Models\Mentor;
+use App\Models\MentorReview;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -46,8 +47,11 @@ class SessionController extends Controller
      */
     public function show_booking(Booking $booking)
     {
+        $is_reviewed = Auth::user()->mentor_review()->where('mentor_id', $booking->session->mentor_id)->exists();
+        // dd($is_reviewed);
         return view('user.bookings.show', [
-            'booking' => $booking
+            'booking' => $booking,
+            'is_reviewed' => $is_reviewed
         ]);
     }
 
@@ -87,6 +91,9 @@ class SessionController extends Controller
         return redirect(route('user.session.index'))->with('status', 'Session booked!');
     }
 
+    /**
+     * Creates BookingInfo for a Booking
+     */
     public function create_bookingInfo(Request $request)
     {
         $data = $request->validate([
@@ -97,5 +104,21 @@ class SessionController extends Controller
         BookingInfo::create($data);
 
         return redirect()->back()->with('status', 'Sent!');
+    }
+
+    /**
+     * Create a review for the mentor of the session
+     */
+    public function create_mentor_review(Request $request)
+    {
+        $data = $request->validate([
+            'mentor_id' => 'required',
+            'rating' => 'required',
+            'comment' => 'required|max:250'
+        ]);
+
+        $request->user()->mentor_review()->create($data);
+
+        return redirect('/user/dashboard/mentors/' . $data['mentor_id'])->with('status', 'Review saved for this mentor!');
     }
 }

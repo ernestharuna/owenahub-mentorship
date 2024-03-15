@@ -29,7 +29,8 @@
                     }
                 @endphp
                 @if ($r_count > 0)
-                    You have <a href="{{ route('mentor.session.index') }}" class="text-purple ">{{ $r_count }}
+                    You have <a href="{{ route('mentor.session.index') }}"
+                        class="text-purple cta-animation-focus rounded">{{ $r_count }}
                         session requests</a>
                 @else
                     You have no session requests
@@ -43,17 +44,70 @@
         <div class="row mx-auto gap-4 justify-content-between">
             <section class="col-12 col-md-7 px-0">
                 <div class="p-3 bg-white shadow-sm border rounded-4">
-                    <h3 class="fw-bold fs-4 text-theme">Upcoming sessions</h3>
-                    <hr class="mb-4">
+                    <h3 class="fw-bold fs-4 text-theme mb-3">Upcoming sessions</h3>
+                    {{-- <hr class="mb-4"> --}}
                     <div>
-                        <p class="text-secondary">
-                            Sessions are unavailable at the moment.
-                        </p>
+                        <ol class="list-group list-group-numbered">
+                            @forelse ($sessions as $session)
+                                @php
+                                    $day;
+                                    switch ($session->week_day) {
+                                        case 1:
+                                            $day = 'Sunday';
+                                            break;
+                                        case 2:
+                                            $day = 'Monday';
+                                            break;
+                                        case 3:
+                                            $day = 'Tuesday';
+                                            break;
+                                        case 4:
+                                            $day = 'Wednesday';
+                                            break;
+                                        case 5:
+                                            $day = 'Thursday';
+                                            break;
+                                        case 6:
+                                            $day = 'Friday';
+                                            break;
+                                        case 7:
+                                            $day = 'Saturday';
+                                            break;
+                                        default:
+                                            $day = 'Someday';
+                                    }
+                                @endphp
+                                @forelse ($session->booking as $booking)
+                                    @if ($booking->status === 'confirmed')
+                                        <li
+                                            class="list-group-item d-flex justify-content-between align-items-start rounded-4">
+                                            <div class="ms-2 me-auto lh-sm">
+                                                <div class="fw-bold">{{ $booking->user->first_name }}</div>
+                                                {{ $booking->topic }}
+                                            </div>
+                                            <span class="badge bg-light-green text-success rounded-pill">
+                                                <i class="bi bi-check-circle"></i>
+                                                {{ $day }}
+                                            </span>
+                                        </li>
+                                    @endif
+                                @empty
+                                    <p class="text-seconadary p-2 bg-body-secondary rounded-3">
+                                        You're schedule is free
+                                    </p>
+                                @endforelse
+                            @empty
+                                <p class="text-seconadary p-2 bg-body-secondary rounded-3">
+                                    You're schedule is free
+                                </p>
+                            @endforelse
+                        </ol>
                     </div>
                     <div class="mt-2">
-                        <button class="btn btn-theme rounded-4 px-4 py-2 shadow-sm fw-semibold border-0 mt-1" disabled>
-                            <i class="bi bi-plus-circle me-1"></i> Create a session
-                        </button>
+                        <a href="{{ route('mentor.session.index') }}"
+                            class="btn  btn-theme rounded-4 px-4 py-2 shadow-sm fw-semibold border-0 mt-1">
+                            All bookings <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -66,13 +120,15 @@
                             @forelse ($sessions as $session)
                                 @foreach ($session->booking as $booking)
                                     @if ($booking->status === 'completed')
-                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <li
+                                            class="list-group-item d-flex justify-content-between align-items-start rounded-4 mb-1 border-0">
                                             <div class="ms-2 me-auto lh-sm">
                                                 <div class="fw-bold">{{ $booking->user->first_name }}</div>
                                                 {{ $booking->topic }}
                                             </div>
                                             <span class="badge text-bg-success rounded-pill">
                                                 <i class="bi bi-check-circle"></i>
+                                                Done
                                             </span>
                                         </li>
                                     @endif

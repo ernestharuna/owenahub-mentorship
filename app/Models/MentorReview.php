@@ -25,4 +25,14 @@ class MentorReview extends Model
     {
         return $this->belongsTo(Mentor::class);
     }
+
+    /**
+     * Get the mentor that owns the MentorReview
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }

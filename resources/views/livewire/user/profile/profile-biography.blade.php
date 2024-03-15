@@ -27,16 +27,22 @@
                     Web Developer
                 </option>
                 <option value="Mobile Application Developer">
-                    Mobile Application Developer
+                    Mobile Developer
                 </option>
                 <option value="DevOps">
-                    DevOps
+                    DevOps Engineer
                 </option>
-                <option value="Product Management">
-                    Product Management
+                <option value="Product Manager">
+                    Product Manager
                 </option>
                 <option value="UI/UX Designer">
                     UI/UX Designer
+                </option>
+                <option value="Data Scientist">
+                    Data Scientist
+                </option>
+                <option value="Tech Enthusiast">
+                    Tech Enthusiast
                 </option>
                 <option value="Not sure yet">
                     Not sure yet

@@ -1,4 +1,4 @@
-<div class="bg-theme rounded-3 p-2">
+<div class="bg-theme-light rounded-3 p-2">
     @if ($current_status === 'pending')
         <h3 class="fs-6 mb-3">Confirm your availability</h3>
         <div class="fs-tiny">
@@ -14,11 +14,71 @@
     @endif
 
     @if ($current_status === 'confirmed')
-        <h3 class="fs-6 mb-2">Are you done with this session?</h3>
-        <div>
-            <button wire:click="updateStatus('completed')" class="btn btn-sm btn-light rounded-4 px-4 fw-semibold me-2">
-                Yes
+        <div class="d-flex align-items-center justify-content-between">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-sm btn-dark rounded-3 px-3 py-2 fw-semibold" data-bs-toggle="modal"
+                data-bs-target="#createMeeting">
+                <i class="bi bi-check-circle-fill text-theme me-1"></i> Create meeting room
             </button>
+            <!-- Modal -->
+            <div class="modal fade" id="createMeeting" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-4">
+                        <div class="modal-header border border-0">
+                            <div>
+                                <h5 class="modal-title text-dark fw-bold" id="exampleModalLabel">
+                                    Create a meeting room
+                                </h5>
+                                <p class="m-0">Select your preferred option</p>
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <button class="btn btn-white border shadow-sm py-3 mb-3 rounded-4 w-100 fw-semibold">
+                                Zoom
+                            </button>
+                            <button class="btn btn-white border shadow-sm py-3 mb-3 rounded-4 w-100 fw-semibold"
+                                class="btn-close">
+                                Google meet
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-sm btn-light rounded-3 px-4 py-2 fw-semibold" data-bs-toggle="modal"
+                data-bs-target="#finishSession">
+                <i class="bi bi-check-circle-fill text-theme me-1"></i> Finish session
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="finishSession" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-4">
+                        <div class="modal-header border border-0">
+                            <p class="modal-title text-dark fw-bold" id="exampleModalLabel">
+                                Are you done with this Mentee? <br>
+                                <span class="text-red fw-normal">This action cannot be undone</span>
+                            </p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <button wire:click="updateStatus('completed')"
+                                class="btn btn-theme py-3 mb-3 rounded-4 w-100 fw-semibold">
+                                Yes
+                            </button>
+                            <button class="btn btn-white border shadow-sm py-3 mb-3 rounded-4 w-100 fw-semibold"
+                                class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                No
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     @endif
 </div>

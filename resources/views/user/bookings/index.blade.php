@@ -87,7 +87,7 @@
                         <x-mentor-card :mentor="$mentor" />
                     @empty
                         <p class="p-2 bg-f2 text-secondary">
-                            Slices Unavailable ☹
+                            Mentors Unavailable ☹
                         </p>
                     @endforelse
                 </div>

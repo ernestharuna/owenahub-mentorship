@@ -58,6 +58,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Booking::class);
     }
 
+    public function mentor_review(): HasMany
+    {
+        return $this->hasMany(MentorReview::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
