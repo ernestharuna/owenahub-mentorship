@@ -1,7 +1,13 @@
 <x-layouts.user>
-    <div>
-        <div class="my-5 p-3 bg-white shadow-sm rounded-4 border" />
-        <livewire:user.search-mentor />
+    <div class="mb-5 mt-4">
+        <h2 class="fw-bold fs-2 mb-4">
+            {{-- {{ ucfirst(strtolower(Auth::user()->first_name)) }}
+            {{ ucfirst(strtolower(Auth::user()->last_name)) }} --}}
+            Mentors
+        </h2>
+        <div class="mb-5 p-3 bg-white shadow-sm rounded-4 border">
+            <livewire:user.search-mentor />
+        </div>
     </div>
 
     <div class="bg-theme rounded-4">
@@ -16,8 +22,8 @@
                 </div>
                 <div class="text-center">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn rounded-3 btn-light shadow text-dark fw-bold" data-bs-toggle="modal"
-                        data-bs-target="#joinCommunity">
+                    <button type="button" class="btn rounded-3 btn-light shadow text-dark fw-bold"
+                        data-bs-toggle="modal" data-bs-target="#joinCommunity">
                         Check Us Out! 🤙🏽
                     </button>
 

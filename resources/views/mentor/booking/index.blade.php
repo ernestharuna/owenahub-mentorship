@@ -48,14 +48,13 @@
                                     $day = 'Someday';
                             }
                         @endphp
-                        <div class="col-12 col-md-5 border p-3 rounded-3 shadow-sm">
-                            {{-- <x-status :status="$booking->status" /> --}}
+                        <div class="col-12 col-md-5 p-3 rounded-3 shadow-sm bg-theme-light">
                             <h5> {{ $day }}</h5>
                             <div class="fw-semibold">
 
                             </div>
                             <div class="mt-3">
-                                <ol class="list-group list-group-numbered">
+                                <ol class="list-group list-group-numbered border border-0">
                                     @forelse ($session->booking as $booking)
                                         <li class="list-group-item d-flex justify-content-between align-items-start">
                                             <div class="ms-2 me-auto lh-sm">

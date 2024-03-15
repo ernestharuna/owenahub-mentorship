@@ -39,17 +39,7 @@
         </div>
     </section>
 
-    <livewire:mentor.complete-profile />
-
-    <section class="my-4">
-        <div class="bg-white shadow-sm border rounded-4 p-3">
-            <h3 class="fw-bold fs-4 text-dark">Recommended for you</h3>
-            <hr class="mb-4">
-            <livewire:recommended-articles />
-        </div>
-    </section>
-
-    <div class="bg-theme-light shadow-sm rounded-4 mt-2 p-3">
+    <div class="bg-theme-light shadow-sm rounded-4 mt-4 p-3">
         <div class="row mx-auto gap-4 justify-content-between">
             <section class="col-12 col-md-7 px-0">
                 <div class="p-3 bg-white shadow-sm border rounded-4">
@@ -72,14 +62,42 @@
                 <div class="">
                     <h3 class="fw-bold fs-4 text-dark">Recent sessions</h3>
                     <div class="mt-3">
-                        <p class="text-seconadary p-2 bg-white rounded-3 shadow-sm">
-                            No sessions yet
-                        </p>
+                        <ol class="list-group list-group-numbered">
+                            @forelse ($sessions as $session)
+                                @foreach ($session->booking as $booking)
+                                    @if ($booking->status === 'completed')
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto lh-sm">
+                                                <div class="fw-bold">{{ $booking->user->first_name }}</div>
+                                                {{ $booking->topic }}
+                                            </div>
+                                            <span class="badge text-bg-success rounded-pill">
+                                                <i class="bi bi-check-circle"></i>
+                                            </span>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @empty
+                                <p class="text-seconadary p-2 bg-white rounded-3 shadow-sm">
+                                    No sessions yet...
+                                </p>
+                            @endforelse
+                        </ol>
                     </div>
                 </div>
             </section>
         </div>
     </div>
+
+    <livewire:mentor.complete-profile />
+
+    <section class="my-4">
+        <div class="bg-white shadow-sm border rounded-4 p-3">
+            <h3 class="fw-bold fs-4 text-dark">Recommended for you</h3>
+            <hr class="mb-4">
+            <livewire:recommended-articles />
+        </div>
+    </section>
 
     <hr class="opacity-0 my-5">
 </x-layouts.mentor>

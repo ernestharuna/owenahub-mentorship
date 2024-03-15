@@ -30,7 +30,7 @@ Route::name('user.')->group(function () {
                     });
                 });
 
-                Route::prefix('mentor')->group(function () {
+                Route::prefix('mentors')->group(function () {
                     Route::name('mentor.')->group(function () {
                         Route::get('/', [SessionController::class, 'all_mentors'])->name('index');
                         Route::get('{mentor}', [SessionController::class, 'show_mentor'])->name('show');

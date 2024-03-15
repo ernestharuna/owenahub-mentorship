@@ -2,7 +2,7 @@
     <div class="">
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
             <div class="d-flex align-items-center gap-3">
-                <div class="" style="min-width: 100px; min-height: 100px; max-width: 100px">
+                <div style="width: 100px; max-width: 100px; min-height: 100px;">
                     @if ($mentor->social_handle && $mentor->social_handle->image_path)
                         <img src="{{ $mentor->social_handle->image_path }}" alt="..."
                             class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">

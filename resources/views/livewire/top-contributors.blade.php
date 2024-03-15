@@ -1,7 +1,7 @@
 <div>
     @forelse ($mentors as $mentor)
-        <div class="bg-theme-light rounded-4 p-2 shadow-sm d-flex align-items-center gap-2">
-            <div style="min-width: 40px; min-height: 40px; max-width: 40px">
+        <div class="bg-body-secondary rounded-4 p-2 shadow-sm d-flex align-items-center gap-2 mb-2">
+            <div style="width: 40px; height: 40px; max-width: 40px">
                 @if ($mentor->social_handle && $mentor->social_handle->image_path)
                     <img src="{{ $mentor->social_handle->image_path }}" alt="..."
                         class="border d-block img-fluid w-100 rounded-4 object-fit-cover border-2 border-danger shadow-sm">
