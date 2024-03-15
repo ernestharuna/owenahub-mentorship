@@ -5,7 +5,8 @@
                 <div class="card h-100 border-0 bg-body-tertiary shadow-sm rounded-3">
                     <div class="card-body">
                         <h5 class="card-title m-0 fs-6">
-                            John Doe
+                            {{ $review->user->first_name }}
+                            {{ $review->user->last_name }}
                         </h5>
                         <div class="fs-tiny">
                             <i class="bi bi-star-fill text-theme"></i>

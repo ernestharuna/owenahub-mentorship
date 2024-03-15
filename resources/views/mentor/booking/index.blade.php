@@ -55,7 +55,7 @@
                             </div>
                             <div class="mt-3">
                                 <ol class="list-group list-group-numbered border border-0">
-                                    @forelse ($session->booking as $booking)
+                                    @forelse ($session->booking->reverse() as $booking)
                                         <li class="list-group-item d-flex justify-content-between align-items-start">
                                             <div class="ms-2 me-auto lh-sm">
                                                 <a href="{{ route('mentor.session.show', $booking->id) }}"

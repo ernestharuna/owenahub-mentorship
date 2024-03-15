@@ -18,7 +18,7 @@
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-sm btn-dark rounded-3 px-3 py-2 fw-semibold" data-bs-toggle="modal"
                 data-bs-target="#createMeeting">
-                <i class="bi bi-check-circle-fill text-theme me-1"></i> Create meeting room
+                Create meeting room
             </button>
             <!-- Modal -->
             <div class="modal fade" id="createMeeting" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -39,10 +39,11 @@
                             <button class="btn btn-white border shadow-sm py-3 mb-3 rounded-4 w-100 fw-semibold">
                                 Zoom
                             </button>
-                            <button class="btn btn-white border shadow-sm py-3 mb-3 rounded-4 w-100 fw-semibold"
+                            <a href="https://meet.google.com"
+                                class="btn btn-white border shadow-sm py-3 mb-3 rounded-4 w-100 fw-semibold"
                                 class="btn-close">
                                 Google meet
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
