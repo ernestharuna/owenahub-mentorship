@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Mentor;
 
+use App\Events\BookingConfirmed;
 use App\Models\Booking;
 use Livewire\Component;
 
@@ -12,9 +13,11 @@ class SessionStatus extends Component
 
     public function updateStatus($status)
     {
-        Booking::where('id', $this->id)->update([
-            'status' => $status
-        ]);
+        $booking = Booking::find($this->id);
+        $booking->status = $status;
+        $booking->save();
+
+        event(new BookingConfirmed($booking));
 
         return redirect('/mentor/dashboard/sessions/bookings/' . $this->id)->with('status', "Booking status updated 👌🏾");
     }

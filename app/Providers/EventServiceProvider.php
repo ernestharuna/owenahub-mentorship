@@ -3,7 +3,12 @@
 namespace App\Providers;
 
 // use Illuminate\Support\Facades\Event;
+
+use App\Events\BookingConfirmed;
+use App\Events\BookingCreated;
 use App\Listeners\LogVerifiedUser;
+use App\Listeners\SendBookingConfirmedNotifications;
+use App\Listeners\SendBookingCreatedNotifications;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -20,6 +25,12 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        BookingCreated::class => [
+            SendBookingCreatedNotifications::class
+        ],
+        BookingConfirmed::class => [
+            SendBookingConfirmedNotifications::class
+        ]
         // Verified::class => [
         //     LogVerifiedUser::class,
         // ],

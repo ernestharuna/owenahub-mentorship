@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Events\BookingConfirmed;
+use App\Events\BookingCreated;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -16,6 +18,11 @@ class Booking extends Model
         'user_id',
         'topic',
         'status'
+    ];
+
+    protected $dispatchesEvents = [
+        'created' => BookingCreated::class,
+        'updated' => BookingConfirmed::class
     ];
 
     /**

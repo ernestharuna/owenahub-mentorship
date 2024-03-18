@@ -143,8 +143,20 @@
                                                             <option value="Career advancement">
                                                                 Career advancement
                                                             </option>
-                                                            <option value="Ask AI">
-                                                                Ask AI
+                                                            <option value="Resume and interview prepartion">
+                                                                Resume and interview prepartion
+                                                            </option>
+                                                            <option value="Entrepreneurship">
+                                                                Entrepreneurship
+                                                            </option>
+                                                            <option value="Work-life balance">
+                                                                Work-life balance
+                                                            </option>
+                                                            <option value="Industry insight">
+                                                                Industry insight
+                                                            </option>
+                                                            <option value="Technical skill development">
+                                                                Technical skill development
                                                             </option>
                                                         </select>
                                                         <input type="hidden" name="session_id" id="session_id"

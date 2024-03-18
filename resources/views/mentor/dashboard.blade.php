@@ -48,7 +48,11 @@
                     {{-- <hr class="mb-4"> --}}
                     <div>
                         <ol class="list-group list-group-numbered">
-                            @forelse ($sessions as $session)
+                            @php
+                                $noConfirmedBookings = true;
+                            @endphp
+
+                            @foreach ($sessions as $session)
                                 @php
                                     $day;
                                     switch ($session->week_day) {
@@ -77,10 +81,11 @@
                                             $day = 'Someday';
                                     }
                                 @endphp
-                                @forelse ($session->booking as $booking)
-                                    @if ($booking->status === 'confirmed')
+
+                                @if ($session->booking->where('status', 'confirmed')->count() > 0)
+                                    @foreach ($session->booking->where('status', 'confirmed') as $booking)
                                         <li
-                                            class="list-group-item d-flex justify-content-between align-items-start rounded-4">
+                                            class="list-group-item d-flex justify-content-between align-items-start mb-1">
                                             <div class="ms-2 me-auto lh-sm">
                                                 <div class="fw-bold">{{ $booking->user->first_name }}</div>
                                                 {{ $booking->topic }}
@@ -90,17 +95,19 @@
                                                 {{ $day }}
                                             </span>
                                         </li>
-                                    @endif
-                                @empty
-                                    <p class="text-seconadary p-2 bg-body-secondary rounded-3">
-                                        You're schedule is free
-                                    </p>
-                                @endforelse
-                            @empty
-                                <p class="text-seconadary p-2 bg-body-secondary rounded-3">
-                                    You're schedule is free
+                                    @endforeach
+                                    @php
+                                        $noConfirmedBookings = false;
+                                    @endphp
+                                @endif
+                            @endforeach
+
+                            @if ($noConfirmedBookings)
+                                <p class="text-secondary p-2 bg-body-secondary rounded-3">
+                                    Your schedule is free
                                 </p>
-                            @endforelse
+                            @endif
+
                         </ol>
                     </div>
                     <div class="mt-2">
@@ -121,7 +128,7 @@
                                 @foreach ($session->booking as $booking)
                                     @if ($booking->status === 'completed')
                                         <li
-                                            class="list-group-item d-flex justify-content-between align-items-start rounded-4 mb-1 border-0">
+                                            class="list-group-item d-flex justify-content-between align-items-start mb-1 border-0">
                                             <div class="ms-2 me-auto lh-sm">
                                                 <div class="fw-bold">{{ $booking->user->first_name }}</div>
                                                 {{ $booking->topic }}

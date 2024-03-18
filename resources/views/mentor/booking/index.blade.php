@@ -56,7 +56,8 @@
                             <div class="mt-3">
                                 <ol class="list-group list-group-numbered border border-0">
                                     @forelse ($session->booking->reverse() as $booking)
-                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <li
+                                            class="list-group-item d-flex justify-content-between align-items-start position-relative">
                                             <div class="ms-2 me-auto lh-sm">
                                                 <a href="{{ route('mentor.session.show', $booking->id) }}"
                                                     class="text-dark text-decoration-none">
@@ -69,6 +70,13 @@
                                             <span>
                                                 <x-status :status="$booking->status" />
                                             </span>
+                                            @if ($booking->booking_info->count() > 0)
+                                                <span title="{{ $booking->booking_info->count() }} chats exchanged"
+                                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    {{ $booking->booking_info->count() }}
+                                                    <span class="visually-hidden">unread messages</span>
+                                                </span>
+                                            @endif
                                         </li>
                                     @empty
                                         <p class="m-0 text-secondary fw-semibold">
