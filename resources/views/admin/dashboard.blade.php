@@ -48,10 +48,10 @@
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title fw-bold text-secondary m-0 fs-6">
-                                OweaHub Teams
+                                Session bookings
                             </h5>
                             <p class="card-text mb-1">
-                                <b class="fs-4">5 teams</b> active
+                                <b class="fs-4">{{ $bookings }}</b> bookings
                             </p>
                             <a href="#" class="btn btn-theme rounded-1 px-4">
                                 See Teams

@@ -1,12 +1,15 @@
 <div class="bg-theme-light rounded-3 p-2">
     @if ($current_status === 'pending')
-        <h3 class="fs-6 mb-3">Confirm your availability</h3>
+        <h3 class="fs-6 mb-3">Confirm your availability
+            <i style="font-size: 10px" class="fw-semibold text-red ms-2" wire:loading>Sending a mail to your mentee...</i>
+        </h3>
         <div class="fs-tiny">
-            <button wire:click="updateStatus('confirmed')"
+            <button wire:click="updateStatus('confirmed')" wire:loading.attr="disabled"
                 class="btn btn-sm btn-success text-white rounded-2 px-3 fw-semibold me-2">
                 I'm available
             </button>
-            <button wire:click="updateStatus('cancelled')"
+
+            <button wire:click="updateStatus('cancelled')" wire:loading.attr="disabled"
                 class="btn btn-sm btn-danger text-white rounded-2 px-3 fw-semibold">
                 Not availabale
             </button>

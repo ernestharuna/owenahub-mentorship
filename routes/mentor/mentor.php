@@ -8,10 +8,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::name('mentor.')->group(function () {
     Route::prefix('mentor')->group(function () {
-        Route::middleware(['auth:mentor'])->group(function () {
+        Route::view('account-pending', 'mentor.unverified-mentor')->name('unverified');
+        Route::middleware('auth:mentor')->group(function () {
 
             Route::prefix('dashboard')->group(function () {
-                Route::get('/', MentorDashboardController::class)->name('dashboard');
+                Route::get('/', MentorDashboardController::class)->name('dashboard')->middleware('verified.mentor');
 
                 Route::prefix('profile')->group(function () {
                     Route::name('profile.')->group(function () {
@@ -24,11 +25,13 @@ Route::name('mentor.')->group(function () {
                     });
                 });
 
-                Route::prefix('sessions')->group(function () {
-                    Route::name('session.')->group(function () {
-                        Route::get('bookings', [SessionController::class, 'index'])->name('index');
-                        Route::get('bookings/{booking}', [SessionController::class, 'show_booking'])->name('show');
-                        Route::post('create_bookingInfo', [SessionController::class, 'create_bookingInfo'])->name('create-booking-info');
+                Route::middleware('verified.mentor')->group(function () {
+                    Route::prefix('sessions')->group(function () {
+                        Route::name('session.')->group(function () {
+                            Route::get('bookings', [SessionController::class, 'index'])->name('index');
+                            Route::get('bookings/{booking}', [SessionController::class, 'show_booking'])->name('show');
+                            Route::post('create_bookingInfo', [SessionController::class, 'create_bookingInfo'])->name('create-booking-info');
+                        });
                     });
                 });
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\SliceController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FeaturedArticleController;
+use App\Http\Controllers\Admin\MentorController;
 
 Route::name('admin.')->group(function () {
     Route::prefix('admin')->group(function () {
@@ -68,6 +69,14 @@ Route::name('admin.')->group(function () {
                         Route::patch('{article}/update', [FeaturedArticleController::class, 'update'])->name('update');
                         Route::get('{article}/edit', [FeaturedArticleController::class, 'show'])->name('edit');
                         Route::delete('{article}/delete', [FeaturedArticleController::class, 'delete'])->name('delete');
+                    });
+                });
+
+                // Featured Articles
+                Route::prefix('mentors')->group(function () {
+                    Route::name('mentors.')->group(function () {
+                        Route::view('/', 'admin.mentors.index')->name('index');
+                        Route::get('{mentor}', [MentorController::class, 'show'])->name('show');
                     });
                 });
 

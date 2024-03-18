@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Article;
 // use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use App\Models\FeaturedArticles;
 use App\Models\Mentor;
 use App\Models\Slice;
@@ -14,21 +15,31 @@ class DashboardController extends Controller
 {
     public function __invoke()
     {
-        // $articles = Article::get();
+        // Articles count
         $article_count = Article::count();
 
+        // Get featured articles
         $feat_articles = FeaturedArticles::get();
 
-        $slices = Slice::latest()->limit(5)->get();
-        $slice_count = $slices->count();
+        // Slices count
+        $slice_count = Slice::count();
 
-        $users = User::latest()->get();
+        /**
+         * Get all users - verified & unverified
+         */
+        $users = User::get();
         $verified_users = $users->where('email_verified_at', '!=', null)->count();
         $unverified_users = $users->where('email_verified_at', null)->count();
 
-        $mentors = Mentor::latest()->get();
+        /**
+         * Get all Mentors - verified & unverified
+         */
+        $mentors = Mentor::get();
         $verified_mentors = $mentors->where('email_verified_at', '!=', null)->count();
         $unverified_mentors = $mentors->where('email_verified_at', null)->count();
+
+        // 
+        $bookings = Booking::count();
 
         return view('admin.dashboard', [
             // 'articles' => $articles,
@@ -36,7 +47,7 @@ class DashboardController extends Controller
 
             'feat_articles' => $feat_articles,
 
-            'slices' => $slices,
+            // 'slices' => $slices,
             'slice_count' => $slice_count,
 
             'all_users' => $users->count(),
@@ -46,6 +57,8 @@ class DashboardController extends Controller
             'all_mentors' => $mentors->count(),
             'verified_mentors' => $verified_mentors,
             'unverified_mentors' => $unverified_mentors,
+
+            'bookings' => $bookings
         ]);
     }
 }

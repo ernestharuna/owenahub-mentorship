@@ -10,8 +10,12 @@ class MiscInfo extends Model
     use HasFactory;
 
     protected $fillable = [
+        'gender',
         'expertise',
+        'company',
+        'role',
         'skills',
+        'country',
         'bio'
     ];
 }

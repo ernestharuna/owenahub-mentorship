@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Mentor\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Mentor\AuthController;
 
 Route::name('mentor.')->group(function () {
     Route::prefix('mentor')->group(function () {
