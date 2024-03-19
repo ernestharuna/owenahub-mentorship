@@ -53,8 +53,9 @@
                             <p class="card-text mb-1">
                                 <b class="fs-4">{{ $bookings }}</b> bookings
                             </p>
-                            <a href="#" class="btn btn-theme rounded-1 px-4">
-                                See Teams
+                            <a href="{{ route('admin.mentors.index') }}"
+                                class="btn btn-theme text-white rounded-1 px-4">
+                                See Mentors
                             </a>
                         </div>
                     </div>

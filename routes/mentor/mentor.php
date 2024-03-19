@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::name('mentor.')->group(function () {
     Route::prefix('mentor')->group(function () {
-        Route::view('account-pending', 'mentor.unverified-mentor')->name('unverified');
         Route::middleware('auth:mentor')->group(function () {
+            Route::view('account-pending', 'mentor.unverified-mentor')->name('unverified');
 
             Route::prefix('dashboard')->group(function () {
                 Route::get('/', MentorDashboardController::class)->name('dashboard')->middleware('verified.mentor');

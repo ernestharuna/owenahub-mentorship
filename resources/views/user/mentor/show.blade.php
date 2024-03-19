@@ -1,50 +1,65 @@
 <x-layouts.user>
     <div class="">
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
-            <div class="d-flex align-items-center gap-3">
-                <div style="width: 100px; max-width: 100px; height: 100px; max-height: 100px;">
-                    @if ($mentor->social_handle && $mentor->social_handle->image_path)
-                        <img src="{{ $mentor->social_handle->image_path }}" alt="..."
-                            class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
-                    @else
-                        <img src="{{ asset('images/default-dp.png') }}" alt="..."
-                            class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
-                    @endif
+            <div class="d-md-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 100px; max-width: 100px; height: 100px; max-height: 100px;">
+                        @if ($mentor->social_handle && $mentor->social_handle->image_path)
+                            <img src="{{ $mentor->social_handle->image_path }}" alt="..."
+                                class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
+                        @else
+                            <img src="{{ asset('images/default-dp.png') }}" alt="..."
+                                class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
+                        @endif
+                    </div>
+                    <div>
+                        <h1 class="fs-2 fw-bold m-0">
+                            {{ $mentor->first_name }} {{ $mentor->last_name }}
+                        </h1>
+                        <p class="m-0">
+                            {{ $mentor->misc_info ? $mentor->misc_info->expertise : 'New mentor' }}
+                        </p>
+                    </div>
                 </div>
                 <div>
-                    <h1 class="fs-2 fw-bold m-0">
-                        {{ $mentor->first_name }} {{ $mentor->last_name }}
-                    </h1>
-                    <p class="m-0">
-                        {{ $mentor->misc_info ? $mentor->misc_info->expertise : 'New mentor' }}
-                    </p>
+                    @if ($mentor->social_handle)
+                        <div class="fs-4 social-links">
+                            @isset($mentor->social_handle->linkedin)
+                                <a href="{{ $mentor->social_handle->linkedin }}" target="_blank"
+                                    class="linkedin text-decoration-none text-white p-1 ms-1 rounded-1 fs-tiny">
+                                    <i class="ms-1 bi bi-linkedin"></i> linkedin
+                                </a>
+                            @endisset
+                            @isset($mentor->social_handle->x_twitter)
+                                <a href="{{ $mentor->social_handle->x_twitter }}" target="_blank"
+                                    class="bg-dark text-decoration-none text-white p-1 ms-1 rounded-1 fs-tiny">
+                                    <i class="ms-1 bi bi-twitter-x"></i> (twitter)
+                                </a>
+                            @endisset
+                            @isset($mentor->social_handle->isntagram)
+                                <a href="{{ $mentor->social_handle->instagram }}" target="_blank"
+                                    class="instagram text-decoration-none text-white p-1 ms-1 rounded-1 fs-tiny">
+                                    <i class="m-0 bi bi-instagram"></i> instagram
+                                </a>
+                            @endisset
+                            @isset($mentor->social_handle->facebook)
+                                <a href="{{ $mentor->social_handle->facebook }}" target="_blank"
+                                    class="facebook text-decoration-none text-white p-1 ms-1 rounded-1 fs-tiny">
+                                    <i class="m-0 bi bi-facebook"></i> facebook
+                                </a>
+                            @endisset
+                        </div>
+                    @endif
                 </div>
             </div>
 
-            <div class="mt-5 row mx-auto justify-content-between">
+            <div class="mt-4 row mx-auto justify-content-between">
                 <div class="col-12 col-md-6 pe-md-5">
                     <h2 class="fs-5 fw-semibold">Overview</h2>
                     <hr>
                     <p>
                         {!! $mentor->misc_info ? nl2br($mentor->misc_info->bio) : 'No information' !!}
                     </p>
-
-                    @if ($mentor->social_handle)
-                        <div class="fs-4 social-links">
-                            @isset($mentor->social_handle->linkedin)
-                                <i class="bi bi-linkedin me-2 linkedin text-white rounded px-2 py-1"></i>
-                            @endisset
-                            @isset($mentor->social_handle->x_twitter)
-                                <i class="bi bi-twitter-x me-2 bg-dark text-white rounded px-2 py-1"></i>
-                            @endisset
-                            @isset($mentor->social_handle->isntagram)
-                                <i class="bi bi-isntagram me-2 instagram text-white rounded px-2 py-1"></i>
-                            @endisset
-                            @isset($mentor->social_handle->facebook)
-                                <i class="bi bi-facebook me-2 facebook text-white rounded px-2 py-1"></i>
-                            @endisset
-                        </div>
-                    @endif
 
                     <div class="mt-4">
                         <h3 class="fs-6">Available sessions</h3>

@@ -26,7 +26,16 @@
             @endif
         </div>
         <div class="card-body mb-2 px-2 py-0">
-            <h5 class="card-title fw-semibold fs-5 m-0">{{ $mentor->first_name }} {{ $mentor->last_name }}</h5>
+            <h5 class="card-title fw-semibold fs-5 m-0">
+                {{ $mentor->first_name }} {{ $mentor->last_name }}
+                <span class="fs-tiny">
+                    @if ($mentor->email_verified_at)
+                        <span class="p-1 bg-light-green text-success py-0 rounded">approved</span>
+                    @else
+                        <span class="p-1 bg-danger-subtle text-danger py-0 rounded">suspended</span>
+                    @endif
+                </span>
+            </h5>
             <div class="mb-2">
                 <p class="m-0">
                     <i class="bi bi-briefcase me-1 fs-5" style="position: relative; top:2px;"></i>

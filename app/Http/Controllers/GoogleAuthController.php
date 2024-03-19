@@ -74,7 +74,7 @@ class GoogleAuthController extends Controller
                                 "first_name" => $user->user["given_name"] ?? $user->email,
                                 "last_name" => $user->user["family_name"] ?? " ",
                                 "email" => $user->email,
-                                "email_verified_at" => Carbon::now(),
+                                "email_verified_at" => null,
                                 "password" => bcrypt(request(Str::random(8))),
                             ]);
 

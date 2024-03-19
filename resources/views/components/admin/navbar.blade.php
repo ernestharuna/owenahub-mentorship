@@ -41,7 +41,8 @@
                                     Create storage link
                                 </a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Manage Mentors</a></li>
+                            <li><a class="dropdown-item" href="{{ route('admin.mentors.index') }}">Manage Mentors</a>
+                            </li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

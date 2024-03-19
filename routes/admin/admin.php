@@ -72,11 +72,13 @@ Route::name('admin.')->group(function () {
                     });
                 });
 
-                // Featured Articles
+                // Mentors
                 Route::prefix('mentors')->group(function () {
                     Route::name('mentors.')->group(function () {
                         Route::view('/', 'admin.mentors.index')->name('index');
                         Route::get('{mentor}', [MentorController::class, 'show'])->name('show');
+                        Route::patch('{mentor}/profile/approve', [MentorController::class, 'approve'])->name('approve.profile');
+                        Route::patch('{mentor}/profile/suspend', [MentorController::class, 'suspend'])->name('suspend.profile');
                     });
                 });
 

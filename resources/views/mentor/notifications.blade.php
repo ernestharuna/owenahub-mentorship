@@ -1,6 +1,6 @@
 <x-layouts.mentor>
     <div class="mt-2 container">
-        <section class="py-3 mb-5 border-bottom">
+        <section class="py-3 mb-4">
             <h2 class="fw-bold text-dark">
                 Notifications
             </h2>

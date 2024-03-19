@@ -47,8 +47,8 @@ class SessionController extends Controller
      */
     public function show_booking(Booking $booking)
     {
+        // Check if the current user has reviewed the mentor associated with the booking
         $is_reviewed = Auth::user()->mentor_review()->where('mentor_id', $booking->session->mentor_id)->exists();
-        // dd($is_reviewed);
         return view('user.bookings.show', [
             'booking' => $booking,
             'is_reviewed' => $is_reviewed

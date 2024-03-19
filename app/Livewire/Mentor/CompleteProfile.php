@@ -45,7 +45,7 @@ class CompleteProfile extends Component
         /**
          * Checks if misc_info table exists
          */
-        if (Auth::user()->misc_info) {
+        if (Auth::guard('mentor')->user()->misc_info) {
             $this->bio_complete = true;
         } else {
             $this->bio_complete = false;
@@ -54,8 +54,8 @@ class CompleteProfile extends Component
         /**
          * Checks if social handle is present
          */
-        if (Auth::user()->social_handle) {
-            if (Auth::user()->social_handle->linkedin && Auth::user()->social_handle->x_twitter) {
+        if (Auth::guard('mentor')->user()->social_handle) {
+            if (Auth::guard('mentor')->user()->social_handle->linkedin && Auth::guard('mentor')->user()->social_handle->x_twitter) {
                 $this->social_complete = true;
             }
         } else {
@@ -65,7 +65,7 @@ class CompleteProfile extends Component
         /**
          *  Checks if mentor has set sessions
          */
-        if (Auth::user()->session->count() > 0) {
+        if (Auth::guard('mentor')->user()->session->count() > 0) {
             $this->session_complete = true;
         } else {
             $this->session_complete = false;

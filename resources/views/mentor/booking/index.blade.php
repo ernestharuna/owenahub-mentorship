@@ -13,8 +13,8 @@
                 </div>
             </div>
             <p class="lh-sm fw-semibold">
-                The session timings are following your local timezone <span class="text-red fw-semibold">Africa/Lagos
-                </span>
+                Our session timings follow <span class="text-red fw-semibold">Africa/Lagos
+                </span> timezone
             </p>
 
             <div class="mt-4">
@@ -88,7 +88,8 @@
                         </div>
                     @empty
                         <p class="m-0 p-2 text-secondary bg-body-secondary rounded-2 ">
-                            You have no upcoming bookings 🙂
+                            Set your availability to enable mentees to schedule appointments with you <br>
+                            <a href="{{ route('mentor.profile.availability') }}" class="fw-semibold">Get started</a>
                         </p>
                     @endforelse
 

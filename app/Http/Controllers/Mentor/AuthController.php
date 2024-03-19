@@ -40,7 +40,6 @@ class AuthController extends Controller
                 'password' => Hash::make($data['password'])
             ]);
 
-            event(new Registered($mentor));
             Auth::login($mentor);
             return redirect(route('mentor.dashboard'))->with('status', 'Welcome to OwenaHub! 🎉');
         } catch (\Exception $e) {
