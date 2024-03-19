@@ -13,6 +13,7 @@ class SearchMentor extends Component
     {
         return view('livewire.user.search-mentor', [
             'mentors' => Mentor::search($this->search),
+            'mentors' => Mentor::search($this->search)->where('email_verified_at', '!=', null),
             'search' => $this->search
         ]);
     }

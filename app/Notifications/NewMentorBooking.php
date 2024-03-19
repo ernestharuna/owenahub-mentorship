@@ -40,7 +40,8 @@ class NewMentorBooking extends Notification
             ->subject("OwenaHub: Session request")
             ->greeting("{$this->booking->topic} session!")
             ->line("{$this->booking->user->first_name} wants to connect with you and talk about " . Str::limit($this->booking->topic))
-            ->action('Message mentee', url('/mentor/dashboard'))
+            ->action('Message mentee', url('/mentor/dashboard/sessions/bookings/' . $this->booking->id))
+            ->line("Wishing you both a productive and insightful session!")
             ->line('Have a great time!');
     }
 

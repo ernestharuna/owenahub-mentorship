@@ -41,7 +41,7 @@ class NewUserBooking extends Notification
             ->greeting("Upcoming meeting with {$this->booking->session->mentor->first_name}")
             ->line("You have a pending request session with {$this->booking->session->mentor->first_name}. You can meet with your mentor when they've confirmed your booking")
             ->line("Endeavor to check back regularly to view your booking status")
-            ->action('Message mentor', url('/user/dashboard'))
+            ->action('Message mentor', url('/user/dashboard/sessions/bookings' . $this->booking->id))
             ->line('Have a great time!');
     }
 

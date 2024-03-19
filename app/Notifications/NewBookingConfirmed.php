@@ -36,12 +36,13 @@ class NewBookingConfirmed extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject("Congratulations! Session Confirmed!")
+            ->subject("Congratulations! Session Confirmed 🧡")
             ->greeting("Congratulations, {$this->booking->user->first_name}!")
-            ->line("{$this->booking->session->mentor->first_name} has accepted your request to meet—Make sure to be early.")
-            ->line("You can set a reminder on a to-do app or a calender so you don't miss the date")
+            ->line("We're thrilled to inform you that {$this->booking->session->mentor->first_name} has accepted your meeting request ✨.")
+            ->line("Be sure to arrive early and make the most of this opportunity 😎👌🏾.")
+            ->line("Consider setting a reminder on your favorite to-do app or calendar to ensure you don't miss the scheduled date.")
             ->action('Meet your mentor', url('/user/dashboard/sessions/bookings/' . $this->booking->id))
-            ->line('Have a great time! 🎉');
+            ->line('Wishing you a fruitful session! 🎉');
     }
 
     /**

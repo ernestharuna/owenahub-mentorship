@@ -22,7 +22,7 @@ class Booking extends Model
 
     protected $dispatchesEvents = [
         'created' => BookingCreated::class,
-        'updated' => BookingConfirmed::class
+        // 'updated' => BookingConfirmed::class
     ];
 
     /**
