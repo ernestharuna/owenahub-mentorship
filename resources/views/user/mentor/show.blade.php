@@ -26,26 +26,26 @@
                         <div class="fs-4 social-links fs-5">
                             @isset($mentor->social_handle->linkedin)
                                 <a href="{{ $mentor->social_handle->linkedin }}" target="_blank"
-                                    class="bg-body-secondary text-decoration-none text-dark px-2 py-2 rounded-5 border">
-                                    <i class="ms-1 bi bi-linkedin"></i>
+                                    class="bg-body-secondary text-decoration-none text-dark px-1 py-1 rounded-5 border">
+                                    <i class="ms-1 bi bi-linkedin fs-5"></i>
                                 </a>
                             @endisset
                             @isset($mentor->social_handle->x_twitter)
                                 <a href="{{ $mentor->social_handle->x_twitter }}" target="_blank"
-                                    class="bg-body-secondary text-decoration-none text-dark px-2 py-2 ms-2 rounded-5 border">
-                                    <i class="ms-1 bi bi-twitter-x"></i>
+                                    class="bg-body-secondary text-decoration-none text-dark px-1 py-1 ms-2 rounded-5 border">
+                                    <i class="ms-1 bi bi-twitter-x fs-5"></i>
                                 </a>
                             @endisset
                             @isset($mentor->social_handle->isntagram)
                                 <a href="{{ $mentor->social_handle->instagram }}" target="_blank"
-                                    class="bg-body-secondary text-decoration-none text-dark px-2 py-2 ms-2 rounded-5 border">
-                                    <i class="m-0 bi bi-instagram"></i>
+                                    class="bg-body-secondary text-decoration-none text-dark px-1 py-1 ms-2 rounded-5 border">
+                                    <i class="m-0 bi bi-instagram fs-5"></i>
                                 </a>
                             @endisset
                             @isset($mentor->social_handle->facebook)
                                 <a href="{{ $mentor->social_handle->facebook }}" target="_blank"
-                                    class="bg-body-secondary text-decoration-none text-dark px-3 py-2 ms-1 rounded-5 border">
-                                    <i class="m-0 bi bi-facebook"></i>
+                                    class="bg-body-secondary text-decoration-none text-dark px-2 py-1 ms-2 rounded-5 border">
+                                    <i class="m-0 bi bi-facebook fs-5"></i>
                                 </a>
                             @endisset
                         </div>
