@@ -24,31 +24,45 @@
                     <img src={{ asset('images/about_img.png') }}
                         class="col-md-6 float-md-end mb-4 ms-md-3 img-fluid img-thumbnail rounded-5 shadow"
                         alt="OwenaHub icon">
+
+                    <h2 class="fw-semibold">For tech juniors</h2>
                     <p>
-                        Starting a career in tech, can be daunting. It cost time and resources trying to find a field
-                        that fits you and your interest before for one.
+                        Starting a tech career can be daunting. It costs time and resources to try to find a field that
+                        fits you and understand what you need to get started.
                         <br>
-                        <span class="text-theme"><b>OwenaHub</b> makes it easier.</span>
+                        <span class="text-purple"><b>OwenaHub</b> makes it easier.</span><br>
+                        We provide you with a platform to talk with professionals who have threaded the path you aspire
+                        to follow.
                     </p>
 
-                    <h3 class='fs-4 fw-bold mt-4'>What OwenaHub is</h3>
+                    <h2 class="fw-semibold mt-4">For tech professionals</h2>
                     <p>
-                        they venture into building a career in tech.
-                        OwenaHub is the mentorship platform for tech enthusiasts who want to get clarity and guidance as
-                        We are fueled by the passion to help people start a career the right way.
+                        Our mentors have mentors who also have mentors 😲—No one is an island of knowledge. <br>
+                        Finding mentors even when you feel accomplished shouldn't ignite your imposter syndrome.
+                        Feel free to create a user account and connect with
+                        <br>
+                        <span class="text-theme"><b>OwenaHub</b> makes it easier.</span><br>
+                        Talk with professionals who
+                        have thread the path you aspire to follow.
                     </p>
+
+                    <hr>
+
                     <p>
+                        OwenaHub is the mentorship platform for tech enthusiasts who want to get clarity and guidance.
+                        <br>
                         OwenaHub isn't focused on teaching you to code as there are already a ton of free resources that
                         help learners with this, we simply guide you with mentorship.
                         We help you navigate through all the resources out there.
                     </p>
 
-                    <p class="text-red fw-bold">
-                        We are fueled by the passion to help people start a career the right way.
+                    <p class="text-red fw-semibold">
+                        We are fueled by the passion to help people start a career the right way by making mentorship
+                        accessible to all.
                     </p>
 
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class="btn btn-light border rounded-4 text-dark shadow-sm px-4 py-2 fs-5 mt-4">
+                        class="btn btn-theme rounded-4 text-dark shadow-sm px-4 py-2 fs-5 mt-4 fw-semibold">
                         Get started today
                     </a>
                 </div>

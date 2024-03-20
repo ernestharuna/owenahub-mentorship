@@ -210,11 +210,15 @@
                                     Personalised learning
                                 </h3>
                                 <p class="fs-4 lh-sm mb-4">
-                                    Schedule your mentorship session & get advice and <br class="d-none d-lg-block">
-                                    insights to move faster with your work.
+                                    OwenaHub offers courses focused on mentorship. <br class="d-none d-lg-block">
+                                    Enroll in a mentorship courses & learn at your own pace.
+                                    {{-- Schedule your mentorship session & get advice and 
+                                    insights to move faster with your work. --}}
                                 </p>
-                                <a href="" class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">Learn
-                                    more</a>
+                                <a href="{{ route('guest.slices.index') }}"
+                                    class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">
+                                    Learn more
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -233,16 +237,18 @@
                     <div class="text-dark pt-5 px-4">
                         <div class="mb-5">
                             <div>
-                                <span class="text-red text-uppercase fs-5 fw-bold">Talk with experts</span>
+                                <span class="text-red fs-5 fw-bold">Visions Into Reality</span>
                                 <h3 class="text-dark display-4 fw-bold mb-4 mt-3">
-                                    Acheive long-term <br class="d-none d-lg-block"> goals with ease
+                                    Stop dreaming, start achieving
                                 </h3>
                                 <p class="fs-4 lh-sm mb-4">
-                                    Connect with mentors for recurring sessions <br class="d-none d-lg-block">
-                                    and work towards a long-term goal.
+                                    Work towards long-term goals by connecting <br class="d-none d-lg-block"> with
+                                    mentors for private sessions.
                                 </p>
-                                <a href="" class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">Learn
-                                    more</a>
+                                <a href="{{ route('user.mentor.index') }}"
+                                    class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">
+                                    See mentors for you
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -260,17 +266,18 @@
                     <div class="text-dark py-5 px-4">
                         <div class="mb-5">
                             <div>
-                                <span class="text-theme text-uppercase fs-5 fw-bold">Talk with experts</span>
+                                <span class="text-purple fs-5 fw-bold">Talk With Experts</span>
                                 <h3 class="text-dark display-4 fw-bold mb-4">
-                                    Easy access to the <br class="d-none d-lg-block"> world’s best.
+                                    Easy access to the <br class="d-none d-lg-block"> world’s best
                                 </h3>
                                 <p class="fs-4 lh-sm mb-4">
                                     From Web Development to Software Engineering, <br class="d-none d-lg-block"> there
                                     are thousands of
                                     top experts, you can get access for free.
                                 </p>
-                                <a href="" class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">Learn
-                                    more</a>
+                                <a href="/about" class="btn btn-outline-dark rounded-5 px-5 py-2 fw-semibold">
+                                    Learn more
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,9 @@
 <x-layouts.admin>
     <div class="container">
-        <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
-
+        <a href="{{ route('admin.mentors.index') }}" class="mt-4 btn btn-theme rounded-4">
+            <i class="bi bi-arrow-left"></i> All mentors
+        </a>
+        <div class="mb-5 mt-4 p-3 bg-white shadow-sm rounded-4 border">
             <div class="d-md-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <div style="width: 100px; max-width: 100px; height: 100px; max-height: 100px;">
@@ -46,7 +48,7 @@
                                     <i class="ms-1 bi bi-twitter-x"></i> (twitter)
                                 </a>
                             @endisset
-                            @isset($mentor->social_handle->isntagram)
+                            @isset($mentor->social_handle->instagram)
                                 <a href="{{ $mentor->social_handle->instagram }}"
                                     class="instagram text-decoration-none text-white p-1 ms-1 rounded-1 fs-tiny">
                                     <i class="m-0 bi bi-instagram"></i> instagram

@@ -36,10 +36,10 @@
                                     <i class="ms-1 bi bi-twitter-x fs-5"></i>
                                 </a>
                             @endisset
-                            @isset($mentor->social_handle->isntagram)
+                            @isset($mentor->social_handle->instagram)
                                 <a href="{{ $mentor->social_handle->instagram }}" target="_blank"
                                     class="bg-body-secondary text-decoration-none text-dark px-1 py-1 ms-2 rounded-5 border">
-                                    <i class="m-0 bi bi-instagram fs-5"></i>
+                                    <i class="ms-1 bi bi-instagram fs-5"></i>
                                 </a>
                             @endisset
                             @isset($mentor->social_handle->facebook)

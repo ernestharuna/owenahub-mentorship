@@ -51,6 +51,8 @@
                     class="d-block text-decoration-none text-white fs-tiny fw-light">hello@owenahub.com</a>
                 <a href="mailto:ernest@owenahub.com"
                     class="d-block text-decoration-none text-white fs-tiny fw-light">ernest@owenahub.com</a>
+                <a href="mailto:ernestharuna1@gmail.com"
+                    class="d-block text-decoration-none text-white fs-tiny fw-light">ernestharuna1@gmail.com</a>
             </div>
 
             <div class="p-2 flex-fill">

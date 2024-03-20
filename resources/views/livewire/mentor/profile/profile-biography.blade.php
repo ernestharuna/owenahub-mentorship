@@ -115,6 +115,7 @@
         <div class="mb-3">
             <label for="country" class="form-label fw-semibold m-0">Country</label>
             <select wire:model="country" id="country" class="form-control rounded-3 py-2 border-2 editable" disabled>
+                <option value="" disabled selected>Choose country</option>
                 @foreach ($countries as $country)
                     <option value="{{ $country }}">{{ $country }}</option>
                 @endforeach
@@ -128,7 +129,7 @@
             <label for="bio" class="form-label fw-semibold m-0">About you</label>
             <textarea wire:model="bio" name="bio" id="bio" cols="30" rows="10"
                 class="form-control rounded-3 py-2 border-2 editable"
-                placeholder="I am a software enthusiast with * years of experience" disabled></textarea>
+                placeholder="Tell us about your experince, keep it under 500 characters 👌🏾" disabled></textarea>
             @error('bio')
                 <x-error :message="$message" />
             @enderror

@@ -20,12 +20,16 @@
                 id="instagram" placeholder="https://instagram.com/..." name="instagram" disabled>
         </div>
         <div class="mb-3">
-            <label for="linkedin" class="form-label fw-semibold m-0">LinkedIn</label>
+            <label for="linkedin" class="form-label fw-semibold m-0">LinkedIn
+                <span class="text-red fw-bold fs-5">*</span>
+            </label>
             <input wire:model="linkedin" type="text" class="form-control rounded-3 py-2 border-2 editable"
                 id="linkedin" placeholder="https://linkedin.com/in/..." name="linkedin" disabled>
         </div>
         <div class="mb-3">
-            <label for="twitter" class="form-label fw-semibold m-0">X (formerly twitter)</label>
+            <label for="twitter" class="form-label fw-semibold m-0">X (formerly twitter)
+                <span class="text-red fw-bold fs-5">*</span>
+            </label>
             <input wire:model="x_twitter" type="text" class="form-control rounded-3 py-2 border-2 editable"
                 id="twitter" placeholder="https://x.com/..." name="x_twitter" disabled>
         </div>
