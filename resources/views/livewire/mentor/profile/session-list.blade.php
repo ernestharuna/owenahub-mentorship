@@ -36,7 +36,7 @@
             $end_time = DateTime::createFromFormat('H:i:s', $et);
 
             $formatted_time_1 = $start_time->format('h:i a');
-            $formatted_time_2 = $start_time->format('h:i a');
+            $formatted_time_2 = $end_time->format('h:i a');
         @endphp
 
         <div wire:key="{{ $session->id }}"

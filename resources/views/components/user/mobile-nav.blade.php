@@ -1,5 +1,5 @@
 <nav class="py-2 fixed-bottom d-lg-none d-block bg-white border-top border-bg-body-secondary"
-    style="box-shadow: 0px 0px 25px #80808052 !important;">
+    style="box-shadow: 0px 0px 25px #80808041 !important;">
     <div class="container">
         <div class="d-flex justify-content-around bg-f2 py-2 rounded-4 bg-gradient">
             <a href="{{ route('user.dashboard') }}" class="d-block text-dark text-center text-decoration-none">

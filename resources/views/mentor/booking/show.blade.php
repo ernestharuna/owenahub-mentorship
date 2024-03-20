@@ -40,6 +40,10 @@
                         default:
                             $day = 'Someday';
                     }
+                    // format times to 24hr format
+                    $st = $booking->session->start_time;
+                    $start_time = DateTime::createFromFormat('H:i:s', $st);
+                    $formatted_time_1 = $start_time->format('h:i a');
                 @endphp
                 <div class="fw-semibold mb-3">
                     <div class="d-inline-block me-2">
@@ -49,7 +53,7 @@
 
                     <div class="d-inline-block me-2">
                         <i class="bi bi-clock"></i>
-                        {{ $booking->session->start_time }} — {{ $booking->session->end_time }}
+                        Starting {{ $formatted_time_1 }}
                     </div>
                 </div>
 

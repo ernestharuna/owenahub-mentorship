@@ -27,7 +27,7 @@ class ProfileBiography extends Component
     #[Validate('required|max:80')]
     public $country;
 
-    #[Validate('required|max:500')]
+    #[Validate('required|max:900')]
     public $bio;
 
     public $countries = [
