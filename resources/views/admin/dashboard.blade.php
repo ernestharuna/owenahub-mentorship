@@ -110,7 +110,7 @@
                                 <div class="px-4 border-start">
                                     <h5 class="card-title fs-6 text-red m-0">All Mentors</h5>
                                     <p class="card-text m-0 text-white">
-                                        <span class="fs-1 fw-bold">{{ $all_mentors }}</span>metnors
+                                        <span class="fs-1 fw-bold">{{ $all_mentors }}</span>mentors
                                     </p>
                                 </div>
                             </div>

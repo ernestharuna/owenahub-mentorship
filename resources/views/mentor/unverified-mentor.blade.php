@@ -46,7 +46,7 @@
                         </li>
                         <li>
                             If you have any questions or need assistance, you can contact our support team at
-                            support@example.com.
+                            <span class="text-primary">hello@owenahub.com.</span>
                         </li>
                     </ul>
                 </div>

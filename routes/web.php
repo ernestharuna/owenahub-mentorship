@@ -31,9 +31,12 @@ Route::name('guest.')->group(function () {
         Route::view('/getstarted/signup', 'guest.onboarding.signup')->name('signup');
         // ------------------------------------------
         Route::prefix('mentor')->group(function () {
-            Route::view('getstarted/empower', 'guest.onboarding_2.screen_1')->name('empower');
-            Route::view('getstarted/flexible-timing', 'guest.onboarding_2.screen_2')->name('schedule');
-            Route::view('getstarted/earn', 'guest.onboarding_2.screen_3')->name('earn');
+            Route::name('mentor.')->group(function () {
+                Route::view('getstarted/empower', 'guest.onboarding_2.screen_1')->name('empower');
+                Route::view('getstarted/flexible-timing', 'guest.onboarding_2.screen_2')->name('schedule');
+                Route::view('getstarted/earn', 'guest.onboarding_2.screen_3')->name('earn');
+                Route::view('getstarted/signup', 'guest.onboarding_2.screen_4')->name('signup');
+            });
         });
     });
 

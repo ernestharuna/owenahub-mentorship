@@ -20,8 +20,8 @@
                         Mentorship
                     </a>
                     <ul class="dropdown-menu rounded-4">
-                        <li><a class="dropdown-item" href="#">See Mentors</a></li>
-                        <li><a class="dropdown-item" href="#">Book a session</a></li>
+                        <li><a class="dropdown-item" href="{{ route('user.mentor.index') }}">See Mentors</a></li>
+                        <li><a class="dropdown-item" href="{{ route('user.session.index') }}">Book a session</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

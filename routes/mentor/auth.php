@@ -9,7 +9,7 @@ Route::name('mentor.')->group(function () {
             Route::view('login', 'mentor.auth.login')->name('login');
             Route::view('register', 'mentor.auth.register')->name('register');
 
-            Route::post('login', [AuthController::class, 'login'])->name('login.req'); //uses users Auth Controller
+            Route::post('login', [AuthController::class, 'login'])->name('login.req');
             Route::post('register', [AuthController::class, 'register'])->name('register.req');
         });
     });

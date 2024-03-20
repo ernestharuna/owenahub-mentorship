@@ -18,7 +18,7 @@
                             </p>
                         </div>
                         <div class="">
-                            <a href="{{ route('mentor.register') }}"
+                            <a href="{{ route('guest.onboarding.mentor.signup') }}"
                                 class="btn btn-light shadow rounded-5 fw-bold mt-3 px-5 py-2 mx-auto d-inline-block">
                                 Continue
                             </a>

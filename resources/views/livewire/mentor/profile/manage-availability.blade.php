@@ -17,7 +17,8 @@
         <form wire:submit="saveSession" class="col-12 col-md-6 animated-2 fadeIn">
             <div class="mb-3">
                 <label for="week_day" class="form-label fw-semibold m-0">Pick a day of the week</label>
-                <select wire:model="week_day" id="week_day" class="form-control rounded-3 py-2 border-2 editable">
+                <select wire:model="week_day" id="week_day" class="form-control rounded-3 py-2 border-2 editable"
+                    required>
                     <option value="" selected>
                         Choose category
                     </option>
@@ -49,18 +50,22 @@
             </div>
 
             <div class="mb-3">
-                <label for="start_time" class="form-label fw-semibold m-0">Your start time</label>
+                <label for="start_time" class="form-label fw-semibold m-0">Your start time
+                    <span class="fw-normal text-red fs-tiny fst-italic">(24-hour format)</span>
+                </label>
                 <input wire:model="start_time" type="time" class="form-control rounded-3 py-2 border-2 editable"
-                    id="start_time">
+                    id="start_time" required>
             </div>
             @error('start_time')
                 <x-error :message="$message" />
             @enderror
 
             <div class="mb-3">
-                <label for="end_time" class="form-label fw-semibold m-0">Your close time</label>
+                <label for="end_time" class="form-label fw-semibold m-0">Your close time
+                    <span class="fw-normal text-red fs-tiny fst-italic">(24-hour format)</span>
+                </label>
                 <input wire:model="end_time" type="time" class="form-control rounded-3 py-2 border-2 editable"
-                    id="end_time">
+                    id="end_time" required>
             </div>
             @error('end_time')
                 <x-error :message="$message" />

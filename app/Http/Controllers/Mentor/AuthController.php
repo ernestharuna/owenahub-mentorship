@@ -19,7 +19,7 @@ class AuthController extends Controller
             'first_name' => ['required', 'min:2', 'max:20', 'alpha'],
             'last_name' => ['required', 'min:2', 'max:20', 'alpha'],
             'email' => ['required', 'email', Rule::unique('mentors', 'email')],
-            'password' => ['required', 'confirmed', Password::min(8)->letters()]
+            'password' => ['required', 'confirmed', Password::min(8)]
         ]);
 
         /**
@@ -40,7 +40,7 @@ class AuthController extends Controller
                 'password' => Hash::make($data['password'])
             ]);
 
-            Auth::login($mentor);
+            Auth::guard('mentor')->login($mentor);
             return redirect(route('mentor.dashboard'))->with('status', 'Welcome to OwenaHub! 🎉');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());

@@ -56,7 +56,9 @@
         <div class="card-footer px-2 pt-0 border-0 bg-white rounded-4">
             <div class="fs-tiny d-flex justify-content-between align-items-center flex-wrap pb-1">
                 <p class="m-0 fw-semibold bg-body-secondary secondary px-2 rounded d-inline-block">
-                    {{ $mentor->misc_info->count() > 0 ? Str::limit($mentor->misc_info->skills, 25, '...') : 'New mentor' }}
+                    @if ($mentor->misc_info)
+                        {{ $mentor->misc_info->count() > 0 ? Str::limit($mentor->misc_info->skills, 25, '...') : 'New mentor' }}
+                    @endif
                 </p>
                 <div>
                     <a href="{{ route('admin.mentors.show', $mentor->id) }}"

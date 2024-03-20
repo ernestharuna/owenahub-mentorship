@@ -9,7 +9,7 @@
             <div class="d-block d-md-none">
                 <a href="{{ route('user.mentor.index') }}"
                     class="text-decoration-none text-dark me-2 bg-body-secondary px-3 py-2 rounded-4 border position-relative">
-                    <i class="bi bi-bell fs-5"></i>
+                    <i class="bi bi-bell fs-5 ms-1"></i>
                     <span class="position-absolute top-0 start-100 translate-middle p-2 bg-red rounded-circle">
                         <span class="visually-hidden">New alerts</span>
                     </span>

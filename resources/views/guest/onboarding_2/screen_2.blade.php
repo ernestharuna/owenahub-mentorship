@@ -14,7 +14,7 @@
                             </p>
                         </div>
                         <div class="">
-                            <a href="{{ route('guest.onboarding.earn') }}"
+                            <a href="{{ route('guest.onboarding.mentor.earn') }}"
                                 class="btn btn-light shadow rounded-5 fw-bold mt-3 px-5 py-2 mx-auto d-inline-block">
                                 Continue
                             </a>

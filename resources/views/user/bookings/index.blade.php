@@ -39,6 +39,11 @@
                                 default:
                                     $day = 'Someday';
                             }
+
+                            // format times to 24hr format
+                            $st = $booking->session->start_time;
+                            $start_time = DateTime::createFromFormat('H:i:s', $st);
+                            $formatted_time_1 = $start_time->format('h:i a');
                         @endphp
                         <div class="col-12 col-md-5 border p-3 rounded-4 shadow-sm">
                             <x-status :status="$booking->status" />
@@ -48,7 +53,7 @@
                             </h5>
                             <div class="fw-semibold">
                                 <i class="bi bi-calendar3-week"></i>
-                                {{ $day }}, {{ $booking->session->start_time }}
+                                {{ $day }}, {{ $formatted_time_1 }}
                             </div>
                             <div class="mt-3">
                                 <a href="{{ route('user.session.show', $booking->id) }}"
@@ -73,7 +78,7 @@
 
         <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
             <h4 class="fw-semibold">
-                Your top matches
+                Suggested Mentors
             </h4>
 
             <p class="lh-sm fw-semibold">
@@ -94,8 +99,9 @@
             </section>
 
             <div>
-                <a href="{{ route('user.mentor.index') }}" class="btn btn-theme rounded-3 fw-semibold">
-                    Explore mentors
+                <a href="{{ route('user.mentor.index') }}"
+                    class="btn btn-light border border-1 border-dark rounded-3 fw-semibold">
+                    Explore mentors <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
         </div>

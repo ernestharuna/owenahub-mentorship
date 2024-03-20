@@ -125,7 +125,7 @@
                     <div class="mt-3">
                         <ol class="list-group list-group-numbered">
                             @forelse ($sessions as $session)
-                                @foreach ($session->booking as $booking)
+                                @forelse ($session->booking as $booking)
                                     @if ($booking->status === 'completed')
                                         <li
                                             class="list-group-item d-flex justify-content-between align-items-start mb-1 border-0">
@@ -139,11 +139,12 @@
                                             </span>
                                         </li>
                                     @endif
-                                @endforeach
+                                @empty
+                                    <p class="text-seconadary p-2 bg-white rounded-3 shadow-sm">
+                                        No sessions yet...
+                                    </p>
+                                @endforelse
                             @empty
-                                <p class="text-seconadary p-2 bg-white rounded-3 shadow-sm">
-                                    No sessions yet...
-                                </p>
                             @endforelse
                         </ol>
                     </div>

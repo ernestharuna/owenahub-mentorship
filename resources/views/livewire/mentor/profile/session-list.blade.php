@@ -27,13 +27,25 @@
                 default:
                     $day = 'Someday';
             }
+
+            // format times to 24hr format
+            $st = $session->start_time;
+            $et = $session->end_time;
+
+            $start_time = DateTime::createFromFormat('H:i:s', $st);
+            $end_time = DateTime::createFromFormat('H:i:s', $et);
+
+            $formatted_time_1 = $start_time->format('h:i a');
+            $formatted_time_2 = $start_time->format('h:i a');
         @endphp
 
-        <div wire:key="{{ $session->id }}" class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+        <div wire:key="{{ $session->id }}"
+            class="d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom">
             <div>
-                <h3 class="m-0 fs-6">{{ $day }}s</h3>
-                <p class="m-0">
-                    {{ $session->start_time }} — {{ $session->end_time }}
+                <h3 class="m-0 fs-6">{{ $day }}s
+                </h3>
+                <p class="m-0 fw-semibold">
+                    {{ $formatted_time_1 }} <span class="fw-normal">to</span> {{ $formatted_time_2 }}
                 </p>
             </div>
             <div>

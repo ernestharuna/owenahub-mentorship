@@ -15,7 +15,7 @@
     </section>
 
     <div class="animated-2 fadeIn text-center fixed-bottom mb-5">
-        <a href="{{ route('user.register') }}" class="btn btn-light rounded-5 fw-bold px-5 mt-3">
+        <a href="{{ route('mentor.register') }}" class="btn btn-light rounded-5 fw-bold px-5 mt-3">
             Create Account
         </a>
     </div>
