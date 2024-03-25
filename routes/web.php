@@ -21,6 +21,8 @@ Route::redirect('/mentor/getstarted', '/mentor/getstarted/empower');
 
 Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
+Route::view('terms-of-service', 'terms-of-service')->name('tos');
+Route::view('privacy-policy', 'privacy-policy')->name('pp');
 
 // ----------------- Guest Routes
 Route::name('guest.')->group(function () {

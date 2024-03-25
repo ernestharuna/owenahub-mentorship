@@ -16,8 +16,8 @@ class PaystackController extends Controller
         $amount = number_format($request->input('amount'), 2, '', '');
 
         $fields = [
-            // 'email' => $email,
-            'email' => "customer@email.com",
+            'email' => $email,
+            // 'email' => "customer@email.com",
             'amount' => $amount,
             'callback_url' => route('user.pay-verify'),
             'metadata' => [
@@ -34,7 +34,7 @@ class PaystackController extends Controller
     protected function redirectToPaystack($fields)
     {
         $url = "https://api.paystack.co/transaction/initialize";
-        $s_key = env('PAYSTACK_TEST_SECRET_KEY');
+        $s_key = env('PAYSTACK_SECRET_KEY');
 
         $fields_string = http_build_query($fields);
 

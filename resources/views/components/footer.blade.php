@@ -101,7 +101,13 @@
                 &copy; 2024, OwenaHub. All Rights Reserved.
             </p>
             <p class="m-0 fs-tiny">
-                Privacy Policy &middot; Terms Of Service
+                <a href="{{ route('pp') }}" class="text-white text-decoration-none">
+                    Privacy Policy
+                </a>
+                &middot;
+                <a href="{{ route('tos') }}" class="text-white text-decoration-none">
+                    Terms of Service
+                </a>
             </p>
         </div>
     </div>

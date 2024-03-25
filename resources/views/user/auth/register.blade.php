@@ -102,9 +102,9 @@
 
             <div class="fs-tiny my-3 text-center">
                 By signing up, you agree to our
-                <a href="#" class="fw-semibold text-decoration-none text-red">
-                    Terms of Use</a> and
-                <a href="#" class="fw-semibold text-decoration-none text-red">Privacy Policy</a>.
+                <a href="{{ route('tos') }}" class="fw-semibold text-decoration-none text-red">
+                    Terms of Service</a> and
+                <a href="{{ route('pp') }}" class="fw-semibold text-decoration-none text-red">Privacy Policy</a>.
             </div>
 
         </div>

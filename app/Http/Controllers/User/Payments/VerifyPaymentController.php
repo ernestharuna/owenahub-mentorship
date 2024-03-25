@@ -11,7 +11,7 @@ class VerifyPaymentController extends Controller
 {
     public function verify_payment(Request $request)
     {
-        $s_key = env('PAYSTACK_TEST_SECRET_KEY');
+        $s_key = env('PAYSTACK_SECRET_KEY');
         $reference = $request->query('reference');
 
         $curl = curl_init();

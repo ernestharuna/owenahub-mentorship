@@ -37,12 +37,7 @@
                 @empty
                     <tr class="fs-tiny">
                         <th scope="row">*</th>
-                        <td>n/a</td>
-                        <td>n/a</td>
-                        <td>n/a</td>
-                        <td>
-                            n/a
-                        </td>
+                        <td colspan="4" class="text-secondary">No records available</td>
                     </tr>
                 @endforelse
             </tbody>
