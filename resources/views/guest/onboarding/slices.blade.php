@@ -8,9 +8,10 @@
                             <i class="bi bi-lightning-charge text-red"></i>Easy Learning
                         </h1>
                         <div class="card-text mb-3">
-                            <p> Too busy to meet a mentor enroll in a course to learn on the go. <br>
-
-                                <b>Slices</b> are our unique method of delivering invaluable insights to learners.
+                            <p class="fs-5">Enroll in a course to <span class="fw-semibold text-red">learn on the
+                                    go</span>.
+                                <br>
+                                Slices are our unique method of delivering invaluable insights to learners.
                             </p>
                         </div>
                         <a href="{{ route('guest.onboarding.teams') }}"

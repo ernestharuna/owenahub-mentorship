@@ -9,8 +9,12 @@
                             Blog Access
                         </h1>
                         <div class="card-text mb-3">
-                            OwenaHub features an insightful repository of articles that <br>
-                            covers interesting topics within the field.
+                            <p class="fs-5">
+                                OwenaHub features an insightful <span class="fw-semibold text-purple">repository of
+                                    articles</span> that
+                                <br class="d-none d-md-block">
+                                covers interesting topics within the field.
+                            </p>
                         </div>
 
                         <a href="{{ route('guest.onboarding.signup') }}"

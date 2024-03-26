@@ -15,7 +15,7 @@
         <h3 class=''>Latest Articles</h3>
         <a href="/"
             class='text-decoration-none btn btn-sm btn-dark px-3 py-1 fw-semibold rounded-3 text-white mt-2 d-inline-block'>
-            ← Go back
+            <i class="bi bi-arrow-left me-2"></i> Go back
         </a>
     </div>
 

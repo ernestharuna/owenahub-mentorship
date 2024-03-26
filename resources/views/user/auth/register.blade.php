@@ -100,7 +100,7 @@
             </div>
             <livewire:user.google-signin />
 
-            <div class="fs-tiny my-3 text-center">
+            <div class="fs-tiny mt-5 mb-4 text-center">
                 By signing up, you agree to our
                 <a href="{{ route('tos') }}" class="fw-semibold text-decoration-none text-red">
                     Terms of Service</a> and

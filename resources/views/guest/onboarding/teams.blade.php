@@ -9,8 +9,9 @@
                             Meet Experts
                         </h1>
                         <div class="card-text mb-3">
-                            <p>
-                                <b>Talk with professionals</b> that inspire you and give you career clarity.
+                            <p class="fs-5">
+                                <span class="fw-semibold text-red">Talk with professionals</span> that inspire you and
+                                give you career clarity.
                             </p>
                         </div>
                         <a href="{{ route('guest.onboarding.blog') }}"

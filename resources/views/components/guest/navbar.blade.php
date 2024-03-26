@@ -113,8 +113,11 @@
                 @endauth
 
                 @if (!Auth::check() && !Auth::guard('mentor')->check())
-                    <a href="{{ route('user.login') }}" class="btn btn-dark rounded-5 px-4 me-2">Log in</a>
-                    <a href="{{ route('user.register') }}" class="btn btn-outline-dark rounded-5 px-4">Sign up</a>
+                    <a href="{{ route('user.login') }}" class="btn btn-sm btn-dark rounded-5 px-4 me-2">Log in</a>
+                    <a href="{{ route('user.register') }}"
+                        class="btn btn-sm btn-outline-dark rounded-5 px-4 fw-semibold">
+                        Sign up
+                    </a>
                 @endif
             </div>
         </div>

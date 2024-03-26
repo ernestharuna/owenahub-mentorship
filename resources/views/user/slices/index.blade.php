@@ -65,4 +65,5 @@
             </div>
         </section>
     </div>
+    <hr class="opacity-0 my-5">
 </x-layouts.user>

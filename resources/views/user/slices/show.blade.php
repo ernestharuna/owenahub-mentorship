@@ -2,19 +2,20 @@
     <div>
         <section class="row">
             <div class="col-md-7 col-12 py-4">
-                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+                    class="bg-theme-light p-2 rounded shadow-sm">
+                    <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item">
-                            <a href="{{ route('user.slice.index') }}" class="fw-semibold text-secondary">
+                            <a href="{{ route('user.slice.index') }}" class="fw-semibold text-dark">
                                 Slices
                             </a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">
+                        <li class="breadcrumb-item text-dark" aria-current="page">
                             <span class="fw-semibold">
                                 {{ $show_bite->slice->title }}
                             </span>
                         </li>
-                        <li class="breadcrumb-item active text-dark" aria-current="page">
+                        <li class="breadcrumb-item text-dark" aria-current="page">
                             <span class="fw-bold">
                                 {{ $show_bite->title }}
                             </span>

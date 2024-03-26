@@ -99,8 +99,7 @@
             </section>
 
             <div>
-                <a href="{{ route('user.mentor.index') }}"
-                    class="btn btn-light border border-1 border-dark rounded-3 fw-semibold">
+                <a href="{{ route('user.mentor.index') }}" class="btn btn-outline-dark rounded-3 fw-semibold">
                     Explore mentors <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
