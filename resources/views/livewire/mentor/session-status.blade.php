@@ -19,7 +19,7 @@
     @if ($current_status === 'confirmed')
         <div class="d-flex align-items-center justify-content-between">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-sm btn-dark rounded-3 px-3 py-2 fw-semibold" data-bs-toggle="modal"
+            <button type="button" class="btn btn-sm btn-theme rounded-3 px-3 py-2 fw-semibold" data-bs-toggle="modal"
                 data-bs-target="#createMeeting">
                 Create meeting room <i class="bi bi-file-person fs-5 ms-1" style="position: relative; top: 2px;"></i>
             </button>

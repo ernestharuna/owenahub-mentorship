@@ -36,7 +36,7 @@ class SessionController extends Controller
         }
 
         return view('user.bookings.index', [
-            'mentors' => $mentors,
+            'mentors' => $mentors->where('email_is_verified', '!=', null),
             'bookings' => $bookings
         ]);
     }

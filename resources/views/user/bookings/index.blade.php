@@ -92,7 +92,8 @@
                         <x-mentor-card :mentor="$mentor" />
                     @empty
                         <p class="p-2 bg-f2 text-secondary">
-                            Mentors Unavailable ☹
+                            No suggestions for your profile.
+                            Make sure your <a href="{{ route('user.profile.index') }}">profile</a> is updated.
                         </p>
                     @endforelse
                 </div>

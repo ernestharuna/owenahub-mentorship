@@ -33,11 +33,10 @@
             <div class="mb-2">
                 <div class="">
                     <p class="m-0 fw-semibold">
-                        {{ $mentor->misc_info->role }} at {{ $mentor->misc_info->company }}
-                        {{-- {{ $mentor->misc_info ? $mentor->misc_info->expertise : 'New mentor' }} --}}
+                        {{ $mentor->misc_info->role ?? '' }} at {{ $mentor->misc_info->company ?? '' }}
                     </p>
                     <p class="m-0">
-                        <i class="bi bi-lightning-fill text-purple"></i>{{ $mentor->misc_info->expertise }}
+                        <i class="bi bi-lightning-fill text-purple"></i>{{ $mentor->misc_info->expertise ?? '' }}
                     </p>
                 </div>
                 {{-- <div class="text-theme fs-tiny mt-2">

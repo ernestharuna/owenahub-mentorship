@@ -1,6 +1,6 @@
 <div>
     <input wire:model.live="search" type="text"
-        class="form-control py-3 bg-body-secondary rounded-3 fs-5 fw-semibold shadow-sm col-6 col-md-6"
+        class="form-control py-2 bg-body-secondary rounded-3 fs-5 fw-semibold shadow-sm col-6 col-md-6"
         placeholder="Search mentors">
 
     <section class="my-4">

@@ -18,7 +18,7 @@
                         <hr class="my-1">
                         <p class="card-text">
                             <small class="fs-tiny">
-                                I love his way of explaining things to me
+                                {{ $review->comment }}
                             </small>
                         </p>
                     </div>
