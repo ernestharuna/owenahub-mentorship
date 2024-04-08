@@ -4,7 +4,7 @@
             $data = $feat_article->title;
             $title = strtolower(str_replace(' ', '-', $data));
         @endphp
-        <div class="bg-theme p-3 my-3 animated-2 fadeIn rounded-4">
+        <div class="bg-theme-light p-3 my-3 animated-2 fadeIn rounded-4">
             <p class="fs-tiny text-red fw-bold font-monospace text-uppercase m-0">
                 Posted on {{ $feat_article->created_at->format('j M Y') }}
             </p>
@@ -24,7 +24,7 @@
             </div>
         </div>
     @else
-        <div class="bg-f2 border p-1 text-secondary shadow-sm">
+        <div class="p-1 text-secondary">
             Some new articles are rolling up ... 🚀 <br>
             Email for adverts and inquiries hello@owenahub.com
         </div>

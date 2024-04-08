@@ -2,7 +2,7 @@
 <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
 <footer class='bg-dark py-4' id="footer">
     <div class="container text-white fs-6">
-        <div class="d-md-flex justify-content-between">
+        <div class="d-md-flex justify-content-between align-items-center">
             <div>
                 <div>
                     <img src={{ asset('images/logo.png') }} alt="..." class="img-fluid" width="25">
@@ -12,13 +12,8 @@
                     Fostering global connections, leveraging experts <br> to empower learners through mentorship.
                 </p>
             </div>
-            <div>
-                <h2 class='fs-6'>
-                    Subscribe to <span class="text-theme">OwenaHub</span>
-                </h2>
-                <div class="input-group">
-                    <livewire:subscribe-button />
-                </div>
+            <div class="text-dark fw-semibold">
+                <a href="/mentor/getstarted" class="btn btn-theme rounded-4 px-4 fw-bold">Become a mentor</a>
             </div>
         </div>
         <hr>

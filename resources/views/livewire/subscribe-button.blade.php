@@ -1,6 +1,6 @@
 {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
 <!-- Button trigger modal -->
-<div id="sub-btn">
+{{-- <div id="sub-btn">
     <button type="button" class="btn rounded-5 px-4 btn-theme" data-bs-toggle="modal" data-bs-target="#subscribe-button">
         <span class="text-white fs-6 fw-semibold">SUBSCRIBE </span> — <small class="fw-light text-red fs-tiny">
             it's free ❤️</small>
@@ -66,4 +66,17 @@
         </div>
     </div>
 
+</div> --}}
+
+
+<div class="row mx-auto w-30 gap-md-0 gap-2">
+    <div class="col-12 col-md-9">
+        <input type="email" placeholder="Subscribe via Email"
+            class="form-control w-100 border-1 py-2 fw-semibold border-bg-tertiary shadow-sm rounded-3" />
+    </div>
+    <div class="col-12 col-md-3">
+        <button class="btn bg-theme text-white w-100 py-2 rounded-3 fw-semibold">
+            Subscribe
+        </button>
+    </div>
 </div>

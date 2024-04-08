@@ -24,7 +24,7 @@ class ArticleController extends Controller
         $data = $request->validate([
             'title' => ['required', 'min:5', 'max:100'],
             'category' => 'required',
-            'description' => ['required', 'min:10', 'max:150'],
+            'description' => ['required', 'min:10', 'max:250'],
             'image_path' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
             'content' => 'required',
         ]);

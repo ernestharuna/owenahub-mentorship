@@ -121,8 +121,18 @@ $gradient-light: linear-gradient(45deg, #ffda8a 40%, #ff7300) !important;
     margin: 0 auto;
 }
 
+.w-54 {
+    max-width: 54rem;
+    margin: 0 auto;
+}
+
 .w-34 {
     max-width: 34rem !important;
+    margin: 0 auto;
+}
+
+.w-30 {
+    max-width: 30rem !important;
     margin: 0 auto;
 }
 

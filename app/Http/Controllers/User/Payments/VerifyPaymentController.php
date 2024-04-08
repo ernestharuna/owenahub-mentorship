@@ -56,7 +56,7 @@ class VerifyPaymentController extends Controller
             if ($data['payment_status'] == 'success') {
                 return redirect('/user/dashboard')->with('status', 'Purchase successful 🎉');
             } else if ($data['payment_status'] ==  'failed') {
-                return redirect('/user/dashboard')->with('error', 'Purchase failed! 🎉');
+                return redirect('/user/dashboard')->with('error', 'Purchase failed!');
             } else {
                 return redirect('/user/dashboard')->with('error', 'Unable to verify payment status, email hello@owenahub.com');
             }

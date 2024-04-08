@@ -7,17 +7,17 @@
     </head>
     <div class="bg-f2">
         <div class="container py-5">
-            <span class='text-theme mb-2 fs-5'>
-                OwenaHub
-            </span>
-            <h1 class="fs-2 lh-1">
+            <h1 class="fs-2 lh-1 fw-bold">
                 Privacy Policy
             </h1>
+            <span class='text-secondary mb-2'>
+                Last updated: 10th March 2024
+            </span>
         </div>
     </div>
 
     <div class="container my-5 animated-2 fadeIn mx-auto">
-        <div class="">
+        <div class="w-64">
             <div class='mt-2'>
                 <p>OwenaHub ("we," "us," or "our") respects the privacy of our users ("you" or "your"). This Privacy
                     Policy describes how we collect, use, disclose, and secure your information when you use our
@@ -25,7 +25,7 @@
                     security of your personal information.
                 </p>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">Information We Collect</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">Information We Collect</h2>
                 <p>Personal Information</p>
                 <ul>
                     <li>When you register for an account, we may collect personal information such as your name, email
@@ -54,7 +54,7 @@
                     </li>
                 </ul>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">How We Use Your Information</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">How We Use Your Information</h2>
                 <p>Providing Services</p>
                 <ul>
                     <li>We use your personal information to create and manage your account, facilitate mentorship
@@ -76,7 +76,7 @@
                     </li>
                 </ul>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">Information Sharing and Disclosure</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">Information Sharing and Disclosure</h2>
 
                 <p>Third-Party Service Providers</p>
                 <ul>
@@ -91,7 +91,7 @@
                         protect our rights, property, or safety, or the rights, property, or safety of others.</li>
                 </ul>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">Data Security</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">Data Security</h2>
 
                 <ul>
                     <li>We implement appropriate technical and organizational measures to safeguard your information
@@ -99,7 +99,7 @@
                         unauthorized access, disclosure, alteration, or destruction.</li>
                 </ul>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">Data Retention</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">Data Retention</h2>
 
                 <ul>
                     <li>We retain your information for as long as necessary to fulfill the purposes outlined in this
@@ -107,7 +107,7 @@
                         Policy, unless a longer retention period is required or permitted by law.</li>
                 </ul>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">Your Choices and Rights</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">Your Choices and Rights</h2>
 
                 <ul>
                     <li>You may update or delete your account information at any time by accessing your account
@@ -117,7 +117,7 @@
                         would like to exercise these rights or have any questions about your data.</li>
                 </ul>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">Changes to this Privacy Policy</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">Changes to this Privacy Policy</h2>
 
                 <ul>
                     <li>We may update this Privacy Policy from time to time. We will notify you of any changes by
@@ -125,7 +125,7 @@
                         new Privacy Policy on this page.</li>
                 </ul>
 
-                <h2 class="fs-5 fw-semibold text-theme mt-3">
+                <h2 class="fs-5 fw-semibold text-dark mt-3">
                     Changes to this Privacy Policy
                 </h2>
                 <p>
@@ -133,7 +133,7 @@
                     the new Privacy Policy on our Platform.
                 </p>
                 <hr class="my-4">
-                <h2 class="fs-5 fw-semibold text-theme mt-3">Contact Us</h2>
+                <h2 class="fs-5 fw-semibold text-dark mt-3">Contact Us</h2>
 
                 <p>If you have any questions, concerns, or feedback regarding this Privacy Policy or our data practices,
                     please

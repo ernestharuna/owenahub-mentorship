@@ -1,16 +1,19 @@
 <!-- Let all your things have their places; let each part of your business have its time. - Benjamin Franklin -->
 <x-layouts.app>
     <x-slot name="title">
-        {{ $title ?? 'OwenaHub Blog: The Mentorship Platform for Tech Enthusiasts' }}
+        {{ $title ?? 'Blog: OwenaHub' }}
     </x-slot>
 
     <section class='container my-4'>
         <div class='row mb-4'>
-            <div class='col-md-8 mb-4 px-lg-5'>
+            <div class='col-12 mb-4'>
                 {{ $slot }}
             </div>
+            {{-- <div class='col-md-8 mb-4 px-lg-5'>
+                {{ $slot }}
+            </div> --}}
 
-            <aside class='col-md-4'>
+            {{-- <aside class='col-md-4'>
                 <div>
                     <h4 class='fw-bold'>Recommended Articles 😍</h4>
                     <livewire:recommended-articles />
@@ -89,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-            </aside>
+            </aside> --}}
         </div>
     </section>
 
