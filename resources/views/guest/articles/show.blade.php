@@ -22,12 +22,12 @@
             <span>{{ $article->category }}</span>
         </div>
 
-        <h1 class="fs-1 fw-bold">{{ $article->title }}</h1>
-        <div class="mt-3 mb-4">
+        <h1 class="fs-2" style="font-weight: 800; letter-spacing: -.025em;">{{ $article->title }}</h1>
+        <div class="mt-3 mb-3">
             <x-guest.author :is_admin="$article->admin" />
         </div>
     </div>
-    <div class="mb-5 mt-3 w-64">
+    <div class="mb-5 mt-2 w-64">
         {!! $article->content !!}
 
         <div class="mt-4">

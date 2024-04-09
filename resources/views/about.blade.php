@@ -62,7 +62,7 @@
                     </p>
 
                     <a href="{{ route('guest.onboarding.slices') }}"
-                        class="btn btn-theme rounded-4 text-dark shadow-sm px-4 py-2 fs-5 mt-4 fw-semibold">
+                        class="btn btn-theme rounded-4 text-dark shadow-sm px-4 py-2 mt-4 fw-semibold">
                         Get started today
                     </a>
                 </div>

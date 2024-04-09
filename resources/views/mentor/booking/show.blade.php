@@ -74,7 +74,7 @@
                                     {{ $booking->user->first_name }}
                                 </span>
                             @endif
-                            <div class="p-2 rounded d-inline-block bg-light bg-gradient border">
+                            <div class="px-2 py-1 rounded d-inline-block bg-light bg-gradient border">
                                 {!! nl2br($info->content) !!}
                             </div>
                         </div>

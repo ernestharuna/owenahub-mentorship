@@ -140,12 +140,40 @@
                                         </li>
                                     @endif
                                 @empty
-                                    <p class="text-seconadary p-2 bg-white rounded-3 shadow-sm">
+                                    {{-- <p class="text-seconadary p-2 bg-white rounded-3 shadow-sm">
                                         No sessions yet...
-                                    </p>
+                                    </p> --}}
                                 @endforelse
                             @empty
                             @endforelse
+
+                            {{-- @forelse ($sessions as $session)
+                                @php
+                                    $completedBookings = $session->booking->where('status', 'completed');
+                                @endphp
+
+                                @if ($completedBookings->isNotEmpty())
+                                    @foreach ($completedBookings as $booking)
+                                        <li
+                                            class="list-group-item d-flex justify-content-between align-items-start mb-1 border-0">
+                                            <div class="ms-2 me-auto lh-sm">
+                                                <div class="fw-bold">{{ $booking->user->first_name }}</div>
+                                                {{ $booking->topic }}
+                                            </div>
+                                            <span class="badge text-bg-success rounded-pill">
+                                                <i class="bi bi-check-circle"></i>
+                                                Done
+                                            </span>
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <p class="text-seconadary p-2 bg-white rounded-3 shadow-sm">
+                                        No sessions yet...
+                                    </p>
+                                @endif
+                            @empty
+                            @endforelse --}}
+
                         </ol>
                     </div>
                 </div>

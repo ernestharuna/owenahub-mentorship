@@ -74,7 +74,7 @@
                                     </span>
                                 @endif
                             </span>
-                            <div class="p-2 rounded d-inline-block bg-light bg-body-secondary border">
+                            <div class="px-2 py-1 rounded d-inline-block bg-light bg-body-secondary border">
                                 {!! nl2br($info->content) !!}
                             </div>
                         </div>

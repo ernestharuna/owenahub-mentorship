@@ -1,7 +1,7 @@
 <section>
     <section class="social-links">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-dark rounded-4 py-2 px-4 fw-semibold" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark btn-sm rounded-4 py-2 px-3 fw-semibold" data-bs-toggle="modal"
             data-bs-target="#share-page">
             <i class="bi bi-share me-2"></i> Share this page
         </button>

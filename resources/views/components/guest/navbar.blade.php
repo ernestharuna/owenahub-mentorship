@@ -65,7 +65,7 @@
                                         <i class="bi bi-people me-1"></i> Community
                                     </a>
                                 </li>
-                                <li class="animated fadeIn">
+                                <li class="animated-2 fadeIn">
                                     <a class="dropdown-item fw-bold text-danger" href="{{ route('user.logout') }}">
                                         <i class="bi bi-box-arrow-right me-1"></i> Logout
                                     </a>
@@ -102,7 +102,7 @@
                                         <i class="bi bi-people me-1"></i> Community
                                     </a>
                                 </li>
-                                <li class="animated fadeIn">
+                                <li class="animated-2 fadeIn">
                                     <a class="dropdown-item fw-bold text-danger" href="{{ route('mentor.logout') }}">
                                         <i class="bi bi-box-arrow-right me-1"></i> Logout
                                     </a>

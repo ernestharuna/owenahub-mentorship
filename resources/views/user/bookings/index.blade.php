@@ -91,8 +91,8 @@
                     @forelse ($mentors as $mentor)
                         <x-mentor-card :mentor="$mentor" />
                     @empty
-                        <p class="p-2 bg-f2 text-secondary">
-                            No suggestions for your profile.
+                        <p class="p-2 bg-f2 text-secondary fs-tiny">
+                            No suggestions for your profile. <br>
                             Make sure your <a href="{{ route('user.profile.index') }}">profile</a> is updated.
                         </p>
                     @endforelse
