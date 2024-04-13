@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class SubscribeButton extends Component
 {
-    #[Rule('required|email')]
+    #[Rule('required')]
     public $email = "";
 
     public function save()
@@ -18,13 +18,13 @@ class SubscribeButton extends Component
         try {
             if (NewsletterSubscriber::where('email', $this->email)->exists()) {
                 $this->email = "";
-                return back()->with('status', "Great!, \nThis email has already subscribed! 🧐");
+                return redirect('/articles')->with('status', "Email is already subscribed! 🧐");
             } else {
                 NewsletterSubscriber::create(
                     $this->only(['email'])
                 );
                 $this->email = "";
-                return back()->with('status', 'Email Subscribed! 👍🏽');
+                return redirect('/articles')->with('status', 'Email Subscribed! 👍🏽');
             }
         } catch (\Exception $e) {
             throw $e;
