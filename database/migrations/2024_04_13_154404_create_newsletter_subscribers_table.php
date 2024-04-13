@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('newsletter_subscribers', function (Blueprint $table) {
             $table->id();
+            $table->string('email');
+            $table->string('email_is_verified')->nullable();
+            $table->boolean('is_subscribed')->default(true);
             $table->timestamps();
         });
     }
