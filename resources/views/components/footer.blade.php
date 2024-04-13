@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="text-dark fw-semibold">
-                <a href="/mentor/getstarted" class="btn btn-light rounded-4 px-4 fw-bold">Become a mentor</a>
+                <a href="/mentor/getstarted" class="btn btn-light rounded-3 px-4 fw-bold">Become a mentor</a>
             </div>
         </div>
         <hr>

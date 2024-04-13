@@ -6,6 +6,7 @@ use App\Models\Slice;
 use Illuminate\Http\Request;
 use App\Models\SliceEnrollment;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Auth;
 
 class SliceController extends Controller
@@ -35,6 +36,11 @@ class SliceController extends Controller
             ];
 
             $request->user()->slice_enrollment()->create($data);
+            $request->user()->notification()->create([
+                'topic' => 'Course Enrolled',
+                'message' => "Congratulations!, You have successfully enrolled for a new course"
+            ]);
+
             return redirect(route('user.dashboard'))->with('status', 'Slice added!');
         } catch (\Exception $e) {
             throw $e;

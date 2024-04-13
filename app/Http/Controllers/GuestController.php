@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Auth;
 
 class GuestController extends Controller
 {
+    /**
+     * Show all articles
+     */
     public function articles()
     {
         $articles = Article::with('admin')->latest()->simplePaginate(9);
@@ -18,7 +21,9 @@ class GuestController extends Controller
             'articles' => $articles
         ]);
     }
-
+    /**
+     * Show one article
+     */
     public function show_article(Article $article)
     {
         return view('guest.articles.show', [
@@ -26,6 +31,9 @@ class GuestController extends Controller
         ]);
     }
 
+    /**
+     * Show one featured article
+     */
     public function show_feat_article(FeaturedArticles $article)
     {
         return view('guest.articles.show', [
@@ -33,6 +41,9 @@ class GuestController extends Controller
         ]);
     }
 
+    /**
+     * Show all courses to guest
+     */
     public function slices()
     {
         $slices = Slice::with('admin')->latest()->simplePaginate(8);
@@ -41,6 +52,9 @@ class GuestController extends Controller
         ]);
     }
 
+    /**
+     * Show one course to guest
+     */
     public function show_slice(Slice $slice)
     {
         $slice_price = '';

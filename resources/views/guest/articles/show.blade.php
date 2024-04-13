@@ -1,6 +1,4 @@
 <x-guest.article>
-
-
     <x-slot name="title">
         {{ $article->title . ' | OwenaHub Blog' ?? 'Blog: OwenaHub' }}
     </x-slot>
@@ -22,7 +20,9 @@
             <span>{{ $article->category }}</span>
         </div>
 
-        <h1 class="fs-2" style="font-weight: 800; letter-spacing: -.025em;">{{ $article->title }}</h1>
+        <h1 class="fs-2" style="font-weight: 750; letter-spacing: -.025em;">
+            {{ $article->title }}
+        </h1>
         <div class="mt-3 mb-3">
             <x-guest.author :is_admin="$article->admin" />
         </div>

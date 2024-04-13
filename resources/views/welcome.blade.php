@@ -24,13 +24,17 @@
         <header class="container py-lg-5 text-center">
             <div>
                 <h1 class='mb-3 display-2 fw-boldest'>
-                    Start your <span class="animated-text-2">tech career</span> with
-                    <br class="d-none d-lg-block"> Africa's leading mentors
+                    Start your tech journey <br class="d-none d-lg-block">with expert mentors
+                    {{-- Start your <span class="animated-text-2">tech career</span> with
+                    <br class="d-none d-lg-block"> Africa's leading mentors --}}
                 </h1>
                 <p class="mt-4 mb-4">
-                    OwenaHub is a mentorship platform for tech enthusiansts. We offer a vibrant platform
+                    Tailored for tech career starters, enabling faster and more effective
+                    <br class="d-none d-lg-block"> learning through personalized
+                    guidance and experienced mentors.
+                    {{-- OwenaHub is a mentorship platform for tech enthusiansts. We offer a vibrant platform
                     <br class="d-none d-lg-block"> for learners to
-                    gain <b>career insights</b> from experienced mentors.
+                    gain <b>career insights</b> from experienced mentors. --}}
                 </p>
 
                 <div class="cta">
@@ -51,7 +55,7 @@
             </div>
         </header>
 
-        <section class=features>
+        {{-- <section class=features>
             <div class="container">
                 <div class="shadow shadow-0 feature_box rounded-4">
                     <div>
@@ -96,7 +100,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
     </div>
 
     <section class="bg-f2">

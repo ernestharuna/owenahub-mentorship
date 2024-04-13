@@ -79,7 +79,7 @@
                                             @endif
                                         </li>
                                     @empty
-                                        <p class="m-0 text-secondary fw-semibold">
+                                        <p class="m-0 text-secondary">
                                             No bookings for {{ $day }}
                                         </p>
                                     @endforelse

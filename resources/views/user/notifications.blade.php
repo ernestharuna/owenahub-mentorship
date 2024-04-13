@@ -7,6 +7,15 @@
         </section>
 
         <section class="animated-2 fadeIn pb-5">
+            @foreach ($notifications as $notification)
+                <div class="bg-white p-3 mb-2 rounded-4 shadow-sm">
+                    <p class="fs-tiny text-secondary fw-bold mb-1"> {{ $notification->topic }} </p>
+                    <p class="lh-sm m-0">
+                        {{ $notification->message }}
+                    </p>
+                </div>
+            @endforeach
+
             <div class="bg-white p-3 mb-2 rounded-4 shadow-sm">
                 <p class="fs-tiny text-secondary fw-bold mb-1"> Welcome to Owenahub </p>
                 <p class="lh-sm m-0">

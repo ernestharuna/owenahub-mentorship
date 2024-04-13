@@ -80,6 +80,16 @@ class Mentor extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * Get all of the notification for the Mentor
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function notification(): HasMany
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>

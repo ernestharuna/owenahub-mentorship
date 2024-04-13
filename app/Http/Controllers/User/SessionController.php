@@ -29,10 +29,10 @@ class SessionController extends Controller
             // Query mentors whose expertise matches the current user's expertise
             $mentors = Mentor::whereHas('misc_info', function ($query) use ($userExpertise) {
                 $query->where('expertise', $userExpertise);
-            })->take(3)->get();
+            })->take(2)->get();
         } else {
             // If user's expertise information is not available, fetch all mentors
-            $mentors = Mentor::take(3)->get();
+            $mentors = Mentor::take(2)->get();
         }
 
         return view('user.bookings.index', [
@@ -86,9 +86,18 @@ class SessionController extends Controller
             'session_id' => 'required'
         ]);
 
-        $request->user()->booking()->create($data);
+        try {
+            //code...
+            $request->user()->booking()->create($data);
+            $request->user()->notification()->create([
+                'topic' => 'Session booked!',
+                'message' => "You've booked a session, make sure to mark your calender so you don't miss it"
+            ]);
 
-        return redirect(route('user.session.index'))->with('status', 'Session booked!');
+            return redirect(route('user.session.index'))->with('status', 'Session booked!');
+        } catch (\Exception $e) {
+            return back()->with('error', 'Something went wrong');
+        }
     }
 
     /**

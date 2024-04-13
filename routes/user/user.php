@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\Payments\PaystackController;
 use App\Http\Controllers\User\Payments\VerifyPaymentController;
@@ -49,7 +50,8 @@ Route::name('user.')->group(function () {
                     });
                 });
 
-                Route::view('notifications', 'user.notifications')->name('notifications');
+                // Route::view('notifications', 'user.notifications')->name('notifications');
+                Route::get('notifications', [NotificationController::class, 'user_index'])->name('notifications');
                 Route::view('support', 'user.support')->name('support');
 
                 Route::get('paystack', [PaystackController::class, 'user_payment'])->name('pay-init');

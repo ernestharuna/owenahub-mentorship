@@ -157,6 +157,9 @@
                                                         <select name="topic" id="topic"
                                                             class="form-control bg-body-tertiary rounded-3 mb-2 py-2 shadow-sm fs-5"
                                                             required>
+                                                            <option value="" disabled selected>
+                                                                Select option
+                                                            </option>
                                                             <option value="General mentorship">
                                                                 General mentorship
                                                             </option>
@@ -190,8 +193,8 @@
 
                                                         <p class="fw-semibold">
                                                             {{ $session->mentor->first_name }} is available
-                                                            <span class="text-red">{{ $session->start_time }}</span>
-                                                            to <span class="text-red">{{ $session->end_time }}</span>
+                                                            <span class="text-red">{{ $formatted_time_1 }}</span>
+                                                            to <span class="text-red">{{ $formatted_time_2 }}</span>
                                                             on {{ $day }}
                                                         </p>
 
@@ -207,8 +210,8 @@
                                 </div>
                             </div>
                         @empty
-                            <p class="m-0 text-secondary fw-semibold">
-                                No availability created yet
+                            <p class="m-0 text-secondary">
+                                {{ $session->mentor->first_name }} isn't available for now
                             </p>
                         @endforelse
                     </div>
