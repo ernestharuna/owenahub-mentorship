@@ -28,8 +28,10 @@
                                 @endif
                             </span>
                         </h1>
-                        <p class="m-0">
+                        <p class="m-0 lh-sm">
                             {{ $mentor->misc_info ? $mentor->misc_info->expertise : 'New mentor' }}
+                            <br>
+                            <a href="mailto:{{ $mentor->email }}">{{ $mentor->email }}</a>
                         </p>
                     </div>
                 </div>

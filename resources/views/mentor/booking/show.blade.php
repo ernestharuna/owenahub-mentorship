@@ -8,7 +8,8 @@
                 <span class="text-secondary">{{ $booking->user->first_name }} {{ $booking->user->last_name }}</span>
                 <br>
                 <small class="fs-6 fw-normal text-secondary">
-                    <span class="fw-semibold text-dark">Topic:</span> {{ $booking->topic }}
+                    <span class="fw-semibold text-dark">Topic:</span> {{ $booking->topic }} &middot;
+                    <a href="mailto:{{ $booking->user->email }}">{{ $booking->user->email }}</a>
                 </small>
             </h1>
 

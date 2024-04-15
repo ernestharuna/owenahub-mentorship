@@ -8,13 +8,14 @@
                     <img src={{ asset('images/logo.png') }} alt="..." class="img-fluid" width="25">
                     <div class="d-inline-block fw-bold" style="position: relative; top: 3px">OwenaHub</div>
                 </div>
-                <p class="fs-tiny mt-2">
+                {{-- <p class="fs-tiny mt-2">
                     Fostering global connections, leveraging experts <br> to empower learners through mentorship.
-                </p>
+                </p> --}}
             </div>
-            <div class="text-dark fw-semibold">
-                <a href="/mentor/getstarted" class="btn btn-light rounded-3 px-4 fw-bold">Become a mentor</a>
-            </div>
+            <p class="fs-tiny mt-2">
+                <span class="fw-semibold text-theme">The Learner's Hub</span> <br>
+                Fostering global connections, leveraging experts <br> to empower learners through mentorship.
+            </p>
         </div>
         <hr>
         <div class="mt-3 d-md-flex">
@@ -78,12 +79,12 @@
                 <h2 class='fs-tiny'>
                     COMMUNITIES
                 </h2>
-                <a href="https://www.facebook.com/groups/896520008575738/?ref=share"
+                <a href="https://linkedin.com/company/owenahub"
                     class="d-block text-decoration-none text-white fs-tiny fw-light">
                     LinkedIn Community <i class="bi bi-arrow-right-short"></i>
                 </a>
 
-                <a href="https://linkedin.com/in/ernestharuna"
+                <a href="https://www.facebook.com/groups/896520008575738/?ref=share"
                     class="d-block text-decoration-none text-white fs-tiny fw-light">
                     Facebook Community <i class="bi bi-arrow-right-short"></i>
                 </a>

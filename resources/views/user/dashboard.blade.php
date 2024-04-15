@@ -139,6 +139,36 @@
         </div>
     </section>
 
+    <div class="my-5 p-3 bg-white shadow-sm rounded-4 border">
+        <h4 class="fw-semibold">
+            Suggested Mentors
+        </h4>
+
+        <p class="lh-sm fw-semibold">
+            <i class="bi bi-stars text-red"></i> Your best matches — <span class="text-secondary fw-normal">
+                We picked these mentors based on your interest</span>
+        </p>
+
+        <section class="my-4">
+            <div class="row row-cols-1 row-cols-lg-4 g-3">
+                @forelse ($mentors as $mentor)
+                    <x-mentor-card :mentor="$mentor" />
+                @empty
+                    <p class="p-2 bg-f2 text-secondary fs-tiny rounded-3">
+                        No suggestions for your profile. <br>
+                        Make sure your <a href="{{ route('user.profile.index') }}">profile</a> is updated.
+                    </p>
+                @endforelse
+            </div>
+        </section>
+
+        <div>
+            <a href="{{ route('user.mentor.index') }}" class="btn btn-outline-dark rounded-3 fw-semibold">
+                Explore mentors <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
     <livewire:user.complete-profile />
 
     <section class="mt-4 mb-4">

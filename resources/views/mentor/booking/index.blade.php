@@ -50,40 +50,43 @@
                         @endphp
                         <div class="col-12 col-md-5 p-3 rounded-3 shadow-sm bg-theme-light">
                             <h5> {{ $day }}</h5>
-                            <div class="fw-semibold">
-
-                            </div>
                             <div class="mt-3">
-                                <ol class="list-group list-group-numbered border border-0">
-                                    @forelse ($session->booking->reverse() as $booking)
-                                        <li
-                                            class="list-group-item d-flex justify-content-between align-items-start position-relative">
-                                            <div class="ms-2 me-auto lh-sm">
-                                                <a href="{{ route('mentor.session.show', $booking->id) }}"
-                                                    class="text-dark text-decoration-none">
-                                                    <div class="fw-bold">
-                                                        {{ $booking->user->first_name }}'s booking
+                                @forelse ($session->booking->reverse() as $booking)
+                                    <div class="card border-0 shadow-sm rounded-3 mb-1">
+                                        <a href="{{ route('mentor.session.show', $booking->id) }}"
+                                            class="text-dark text-decoration-none">
+                                            <div class="card-body p-2">
+                                                <span
+                                                    class="d-flex justify-content-between align-items-start position-relative">
+                                                    <div class="ms-2 me-auto lh-sm">
+                                                        <div class="fw-bold">
+                                                            {{ $booking->user->first_name }}'s booking
+                                                        </div>
+                                                        <div class="fs-tiny">
+                                                            <span>{{ $booking->topic }}</span> &middot; <span
+                                                                class="text-decoration-underline text-red">view</span>
+                                                        </div>
                                                     </div>
-                                                    <span>{{ $booking->topic }}</span>
-                                                </a>
-                                            </div>
-                                            <span>
-                                                <x-status :status="$booking->status" />
-                                            </span>
-                                            @if ($booking->booking_info->count() > 0)
-                                                <span title="{{ $booking->booking_info->count() }} chats exchanged"
-                                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                                    {{ $booking->booking_info->count() }}
-                                                    <span class="visually-hidden">unread messages</span>
+                                                    <span>
+                                                        <x-status :status="$booking->status" />
+                                                    </span>
+                                                    @if ($booking->booking_info->count() > 0)
+                                                        <span
+                                                            title="{{ $booking->booking_info->count() }} chats exchanged"
+                                                            class="position-absolute top-0 start-100 translate-middle badge rounded-3 bg-danger">
+                                                            {{ $booking->booking_info->count() }}
+                                                            <span class="visually-hidden">unread messages</span>
+                                                        </span>
+                                                    @endif
                                                 </span>
-                                            @endif
-                                        </li>
-                                    @empty
-                                        <p class="m-0 text-secondary">
-                                            No bookings for {{ $day }}
-                                        </p>
-                                    @endforelse
-                                </ol>
+                                            </div>
+                                        </a>
+                                    </div>
+                                @empty
+                                    <p class="m-0 text-secondary">
+                                        No bookings for {{ $day }}
+                                    </p>
+                                @endforelse
                             </div>
                         </div>
                     @empty

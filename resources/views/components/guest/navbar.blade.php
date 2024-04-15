@@ -47,25 +47,25 @@
                                 {{ ucfirst(strtolower(Auth::user()->last_name)) }}
                             </a>
                             <ul class="dropdown-menu rounded-4">
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a class="dropdown-item" href="{{ route('user.dashboard') }}">
                                         <i class="me-1 bi bi-house"></i> Dashboard
                                     </a>
                                 </li>
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a class="dropdown-item" href="{{ route('guest.slices.index') }}">
                                         <i class="me-2 bi bi-box"></i> View Slices
                                     </a>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a type="button" class="dropdown-item" data-bs-toggle="modal"
                                         data-bs-target="#joinCommunity">
                                         <i class="bi bi-people me-1"></i> Community
                                     </a>
                                 </li>
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a class="dropdown-item fw-bold text-danger" href="{{ route('user.logout') }}">
                                         <i class="bi bi-box-arrow-right me-1"></i> Logout
                                     </a>
@@ -84,25 +84,25 @@
                                 {{ ucfirst(strtolower(Auth::guard('mentor')->user()->last_name)) }}
                             </a>
                             <ul class="dropdown-menu rounded-4">
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a class="dropdown-item" href="{{ route('mentor.dashboard') }}">
                                         <i class="me-1 bi bi-house"></i> Dashboard
                                     </a>
                                 </li>
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a class="dropdown-item" href="{{ route('guest.slices.index') }}">
                                         <i class="me-2 bi bi-box"></i> View Slices
                                     </a>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a type="button" class="dropdown-item" data-bs-toggle="modal"
                                         data-bs-target="#joinCommunity">
                                         <i class="bi bi-people me-1"></i> Community
                                     </a>
                                 </li>
-                                <li class="animated-2 fadeIn">
+                                <li>
                                     <a class="dropdown-item fw-bold text-danger" href="{{ route('mentor.logout') }}">
                                         <i class="bi bi-box-arrow-right me-1"></i> Logout
                                     </a>
@@ -153,17 +153,10 @@
                         </div>
                     </div>
 
-
-                    {{-- <a href="{{ route('user.register') }}"
-                        class="btn btn-sm btn-outline-dark rounded-5 px-4 fw-semibold">
-                        Sign up
-                    </a> --}}
-
                     <button type="button" class="btn btn-sm btn-outline-dark rounded-5 px-4 fw-semibold"
                         data-bs-toggle="modal" data-bs-target="#registerAs">
                         Sign in
                     </button>
-
                     <!-- Modal -->
                     <div class="modal fade" id="registerAs" tabindex="-1" aria-labelledby="registerAsLabel"
                         aria-hidden="true">
@@ -178,13 +171,13 @@
                                     <div class="container text-center">
                                         <div class="row gap-2">
                                             <div class="col rounded-4 bg-theme">
-                                                <a href="mentor/getstarted"
+                                                <a href="/mentor/getstarted"
                                                     class="p-3 d-block text-decoration-none text-dark fw-bold fs-6">
                                                     Mentor
                                                 </a>
                                             </div>
                                             <div class="col rounded-4 bg-dark border">
-                                                <a href="getstarted"
+                                                <a href="/getstarted"
                                                     class="p-3 d-block text-decoration-none text-theme fw-bold fs-6">
                                                     Mentee
                                                 </a>

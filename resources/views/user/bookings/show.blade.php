@@ -9,6 +9,8 @@
                 <br>
                 <small class="fs-6 fw-normal text-secondary">
                     <span class="fw-semibold text-dark">Topic:</span> {{ $booking->topic }}
+                    &middot;
+                    <a href="mailto:{{ $booking->session->mentor->email }}">{{ $booking->session->mentor->email }}</a>
                 </small>
             </h1>
 
