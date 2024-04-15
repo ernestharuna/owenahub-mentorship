@@ -58,6 +58,9 @@ Route::name('guest.')->group(function () {
     });
 });
 
+Route::fallback(function () {
+    return view('error');
+});
 
 require __DIR__ . '/admin/auth.php';
 require __DIR__ . '/admin/admin.php';
