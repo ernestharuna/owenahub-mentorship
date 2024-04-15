@@ -113,11 +113,89 @@
                 @endauth
 
                 @if (!Auth::check() && !Auth::guard('mentor')->check())
-                    <a href="{{ route('user.login') }}" class="btn btn-sm btn-dark rounded-5 px-4 me-2">Log in</a>
-                    <a href="{{ route('user.register') }}"
+                    {{-- <a href="{{ route('user.login') }}" class="btn btn-sm btn-dark rounded-5 px-4 me-2">Log in</a> --}}
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-sm btn-dark rounded-5 px-4 me-2" data-bs-toggle="modal"
+                        data-bs-target="#signInAs">
+                        Log in
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="signInAs" tabindex="-1" aria-labelledby="signInAsLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content rounded-4">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5" id="signInAsLabel">Continue as</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container text-center">
+                                        <div class="row gap-2">
+                                            <div class="col rounded-4 bg-theme">
+                                                <a href="{{ route('mentor.login') }}"
+                                                    class="p-3 d-block text-decoration-none text-dark fw-bold fs-6">
+                                                    Mentor
+                                                </a>
+                                            </div>
+                                            <div class="col rounded-4 bg-dark border">
+                                                <a href="{{ route('user.login') }}"
+                                                    class="p-3 d-block text-decoration-none text-theme fw-bold fs-6">
+                                                    Mentee
+                                                </a>
+                                                {{-- <div class="p-3">Mentee</div> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {{-- <a href="{{ route('user.register') }}"
                         class="btn btn-sm btn-outline-dark rounded-5 px-4 fw-semibold">
                         Sign up
-                    </a>
+                    </a> --}}
+
+                    <button type="button" class="btn btn-sm btn-outline-dark rounded-5 px-4 fw-semibold"
+                        data-bs-toggle="modal" data-bs-target="#registerAs">
+                        Sign in
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="registerAs" tabindex="-1" aria-labelledby="registerAsLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content rounded-4">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5" id="registerAsLabel">Register as</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container text-center">
+                                        <div class="row gap-2">
+                                            <div class="col rounded-4 bg-theme">
+                                                <a href="mentor/getstarted"
+                                                    class="p-3 d-block text-decoration-none text-dark fw-bold fs-6">
+                                                    Mentor
+                                                </a>
+                                            </div>
+                                            <div class="col rounded-4 bg-dark border">
+                                                <a href="getstarted"
+                                                    class="p-3 d-block text-decoration-none text-theme fw-bold fs-6">
+                                                    Mentee
+                                                </a>
+                                                {{-- <div class="p-3">Mentee</div> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endif
             </div>
         </div>

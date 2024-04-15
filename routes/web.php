@@ -23,6 +23,7 @@ Route::view('/', 'welcome')->name('home');
 Route::view('about', 'about')->name('about');
 Route::view('terms-of-service', 'terms-of-service')->name('tos');
 Route::view('privacy-policy', 'privacy-policy')->name('pp');
+// Route::view('getstarted', 'guest.login-as')->name('login-as');
 
 // ----------------- Guest Routes
 Route::name('guest.')->group(function () {
