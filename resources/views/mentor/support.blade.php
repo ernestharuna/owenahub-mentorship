@@ -1,8 +1,8 @@
 <x-layouts.mentor>
     <div class="mt-2 container">
         <section class="py-3 mb-5 border-bottom">
-            <h2 class="fs-4 fw-bold text-dark">
-                <i class="bi bi-gear fs-5 text-secondary"></i> Support
+            <h2 class="fw-bold text-dark">
+                Support
             </h2>
         </section>
 
@@ -11,10 +11,10 @@
                 <h3 class="fw-bold">Send us a message</h3>
                 <p>
                     Did you encounter errors or glitches? <br>
-                    <b>Send us a message and we'll get back to you as soon as possible</b>
+                    <span class="fw-semibold">Send us a message and we'll get back to you as soon as possible</span>
                 </p>
 
-                <a href="mailto:hello@owenahub.com" class="btn btn-theme rounded-3 px-4 fw-semibold">
+                <a href="mailto:hello@owenahub.com" class="btn btn-theme rounded-4 px-4 fw-semibold">
                     Contact us
                 </a>
             </div>

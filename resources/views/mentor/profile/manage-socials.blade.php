@@ -51,7 +51,4 @@
             {{ $message }}
         </p>
     @enderror
-
-
-
 </x-mentor.profile-layout>
