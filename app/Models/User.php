@@ -74,6 +74,17 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * Get the display_image associated with the Mentor
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function display_image(): HasOne
+    {
+        return $this->hasOne(DisplayImage::class);
+    }
+
+
+    /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>

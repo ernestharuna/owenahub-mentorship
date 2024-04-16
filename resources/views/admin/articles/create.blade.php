@@ -45,15 +45,13 @@
                         Choose category
                     </option>
                     <option value="Career Development">Career Development</option>
-                    <option value="Web Developement">Web Developement</option>
+                    <option value="Careers">Careers</option>
+                    <option value="Software Engineering">Software Engineering</option>
                     <option value="Success Stories">Success Stories</option>
                     <option value="News & Updates">News & Updates</option>
-                    <option value="Tech Industry News">Tech Industry News</option>
-                    <option value="Course Reviews">Course Reviews</option>
-                    <option value="Coding Challenges and Projects">Coding Challenges and Projects</option>
-                    <option value="Software Crisis">Software Crisis</option>
-                    <option value="Machine Learning and AI">Machine Learning and AI</option>
-                    <option value="Coding Standards & Best Practices">Coding Standards & Best Practices</option>
+                    <option value="Industry Insights">Industry Insights</option>
+                    <option value="Learning/Mentorship">Learning/Mentorship</option>
+                    <option value="Polls">Polls</option>
                 </select>
                 @error('category')
                     <p class="text-danger fs-6 mt-1">

@@ -41,6 +41,10 @@ class AuthController extends Controller
             ]);
 
             Auth::guard('mentor')->login($mentor);
+            $request->user('mentor')->display_image()->create([
+                'image_path' => null
+            ]);
+
             return redirect(route('mentor.dashboard'))->with('status', 'Welcome to OwenaHub! 🎉');
         } catch (\Exception $e) {
             return back()->with('error', $e->getMessage());

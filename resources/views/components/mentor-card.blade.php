@@ -16,9 +16,11 @@
     <div class="card h-100 border-0 border-start shadow-sm rounded-4">
         <div class="mb-2" id="course-card-img">
             @if ($mentor->social_handle && $mentor->social_handle->image_path)
-                {{-- <img src="{{ asset('storage/' . $mentor->image_path) }}" alt="{{ $mentor->first_name }}'s photo"
-                    class="rounded-top-3 border d-block img-fluid w-100 h-100 object-fit-cover"> --}}
                 <img src="{{ $mentor->social_handle->image_path }}" alt="{{ $mentor->first_name }}'s photo"
+                    class="rounded-top-4 border d-block img-fluid w-100 h-100 object-fit-cover">
+            @elseif ($mentor->display_image && $mentor->display_image->image_path != null)
+                <img src="{{ asset('storage/' . $mentor->display_image->image_path) }}"
+                    alt="{{ $mentor->first_name }}'s photo"
                     class="rounded-top-4 border d-block img-fluid w-100 h-100 object-fit-cover">
             @else
                 <img src="{{ asset('images/default-dp.png') }}" alt="{{ $mentor->first_name }}'s photo"
@@ -39,16 +41,6 @@
                         <i class="bi bi-lightning-fill text-purple"></i>{{ $mentor->misc_info->expertise ?? '' }}
                     </p>
                 </div>
-                {{-- <div class="text-theme fs-tiny mt-2">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <span class="text-dark">
-                        (4.8)
-                    </span>
-                </div> --}}
             </div>
         </div>
         <div class="card-footer px-2 pt-0 border-0 bg-white rounded-4">

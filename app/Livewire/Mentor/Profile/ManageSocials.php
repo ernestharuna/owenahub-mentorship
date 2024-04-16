@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Mentor\Profile;
 
+use App\Http\Controllers\DisplayImageController;
 use Livewire\Component;
 use App\Models\SocialHandle;
 use Illuminate\Support\Facades\Auth;
@@ -47,6 +48,7 @@ class ManageSocials extends Component
             'x_twitter' => $this->x_twitter,
             'facebook' => $this->facebook,
         ]);
+
         return redirect('/mentor/dashboard')->with('status', 'Profile updated!');
     }
 

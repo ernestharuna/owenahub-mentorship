@@ -25,7 +25,6 @@ class Mentor extends Authenticatable implements MustVerifyEmail
             ->get();
     }
 
-
     /**
      * The attributes that are mass assignable.
      *
@@ -87,6 +86,16 @@ class Mentor extends Authenticatable implements MustVerifyEmail
     public function notification(): HasMany
     {
         return $this->hasMany(Notification::class);
+    }
+
+    /**
+     * Get the display_image associated with the Mentor
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function display_image(): HasOne
+    {
+        return $this->hasOne(DisplayImage::class);
     }
 
     /**

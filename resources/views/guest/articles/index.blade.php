@@ -14,14 +14,6 @@
         <livewire:featured-article2 />
     </div>
 
-    {{-- <div class='mb-4'>
-        <h3 class=''>Latest Articles</h3>
-        <a href="/"
-            class='text-decoration-none btn btn-sm btn-dark px-3 py-1 fw-semibold rounded-3 text-white mt-2 d-inline-block'>
-            <i class="bi bi-arrow-left me-2"></i> Go back
-        </a>
-    </div> --}}
-
     <div class="mx-auto w-54 py-2">
         @forelse ($articles as $article)
             @php
@@ -46,7 +38,7 @@
                         class='text-decoration-none text-dark'>
                         <h5 class="fw-semibold fs-5">{{ $article->title }}</h5>
 
-                        <p class="mb-3" style="font-size: 1rem">
+                        <p class="mb-3">
                             {{ $article->description }}
                             {{ strlen($article->description) > 50 ? substr($article->description, 0, 50) . '...' : $article->description }}
                         </p>

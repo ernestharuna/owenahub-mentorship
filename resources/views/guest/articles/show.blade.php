@@ -28,7 +28,9 @@
         </div>
     </div>
     <div class="mb-5 mt-2 w-64">
-        {!! $article->content !!}
+        <div style="font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased;">
+            {!! $article->content !!}
+        </div>
 
         <div class="mt-4">
             <livewire:share-page />

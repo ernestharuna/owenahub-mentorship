@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DisplayImageController;
 use App\Http\Controllers\Mentor\AuthController;
 use App\Http\Controllers\Mentor\MentorDashboardController;
 use App\Http\Controllers\Mentor\ProfileController;
@@ -22,6 +23,9 @@ Route::name('mentor.')->group(function () {
                         Route::view('achievements', 'mentor.profile.achievements')->name('achievements');
                         Route::view('session-reviews', 'mentor.profile.session-reviews')->name('session-reviews');
                         Route::view('manage-availability', 'mentor.profile.manage-availability')->name('availability');
+
+                        Route::post('upload-display-image', [DisplayImageController::class, 'store'])->name('upload-display-image');
+                        Route::patch('update-display-image/{displayImage}', [DisplayImageController::class, 'update'])->name('update-display-image');
                     });
                 });
 

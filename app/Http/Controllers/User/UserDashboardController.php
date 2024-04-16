@@ -14,7 +14,10 @@ class UserDashboardController extends Controller
     {
         $user = Auth::user();
         $enrolled_slices = $user->slice_enrollment()->latest()->get();
-        $bookings = Booking::where('user_id', auth()->id())->with('session')->latest()->get();
+        $bookings = Booking::where('user_id', auth()->id())
+            ->with('session')
+            ->latest()
+            ->get();
 
         if (Auth::user()->misc_info && Auth::user()->misc_info->expertise) {
             $userExpertise = Auth::user()->misc_info->expertise;
@@ -31,7 +34,7 @@ class UserDashboardController extends Controller
         return view('user.dashboard', [
             'enrolled_slices' => $enrolled_slices,
             'booking' => $bookings,
-            'mentors' => $mentors
+            'mentors' => $mentors->where('email_is_verified', '!=', null),
         ]);
     }
 }

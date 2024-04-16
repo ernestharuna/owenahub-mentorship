@@ -38,11 +38,6 @@
             <input wire:model="facebook" type="text" class="form-control rounded-3 py-2 border-2 editable"
                 id="facebook" placeholder="https://facebook.com/..." name="facebook" disabled>
         </div>
-        <div class="mb-3">
-            <label for="image_path" class="form-label fw-semibold m-0">Profile picture</label>
-            <input type="file" class="form-control rounded-3 py-2 border-2" id="image_path" name="image_path"
-                disabled>
-        </div>
 
         <x-profile-submit-btn />
     </form>

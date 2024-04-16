@@ -17,8 +17,13 @@ class ProfileController extends Controller
     {
         try {
             $user = request()->user('mentor');
+
             $user->social_handle()->create([
                 'image_path' => $img_path
+            ]);
+
+            $user->display_image()->create([
+                'image_path' => null
             ]);
         } catch (\Exception $e) {
             Log::error($e->getMessage());

@@ -6,6 +6,6 @@
 
     <div class="lh-sm fw-semibold">
         OwenaHub <br>
-        <a href="https://x.com/owenahub" class="fw-normal">@owenahub</a>
+        <a href="https://x.com/owenahub" class="fw-normal" target="_blank">@owenahub</a>
     </div>
 </div>

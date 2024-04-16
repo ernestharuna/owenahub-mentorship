@@ -6,7 +6,10 @@
                     <div style="width: 100px; max-width: 100px; height: 100px; max-height: 100px;">
                         @if ($mentor->social_handle && $mentor->social_handle->image_path)
                             <img src="{{ $mentor->social_handle->image_path }}" alt="..."
-                                class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
+                                class="border d-block img-fluid h-100 w-100 rounded-5 object-fit-cover border-3 border-warning">
+                        @elseif ($mentor->display_image)
+                            <img src="{{ asset('storage/' . $mentor->display_image->image_path) }}" alt="..."
+                                class="border d-block img-fluid h-100 w-100 rounded-5 object-fit-cover border-3 border-warning">
                         @else
                             <img src="{{ asset('images/default-dp.png') }}" alt="..."
                                 class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
@@ -211,7 +214,8 @@
                             </div>
                         @empty
                             <p class="m-0 text-secondary">
-                                {{ $session->mentor->first_name }} isn't available for now
+                                <span class="text-dark fw-semibold"> {{ $mentor->first_name }}</span> isn't available
+                                for now
                             </p>
                         @endforelse
                     </div>
