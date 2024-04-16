@@ -6,7 +6,7 @@
                     <div class="text-start">
                         {{-- <divs --}}
                         <h1 class="card-title display-3 mb-4 fw-bold">
-                            <i class="bi bi-calendar-event text-red"></i> Flexible schedule
+                            <i class="bi bi-calendar-event text-red"></i> <br>Flexible schedule
                         </h1>
                         <div class="card-text mb-3">
                             <p class="fs-5">

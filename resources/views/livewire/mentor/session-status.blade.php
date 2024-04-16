@@ -21,7 +21,7 @@
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-sm btn-theme rounded-3 px-3 py-2 fw-semibold" data-bs-toggle="modal"
                 data-bs-target="#createMeeting">
-                Create meeting room <i class="bi bi-file-person fs-5 ms-1" style="position: relative; top: 2px;"></i>
+                <i class="bi bi-camera-video" style="position: relative; top: 2px;"></i> New meeting
             </button>
             <!-- Modal -->
             <div class="modal fade" id="createMeeting" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -57,9 +57,9 @@
             </div>
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-sm btn-light rounded-3 px-4 py-2 fw-semibold" data-bs-toggle="modal"
+            <button type="button" class="btn btn-sm btn-dark text-white rounded-3 px-4 py-2 fw-semibold" data-bs-toggle="modal"
                 data-bs-target="#finishSession">
-                <i class="bi bi-check-circle-fill text-theme me-1"></i> Finish session
+                Finish session
             </button>
             <!-- Modal -->
             <div class="modal fade" id="finishSession" tabindex="-1" aria-labelledby="exampleModalLabel"

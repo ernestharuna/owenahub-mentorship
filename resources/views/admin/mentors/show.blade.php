@@ -7,7 +7,10 @@
             <div class="d-md-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <div style="width: 100px; max-width: 100px; height: 100px; max-height: 100px;">
-                        @if ($mentor->social_handle && $mentor->social_handle->image_path)
+                        @if ($mentor->display_image && $mentor->display_image->image_path)
+                            <img src="{{ asset('storage/' . $mentor->display_image->image_path) }}" alt="..."
+                                class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
+                        @elseif ($mentor->social_handle && $mentor->social_handle->image_path)
                             <img src="{{ $mentor->social_handle->image_path }}" alt="..."
                                 class="border d-block img-fluid w-100 rounded-5 object-fit-cover border-3 border-warning">
                         @else

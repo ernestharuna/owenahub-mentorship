@@ -23,14 +23,12 @@
     <div class='animated-2 fadeIn bg-theme-2 py-5'>
         <header class="container py-lg-5 text-center">
             <div>
-                <h1 class='my-3 display-2 fw-boldest'>
+                <h1 class='my-3 display-3' style="font-weight: 800; letter-spacing: -1px">
                     Build your career <br class="d-none d-lg-block">with expert mentors
-                    {{-- Start your <span class="animated-text-2">tech career</span> with
-                    <br class="d-none d-lg-block"> Africa's leading mentors --}}
                 </h1>
-                <p class="mt-4 mb-5 fs-5">
-                    Enabling faster and more effective learning through <br class="d-none d-lg-block"> personalized
-                    guidance and experienced mentors.
+                <p class="mt-4 mb-5">
+                    We offer a vibrant platform for learners to
+                    build successful <br class="d-none d-lg-block">careers by learning from experienced mentors.
                 </p>
 
                 <div class="cta">
