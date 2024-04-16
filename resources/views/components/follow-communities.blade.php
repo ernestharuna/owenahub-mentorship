@@ -1,8 +1,8 @@
-<div id="announcement" class="text-center text-theme fs-tiny py-1 bg-dark">
-    <i class="bi bi-megaphone-fill me-1 text-white"></i> You can now meet mentors —
+<div id="announcement" class="text-center text-theme fs-tiny py-1 bg-theme-2">
+    {{-- <i class="bi bi-megaphone-fill me-1 text-white"></i> You can now meet mentors —
     <a href="{{ route('user.mentor.index') }}" class="text-white fw-light">
         Get started
-    </a>
+    </a> --}}
     {{-- <!-- Button trigger modal -->
     <a type="button" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#joinCommunity">
         <span class="fw-bold text-decoration-underline">Click Here</span> — our community awaits your grand entrance!
