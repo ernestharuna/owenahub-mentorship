@@ -29,14 +29,14 @@ class SessionController extends Controller
             // Query mentors whose expertise matches the current user's expertise
             $mentors = Mentor::whereHas('misc_info', function ($query) use ($userExpertise) {
                 $query->where('expertise', $userExpertise);
-            })->take(2)->get();
+            })->whereNotNull('email_verified_at')->limit(2)->get();
         } else {
             // If user's expertise information is not available, fetch all mentors
-            $mentors = Mentor::take(2)->get();
+            $mentors = Mentor::whereNotNull('email_verified_at')->limit(3)->get();
         }
 
         return view('user.bookings.index', [
-            'mentors' => $mentors->where('email_is_verified', '!=', null),
+            'mentors' => $mentors,
             'bookings' => $bookings
         ]);
     }
