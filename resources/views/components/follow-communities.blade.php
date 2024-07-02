@@ -1,4 +1,4 @@
-<div id="announcement" class="text-center text-theme fs-tiny py-1 bg-theme-2">
+<div id="announcement" class="text-center text-theme fs-tiny bg-theme-2">
     {{-- <i class="bi bi-megaphone-fill me-1 text-white"></i> You can now meet mentors —
     <a href="{{ route('user.mentor.index') }}" class="text-white fw-light">
         Get started

@@ -7,13 +7,11 @@ use App\Http\Controllers\User\ProfileController;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Mentor;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
 use Laravel\Socialite\Facades\Socialite;
-use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class GoogleAuthController extends Controller
 {
@@ -89,10 +87,10 @@ class GoogleAuthController extends Controller
                         return redirect()->back()->with('error', 'Invalid authentication type');
                 }
             } catch (\Exception $e) {
-                return redirect()->back()->with('error', "$e");
+                return redirect()->back()->with('error', $e->getMessage());
             }
         } else {
-            return redirect()->back()->with('error', 'Authentication failed!');
+            return redirect()->back()->with('error', 'Authentication failed, try again!');
         }
     }
 }

@@ -37,7 +37,7 @@
                         Get Started <i class="bi bi-arrow-right ms-2"></i>
                     </a>
                     <a href="{{ route('guest.slices.index') }}"
-                        class='btn btn-outline-dark fw-semibold rounded-5 px-4 py-2 text-center d-md-inline-block d-block ms-md-3 mt-3 mt-md-0'>
+                        class='btn btn-outline-dark fw-semibold rounded-5 px-4 py-2 shadow text-center d-md-inline-block d-block ms-md-3 mt-3 mt-md-0'>
                         Start with courses <i class="bi bi-stars text-primary"></i>
                     </a>
                 </div>
