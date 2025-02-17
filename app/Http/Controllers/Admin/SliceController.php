@@ -12,6 +12,7 @@ class SliceController extends Controller
     {
         $slices = Slice::latest()->paginate(10);
         return view('admin.slices.index', [
+
             'slices' => $slices
         ]);
     }
